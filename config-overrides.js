@@ -1,16 +1,16 @@
-const {override, adjustStyleLoaders} = require("customize-cra");
+const {override, adjustStyleLoaders} = require('customize-cra');
 module.exports = override(
-    adjustStyleLoaders(rule => {
-      if (rule.test.toString().includes("sass")) {
+    adjustStyleLoaders((rule) => {
+      if (rule.test.toString().includes('sass')) {
         rule.use.push({
-          loader: "sass-resources-loader",
+          loader: 'sass-resources-loader',
           options: {
             resources: [
-              "./src/styles/variables.scss",
-              "./src/styles/mixins.scss",
+              './src/styles/variables.scss',
+              './src/styles/mixins.scss',
             ],
           },
         });
       }
-    })
+    }),
 );

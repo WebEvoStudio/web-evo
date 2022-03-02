@@ -1,9 +1,11 @@
 import React from 'react';
 import './App.css';
-import {Route, Routes } from 'react-router';
-import Hello from "./pages/Hello";
-import BasicLayout from "./layouts/Basic.Layout";
+import BasicLayout from './layouts/Basic.Layout';
 
+/**
+ * App component
+ * @return {JSX.Element}
+ */
 function App() {
   return (
     <div className="App">

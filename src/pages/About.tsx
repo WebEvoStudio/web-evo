@@ -1,7 +1,14 @@
-import React from "react";
+import React from 'react';
 
+/**
+ * About page
+ */
 export default class About extends React.Component {
-  render() {
+  /**
+   * Render the page
+   * @return {JSX.Element}
+   */
+  render(): JSX.Element {
     return (
       <div>
         <h1>About</h1>
