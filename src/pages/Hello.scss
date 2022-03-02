@@ -1,0 +1,18 @@
+.hello {
+  height: 100vh;
+  background-color: #282c34;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+.action {
+  // 2px 白色边框
+  border: 2px solid #fff;
+  // 鼠标悬浮 背景和边框 更改为 蓝色
+  &:hover {
+    background-color: #61dafb;
+    border-color: #61dafb;
+  }
+}

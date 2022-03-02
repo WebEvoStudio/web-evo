@@ -11,3 +11,23 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+button {
+  padding: 12px;
+  background: transparent;
+  border: none;
+  color: inherit;
+}
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+// 去除 a 标签 默认样式
+// 去除 a 标签 下划线
+a {
+  text-decoration: none;
+  color: inherit;
+}
+// 全局主题变量
+$primary-color: #ffc107;
+

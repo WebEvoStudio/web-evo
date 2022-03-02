@@ -1,0 +1,14 @@
+nav {
+  height: 53px;
+  background: #1b242f;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  .link {
+    margin: 0 20px;
+  }
+  .active {
+    color: $primary-color;
+  }
+}
