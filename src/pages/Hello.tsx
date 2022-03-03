@@ -19,6 +19,7 @@ export default class Hello extends React.Component<any, any> {
         <div>
           <span>I`m a full stack web developer.</span>
         </div>
+        <div className="gap-2"/>
         <div>
           <Link to={'/about'}>
             <button className='action'>View my work</button>
