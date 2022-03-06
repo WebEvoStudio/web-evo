@@ -25,8 +25,8 @@ button {
 // 去除 a 标签 默认样式
 // 去除 a 标签 下划线
 a {
-  text-decoration: none !important;
-  color: inherit !important;
+  text-decoration: none;
+  color: inherit;
 }
 // 全局主题变量
 $primary-color: #ffc107;
