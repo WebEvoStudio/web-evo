@@ -3,6 +3,9 @@ import {Link, Route, Routes, useLocation} from 'react-router-dom';
 import About from '../pages/About';
 import Hello from '../pages/Hello';
 import './Basic.Layout.scss';
+import Portfolio from '../pages/Portfolio';
+import Blog from '../pages/Blog';
+import Contact from '../pages/Contact';
 const _ = require('lodash');
 
 /**
@@ -17,6 +20,9 @@ export default function BasicLayout(): JSX.Element {
         <Routes>
           <Route path={'/'} element={<Hello/>}/>
           <Route path='/about' element={<About/>}/>
+          <Route path='/portfolio' element={<Portfolio/>}/>
+          <Route path='/blog' element={<Blog/>}/>
+          <Route path='/contact' element={<Contact/>}/>
         </Routes>
       </main>
     </div>

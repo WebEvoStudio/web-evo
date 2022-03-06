@@ -25,9 +25,11 @@ button {
 // 去除 a 标签 默认样式
 // 去除 a 标签 下划线
 a {
-  text-decoration: none;
-  color: inherit;
+  text-decoration: none !important;
+  color: inherit !important;
 }
 // 全局主题变量
 $primary-color: #ffc107;
+
+@import '~antd/dist/antd.css';
 
