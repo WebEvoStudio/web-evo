@@ -66,7 +66,7 @@ function Header() {
           <Link className={`link ${pathname === link.path? 'active':''}`}
             key={index}
             to={link.path}
-            onClick={setNavExpandedState}
+            onClick={() => window.innerWidth <= 575? setNavExpandedState: null}
           >{link.name}</Link>
         ))}
       </nav>

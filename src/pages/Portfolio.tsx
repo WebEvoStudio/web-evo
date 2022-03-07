@@ -30,7 +30,7 @@ export default function Portfolio(): JSX.Element {
         <Row className="project-item" gutter={[24, 24]}>
           {state.projects.map((project: any, index) => (
             <Col key={index} xs={24} sm={12} md={8} lg={6}>
-              <Card cover={<img src={project.cover}/>}>
+              <Card cover={<img className={'cover'} src={project.cover}/>}>
                 <Meta title={project.title} description={project.description}/>
               </Card>
             </Col>
