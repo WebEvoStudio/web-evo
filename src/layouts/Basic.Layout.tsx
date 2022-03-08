@@ -6,6 +6,7 @@ import './Basic.Layout.scss';
 import Portfolio from '../pages/Portfolio';
 import Blog from '../pages/Blog';
 import Contact from '../pages/Contact';
+import BlogDetail from '../pages/BlogDetail';
 const _ = require('lodash');
 
 /**
@@ -22,6 +23,7 @@ export default function BasicLayout(): JSX.Element {
           <Route path='/about' element={<About/>}/>
           <Route path='/portfolio' element={<Portfolio/>}/>
           <Route path='/blog' element={<Blog/>}/>
+          <Route path={'/blog/detail'} element={<BlogDetail/>}/>
           <Route path='/contact' element={<Contact/>}/>
         </Routes>
       </main>
@@ -41,7 +43,7 @@ function Header() {
     {path: '/blog', name: 'Blog'},
     {path: '/contact', name: 'Contact'},
   ];
-  const pathname: string = useLocation().pathname;
+  const pathname: string = '/' + useLocation().pathname.split('/')[1];
   const [state, setState] = useState({
     navExpandedState: false,
   });
@@ -66,7 +68,7 @@ function Header() {
           <Link className={`link ${pathname === link.path? 'active':''}`}
             key={index}
             to={link.path}
-            onClick={() => window.innerWidth <= 575? setNavExpandedState: null}
+            onClick={() => window.innerWidth < 575? setNavExpandedState(): null}
           >{link.name}</Link>
         ))}
       </nav>
