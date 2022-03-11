@@ -1,7 +1,9 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {useRouter} from 'next/router';
 import Link from 'next/link';
-import Modules from './header.module.scss';
+import style from './header.module.scss';
+import variables from '../styles/variables.module.scss';
+const _ = require('lodash');
 /**
  * Header component
  * @constructor
@@ -22,17 +24,28 @@ const Header = () => {
   const setNavExpandedState = () => setState(
       {navExpandedState: !state.navExpandedState},
   );
+  useEffect(() => {
+    const resize = () => {
+      if (window.innerWidth > 575) {
+        setState({navExpandedState: true});
+      } else {
+        setState({navExpandedState: false});
+      }
+    };
+    resize();
+    window.addEventListener('resize', _.debounce(resize, 150));
+  }, []);
   return (
-    <header className={Modules.header}>
-      <nav className={'nav'} style={{display: state.navExpandedState? 'flex': 'none'}}>
+    <header className={style.header}>
+      <nav className={style.nav} style={{display: state.navExpandedState? 'flex': 'none'}}>
         {links.map((link, index) => (
           <Link
             key={index}
             href={link.path}
           >
-            <div className={`link ${pathname === link.path? 'active':''}`} onClick={() => window.innerWidth < 575? setNavExpandedState(): null}>
+            <span className={style.link} style={{color: pathname === link.path? variables.primaryColor:''}} onClick={() => window.innerWidth < 575? setNavExpandedState(): null}>
               {link.name}
-            </div>
+            </span>
           </Link>
         ))}
       </nav>

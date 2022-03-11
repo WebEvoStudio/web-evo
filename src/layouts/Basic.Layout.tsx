@@ -1,12 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {Link, Route, Routes, useLocation} from 'react-router-dom';
-import About from '../pages/About';
-import Hello from '../pages/Hello';
 import './Basic.Layout.scss';
-import Portfolio from '../pages/Portfolio';
-import Blog from '../pages/Blog';
-import Contact from '../pages/Contact';
-import BlogDetail from '../pages/BlogDetail';
 const _ = require('lodash');
 
 /**
@@ -16,16 +9,8 @@ const _ = require('lodash');
 export default function BasicLayout(): JSX.Element {
   return (
     <div>
-      {useLocation().pathname !== '/' ? <Header/> : null}
+      {/*{useLocation().pathname !== '/' ? <Header/> : null}*/}
       <main>
-        <Routes>
-          <Route path={'/'} element={<Hello/>}/>
-          <Route path='/about' element={<About/>}/>
-          <Route path='/portfolio' element={<Portfolio/>}/>
-          <Route path='/blog' element={<Blog/>}/>
-          <Route path={'/blog/detail'} element={<BlogDetail/>}/>
-          <Route path='/contact' element={<Contact/>}/>
-        </Routes>
       </main>
     </div>
   );
@@ -43,7 +28,8 @@ function Header() {
     {path: '/blog', name: 'Blog'},
     {path: '/contact', name: 'Contact'},
   ];
-  const pathname: string = '/' + useLocation().pathname.split('/')[1];
+  // const pathname: string = '/' + useLocation().pathname.split('/')[1];
+  const pathname: string = '/';
   const [state, setState] = useState({
     navExpandedState: false,
   });
@@ -65,11 +51,12 @@ function Header() {
     <header>
       <nav style={{display: state.navExpandedState? 'flex': 'none'}}>
         {links.map((link, index) => (
-          <Link className={`link ${pathname === link.path? 'active':''}`}
-            key={index}
-            to={link.path}
-            onClick={() => window.innerWidth < 575? setNavExpandedState(): null}
-          >{link.name}</Link>
+          // <Link className={`link ${pathname === link.path? 'active':''}`}
+          //   key={index}
+          //   to={link.path}
+          //   onClick={() => window.innerWidth < 575? setNavExpandedState(): null}
+          // >{link.name}</Link>
+            1
         ))}
       </nav>
       {
