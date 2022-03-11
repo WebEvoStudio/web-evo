@@ -3,6 +3,7 @@ import styles from '../styles/hello.module.scss';
 import Particles from 'react-tsparticles';
 import Head from "next/head";
 import Link from 'next/link';
+import CommonHead from "../components/common-head";
 
 /**
  * @class Index
@@ -583,15 +584,7 @@ export default function Index() {
    */
   return (
     <div className={styles['hello']}>
-      <Head>
-        <link rel="icon" href="/favicon.ico" />
-        <title>獠 - 全栈web开发者</title>
-        <meta name="keywords" content=""/>
-        {/* 百度验证*/}
-        <meta name="baidu-site-verification" content="code-yx2HQhygQo" />
-        {/* 必应验证*/}
-        <meta name="msvalidate.01" content="AB78A0C987D3AEA34B969889512FF33E" />
-      </Head>
+      <CommonHead/>
       <div>
         <span>Hello, I`m 董军.</span>
       </div>
