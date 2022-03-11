@@ -1,6 +1,7 @@
+import Head from 'next/head';
 import Link from 'next/link';
 import React from 'react';
-import style from '../styles/blog.module.scss';
+import styles from '../styles/blog.module.scss';
 /**
  * Blog Page
  * @return {JSX.Element}
@@ -26,18 +27,25 @@ export default function Blog() {
     return str.slice(0, 155);
   };
   return (
-    <div className={style.page}>
-      <div className={style['blog-wrapper']}>
-        {blogs.map((blog, index) => (
-          <div className={style['blog-item']} key={index}>
-            <Link href={`/blogs/${blog.id}`}>
-              <div className={style['blog-title']}>{blog.title}</div>
-            </Link>
-            <div className={style['blog-description']}>
-              {abstractFn(blog.mark_content)}
-            </div>
-          </div>
-        ))}
+    <div>
+      <Head>
+        <title>獠 - 如果想生存的话，什么都要学</title>
+        {/*<meta name="viewport" content="initial-scale=1.0, width=device-width" />*/}
+        <meta name={'description'} content={'学无止境'}/>
+      </Head>
+      <div className={styles.page}>
+        <div className={styles['blog-wrapper']}>
+          {blogs.map((blog, index) => (
+              <div className={styles['blog-item']} key={index}>
+                <Link href={`/blogs/${blog.id}`}>
+                  <div className={styles['blog-title']}>{blog.title}</div>
+                </Link>
+                <div className={styles['blog-description']}>
+                  {abstractFn(blog.mark_content)}
+                </div>
+              </div>
+          ))}
+        </div>
       </div>
     </div>
   );

@@ -585,7 +585,7 @@ export default function Index() {
     <div className={styles['hello']}>
       <Head>
         <link rel="icon" href="/favicon.ico" />
-        <title>獠|全栈web开发者</title>
+        <title>獠 - 全栈web开发者</title>
         <meta name="keywords" content=""/>
         {/* 百度验证*/}
         <meta name="baidu-site-verification" content="code-yx2HQhygQo" />
