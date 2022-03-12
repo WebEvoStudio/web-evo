@@ -17,38 +17,40 @@ const Header = () => {
     {path: '/contact', name: 'Contact'},
   ];
   const pathname = `/${useRouter().pathname.split('/')[1]}`;
-  console.log(pathname);
-  const [state, setState] = useState({
-    navExpandedState: false,
-  });
-  const setNavExpandedState = () => setState(
-      {navExpandedState: !state.navExpandedState},
-  );
+  const [navExpandedState, setNavExpandedState] = useState(false);
+  const [windowInnerWidth, setWindowInnerWidth] = useState(600);
   useEffect(() => {
     const resize = () => {
-      if (window.innerWidth > 575) {
-        setState({navExpandedState: true});
-      } else {
-        setState({navExpandedState: false});
-      }
+      setWindowInnerWidth(window.innerWidth);
     };
     resize();
     window.addEventListener('resize', _.debounce(resize, 150));
+    return () => {
+      window.removeEventListener('resize', _.debounce(resize, 150));
+    };
   }, []);
+  useEffect(() => {
+    if (windowInnerWidth > 575) {
+      setNavExpandedState(true);
+    } else {
+      setNavExpandedState(false);
+    }
+  }, [windowInnerWidth]);
   return (
     <header className={style.header}>
-      <nav className={style.nav} style={{display: state.navExpandedState? 'flex': 'none'}}>
+      <nav className={style.nav} style={{display: navExpandedState? 'flex': 'none'}}>
         {links.map((link, index) => (
           <Link
             key={index}
             href={link.path}
           >
-            <span className={style.link} style={{color: pathname === link.path? variables.primaryColor:''}} onClick={() => window.innerWidth < 575? setNavExpandedState(): null}>
+            <span className={style.link} style={{color: pathname === link.path? variables.primaryColor:''}} onClick={() => window.innerWidth < 575? setNavExpandedState(!navExpandedState): null}>
               {link.name}
             </span>
           </Link>
         ))}
       </nav>
+      {windowInnerWidth < 575 ? <div className={style['menu']} onClick={() => setNavExpandedState(!navExpandedState)}>=</div> : null}
     </header>
   );
 };
