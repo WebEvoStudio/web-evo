@@ -9,8 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@bytemd/plugin-frontmatter": "^1.11.0",
+    "@bytemd/plugin-gfm": "^1.11.0",
     "@bytemd/react": "^1.11.0",
     "antd": "^4.19.1",
+    "clipboardy": "^3.0.0",
     "lodash": "^4.17.21",
     "next": "12.1.0",
     "react": "17.0.2",

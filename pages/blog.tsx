@@ -3,12 +3,13 @@ import Link from 'next/link';
 import React from 'react';
 import styles from '../styles/blog.module.scss';
 import CommonHead from "../components/common-head";
+const _ = require('lodash');
 /**
  * Blog Page
  * @return {JSX.Element}
  */
 export default function Blog() {
-  const blogs: any[]= require('../src/assets/data/blog.json');
+  const blogs: any[]= _.orderBy(require('../src/assets/data/blog.json'), ['id'], ['desc']);
   const abstractFn = (res: string) => {
     const str = res.replace(/(\*\*|__)(.*?)(\*\*|__)/g, '') // 全局匹配内粗体
         .replace(/!\[[\s\S]*?]\([\s\S]*?\)/g, '') // 全局匹配图片
