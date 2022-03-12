@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@ant-design/icons": "^4.7.0",
     "@bytemd/plugin-frontmatter": "^1.11.0",
     "@bytemd/plugin-gfm": "^1.11.0",
     "@bytemd/react": "^1.11.0",

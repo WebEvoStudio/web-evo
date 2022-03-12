@@ -3,6 +3,7 @@ import {useRouter} from 'next/router';
 import Link from 'next/link';
 import style from './header.module.scss';
 import variables from '../styles/variables.module.scss';
+import {MenuOutlined} from "@ant-design/icons";
 const _ = require('lodash');
 /**
  * Header component
@@ -44,13 +45,13 @@ const Header = () => {
             key={index}
             href={link.path}
           >
-            <span className={style.link} style={{color: pathname === link.path? variables.primaryColor:''}} onClick={() => window.innerWidth < 575? setNavExpandedState(!navExpandedState): null}>
+            <a className={style.link} style={{color: pathname === link.path? variables.primaryColor:''}} onClick={() => window.innerWidth < 575? setNavExpandedState(!navExpandedState): null}>
               {link.name}
-            </span>
+            </a>
           </Link>
         ))}
       </nav>
-      {windowInnerWidth < 575 ? <div className={style['menu']} onClick={() => setNavExpandedState(!navExpandedState)}>=</div> : null}
+      {windowInnerWidth < 575 ? <div className={style['menu']} onClick={() => setNavExpandedState(!navExpandedState)}><MenuOutlined/></div> : null}
     </header>
   );
 };
