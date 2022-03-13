@@ -12,10 +12,10 @@ const _ = require('lodash');
 const Header = () => {
   const links: any[] = [
     {path: '/', name: 'Home'},
-    {path: '/about', name: 'About'},
-    {path: '/portfolio', name: 'Portfolio'},
+    // {path: '/about', name: 'About'},
+    // {path: '/portfolio', name: 'Portfolio'},
     {path: '/blog', name: 'Blog'},
-    {path: '/contact', name: 'Contact'},
+    // {path: '/contact', name: 'Contact'},
   ];
   const pathname = `/${useRouter().pathname.split('/')[1]}`;
   const [navExpandedState, setNavExpandedState] = useState(false);

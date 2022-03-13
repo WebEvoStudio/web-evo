@@ -1,3 +1,9 @@
-# https://www.robotstxt.org/robotstxt.html
+# *
 User-agent: *
-Disallow:
+Allow: /
+
+# Host
+Host: http://developer.bulv.life/
+
+# Sitemaps
+Sitemap: http://developer.bulv.life/sitemap.xml
