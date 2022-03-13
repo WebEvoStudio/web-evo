@@ -1,5 +1,9 @@
 @media all {
   .actions {
     height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    justify-content: space-between;
   }
 }

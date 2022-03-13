@@ -1,29 +1,28 @@
-import Head from 'next/head';
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import ReactMarkdown from 'react-markdown';
 import style from '../../styles/blog.module.scss';
 import CommonHead from "../../components/common-head";
 import {useRouter} from "next/router";
+import axios from "axios";
+import {message} from "antd";
 /**
  * blog detail page
  * @return {React.ReactElement}
  */
 export default function BlogDetail() {
-  // const [blog, setBlog] = React.useState({title: '', description: '', mark_content: ''});
-  let blog = {title: '', description: '', mark_content: ''};
   const {id} = useRouter().query;
-  if (id) {
-    const blogs: any[] = require('../../src/assets/data/blog.json');
-    blog = blogs.find((item: any) => item.id === id);
-  }
-  // useEffect(() => {
-  //   console.log(blogs);
-  //   console.log(id);
-  //   console.log(typeof id);
-  //   console.log(blogs.find(item => item.id === id));
-  //   setBlog(blogs.find(item => item.id === id));
-  //   // setBlog(require('../../src/assets/data/blog.json').find((item: any) => item.id === id));
-  // }, [])
+  const [blog, setBlog] = useState({title: '', description: '', mark_content: ''});
+  useEffect(() => {
+    console.log(id);
+    if (id) {
+      const url = `${process.env.NEXT_PUBLIC_BASE_URL}api/blogs?id=${id}`;
+      axios.get(url).then(res => {
+        console.log(res.data);
+        setBlog(res.data);
+        console.log(blog);
+      }).catch(err => message.error(err.message));
+    }
+  }, [id]);
   return (
       <div>
         <CommonHead title={blog.title} description={blog.description}/>

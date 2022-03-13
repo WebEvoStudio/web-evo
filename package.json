@@ -15,6 +15,7 @@
     "@bytemd/plugin-gfm": "^1.11.0",
     "@bytemd/react": "^1.11.0",
     "antd": "^4.19.1",
+    "axios": "^0.26.1",
     "clipboardy": "^3.0.0",
     "lodash": "^4.17.21",
     "next": "12.1.0",

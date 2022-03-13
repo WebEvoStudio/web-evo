@@ -1,15 +1,14 @@
-import Head from 'next/head';
 import Link from 'next/link';
-import React from 'react';
+import React, {useEffect} from 'react';
 import styles from '../styles/blog.module.scss';
 import CommonHead from "../components/common-head";
+import axios from "axios";
 const _ = require('lodash');
 /**
  * Blog Page
  * @return {JSX.Element}
  */
 export default function Blog() {
-  const blogs: any[]= _.orderBy(require('../src/assets/data/blog.json'), ['id'], ['desc']);
   const abstractFn = (res: string) => {
     const str = res.replace(/(\*\*|__)(.*?)(\*\*|__)/g, '') // 全局匹配内粗体
         .replace(/!\[[\s\S]*?]\([\s\S]*?\)/g, '') // 全局匹配图片
@@ -28,20 +27,30 @@ export default function Blog() {
         .replace(/\s/g, ''); // 全局匹配空字符;
     return str.slice(0, 155);
   };
+  const [blogs, setBlogs] = React.useState<any[]>([]);
+  useEffect(() => {
+    const url = `${process.env.NEXT_PUBLIC_BASE_URL}api/blogs`;
+    axios.get(url).then(res => {
+      console.log(res.data);
+      setBlogs(res.data);
+    })
+  }, []);
   return (
     <div>
       <CommonHead title={'獠 - 如果想生存的话，什么都要学'}/>
       <div className={styles.page}>
         <div className={styles['blog-wrapper']}>
           {blogs.map((blog, index) => (
-              <div className={styles['blog-item']} key={index}>
-                <Link href={`/blogs/${blog.id}`}>
-                  <a className={styles['blog-title']}>{blog.title}</a>
-                </Link>
-                <div className={styles['blog-description']}>
-                  {abstractFn(blog.mark_content)}
+              <Link href={`/blogs/${blog['_id']}`} key={index}>
+                <div className={styles['blog-item']} key={index}>
+                  <Link href={`/blogs/${blog.id}`}>
+                    <a className={styles['blog-title']}>{blog.title}</a>
+                  </Link>
+                  <div className={styles['blog-description']}>
+                    {abstractFn(blog.mark_content)}
+                  </div>
                 </div>
-              </div>
+              </Link>
           ))}
         </div>
       </div>
