@@ -1,9 +1,8 @@
 import Link from 'next/link';
 import React, {useEffect} from 'react';
 import styles from '../styles/blog.module.scss';
-import CommonHead from "../components/common-head";
-import axios from "axios";
-const _ = require('lodash');
+import CommonHead from '../components/common-head';
+import axios from 'axios';
 /**
  * Blog Page
  * @return {JSX.Element}
@@ -30,10 +29,10 @@ export default function Blog() {
   const [blogs, setBlogs] = React.useState<any[]>([]);
   useEffect(() => {
     const url = `${process.env.NEXT_PUBLIC_BASE_URL}api/blogs`;
-    axios.get(url).then(res => {
+    axios.get(url).then((res) => {
       console.log(res.data);
       setBlogs(res.data);
-    })
+    });
   }, []);
   return (
     <div>
@@ -41,14 +40,14 @@ export default function Blog() {
       <div className={styles.page}>
         <div className={styles['blog-wrapper']}>
           {blogs.map((blog, index) => (
-              <Link href={`/blogs/${blog['_id']}`} key={index}>
-                <div className={styles['blog-item']} key={index}>
-                    <span className={styles['blog-title']}>{blog.title}</span>
-                  <div className={styles['blog-description']}>
-                    {abstractFn(blog.mark_content)}
-                  </div>
+            <Link href={`/blogs/${blog['_id']}`} key={index}>
+              <div className={styles['blog-item']} key={index}>
+                <span className={styles['blog-title']}>{blog.title}</span>
+                <div className={styles['blog-description']}>
+                  {abstractFn(blog.mark_content)}
                 </div>
-              </Link>
+              </div>
+            </Link>
           ))}
         </div>
       </div>
