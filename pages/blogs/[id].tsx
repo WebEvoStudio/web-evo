@@ -1,29 +1,14 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import style from '../../styles/blog.module.scss';
 import CommonHead from '../../components/common-head';
-import {useRouter} from 'next/router';
 import axios from 'axios';
-import {message} from 'antd';
 import Markdown from '../../core/unit/markdown';
 /**
  * blog detail page
  * @return {React.ReactElement}
  */
-export default function BlogDetail() {
-  const {id} = useRouter().query;
-  const [blog, setBlog] = useState({title: '', description: '', mark_content: ''});
-  useEffect(() => {
-    console.log(id);
-    if (id) {
-      const url = `${process.env.NEXT_PUBLIC_BASE_URL}api/blogs?id=${id}`;
-      axios.get(url).then((res) => {
-        console.log(res.data);
-        setBlog(res.data);
-        console.log(blog);
-      }).catch((err) => message.error(err.message));
-    }
-  }, [id]);
+function BlogDetail({blog}: {blog: {title: string, mark_content: string}}) {
   return (
     <div>
       <CommonHead title={blog.title} description={Markdown.intercept(blog.mark_content, 100)}/>
@@ -37,3 +22,10 @@ export default function BlogDetail() {
     </div>
   );
 }
+BlogDetail.getInitialProps = async (ctx: any) => {
+  const {id} = ctx.query;
+  const url = `${process.env.NEXT_PUBLIC_BASE_URL}api/blogs?id=${id}`;
+  const res = await axios.get(url);
+  return {blog: res.data};
+};
+export default BlogDetail;
