@@ -8,15 +8,7 @@ import Markdown from '../core/unit/markdown';
  * Blog Page
  * @return {JSX.Element}
  */
-export default function Blog() {
-  const [blogs, setBlogs] = React.useState<any[]>([]);
-  useEffect(() => {
-    const url = `${process.env.NEXT_PUBLIC_BASE_URL}api/blogs`;
-    axios.get(url).then((res) => {
-      console.log(res.data);
-      setBlogs(res.data);
-    });
-  }, []);
+function Blog({blogs}: {blogs: any[]}) {
   return (
     <div>
       <CommonHead title={'獠 - 如果想生存的话，什么都要学'}/>
@@ -37,3 +29,9 @@ export default function Blog() {
     </div>
   );
 }
+Blog.getInitialProps = async (ctx: any) => {
+  const url = `${process.env.NEXT_PUBLIC_BASE_URL}api/blogs`;
+  const res = await axios.get(url);
+  return {blogs: res.data};
+};
+export default Blog;
