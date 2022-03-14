@@ -28,7 +28,7 @@ export default function CommonHead(props: {title?: string, description?: string}
       {/* 百度联盟验证*/}
       <meta name="baidu_union_verify" content="50312ad0c63983b3fe6c2e2a6e10c386"/>
       {/* Google Analytics*/}
-      <Script src={'https://www.googletagmanager.com/gtag/js?id=G-KZY93Q4TYH'} async={true}/>
+      <Script src={'https://www.googletagmanager.com/gtag/js?id=G-YKCPHDYK53'} async={true}/>
       <Script dangerouslySetInnerHTML={{
         __html: `
         window.dataLayer = window.dataLayer || [];
