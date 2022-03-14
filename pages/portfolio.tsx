@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {Card, Col, Row} from 'antd';
 // import Meta from 'antd/es/card/Meta';
-import style from '../styles/portfolio.module.scss';
 /**
  * Portfolio page component
  * @return {JSX.Element}
@@ -31,7 +30,7 @@ export default function Portfolio(): JSX.Element {
           {state.projects.map((project: any, index) => (
             <Col key={index} xs={24} sm={12} md={8} lg={6}>
               <Card cover={<img className={'cover'} src={project.cover}/>}>
-                {/*<Meta title={project.title} description={project.description}/>*/}
+                {/* <Meta title={project.title} description={project.description}/>*/}
               </Card>
             </Col>
           ))}

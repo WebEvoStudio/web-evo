@@ -1,9 +1,8 @@
 import React from 'react';
 import styles from '../styles/hello.module.scss';
 import Particles from 'react-tsparticles';
-import Head from "next/head";
 import Link from 'next/link';
-import CommonHead from "../components/common-head";
+import CommonHead from '../components/common-head';
 
 /**
  * @class Index

@@ -12,9 +12,9 @@ import '../src/index.scss';
  */
 function MyApp({Component, pageProps}: AppProps) {
   return (
-      <BasicLayout>
-        <Component {...pageProps} />
-      </BasicLayout>
+    <BasicLayout>
+      <Component {...pageProps} />
+    </BasicLayout>
   );
 }
 
