@@ -34,7 +34,7 @@ export default function CommonHead(props: {title?: string, description?: string}
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'G-KZY93Q4TYH');
+        gtag('config', 'G-YKCPHDYK53');
      `,
       }}/>
     </Head>
