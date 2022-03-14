@@ -5,11 +5,13 @@ import zh_Hans from 'bytemd/lib/locales/zh_Hans.json'
 import styles from '../styles/editor.module.scss';
 import frontmatter from '@bytemd/plugin-frontmatter';
 import gfm from "@bytemd/plugin-gfm";
-import {Button, message} from "antd";
+import {Button, Input, message} from "antd";
 import clipboard from "clipboardy";
 import axios from "axios";
+import 'github-markdown-css/github-markdown-light.css';
 export default function EditorPage() {
   const [value, setValue] = useState('')
+  const [title, setTitle] = useState('')
   const plugins = [frontmatter(), gfm()];
   const copy = () => {
     clipboard.write(
@@ -17,9 +19,9 @@ export default function EditorPage() {
     ).then(() => message.success('内容已复制到剪贴板'));
   };
   const save = () => {
-    console.log({title: '', mark_content: value})
     const url = `${process.env.NEXT_PUBLIC_BASE_URL}/api/blogs`;
-    const requestData = {title: '', mark_content: value};
+    const requestData = {title, mark_content: value};
+    console.log(requestData);
     axios.post(url, requestData)
         .then(res => {
           console.log(res.data);
@@ -30,6 +32,7 @@ export default function EditorPage() {
     <div>
       {/*<h1>Editor</h1>*/}
       <div className={styles['actions']}>
+        <Input placeholder={'请输入标题'} defaultValue={title} onChange={({target: {value}}) => setTitle(value)}/>
         <Button onClick={copy}>复制到剪贴板</Button>
         <Button onClick={save}>保存</Button>
       </div>

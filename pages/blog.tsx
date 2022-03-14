@@ -43,9 +43,7 @@ export default function Blog() {
           {blogs.map((blog, index) => (
               <Link href={`/blogs/${blog['_id']}`} key={index}>
                 <div className={styles['blog-item']} key={index}>
-                  <Link href={`/blogs/${blog.id}`}>
-                    <a className={styles['blog-title']}>{blog.title}</a>
-                  </Link>
+                    <span className={styles['blog-title']}>{blog.title}</span>
                   <div className={styles['blog-description']}>
                     {abstractFn(blog.mark_content)}
                   </div>
