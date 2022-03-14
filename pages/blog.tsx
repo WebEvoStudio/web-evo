@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import React, {useEffect} from 'react';
+import React from 'react';
 import styles from '../styles/blog.module.scss';
 import CommonHead from '../components/common-head';
 import axios from 'axios';
