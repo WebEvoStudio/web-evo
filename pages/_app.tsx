@@ -17,8 +17,6 @@ interface MyAppProps extends AppProps {
 
 /**
  * @param {AppProps} props
- * @param {any} Component
- * @param {any} pageProps
  * @constructor
  * @return {JSX.Element}
  */
