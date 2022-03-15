@@ -585,15 +585,18 @@ export default function Index() {
     <div className={styles['hello']}>
       <CommonHead/>
       <div>
-        <span>Hello, I`m 董军.</span>
+        <span>Hello and welcome to the web developer center.</span>
       </div>
       <div>
-        <span>I`m a full stack web developer.</span>
+        <span>We are a team of developers who are passionate about web development.</span>
+      </div>
+      <div>
+        <span>We are here to help you build your web project.</span>
       </div>
       <div className="gap-2"/>
       <div>
         <Link href={'/about'}>
-          <button className='action'>View my work</button>
+          <button className={styles['action']}>View our work</button>
         </Link>
       </div>
       <Particles

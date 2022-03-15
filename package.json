@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@ant-design/icons": "^4.7.0",
+    "@bradgarropy/next-google-analytics": "^1.0.2",
     "@bytemd/plugin-frontmatter": "^1.11.0",
     "@bytemd/plugin-gfm": "^1.11.0",
     "@bytemd/react": "^1.11.0",

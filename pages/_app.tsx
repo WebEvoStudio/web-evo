@@ -3,6 +3,7 @@ import '../styles/globals.css';
 import type {AppProps} from 'next/app';
 import BasicLayout from '../layouts/basic.layout';
 import '../src/index.scss';
+import GoogleAnalytics from '@bradgarropy/next-google-analytics';
 /**
  * @param {AppProps} props
  * @param {any} Component
@@ -13,6 +14,8 @@ import '../src/index.scss';
 function MyApp({Component, pageProps}: AppProps) {
   return (
     <BasicLayout>
+      {/* Google Analytics*/}
+      <GoogleAnalytics measurementId={'G-YKCPHDYK53'}/>
       <Component {...pageProps} />
     </BasicLayout>
   );
