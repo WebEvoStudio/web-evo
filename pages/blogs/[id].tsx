@@ -14,6 +14,7 @@ function BlogDetail({blog}: {blog: {title: string, mark_content: string}}) {
       <CommonHead title={blog.title} description={Markdown.intercept(blog.mark_content, 100)}/>
       <div className={style['blog-detail']}>
         <div className={style['blog-content']}>
+          <h1>{blog.title}</h1>
           <ReactMarkdown>
             {blog.mark_content}
           </ReactMarkdown>

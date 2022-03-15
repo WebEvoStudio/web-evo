@@ -585,13 +585,13 @@ export default function Index() {
     <div className={styles['hello']}>
       <CommonHead/>
       <div>
-        <span>Hello and welcome to the web developer center.</span>
+        <h1>Hello and welcome to the web developer center.</h1>
       </div>
       <div>
-        <span>We are a team of developers who are passionate about web development.</span>
+        <h2>We are a team of developers who are passionate about web development.</h2>
       </div>
       <div>
-        <span>We are here to help you build your web project.</span>
+        <h3>We are here to help you build your web project.</h3>
       </div>
       <div className="gap-2"/>
       <div>
