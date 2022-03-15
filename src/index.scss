@@ -11,12 +11,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-button {
-  padding: 12px;
-  background: transparent;
-  border: none;
-  color: inherit;
-}
+//button {
+//  padding: 12px;
+//  background: transparent;
+//  border: none;
+//  color: inherit;
+//}
 .flex {
   display: flex;
   align-items: center;
@@ -31,5 +31,5 @@ a {
 // 全局主题变量
 $primary-color: #ffc107;
 
-@import '~antd/dist/antd.css';
+//@import '~antd/dist/antd.css';
 

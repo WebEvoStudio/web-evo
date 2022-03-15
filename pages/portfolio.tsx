@@ -14,7 +14,7 @@ export default function Portfolio(): JSX.Element {
       {
         title: '不虑管理平台',
         description: '不虑APP基础内容的配置管理以及各种服务商(医院｜商家)的内容发布与管理和客服人员沟通管理平台',
-        cover: require('../src/assets/projects/project-1-cover.jpeg')},
+        cover: 'https://picsum.photos/200/300'},
       {title: 'Project 2', description: 'Description 2', cover: 'https://picsum.photos/200/300'},
       {title: 'Project 3', description: 'Description 3', cover: 'https://picsum.photos/200/300'},
       {title: 'Project 4', description: 'Description 4', cover: 'https://picsum.photos/200/300'},

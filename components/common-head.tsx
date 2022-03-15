@@ -14,6 +14,7 @@ export default function CommonHead(props: {title?: string, description?: string}
       <link rel="icon" href={'/favicon.ico'} />
       <title>{props.title||'獠 - web开发者中心'}</title>
       <meta name={'description'} content={props.description||description}/>
+      <meta name="viewport" content="initial-scale=1, width=device-width" />
       {/* 百度验证*/}
       <meta name="baidu-site-verification" content="code-yx2HQhygQo" />
       {/* 必应验证*/}

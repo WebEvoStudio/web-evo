@@ -1,21 +1,24 @@
 @media all {
   .hello {
-    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: #fff;
+    padding: 20px;
   }
-  .action {
-    border: 2px solid #fff;
-    &:hover {
-      //background-color: $primary-color;
-      //border-color: $primary-color;
-    }
+  .image {
+    margin: 20px 100px;
+  }
+  .h1 {
+    font-size: 24px;
+    text-align: center;
+  }
+  .actions {
+    //border: 1px solid #ccc;
   }
 }
-#ts-particles {
-  width: 100vw;
-  height: 100vh;
+@media (max-width: 575px) {
+  .image {
+    margin: 20px 50px;
+  }
 }
