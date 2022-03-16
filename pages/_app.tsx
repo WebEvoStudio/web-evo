@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/globals.css';
-import type {AppProps} from 'next/app';
+import {AppProps} from 'next/app';
 import BasicLayout from '../layouts/basic.layout';
 import '../src/index.scss';
 import GoogleAnalytics from '@bradgarropy/next-google-analytics';
@@ -20,7 +20,7 @@ interface MyAppProps extends AppProps {
  * @constructor
  * @return {JSX.Element}
  */
-function MyApp(props: MyAppProps) {
+export default function MyApp(props: MyAppProps) {
   const {Component, pageProps, emotionCache = clientSideEmotionCache} = props;
   return (
     <CacheProvider value={emotionCache}>
@@ -35,5 +35,3 @@ function MyApp(props: MyAppProps) {
     </CacheProvider>
   );
 }
-
-export default MyApp;
