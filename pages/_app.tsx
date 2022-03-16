@@ -2,12 +2,12 @@ import React from 'react';
 import '../styles/globals.css';
 import {AppProps} from 'next/app';
 import BasicLayout from '../layouts/basic.layout';
-import '../src/index.scss';
+import '../styles/index.scss';
 import GoogleAnalytics from '@bradgarropy/next-google-analytics';
 import {CssBaseline, ThemeProvider} from '@mui/material';
 import theme from '../core/themes/theme';
 import {CacheProvider, EmotionCache} from '@emotion/react';
-import createEmotionCache from '../core/createEmotionCache';
+import createEmotionCache from '../core/unit/createEmotionCache';
 
 const clientSideEmotionCache = createEmotionCache();
 

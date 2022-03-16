@@ -19,6 +19,10 @@
   }
 }
 @media screen and (max-width: 575px) {
+  .header {
+    display: flex;
+    align-items: center;
+  }
   .nav {
     top: 53px;
     width: 100%;
@@ -34,10 +38,15 @@
   }
   .menu {
     display: flex;
-    height: 100%;
-    width: 60px;
+    height: 50px;
+    width: 50px;
     align-items: center;
     justify-content: center;
-    font-size: 26px;
+    font-size: 24px;
+    border-radius: 50%;
+    margin: 0 10px;
+    &:active {
+      background: rgba(255, 255, 255, 0.1);
+    }
   }
 }

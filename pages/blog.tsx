@@ -4,6 +4,7 @@ import styles from '../styles/blog.module.scss';
 import CommonHead from '../components/common-head';
 import axios from 'axios';
 import Markdown from '../core/unit/markdown';
+import {Paper, Skeleton} from '@mui/material';
 /**
  * Blog Page
  * @return {JSX.Element}
@@ -16,12 +17,15 @@ function Blog({blogs}: {blogs: any[]}) {
         <div className={styles['blog-wrapper']}>
           {blogs.map((blog, index) => (
             <Link href={`/blogs/${blog['_id']}`} key={index}>
-              <div className={styles['blog-item']} key={index}>
-                <span className={styles['blog-title']}>{blog.title}</span>
-                <div className={styles['blog-description']}>
-                  {Markdown.intercept(blog.mark_content, 155)}
+              <Paper elevation={1}>
+                <div className={styles['blog-item']} key={index}>
+                  <span className={styles['blog-title']}>{blog.title}</span>
+                  <div className={styles['blog-description']}>
+                    {Markdown.intercept(blog.mark_content, 155)}
+                  </div>
+                  <Skeleton variant="rectangular"/>
                 </div>
-              </div>
+              </Paper>
             </Link>
           ))}
         </div>

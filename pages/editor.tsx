@@ -10,18 +10,22 @@ import {Button, Input, message} from 'antd';
 import clipboard from 'clipboardy';
 import axios from 'axios';
 import 'github-markdown-css/github-markdown-light.css';
+import {useRouter} from 'next/router';
 
 /**
  * editor.tsx
- * @constructor
+ * @param {any} props
+ * @return {React.ReactElement}
  */
-export default function EditorPage() {
-  const [value, setValue] = useState('');
-  const [title, setTitle] = useState('');
+export default function EditorPage(props: {title?: string, value?: string}) {
+  const [value, setValue] = useState(props.value||'');
+  const [title, setTitle] = useState(props.title||'');
   const plugins = [frontmatter(), gfm()];
+  const isModify = useRouter().query.hasOwnProperty('id');
+  console.log(isModify);
   const copy = () => {
     clipboard.write(
-        JSON.stringify({title: '', mark_content: value}),
+        JSON.stringify({title, mark_content: value}),
     ).then(() => message.success('内容已复制到剪贴板'));
   };
   const save = () => {
@@ -31,16 +35,19 @@ export default function EditorPage() {
     axios.post(url, requestData)
         .then((res) => {
           console.log(res.data);
+          message.success('文章发布成功').then();
         })
         .catch((err) => message.error(err.message));
   };
+  const modify = () => {
+    message.warn('暂不支持修改').then();
+  };
   return (
     <div>
-      {/* <h1>Editor</h1>*/}
       <div className={styles['actions']}>
         <Input placeholder={'请输入标题'} defaultValue={title} onChange={({target: {value}}) => setTitle(value)}/>
         <Button onClick={copy}>复制到剪贴板</Button>
-        <Button onClick={save}>保存</Button>
+        <Button onClick={isModify ? modify : save}>{isModify ? '保存修改' : '发布'}</Button>
       </div>
       <Editor value={value} locale={zhHans} plugins={plugins} onChange={(v: string) => setValue(v)}/>
     </div>

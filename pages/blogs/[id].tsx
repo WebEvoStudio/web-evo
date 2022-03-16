@@ -10,11 +10,13 @@ import Markdown from '../../core/unit/markdown';
  */
 function BlogDetail({blog}: {blog: {title: string, mark_content: string}}) {
   return (
-    <div>
+    <div className={style['blog']}>
       <CommonHead title={blog.title} description={Markdown.intercept(blog.mark_content, 100)}/>
       <div className={style['blog-detail']}>
-        <div className={style['blog-content']}>
+        <div className={style['blog-title']}>
           <h1>{blog.title}</h1>
+        </div>
+        <div className={style['blog-content']}>
           <ReactMarkdown>
             {blog.mark_content}
           </ReactMarkdown>

@@ -6,7 +6,7 @@ const nextConfig = {
     includePaths: [path.join(__dirname, 'styles')],
   },
   env: {
-    NEXT_PUBLIC_BASE_URL: process.env.BASE_URL
+    NEXT_PUBLIC_BASE_URL: process.env.BASE_URL,
   },
 };
 

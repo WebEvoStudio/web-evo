@@ -4,6 +4,7 @@ import Link from 'next/link';
 import style from './header.module.scss';
 import variables from '../styles/variables.module.scss';
 import {MenuOutlined} from '@ant-design/icons';
+
 const _ = require('lodash');
 /**
  * Header component
@@ -37,14 +38,20 @@ const Header = () => {
       setNavExpandedState(false);
     }
   }, [windowInnerWidth]);
+  const menu = () => {
+    if (windowInnerWidth < 575) {
+      return (
+        <div className={style['menu']} onClick={() => setNavExpandedState(!navExpandedState)}>
+          <MenuOutlined/>
+        </div>
+      );
+    }
+  };
   return (
     <header className={style.header}>
       <nav className={style.nav} style={{display: navExpandedState? 'flex': 'none'}}>
         {links.map((link, index) => (
-          <Link
-            key={index}
-            href={link.path}
-          >
+          <Link key={index} href={link.path}>
             <a
               className={style.link}
               style={{color: pathname === link.path? variables.primaryColor:''}}
@@ -54,10 +61,11 @@ const Header = () => {
           </Link>
         ))}
       </nav>
-      {windowInnerWidth < 575 ? <div
-        className={style['menu']}
-        onClick={() => setNavExpandedState(!navExpandedState)}
-      ><MenuOutlined/></div> : null}
+      {menu()}
+      {/* {windowInnerWidth < 575 ? <div*/}
+      {/*  className={style['menu']}*/}
+      {/*  onClick={() => setNavExpandedState(!navExpandedState)}*/}
+      {/* ><MenuOutlined/></div> : null}*/}
     </header>
   );
 };
