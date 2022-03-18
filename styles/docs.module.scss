@@ -1,0 +1,18 @@
+@media all {
+  .docs {
+    &-title {
+      padding: 0 20px;
+      margin: 10px 0;
+    }
+  }
+  .framework {
+    &-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    &-item {
+      margin: 20px 0;
+    }
+  }
+}

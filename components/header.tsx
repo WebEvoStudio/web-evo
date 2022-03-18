@@ -16,6 +16,7 @@ const Header = () => {
     // {path: '/about', name: 'About'},
     // {path: '/portfolio', name: 'Portfolio'},
     {path: '/blog', name: 'Blog'},
+    {path: '/docs', name: 'Docs'},
     // {path: '/contact', name: 'Contact'},
   ];
   const pathname = `/${useRouter().pathname.split('/')[1]}`;

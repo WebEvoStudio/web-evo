@@ -20,7 +20,7 @@ interface MyAppProps extends AppProps {
  * @constructor
  * @return {JSX.Element}
  */
-export default function MyApp(props: MyAppProps) {
+function MyApp(props: MyAppProps) {
   const {Component, pageProps, emotionCache = clientSideEmotionCache} = props;
   return (
     <CacheProvider value={emotionCache}>
@@ -35,3 +35,4 @@ export default function MyApp(props: MyAppProps) {
     </CacheProvider>
   );
 }
+export default MyApp;

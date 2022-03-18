@@ -6,4 +6,7 @@ export class Images {
   static undrawTeamCollaboration = require('../../assets/svgs/undraw_team_collaboration_re_ow29.svg');
   static undrawUnderConstruction = require('../../assets/svgs/undraw_under_construction_-46-pa.svg');
   static undrawBlogPost = require('../../assets/svgs/undraw_blog_post_re_fy5x.svg');
+  static undrawReact = require('../../assets/svgs/undraw_react_y-7-wq.svg');
+  static undrawNextJs = require('../../assets/svgs/undraw_next_js_-8-g5m.svg');
+  static undrawNuxtJs = require('../../assets/svgs/undraw_nuxt_js_0fq9.svg');
 }
