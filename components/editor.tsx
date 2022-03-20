@@ -10,27 +10,39 @@ import {Button, Input, message} from 'antd';
 import clipboard from 'clipboardy';
 import axios from 'axios';
 import 'github-markdown-css/github-markdown-light.css';
-import {useRouter} from 'next/router';
 
 /**
  * editor.tsx
  * @param {any} props
  * @return {React.ReactElement}
  */
-export default function EditorPage(props: {title?: string, value?: string}) {
+export default function EditorPage(props: {title?: string, value?: string, id?: string}) {
   const [value, setValue] = useState(props.value||'');
   const [title, setTitle] = useState(props.title||'');
   const plugins = [frontmatter(), gfm()];
-  const isModify = useRouter().query.hasOwnProperty('id');
+  const isModify = !!props.id;
   console.log(isModify);
+  const contentKeywordConversion = (content: string) => {
+    const host = 'http://developer.bulv.life';
+    // return content.replace(/\n/g, '<br>');
+    const keywords = ['git'];
+    keywords.forEach((keyword) => {
+      content = content.replaceAll(
+          ` ${keyword} `&&``,
+          ` [${keyword}](${host}/blogs?q=${keyword}) `,
+      );
+    });
+    console.log(content);
+    return content;
+  };
   const copy = () => {
     clipboard.write(
-        JSON.stringify({title, mark_content: value}),
+        JSON.stringify({title, mark_content: contentKeywordConversion(value)}),
     ).then(() => message.success('内容已复制到剪贴板'));
   };
   const save = () => {
     const url = `${process.env.NEXT_PUBLIC_BASE_URL}/api/blogs`;
-    const requestData = {title, mark_content: value};
+    const requestData = {title, mark_content: contentKeywordConversion(value)};
     console.log(requestData);
     axios.post(url, requestData)
         .then((res) => {

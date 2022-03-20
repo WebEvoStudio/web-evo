@@ -1,6 +1,6 @@
 import React from 'react';
 import {NextPage} from 'next';
-import EditorPage from '../editor';
+import EditorPage from '../../components/editor';
 import CommonHead from '../../components/common-head';
 
 const BlogPublish: NextPage = () => {
