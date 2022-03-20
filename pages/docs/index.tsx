@@ -54,18 +54,16 @@ const DocsIndex: NextPage = () => {
           <TabPanel value={'1'}>
             <div className={styles['framework-list']}>
               {frameworks.map((framework, index) => (
-                <div className={styles['framework-item']} key={index}>
-                  <Card sx={{width: ['100%', 180, 220]}}>
-                    <CardMedia component={'img'} image={framework.image}/>
-                    <CardContent>
-                      <Typography variant={'h6'} component={'div'}>{framework.name}</Typography>
-                      <Typography variant={'body2'} color="text.secondary">{framework.description}</Typography>
-                    </CardContent>
-                    <CardActions>
-                      <Button size={'small'} onClick={() => openFrameworkWebsite(framework)}>查看官网</Button>
-                    </CardActions>
-                  </Card>
-                </div>
+                <Card key={index} sx={{width: ['100%', 'calc((100% - 48px) / 3)'], margin: '12px 0'}}>
+                  <CardMedia component={'img'} image={framework.image}/>
+                  <CardContent>
+                    <Typography variant={'h6'} component={'div'}>{framework.name}</Typography>
+                    <Typography variant={'body2'} color="text.secondary">{framework.description}</Typography>
+                  </CardContent>
+                  <CardActions>
+                    <Button size={'small'} onClick={() => openFrameworkWebsite(framework)}>查看官网</Button>
+                  </CardActions>
+                </Card>
               ))}
             </div>
           </TabPanel>
