@@ -15,6 +15,7 @@
     "@bytemd/plugin-frontmatter": "^1.11.0",
     "@bytemd/plugin-gfm": "^1.11.0",
     "@bytemd/react": "^1.11.0",
+    "@emotion/cache": "^11.7.1",
     "@emotion/react": "^11.8.2",
     "@emotion/server": "^11.4.0",
     "@emotion/styled": "^11.8.1",
