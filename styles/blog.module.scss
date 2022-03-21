@@ -1,8 +1,4 @@
 @media all {
-  .page {
-    background-color: #f4f5f5;
-    height: calc(100vh - 53px);
-  }
   .blog {
     &-title {
       background-color: #ffffff;
@@ -12,24 +8,19 @@
       }
     }
     &-wrapper {
-      padding: 0 20px;
-      margin: 0;
+      padding: 10px 0;
       height: 100%;
-      overflow-y: scroll;
+      display: flex;
+      flex-direction: column;
       text-align: left;
     }
     &-item {
-      margin: 20px 0;
       padding: 20px;
       border-radius: 5px;
       background-color: #fff;
-      //box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      //&:hover {
-      //  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-      //}
     }
     &-title {
       font-weight: 600;

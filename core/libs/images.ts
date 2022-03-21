@@ -9,4 +9,7 @@ export class Images {
   static undrawReact = require('../../assets/svgs/undraw_react_y-7-wq.svg');
   static undrawNextJs = require('../../assets/svgs/undraw_next_js_-8-g5m.svg');
   static undrawNuxtJs = require('../../assets/svgs/undraw_nuxt_js_0fq9.svg');
+  static materialDesign = require('../../assets/images/material-design.png');
+  static fluentDesign = require('../../assets/images/fluent-design.jpg');
+  static antDesign = require('../../assets/svgs/ant-design.svg');
 }

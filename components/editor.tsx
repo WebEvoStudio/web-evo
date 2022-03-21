@@ -28,7 +28,7 @@ export default function EditorPage(props: {title?: string, value?: string, id?: 
     const keywords = ['git'];
     keywords.forEach((keyword) => {
       content = content.replaceAll(
-          ` ${keyword} `&&``,
+          ` ${keyword} `,
           ` [${keyword}](${host}/blogs?q=${keyword}) `,
       );
     });
@@ -52,7 +52,13 @@ export default function EditorPage(props: {title?: string, value?: string, id?: 
         .catch((err) => message.error(err.message));
   };
   const modify = () => {
-    message.warn('暂不支持修改').then();
+    // message.warn('暂不支持修改').then();
+    const url = `${process.env.NEXT_PUBLIC_BASE_URL}/api/blogs`;
+    const requestData = {_id: props.id, title, mark_content: contentKeywordConversion(value)};
+    axios.put(url, requestData).then((res) => {
+      console.log(res.data);
+      message.success('文章修改成功').then();
+    }).catch((err) => message.error(err.message));
   };
   return (
     <div>
