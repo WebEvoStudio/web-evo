@@ -3,7 +3,7 @@
     &-title {
       background-color: #ffffff;
       h1 {
-        padding: 20px;
+        padding: 10px;
         font-size: 24px;
       }
     }
@@ -49,6 +49,24 @@
       p {
         word-break: break-word;
       }
+    }
+  }
+}
+@media (max-width: 575px) {
+  .blog {
+    &-title {
+      margin: 0 -16px;
+      h1 {
+        padding: 16px;
+        margin-bottom: 16px;
+      }
+    }
+    &-content {
+      padding: 16px;
+      margin: 0 -16px;
+    }
+    &-detail {
+      padding: 16px 0;
     }
   }
 }

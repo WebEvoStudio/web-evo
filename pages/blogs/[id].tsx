@@ -4,28 +4,30 @@ import style from '../../styles/blog.module.scss';
 import CommonHead from '../../components/common-head';
 import axios from 'axios';
 import Markdown from '../../core/unit/markdown';
-import {Container} from '@mui/material';
+import {Box, Container} from '@mui/material';
 /**
  * blog detail page
  * @return {React.ReactElement}
  */
 function BlogDetail({blog}: {blog: {title: string, mark_content: string}}) {
   return (
-    <Container maxWidth={'md'}>
-      <div className={style['blog']}>
-        <CommonHead title={blog.title} description={Markdown.intercept(blog.mark_content, 100)}/>
-        <div className={style['blog-detail']}>
-          <div className={style['blog-title']}>
-            <h1>{blog.title}</h1>
-          </div>
-          <div className={style['blog-content']}>
-            <ReactMarkdown>
-              {blog.mark_content}
-            </ReactMarkdown>
+    <Box sx={{background: '#f4f5f5'}}>
+      <Container maxWidth={'md'}>
+        <div className={style['blog']}>
+          <CommonHead title={blog.title} description={Markdown.intercept(blog.mark_content, 100)}/>
+          <div className={style['blog-detail']}>
+            <div className={style['blog-title']}>
+              <h1>{blog.title}</h1>
+            </div>
+            <div className={style['blog-content']}>
+              <ReactMarkdown>
+                {blog.mark_content}
+              </ReactMarkdown>
+            </div>
           </div>
         </div>
-      </div>
-    </Container>
+      </Container>
+    </Box>
   );
 }
 BlogDetail.getInitialProps = async (ctx: any) => {
