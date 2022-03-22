@@ -27,4 +27,22 @@ export default class Markdown {
         .replace(/\s/g, ''); // 全局匹配空字符;
     return str.slice(0, length);
   }
+
+  /**
+   * 关键字转markdown链接
+   * @param {string} source
+   * @param {string} host
+   * @return {string}
+   */
+  static keywordToLink(source: string, host: string) {
+    const keywords = ['git', 'vue', 'Hook', '`Hook`'];
+    let target = source;
+    keywords.forEach((keyword) => {
+      target = target.replaceAll(
+          ` ${keyword} `,
+          ` [${keyword}](${host}/search?query=${keyword}) `,
+      );
+    });
+    return target;
+  }
 }

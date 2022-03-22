@@ -22,27 +22,14 @@ export default function EditorPage(props: {title?: string, value?: string, id?: 
   const plugins = [frontmatter(), gfm()];
   const isModify = !!props.id;
   console.log(isModify);
-  const contentKeywordConversion = (content: string) => {
-    const host = 'http://developer.bulv.life';
-    // return content.replace(/\n/g, '<br>');
-    const keywords = ['git'];
-    keywords.forEach((keyword) => {
-      content = content.replaceAll(
-          ` ${keyword} `,
-          ` [${keyword}](${host}/blogs?q=${keyword}) `,
-      );
-    });
-    console.log(content);
-    return content;
-  };
   const copy = () => {
     clipboard.write(
-        JSON.stringify({title, mark_content: contentKeywordConversion(value)}),
+        JSON.stringify({title, mark_content: value}),
     ).then(() => message.success('内容已复制到剪贴板'));
   };
   const save = () => {
     const url = `${process.env.NEXT_PUBLIC_BASE_URL}/api/blogs`;
-    const requestData = {title, mark_content: contentKeywordConversion(value)};
+    const requestData = {title, mark_content: value};
     console.log(requestData);
     axios.post(url, requestData)
         .then((res) => {
@@ -54,7 +41,7 @@ export default function EditorPage(props: {title?: string, value?: string, id?: 
   const modify = () => {
     // message.warn('暂不支持修改').then();
     const url = `${process.env.NEXT_PUBLIC_BASE_URL}/api/blogs`;
-    const requestData = {_id: props.id, title, mark_content: contentKeywordConversion(value)};
+    const requestData = {_id: props.id, title, mark_content: value};
     axios.put(url, requestData).then((res) => {
       console.log(res.data);
       message.success('文章修改成功').then();

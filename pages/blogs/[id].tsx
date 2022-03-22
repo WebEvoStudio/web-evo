@@ -10,6 +10,7 @@ import {Box, Container} from '@mui/material';
  * @return {React.ReactElement}
  */
 function BlogDetail({blog}: {blog: {title: string, mark_content: string}}) {
+  const host: string = process.env.NEXT_PUBLIC_SITE_URL as string;
   return (
     <Box sx={{background: '#f4f5f5'}}>
       <Container maxWidth={'md'}>
@@ -21,7 +22,7 @@ function BlogDetail({blog}: {blog: {title: string, mark_content: string}}) {
             </div>
             <div className={style['blog-content']}>
               <ReactMarkdown>
-                {blog.mark_content}
+                {Markdown.keywordToLink(blog.mark_content, host)}
               </ReactMarkdown>
             </div>
           </div>
