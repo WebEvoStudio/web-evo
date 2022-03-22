@@ -79,37 +79,37 @@ const DocsIndex: NextPage = () => {
   const [value, setValue] = useState('1');
   return (
     <div className={styles['docs']}>
-      <h1 className={styles['docs-title']}>文档</h1>
       <Divider/>
       <Box>
         <TabContext value={value}>
-          <Box sx={{padding: '0 20px', borderBottom: 1, borderColor: 'divider'}}>
+          <Box sx={{padding: '0 20px', borderBottom: 1, borderColor: 'divider', display: 'flex'}}>
+            <h1 className={styles['docs-title']}>文档</h1>
             <TabList onChange={(event, newValue) => setValue(newValue)} aria-label="lab API tabs example">
               <Tab label="Frameworks" value="1" />
               <Tab label="Designs" value="2" />
             </TabList>
           </Box>
-          <TabPanel value={'1'}>
-            <div className={styles['framework-list']}>
-              {frameworks.map((framework, index) => (
-                <Card key={index} sx={{width: ['100%', 'calc((100% - 48px) / 3)'], margin: '12px 0'}}>
-                  <CardMedia component={'img'} image={framework.image}/>
-                  <CardContent>
-                    <Typography variant={'h6'} component={'div'}>{framework.name}</Typography>
-                    <Typography variant={'body2'} color="text.secondary">{framework.description}</Typography>
-                  </CardContent>
-                  <CardActions>
-                    <Button size={'small'} onClick={() => openFrameworkWebsite(framework)}>查看官网</Button>
-                  </CardActions>
-                </Card>
-              ))}
-            </div>
-          </TabPanel>
-          <TabPanel value={'2'}>
-            <Container maxWidth={'md'}>
+          <Container maxWidth={'md'} sx={{padding: 0}}>
+            <TabPanel value={'1'}>
+              <div className={styles['framework-list']}>
+                {frameworks.map((framework, index) => (
+                  <Card key={index} sx={{width: ['100%', 'calc((100% - 48px) / 3)'], margin: '12px 0'}}>
+                    <CardMedia component={'img'} image={framework.image}/>
+                    <CardContent>
+                      <Typography variant={'h6'} component={'div'}>{framework.name}</Typography>
+                      <Typography variant={'body2'} color="text.secondary">{framework.description}</Typography>
+                    </CardContent>
+                    <CardActions>
+                      <Button size={'small'} onClick={() => openFrameworkWebsite(framework)}>查看官网</Button>
+                    </CardActions>
+                  </Card>
+                ))}
+              </div>
+            </TabPanel>
+            <TabPanel value={'2'}>
               <div className={styles['framework-list']}>
                 {designs.map((design, index) => (
-                  <Card key={index} sx={{width: ['100%', 'calc((100% - 48px) / 3)']}}>
+                  <Card key={index} sx={{width: ['100%', 'calc((100% - 48px) / 3)'], margin: '12px 0'}}>
                     <CardMedia component={'img'} image={design.image}/>
                     <CardContent>
                       <Typography variant={'h6'} component={'div'}>{design.name}</Typography>
@@ -118,8 +118,8 @@ const DocsIndex: NextPage = () => {
                   </Card>
                 ))}
               </div>
-            </Container>
-          </TabPanel>
+            </TabPanel>
+          </Container>
         </TabContext>
       </Box>
     </div>
