@@ -18,10 +18,12 @@ export default class MyDocument extends Document {
       <Html lang={'zh-CN'}>
         <Head>
           <link rel="icon" href={'/favicon.png'} />
-          {/* PWA primary color */}
-          <meta name="theme-color" content={theme.palette.primary.main} />
           <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"/>
           <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+          {/* PWA */}
+          <link rel="manifest" href={'/manifest.json'} />
+          <meta name="theme-color" content={theme.palette.primary.main} />
+          <link rel="apple-touch-icon" href="/logo192.png"/>
           {/* 谷歌广告*/}
           <script
             src={'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1031326139722537'}
