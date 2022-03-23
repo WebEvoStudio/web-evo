@@ -5,12 +5,15 @@ import CommonHead from '../../components/common-head';
 import axios from 'axios';
 import Markdown from '../../core/unit/markdown';
 import {Box, Container} from '@mui/material';
+import rehypeHighlight from 'rehype-highlight';
+import 'highlight.js/styles/github.css';
 /**
  * blog detail page
  * @return {React.ReactElement}
  */
 function BlogDetail({blog}: {blog: {title: string, mark_content: string}}) {
   const host: string = process.env.NEXT_PUBLIC_SITE_URL as string;
+  const content = Markdown.keywordToLink(blog.mark_content, host);
   return (
     <Box sx={{background: '#f4f5f5'}}>
       <Container maxWidth={'md'}>
@@ -21,8 +24,8 @@ function BlogDetail({blog}: {blog: {title: string, mark_content: string}}) {
               <h1>{blog.title}</h1>
             </div>
             <div className={style['blog-content']}>
-              <ReactMarkdown>
-                {Markdown.keywordToLink(blog.mark_content, host)}
+              <ReactMarkdown rehypePlugins={[rehypeHighlight]}>
+                {content}
               </ReactMarkdown>
             </div>
           </div>

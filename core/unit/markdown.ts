@@ -35,11 +35,11 @@ export default class Markdown {
    * @return {string}
    */
   static keywordToLink(source: string, host: string) {
-    const keywords = ['git', 'vue', 'Hook', '`Hook`'];
+    const keywords = ['git', 'vue', 'Hook', '`Hook`', 'swiper'];
     let target = source;
     keywords.forEach((keyword) => {
-      target = target.replaceAll(
-          ` ${keyword} `,
+      target = target.replace(
+          eval(`/ ${keyword} /g`),
           ` [${keyword}](${host}/search?query=${keyword}) `,
       );
     });
