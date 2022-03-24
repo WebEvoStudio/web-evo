@@ -26,7 +26,7 @@ export default function Index() {
       <div>
         <Link href={'/blog'}>
           <div>
-            <Button color={'primary'} variant="contained">View our work</Button>
+            <Button sx={{color: '#fff'}} color={'primary'} variant="contained">View our work</Button>
           </div>
         </Link>
       </div>

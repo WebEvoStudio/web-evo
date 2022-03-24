@@ -1,11 +1,10 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import {useRouter} from 'next/router';
 import Link from 'next/link';
 import style from './header.module.scss';
 import variables from '../styles/variables.module.scss';
-import {MenuOutlined} from '@ant-design/icons';
-
-const _ = require('lodash');
+import MenuIcon from '@mui/icons-material/Menu';
+import {AppBar, Box, Drawer, IconButton, List, ListItem, ListItemText, Toolbar} from '@mui/material';
 /**
  * Header component
  * @constructor
@@ -20,54 +19,59 @@ const Header = () => {
     // {path: '/contact', name: 'Contact'},
   ];
   const pathname = `/${useRouter().pathname.split('/')[1]}`;
-  const [navExpandedState, setNavExpandedState] = useState(false);
-  const [windowInnerWidth, setWindowInnerWidth] = useState(600);
-  useEffect(() => {
-    const resize = () => {
-      setWindowInnerWidth(window.innerWidth);
-    };
-    resize();
-    window.addEventListener('resize', _.debounce(resize, 150));
-    return () => {
-      window.removeEventListener('resize', _.debounce(resize, 150));
-    };
-  }, []);
-  useEffect(() => {
-    if (windowInnerWidth > 575) {
-      setNavExpandedState(true);
-    } else {
-      setNavExpandedState(false);
-    }
-  }, [windowInnerWidth]);
-  const menu = () => {
-    if (windowInnerWidth < 575) {
-      return (
-        <div className={style['menu']} onClick={() => setNavExpandedState(!navExpandedState)}>
-          <MenuOutlined/>
-        </div>
-      );
-    }
-  };
+  const [drawerState, setDrawerState] = useState(false);
+  const router = useRouter();
   return (
-    <header className={style.header}>
-      <nav className={style.nav} style={{display: navExpandedState? 'flex': 'none'}}>
-        {links.map((link, index) => (
-          <Link key={index} href={link.path}>
-            <a
-              className={style.link}
-              style={{color: pathname === link.path? variables.primaryColor:''}}
-              onClick={() => window.innerWidth < 575? setNavExpandedState(!navExpandedState): null}>
-              {link.name}
-            </a>
-          </Link>
-        ))}
-      </nav>
-      {menu()}
-      {/* {windowInnerWidth < 575 ? <div*/}
-      {/*  className={style['menu']}*/}
-      {/*  onClick={() => setNavExpandedState(!navExpandedState)}*/}
-      {/* ><MenuOutlined/></div> : null}*/}
-    </header>
+    <Box sx={{flexGrow: 1}}>
+      <AppBar position="fixed" sx={{color: 'white'}}>
+        <Toolbar>
+          <IconButton
+            size="large"
+            edge="start"
+            color="inherit"
+            aria-label="menu"
+            sx={{display: {xs: 'flex', sm: 'none'}, mr: 2}}
+            onClick={() => setDrawerState(true)}
+          >
+            <MenuIcon/>
+          </IconButton>
+          <Box sx={{display: {xs: 'none', sm: 'block'}}}>
+            <nav className={style.nav}>
+              {links.map((link, index) => (
+                <Link key={index} href={link.path}>
+                  <a
+                    className={style.link}
+                    style={{color: pathname === link.path? variables.primaryColor:''}}
+                  >
+                    {link.name}
+                  </a>
+                </Link>
+              ))}
+            </nav>
+          </Box>
+          <Box sx={{flexGrow: 1}} />
+        </Toolbar>
+      </AppBar>
+      <Toolbar/>
+      <Drawer
+        anchor={'top'}
+        open={drawerState}
+        onClose={() => setDrawerState(false)}
+      >
+        <Box>
+          <List>
+            {links.map((link, index) => (
+              <ListItem key={index} button onClick={() => {
+                router.push(link.path).then();
+                setDrawerState(false);
+              }}>
+                <ListItemText>{link.name}</ListItemText>
+              </ListItem>
+            ))}
+          </List>
+        </Box>
+      </Drawer>
+    </Box>
   );
 };
 export default Header;

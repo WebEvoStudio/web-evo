@@ -1,7 +1,6 @@
 @media all {
   .header {
     position: relative;
-    height: 53px;
     background: #1b242f;
     color: #fff;
   }
@@ -12,41 +11,7 @@
     justify-content: flex-start;
     .link {
       margin: 0 20px;
-    }
-  }
-  .menu {
-    display: none;
-  }
-}
-@media screen and (max-width: 575px) {
-  .header {
-    display: flex;
-    align-items: center;
-  }
-  .nav {
-    top: 53px;
-    width: 100%;
-    height: auto;
-    position: absolute;
-    z-index: 1;
-    color: #fff;
-    flex-direction: column;
-    background: #1b242f;
-    .link {
-      margin: 20px 0;
-    }
-  }
-  .menu {
-    display: flex;
-    height: 50px;
-    width: 50px;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    border-radius: 50%;
-    margin: 0 10px;
-    &:active {
-      background: rgba(255, 255, 255, 0.1);
+      font-weight: bold;
     }
   }
 }
