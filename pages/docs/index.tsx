@@ -57,16 +57,19 @@ const DocsIndex: NextPage = () => {
       name: 'Material Design',
       description: 'Material Design is a design language developed by Google.',
       image: Images.materialDesign.default.src,
+      website: 'https://material.io/',
     },
     {
       name: 'Fluent Design',
       description: 'Fluent Design is a design language developed by Microsoft.',
       image: Images.fluentDesign.default.src,
+      website: 'https://www.microsoft.com/design/fluent/',
     },
     {
       name: 'Ant Design',
       description: 'Ant Design is a design language developed by Ali.',
       image: Images.antDesign.default.src,
+      website: 'https://ant.design/',
     },
   ];
   const openFrameworkWebsite = (framework: Framework) => {
@@ -115,6 +118,9 @@ const DocsIndex: NextPage = () => {
                       <Typography variant={'h6'} component={'div'}>{design.name}</Typography>
                       <Typography variant={'body2'} color="text.secondary">{design.description}</Typography>
                     </CardContent>
+                    <CardActions>
+                      <Button size={'small'} onClick={() => openFrameworkWebsite(design)}>查看官网</Button>
+                    </CardActions>
                   </Card>
                 ))}
               </div>
