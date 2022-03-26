@@ -3,8 +3,20 @@ import {useRouter} from 'next/router';
 import Link from 'next/link';
 import style from './header.module.scss';
 import variables from '../styles/variables.module.scss';
-import MenuIcon from '@mui/icons-material/Menu';
-import {AppBar, Box, Drawer, IconButton, List, ListItem, ListItemText, Toolbar} from '@mui/material';
+import {
+  AppBar,
+  Box,
+  Drawer,
+  Fab,
+  IconButton,
+  List,
+  ListItem,
+  ListItemText,
+  Toolbar,
+  useScrollTrigger,
+  Zoom,
+} from '@mui/material';
+import {KeyboardArrowUp, Menu as MenuIcon} from '@mui/icons-material';
 /**
  * Header component
  * @constructor
@@ -21,6 +33,33 @@ const Header = () => {
   const pathname = `/${useRouter().pathname.split('/')[1]}`;
   const [drawerState, setDrawerState] = useState(false);
   const router = useRouter();
+  const ScrollTop = ({window, children}: {window?: () => Window, children: React.ReactElement}) => {
+    const trigger = useScrollTrigger({
+      target: window ? window() : undefined,
+      disableHysteresis: true,
+      threshold: 100,
+    });
+    const handleClick = (event: React.MouseEvent<HTMLDivElement>) => {
+      const anchor = (
+        (event.target as HTMLDivElement).ownerDocument || document
+      ).querySelector('#back-to-top-anchor');
+      if (anchor) {
+        anchor.scrollIntoView({
+          behavior: 'smooth',
+          block: 'center',
+        });
+      }
+    };
+    return (
+      <Zoom in={trigger}>
+        <Box
+          role="presentation"
+          sx={{position: 'fixed', bottom: 16, right: 16}}
+          onClick={handleClick}
+        >{children}</Box>
+      </Zoom>
+    );
+  };
   return (
     <Box sx={{flexGrow: 1}}>
       <AppBar position="fixed" sx={{color: 'white'}}>
@@ -51,8 +90,13 @@ const Header = () => {
           </Box>
           <Box sx={{flexGrow: 1}} />
         </Toolbar>
+        <ScrollTop>
+          <Fab color="primary" size="small" aria-label="scroll back to top">
+            <KeyboardArrowUp sx={{color: '#fff'}}/>
+          </Fab>
+        </ScrollTop>
       </AppBar>
-      <Toolbar/>
+      <Toolbar id="back-to-top-anchor"/>
       <Drawer
         anchor={'top'}
         open={drawerState}
