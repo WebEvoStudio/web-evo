@@ -18,8 +18,8 @@ const Search: NextPage = () => {
   }, [query]);
   return (
     <div>
-      <h1>Search</h1>
       <Container maxWidth={'md'}>
+        <h1>Search</h1>
         {blogs.map((blog, index) => (
           <Link href={`/blogs/${blog['_id']}`} key={index}>
             <Paper elevation={1} sx={{margin: '10px 0'}}>
