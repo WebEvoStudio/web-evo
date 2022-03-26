@@ -15,7 +15,7 @@ import {
   Zoom,
 } from '@mui/material';
 import {KeyboardArrowUp, Menu as MenuIcon} from '@mui/icons-material';
-import MainSearch from './main-search';
+// import MainSearch from './main-search';
 /**
  * Header component
  * @constructor
@@ -87,7 +87,7 @@ const Header = () => {
               ))}
             </nav>
           </Box>
-          <MainSearch/>
+          {/* <MainSearch/>*/}
           <Box sx={{flexGrow: 1}} />
         </Toolbar>
         <ScrollTop>
