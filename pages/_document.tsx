@@ -17,6 +17,8 @@ export default class MyDocument extends Document {
     return (
       <Html lang={'zh-CN'}>
         <Head>
+          {/* 360 搜索验证 */}
+          <meta name="360-site-verification" content="77b0e1a676566c755d708af4c92a3524" />
           <link rel="icon" href={'/favicon.png'} />
           <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"/>
           <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
