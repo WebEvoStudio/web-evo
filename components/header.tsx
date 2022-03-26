@@ -8,15 +8,14 @@ import {
   Box,
   Drawer,
   Fab,
-  IconButton,
-  List,
+  IconButton, List,
   ListItem,
-  ListItemText,
-  Toolbar,
+  ListItemText, Toolbar,
   useScrollTrigger,
   Zoom,
 } from '@mui/material';
 import {KeyboardArrowUp, Menu as MenuIcon} from '@mui/icons-material';
+// import MainSearch from './main-search';
 /**
  * Header component
  * @constructor
@@ -88,6 +87,7 @@ const Header = () => {
               ))}
             </nav>
           </Box>
+          {/* <MainSearch/>*/}
           <Box sx={{flexGrow: 1}} />
         </Toolbar>
         <ScrollTop>

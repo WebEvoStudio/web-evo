@@ -1,6 +1,8 @@
 CONTAINER_ID=`docker ps -a -q -f name=next-app`
 IMAGE_ID=$(docker images | grep "next-app" | awk '{print $3}')
 echo $CONTAINER_ID
+echo "开始 next-app 镜像打包"
+docker build -t next-app .
 echo "停止 next-app"
 if [ -n "$CONTAINER_ID" ]
 then
