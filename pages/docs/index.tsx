@@ -15,7 +15,7 @@ import {
 import {Images} from '../../core/libs/images';
 import styles from '/styles/docs.module.scss';
 import {SnackbarProvider, useSnackbar} from 'notistack';
-import {TabContext, TabList, TabPanel} from '@material-ui/lab';
+import {TabContext, TabList, TabPanel} from '@mui/lab';
 
 interface Framework {
   name: string;

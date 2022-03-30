@@ -45,7 +45,7 @@ const MainSearch: NextPage = () => {
       </SearchIconWrapper>
 
       <StyledInputBase
-        placeholder="Index…"
+        placeholder="Search…"
         inputProps={{'aria-label': 'search'}}
         onKeyDown={({key, target}) => {
           const {value} = target as HTMLInputElement;

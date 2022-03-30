@@ -6,19 +6,19 @@ import Link from 'next/link';
 import styles from '../../styles/blog.module.scss';
 import Markdown from '../../core/unit/markdown';
 import {useRouter} from 'next/router';
+import CommonHead from '../../components/common-head';
+import Empty from '../../components/empty';
+
 const Index: NextPage = () => {
   const {query} = useRouter().query;
   const [blogs, setBlogs] = useState<any[]>([]);
   useEffect(() => {
-    if (query) {
-      BlogRequests.search(query.toString()).then((res) => {
-        setBlogs(res);
-      });
-    }
+    if (query) BlogRequests.search(query.toString()).then((res) => setBlogs(res));
   }, [query]);
   return (
     <div>
-      <Container maxWidth={'md'}>
+      <CommonHead title={`${query} - 搜索 - Web开发者中心`}/>
+      <Container maxWidth={'md'} sx={{minHeight: 'calc(100vh - 56px)', display: 'flex', flexDirection: 'column'}}>
         <h1>Search</h1>
         {blogs.map((blog, index) => (
           <Link href={`/blogs/${blog['_id']}`} key={index}>
@@ -33,6 +33,9 @@ const Index: NextPage = () => {
             </Paper>
           </Link>
         ))}
+        <div style={{flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+          {!blogs.length ? <Empty/> : null}
+        </div>
       </Container>
     </div>
   );
