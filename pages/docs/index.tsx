@@ -71,6 +71,18 @@ const DocsIndex: NextPage = () => {
       image: Images.antDesign.default.src,
       website: 'https://ant.design/',
     },
+    {
+      name: 'Arco design',
+      description: 'Arco design is a design language developed by ByteDance.',
+      image: Images.arcoDesign.default.src,
+      website: 'https://arco.design/',
+    },
+    {
+      name: 'Semi Design',
+      description: 'Semi Design is a design language developed by ByteDance.',
+      image: Images.semiDesign.default.src,
+      website: 'https://semi.design/',
+    },
   ];
   const openFrameworkWebsite = (framework: Framework) => {
     if (framework.website) {
