@@ -12,4 +12,6 @@ export class Images {
   static materialDesign = require('../../assets/images/material-design.png');
   static fluentDesign = require('../../assets/images/fluent-design.jpg');
   static antDesign = require('../../assets/svgs/ant-design.svg');
+  static arcoDesign = require('../../assets/images/arco-design.png');
+  static semiDesign = require('../../assets/images/semi-design.png');
 }
