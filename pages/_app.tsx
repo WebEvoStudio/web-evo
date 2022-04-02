@@ -27,6 +27,8 @@ function MyApp(props: MyAppProps) {
     <CacheProvider value={emotionCache}>
       <ThemeProvider theme={theme}>
         <BasicLayout>
+          <CssBaseline/>
+          <Component {...pageProps} />
           {/* Google Analytics*/}
           <GoogleAnalytics measurementId={'G-YKCPHDYK53'}/>
           {/* microsoft clarity */}
@@ -39,8 +41,6 @@ function MyApp(props: MyAppProps) {
     })(window, document, "clarity", "script", "b91ge7rn7p");
             `,
           }}/>
-          <CssBaseline/>
-          <Component {...pageProps} />
         </BasicLayout>
       </ThemeProvider>
     </CacheProvider>
