@@ -1,7 +1,18 @@
 import React, {useEffect, useState} from 'react';
 import {NextPage} from 'next';
-import {Box, Collapse, Drawer, List, ListItem, ListItemButton, ListItemIcon, ListItemText} from '@mui/material';
+import {
+  Box, Button,
+  Collapse,
+  Drawer, Input,
+  List,
+  ListItem,
+  ListItemButton,
+  ListItemIcon,
+  ListItemText,
+  Toolbar,
+} from '@mui/material';
 import {ExpandLess, ExpandMore, Image as ImageIcon, AddPhotoAlternate} from '@mui/icons-material';
+import Uploader from "../components/uploader";
 
 interface Menu {
   title: string;
@@ -33,6 +44,9 @@ const Tools: NextPage = () => {
   const handleClick = (index: number) => {
     setMenus(menus.map((menu, _index) => _index === index ? {...menu, open: !menu.open} : menu));
   };
+  const chooseImages = () => {
+    // 选择图片
+  };
   return (
     <Box sx={{display: 'flex', height: 'calc(100vh - 56px)'}}>
       <Drawer
@@ -62,7 +76,13 @@ const Tools: NextPage = () => {
           ))}
         </List>
       </Drawer>
-      <Box></Box>
+      <Box>
+        <Toolbar>
+          <Button onClick={chooseImages}>选择图片</Button>
+          <Input type={'file'}></Input>
+          <Uploader/>
+        </Toolbar>
+      </Box>
     </Box>
   );
 };
