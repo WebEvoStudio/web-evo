@@ -4,7 +4,9 @@ import styles from '../styles/blog.module.scss';
 import CommonHead from '../components/common-head';
 import axios from 'axios';
 import Markdown from '../core/unit/markdown';
-import {Container, Paper, Skeleton} from '@mui/material';
+import {Box, Container, Paper} from '@mui/material';
+import {AccessTime, VisibilityOutlined} from '@mui/icons-material';
+import moment from '_moment@2.29.2@moment';
 /**
  * Blog Page
  * @return {JSX.Element}
@@ -24,7 +26,17 @@ function Blog({blogs}: {blogs: any[]}) {
                     <div className={styles['blog-description']}>
                       {Markdown.intercept(blog.mark_content, 155)}
                     </div>
-                    <Skeleton variant="rectangular"/>
+                    <Box sx={{display: 'flex'}}>
+                      <div className={styles['blog-info']}>
+                        <AccessTime fontSize={'small'}/>
+                        <span>{moment(blog.create_time).format('yyyy-MM-DD')}</span>
+                      </div>
+                      <div className={styles['blog-info']}>
+                        <VisibilityOutlined fontSize={'small'}/>
+                        {/* 随机显示浏览量 */}
+                        <span>{Math.floor(Math.random() * 100)}</span>
+                      </div>
+                    </Box>
                   </div>
                 </Paper>
               </Link>

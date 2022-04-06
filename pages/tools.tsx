@@ -12,7 +12,7 @@ import {
   Toolbar,
 } from '@mui/material';
 import {ExpandLess, ExpandMore, Image as ImageIcon, AddPhotoAlternate} from '@mui/icons-material';
-import Uploader from "../components/uploader";
+import Uploader from '../components/uploader';
 
 interface Menu {
   title: string;

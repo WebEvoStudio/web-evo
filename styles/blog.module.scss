@@ -29,6 +29,8 @@
     }
     &-description {
       color: #5b6169;
+      margin-bottom: 10px;
+      word-break: break-word;
     }
     &-detail {
       padding: 20px 0;
@@ -53,6 +55,16 @@
       a {
         color: #00B0FF;
         font-weight: bold;
+      }
+    }
+    &-info {
+      display: flex;
+      align-content: center;
+      margin-right: 20px;
+      font-size: 13px;
+      color: #4e5969;
+      span:nth-child(2) {
+        margin-left: 6px;
       }
     }
   }
