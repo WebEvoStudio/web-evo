@@ -6,7 +6,7 @@ import axios from 'axios';
 import Markdown from '../core/unit/markdown';
 import {Box, Container, Paper} from '@mui/material';
 import {AccessTime, VisibilityOutlined} from '@mui/icons-material';
-import moment from '_moment@2.29.2@moment';
+import moment from 'moment';
 /**
  * Blog Page
  * @return {JSX.Element}

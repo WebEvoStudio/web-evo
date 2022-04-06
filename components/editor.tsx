@@ -10,6 +10,7 @@ import {Button, Input, message} from 'antd';
 import clipboard from 'clipboardy';
 import axios from 'axios';
 import 'github-markdown-css/github-markdown-light.css';
+import {BytemdPlugin} from 'bytemd';
 
 /**
  * editor.tsx
@@ -19,7 +20,7 @@ import 'github-markdown-css/github-markdown-light.css';
 export default function EditorPage(props: {title?: string, value?: string, id?: string}) {
   const [value, setValue] = useState(props.value||'');
   const [title, setTitle] = useState(props.title||'');
-  const plugins = [frontmatter(), gfm()];
+  const plugins: BytemdPlugin[] = [frontmatter(), gfm()];
   const isModify = !!props.id;
   console.log(isModify);
   const copy = () => {
