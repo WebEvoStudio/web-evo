@@ -1,10 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import {NextPage} from 'next';
 import {
-  Box, Button,
-  Collapse,
-  Drawer, Input,
-  List,
+  Box, Button, Collapse,
+  Drawer, List,
   ListItem,
   ListItemButton,
   ListItemIcon,
@@ -13,6 +11,9 @@ import {
 } from '@mui/material';
 import {ExpandLess, ExpandMore, Image as ImageIcon, AddPhotoAlternate} from '@mui/icons-material';
 import Uploader from '../components/uploader';
+import Image from 'next/image';
+import axios from "axios";
+import ObjectUnit from "../core/unit/object-unit";
 
 interface Menu {
   title: string;
@@ -44,8 +45,20 @@ const Tools: NextPage = () => {
   const handleClick = (index: number) => {
     setMenus(menus.map((menu, _index) => _index === index ? {...menu, open: !menu.open} : menu));
   };
-  const chooseImages = () => {
-    // 选择图片
+  const [selectedImages, setSelectedImages] = useState<{file: File, path: string}[]>([]);
+  const run = () => {
+    console.log(selectedImages);
+    const host = 'https://tiia.tencentcloudapi.com';
+    const params = ObjectUnit.toParams({
+      Action: 'EnhanceImage',
+      Version: '2019-05-29',
+      Region: 'ap-shanghai',
+    });
+    const url = host + '?' + params;
+    console.log(url);
+    axios.post(url).then((res) => {
+      console.log(res);
+    });
   };
   return (
     <Box sx={{display: 'flex', height: 'calc(100vh - 56px)'}}>
@@ -78,10 +91,14 @@ const Tools: NextPage = () => {
       </Drawer>
       <Box>
         <Toolbar>
-          <Button onClick={chooseImages}>选择图片</Button>
-          <Input type={'file'}></Input>
-          <Uploader/>
+          <Uploader onChange={(e) => setSelectedImages(e)}/>
+          <Button sx={{color: '#fff'}} variant="contained" onClick={run}>开始增强</Button>
         </Toolbar>
+        <Box>
+          {selectedImages.map((image, index) => (
+            <Image key={index} src={image.path} width={200} height={200}/>
+          ))}
+        </Box>
       </Box>
     </Box>
   );
