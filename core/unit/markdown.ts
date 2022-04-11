@@ -45,4 +45,18 @@ export default class Markdown {
     });
     return target;
   }
+  /**
+   * 获取markdown文档的图片链接
+   * @param {string} source
+   * @return {RegExpMatchArray | null}
+   */
+  static getImgUrl(source: string): string[] {
+    const reg = /!\[(.*?)]\((.*?)\)/g;
+    const result: RegExpMatchArray | null = source.match(reg);
+    const urls: string[] = [];
+    if (result?.length) {
+      urls.push(...result.map((item) => item.replace(/!\[(.*?)]\((.*?)\)/g, '$2')));
+    }
+    return urls;
+  }
 }

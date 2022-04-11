@@ -7,11 +7,17 @@ import Markdown from '../core/unit/markdown';
 import {Box, Container, Paper} from '@mui/material';
 import {AccessTime, VisibilityOutlined} from '@mui/icons-material';
 import moment from 'moment';
+import Image from 'next/image';
 /**
  * Blog Page
  * @return {JSX.Element}
  */
 function Blog({blogs}: {blogs: any[]}) {
+  const poster = (blog: any) => {
+    if (Markdown.getImgUrl(blog.mark_content).length) {
+      return <Image src={Markdown.getImgUrl(blog.mark_content)[0]} width={100} height={100}/>;
+    }
+  };
   return (
     <Container maxWidth={'md'}>
       <div>
@@ -22,6 +28,7 @@ function Blog({blogs}: {blogs: any[]}) {
               <Link href={`/blogs/${blog['_id']}`} key={index}>
                 <Paper elevation={1} sx={{margin: '10px 0'}}>
                   <div className={styles['blog-item']} key={index}>
+                    {poster(blog)}
                     <span className={styles['blog-title']}>{blog.title}</span>
                     <div className={styles['blog-description']}>
                       {Markdown.intercept(blog.mark_content, 155)}

@@ -16,6 +16,9 @@ const nextConfig = withPWA({
     disable: process.env.NODE_ENV === 'development',
     runtimeCaching,
   },
+  images: {
+    domains: ['pic3.zhimg.com', 'p3-juejin.byteimg.com'],
+  },
 });
 
 module.exports = nextConfig;
