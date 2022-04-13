@@ -9,9 +9,11 @@ export default class Request {
   config: AxiosRequestConfig = {};
   /**
    * 构造器
+   * @param {string} baseURL 请求地址
    */
-  constructor() {
+  constructor(baseURL?: string) {
     this.config.baseURL = process.env.NEXT_PUBLIC_BASE_URL;
+    if (baseURL) this.config.baseURL = baseURL;
   }
 
   /**
@@ -38,6 +40,15 @@ export default class Request {
   }
 
   /**
+   * POST请求
+   * @param {string} url
+   * @param {Object} data
+   * @return {any}
+   */
+  post(url: string, data: {[index: string]: any}): Promise<any> {
+    return this.request(url, 'post', data);
+  }
+  /**
    * 响应拦截器
    * @param {any} response
    * @return {any}
@@ -45,8 +56,10 @@ export default class Request {
   responseInterceptor(response: AxiosResponse<any>): any {
     switch (response.status) {
       case 200:
+      case 201:
         return response.data;
       default:
+        console.log(response);
         return Promise.reject(response);
     }
   }

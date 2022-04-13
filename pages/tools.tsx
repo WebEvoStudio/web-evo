@@ -12,8 +12,12 @@ import {
 import {ExpandLess, ExpandMore, Image as ImageIcon, AddPhotoAlternate} from '@mui/icons-material';
 import Uploader from '../components/uploader';
 import Image from 'next/image';
-import axios from "axios";
-import ObjectUnit from "../core/unit/object-unit";
+import FileUnit from '../core/unit/file-unit';
+import Request from '../core/unit/request';
+import JSZip from 'jszip';
+import moment from 'moment';
+import {SnackbarProvider, useSnackbar} from 'notistack';
+import CommonHead from '../components/common-head';
 
 interface Menu {
   title: string;
@@ -24,6 +28,9 @@ interface Menu {
 }
 
 const Tools: NextPage = () => {
+  const description = '对低质图片进行去雾,无损放大,对比度增强等多种处理,优化重建高清图像.可用于提升相册图像质量,提升视频监控质量等.';
+  const keywords = '图像增强,图片增强';
+  const {enqueueSnackbar} = useSnackbar();
   const [menus, setMenus] = useState<Menu[]>([]);
   useEffect(() => {
     setMenus([
@@ -46,22 +53,38 @@ const Tools: NextPage = () => {
     setMenus(menus.map((menu, _index) => _index === index ? {...menu, open: !menu.open} : menu));
   };
   const [selectedImages, setSelectedImages] = useState<{file: File, path: string}[]>([]);
-  const run = () => {
-    console.log(selectedImages);
-    const host = 'https://tiia.tencentcloudapi.com';
-    const params = ObjectUnit.toParams({
-      Action: 'EnhanceImage',
-      Version: '2019-05-29',
-      Region: 'ap-shanghai',
+  const [enhancedImages, setEnhancedImages] = useState<string[]>([]);
+  const run = async () => {
+    const base64Images = (await Promise.all(selectedImages.map(({file}) => FileUnit.toBase64(file)))) as string[];
+    const base64ImageContents = base64Images.map((base64Image) => base64Image.split(',')[1]);
+    const host = process.env['NEXT_PUBLIC_MIDDLEWARE_URL'];
+    const url = '/images/enhance';
+    const requests = base64ImageContents.map((item) => new Request(host).post(url, {ImageBase64: item}));
+    const responses = await Promise.all(requests);
+    const base64ImageHead = base64Images.map((base64Image) => base64Image.split(',')[0]);
+    setEnhancedImages(responses.map(({EnhancedImage}, index) => `${base64ImageHead[index]},${EnhancedImage}`));
+    enqueueSnackbar('图像处理完成', {variant: 'success'});
+  };
+  const download = () => {
+    const zip = new JSZip();
+    const fileNames = selectedImages.map(({file}) => file.name);
+    const enhancedImageContents = enhancedImages.map((enhancedImage) => enhancedImage.split(',')[1]);
+    enhancedImageContents.forEach((enhancedImageContent, index) => {
+      zip.file(fileNames[index], enhancedImageContent, {base64: true});
     });
-    const url = host + '?' + params;
-    console.log(url);
-    axios.post(url).then((res) => {
-      console.log(res);
+    zip.generateAsync({type: 'blob'}).then((blob) => {
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = `图像清晰度增强包 ${moment().format('YYYYMMDDHHmmss')}.zip`;
+      a.click();
+      enqueueSnackbar('下载完成, 请到下载管理器查看', {variant: 'success'});
+    }).catch((err) => {
+      console.log(err);
     });
   };
   return (
     <Box sx={{display: 'flex', height: 'calc(100vh - 56px)'}}>
+      <CommonHead title={'工具-图像清晰度增强'} description={description} keywords={keywords}/>
       <Drawer
         variant="permanent"
         sx={{[`& .MuiDrawer-paper`]: {boxSizing: 'border-box', position: 'relative'}}}>
@@ -92,15 +115,34 @@ const Tools: NextPage = () => {
       <Box>
         <Toolbar>
           <Uploader onChange={(e) => setSelectedImages(e)}/>
-          <Button sx={{color: '#fff'}} variant="contained" onClick={run}>开始增强</Button>
+          <Button
+            sx={{color: '#fff'}}
+            variant="contained"
+            onClick={run} disabled={!(selectedImages.length && !enhancedImages.length)}>开始增强</Button>
+          <Button
+            sx={{color: '#fff'}}
+            variant="contained"
+            onClick={download} disabled={!enhancedImages.length}>一键下载</Button>
         </Toolbar>
         <Box>
-          {selectedImages.map((image, index) => (
-            <Image key={index} src={image.path} width={200} height={200}/>
-          ))}
+          <Box>
+            {selectedImages.map((image, index) => (
+              <Image key={index} src={image.path} width={200} height={200}/>
+            ))}
+          </Box>
+          <Box>
+            {enhancedImages.map((image, index) => (
+              <Image key={index} src={image} width={200} height={200}/>
+            ))}
+          </Box>
         </Box>
       </Box>
     </Box>
   );
 };
-export default Tools;
+const IntegrationNotice = () => (
+  <SnackbarProvider dense={true} maxSnack={1}>
+    <Tools/>
+  </SnackbarProvider>
+);
+export default IntegrationNotice;

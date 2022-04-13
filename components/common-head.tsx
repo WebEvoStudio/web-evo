@@ -6,13 +6,15 @@ import React from 'react';
  * @param {any} props
  * @constructor
  */
-export default function CommonHead(props: {title?: string, description?: string}) {
+export default function CommonHead(props: {title?: string, description?: string, keywords?: string}) {
   const title = '獠 - Web开发人员中心';
   const description = title + ' 是一个帮助web开发者成长的社区。我们以技术文章为核心的产品形态，为开发者提供纯粹、高质的技术文章。';
+  const keywords = 'Web开发人员中心,';
   return (
     <Head>
       <title>{props.title||title}</title>
       <meta name={'description'} content={props.description||description}/>
+      <meta name="keywords" content={keywords + (props.keywords||'')} />
       <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1.0, user-scalable=0"/>
       {/* 百度验证*/}
       <meta name="baidu-site-verification" content="code-yx2HQhygQo" />

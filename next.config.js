@@ -10,6 +10,7 @@ const nextConfig = withPWA({
   env: {
     NEXT_PUBLIC_BASE_URL: process.env.BASE_URL,
     NEXT_PUBLIC_SITE_URL: process.env.SITE_URL,
+    NEXT_PUBLIC_MIDDLEWARE_URL: process.env.MIDDLEWARE_URL,
   },
   pwa: {
     dest: 'public',
