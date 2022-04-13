@@ -1,4 +1,4 @@
-FROM node:16
+FROM node:16-alpine
 # Create app directory
 WORKDIR /usr/src/app
 
@@ -10,3 +10,25 @@ COPY . .
 RUN npm run build:post
 EXPOSE 3000
 CMD [ "npm", "start" ]
+# FROM node:16 as BUILD_IMAGE
+# # Create app directory
+# WORKDIR /usr/src/app
+#
+# COPY package*.json ./
+# RUN npm config set registry https://registry.npm.taobao.org
+# RUN npm install
+# COPY . .
+# EXPOSE 3000
+# RUN npm run build
+# RUN npm run build:post
+#
+# FROM node:16-alpine
+# WORKDIR /usr/src/app
+#
+# COPY --from=BUILD_IMAGE /usr/src/app/.next ./.next
+# COPY --from=BUILD_IMAGE /usr/src/app/public ./public
+# COPY --from=BUILD_IMAGE /usr/src/app/node_modules ./node_modules
+# COPY --from=BUILD_IMAGE /usr/src/app/package*.json ./
+# COPY --from=BUILD_IMAGE /usr/src/app/next.config.js ./
+# CMD [ "npm", "start" ]
+
