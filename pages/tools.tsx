@@ -2,16 +2,15 @@ import React, {useEffect, useState} from 'react';
 import {NextPage} from 'next';
 import {
   Box, Button, Collapse,
-  Drawer, List,
+  Drawer, ImageList, ImageListItem, ImageListItemBar, List,
   ListItem,
   ListItemButton,
   ListItemIcon,
-  ListItemText,
+  ListItemText, ListSubheader,
   Toolbar,
 } from '@mui/material';
 import {ExpandLess, ExpandMore, Image as ImageIcon, AddPhotoAlternate} from '@mui/icons-material';
 import Uploader from '../components/uploader';
-import Image from 'next/image';
 import FileUnit from '../core/unit/file-unit';
 import Request from '../core/unit/request';
 import JSZip from 'jszip';
@@ -87,7 +86,7 @@ const Tools: NextPage = () => {
     });
   };
   return (
-    <Box sx={{display: 'flex', height: 'calc(100vh - 56px)'}}>
+    <Box sx={{display: 'flex', height: 'calc(100vh - 64px)'}}>
       <CommonHead title={'工具-图像清晰度增强'} description={description} keywords={keywords}/>
       <Drawer
         variant="permanent"
@@ -116,7 +115,7 @@ const Tools: NextPage = () => {
           ))}
         </List>
       </Drawer>
-      <Box>
+      <Box sx={{flex: 1, background: '#eee'}}>
         <Toolbar>
           <Uploader onChange={(e) => setSelectedImages(e)}/>
           <LoadingButton
@@ -129,16 +128,45 @@ const Tools: NextPage = () => {
             variant="contained"
             onClick={download} disabled={!enhancedImages.length}>一键下载</Button>
         </Toolbar>
-        <Box>
-          <Box>
-            {selectedImages.map((image, index) => (
-              <Image key={index} src={image.path} width={200} height={200} objectFit={'cover'}/>
-            ))}
+        <Box sx={{display: 'flex', width: '100%'}}>
+          <Box sx={{flex: 1}}>
+            <ListSubheader component="div">源文件</ListSubheader>
+            <Box sx={{overflowY: 'scroll', height: 'calc(100vh - 190px)'}}>
+              <ImageList variant={'masonry'} cols={3}>
+                {selectedImages.map((image, index) => (
+                  <ImageListItem key={index}>
+                    <Box sx={{position: 'relative'}}>
+                      {/* <Image src={image.path} layout={'fill'} objectFit={'none'}/>*/}
+                      <img
+                        src={`${image.path}`}
+                        style={{width: '100%'}}
+                        loading="lazy"
+                      />
+                    </Box>
+                    <ImageListItemBar subtitle={image.file.name} title={(image.file.size/1024).toFixed() + 'kb'}/>
+                  </ImageListItem>
+                ))}
+              </ImageList>
+            </Box>
           </Box>
-          <Box>
-            {enhancedImages.map((image, index) => (
-              <Image key={index} src={image} width={200} height={200} objectFit={'cover'}/>
-            ))}
+          <Box sx={{flex: 1}}>
+            <ListSubheader component="div">增强后</ListSubheader>
+            <Box sx={{overflowY: 'scroll', height: 'calc(100vh - 190px)'}}>
+              <ImageList variant={'masonry'} cols={3}>
+                {enhancedImages.map((image, index) => (
+                  <ImageListItem key={index}>
+                    <Box sx={{position: 'relative'}}>
+                      {/* <Image src={image.path} layout={'fill'} objectFit={'none'}/>*/}
+                      <img
+                        src={`${image}`}
+                        style={{width: '100%'}}
+                        loading="lazy"
+                      />
+                    </Box>
+                  </ImageListItem>
+                ))}
+              </ImageList>
+            </Box>
           </Box>
         </Box>
       </Box>
