@@ -18,6 +18,7 @@ import JSZip from 'jszip';
 import moment from 'moment';
 import {SnackbarProvider, useSnackbar} from 'notistack';
 import CommonHead from '../components/common-head';
+import {LoadingButton} from '@mui/lab';
 
 interface Menu {
   title: string;
@@ -32,6 +33,7 @@ const Tools: NextPage = () => {
   const keywords = '图像增强,图片增强';
   const {enqueueSnackbar} = useSnackbar();
   const [menus, setMenus] = useState<Menu[]>([]);
+  const [enhancing, setEnhancing] = useState(false);
   useEffect(() => {
     setMenus([
       {
@@ -55,6 +57,7 @@ const Tools: NextPage = () => {
   const [selectedImages, setSelectedImages] = useState<{file: File, path: string}[]>([]);
   const [enhancedImages, setEnhancedImages] = useState<string[]>([]);
   const run = async () => {
+    setEnhancing(true);
     const base64Images = (await Promise.all(selectedImages.map(({file}) => FileUnit.toBase64(file)))) as string[];
     const base64ImageContents = base64Images.map((base64Image) => base64Image.split(',')[1]);
     const host = process.env['NEXT_PUBLIC_MIDDLEWARE_URL'];
@@ -63,6 +66,7 @@ const Tools: NextPage = () => {
     const responses = await Promise.all(requests);
     const base64ImageHead = base64Images.map((base64Image) => base64Image.split(',')[0]);
     setEnhancedImages(responses.map(({EnhancedImage}, index) => `${base64ImageHead[index]},${EnhancedImage}`));
+    setEnhancing(false);
     enqueueSnackbar('图像处理完成', {variant: 'success'});
   };
   const download = () => {
@@ -115,10 +119,11 @@ const Tools: NextPage = () => {
       <Box>
         <Toolbar>
           <Uploader onChange={(e) => setSelectedImages(e)}/>
-          <Button
+          <LoadingButton
             sx={{color: '#fff'}}
             variant="contained"
-            onClick={run} disabled={!(selectedImages.length && !enhancedImages.length)}>开始增强</Button>
+            loading={enhancing}
+            onClick={run} disabled={!(selectedImages.length && !enhancedImages.length)}>开始增强</LoadingButton>
           <Button
             sx={{color: '#fff'}}
             variant="contained"
@@ -127,12 +132,12 @@ const Tools: NextPage = () => {
         <Box>
           <Box>
             {selectedImages.map((image, index) => (
-              <Image key={index} src={image.path} width={200} height={200}/>
+              <Image key={index} src={image.path} width={200} height={200} objectFit={'cover'}/>
             ))}
           </Box>
           <Box>
             {enhancedImages.map((image, index) => (
-              <Image key={index} src={image} width={200} height={200}/>
+              <Image key={index} src={image} width={200} height={200} objectFit={'cover'}/>
             ))}
           </Box>
         </Box>
