@@ -57,16 +57,20 @@ const Tools: NextPage = () => {
   const [enhancedImages, setEnhancedImages] = useState<string[]>([]);
   const run = async () => {
     setEnhancing(true);
-    const base64Images = (await Promise.all(selectedImages.map(({file}) => FileUnit.toBase64(file)))) as string[];
-    const base64ImageContents = base64Images.map((base64Image) => base64Image.split(',')[1]);
-    const host = process.env['NEXT_PUBLIC_MIDDLEWARE_URL'];
-    const url = '/images/enhance';
-    const requests = base64ImageContents.map((item) => new Request(host).post(url, {ImageBase64: item}));
-    const responses = await Promise.all(requests);
-    const base64ImageHead = base64Images.map((base64Image) => base64Image.split(',')[0]);
-    setEnhancedImages(responses.map(({EnhancedImage}, index) => `${base64ImageHead[index]},${EnhancedImage}`));
+    try {
+      const base64Images = (await Promise.all(selectedImages.map(({file}) => FileUnit.toBase64(file)))) as string[];
+      const base64ImageContents = base64Images.map((base64Image) => base64Image.split(',')[1]);
+      const host = process.env['NEXT_PUBLIC_MIDDLEWARE_URL'];
+      const url = '/images/enhance';
+      const requests = base64ImageContents.map((item) => new Request(host).post(url, {ImageBase64: item}));
+      const responses = await Promise.all(requests);
+      const base64ImageHead = base64Images.map((base64Image) => base64Image.split(',')[0]);
+      setEnhancedImages(responses.map(({EnhancedImage}, index) => `${base64ImageHead[index]},${EnhancedImage}`));
+      enqueueSnackbar('图像处理完成', {variant: 'success'});
+    } catch (error: any) {
+      enqueueSnackbar(error.message, {variant: 'error'});
+    }
     setEnhancing(false);
-    enqueueSnackbar('图像处理完成', {variant: 'success'});
   };
   const download = () => {
     const zip = new JSZip();
@@ -119,12 +123,12 @@ const Tools: NextPage = () => {
         <Toolbar>
           <Uploader onChange={(e) => setSelectedImages(e)}/>
           <LoadingButton
-            sx={{color: '#fff'}}
+            sx={{color: '#fff', marginLeft: '10px'}}
             variant="contained"
             loading={enhancing}
             onClick={run} disabled={!(selectedImages.length && !enhancedImages.length)}>开始增强</LoadingButton>
           <Button
-            sx={{color: '#fff'}}
+            sx={{color: '#fff', marginLeft: '10px'}}
             variant="contained"
             onClick={download} disabled={!enhancedImages.length}>一键下载</Button>
         </Toolbar>
