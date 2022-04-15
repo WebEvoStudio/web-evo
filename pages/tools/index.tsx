@@ -13,6 +13,7 @@ import {SnackbarProvider, useSnackbar} from 'notistack';
 import CommonHead from '../../components/common-head';
 import {LoadingButton} from '@mui/lab';
 import ToolLayout from '../../layouts/tool.layout';
+import {BuildCircle, Download} from '@mui/icons-material';
 
 interface Menu {
   title: string;
@@ -67,16 +68,19 @@ const ToolsIndex: NextPage = () => {
     <ToolLayout>
       <CommonHead title={'工具-图像清晰度增强'} description={description} keywords={keywords}/>
       <Box sx={{flex: 1, background: '#eee'}}>
-        <Toolbar>
+        <Toolbar sx={{display: 'flex', justifyContent: 'flex-end'}}>
           <Uploader onChange={(e) => setSelectedImages(e)}/>
           <LoadingButton
             sx={{color: '#fff', marginLeft: '10px'}}
             variant="contained"
             loading={enhancing}
+            loadingPosition="start"
+            startIcon={<BuildCircle/>}
             onClick={run} disabled={!(selectedImages.length && !enhancedImages.length)}>开始增强</LoadingButton>
           <Button
             sx={{color: '#fff', marginLeft: '10px'}}
             variant="contained"
+            startIcon={<Download/>}
             onClick={download} disabled={!enhancedImages.length}>一键下载</Button>
         </Toolbar>
         <Box sx={{display: 'flex', width: '100%'}}>

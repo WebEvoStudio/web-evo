@@ -19,7 +19,7 @@
       border-radius: 5px;
       background-color: #fff;
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       align-items: flex-start;
     }
     &-title {
@@ -76,6 +76,12 @@
         padding: 16px;
         margin-bottom: 16px;
       }
+    }
+    &-description {
+      display: none;
+    }
+    &-item {
+      flex-direction: column-reverse;
     }
     &-content {
       padding: 16px;

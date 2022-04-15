@@ -15,7 +15,19 @@ import Image from 'next/image';
 function Blog({blogs}: {blogs: any[]}) {
   const poster = (blog: any) => {
     if (Markdown.getImgUrl(blog.mark_content).length) {
-      return <Image src={Markdown.getImgUrl(blog.mark_content)[0]} width={100} height={100}/>;
+      return (
+        <Box sx={{
+          width: {xs: 'calc(100% + 60px)', sm: '100px'},
+          height: {xs: '160px', sm: '100px'},
+          position: 'relative',
+          background: '#eee',
+          borderRadius: '5px',
+          margin: {xs: '0 -30px', sm: 0},
+          marginTop: {xs: '-20px', sm: 0},
+        }}>
+          <Image src={Markdown.getImgUrl(blog.mark_content)[0]} layout={'fill'} objectFit={'contain'}/>
+        </Box>
+      );
     }
   };
   return (
@@ -26,24 +38,26 @@ function Blog({blogs}: {blogs: any[]}) {
           <div className={styles['blog-wrapper']}>
             {blogs.map((blog, index) => (
               <Link href={`/blogs/${blog['_id']}`} key={index} passHref>
-                <Paper elevation={1} sx={{margin: '10px 0'}}>
+                <Paper elevation={1} sx={{margin: '10px 0', padding: '0 10px'}}>
                   <div className={styles['blog-item']} key={index}>
-                    {poster(blog)}
-                    <span className={styles['blog-title']}>{blog.title}</span>
-                    <div className={styles['blog-description']}>
-                      {Markdown.intercept(blog.mark_content, 155)}
-                    </div>
-                    <Box sx={{display: 'flex'}}>
-                      <div className={styles['blog-info']}>
-                        <AccessTime fontSize={'small'}/>
-                        <span>{moment(blog.create_time).format('yyyy-MM-DD')}</span>
+                    <Box sx={{flex: 1}}>
+                      <span className={styles['blog-title']}>{blog.title}</span>
+                      <div className={styles['blog-description']}>
+                        {Markdown.intercept(blog.mark_content, 155)}
                       </div>
-                      <div className={styles['blog-info']}>
-                        <VisibilityOutlined fontSize={'small'}/>
-                        {/* 随机显示浏览量 */}
-                        <span>{Math.floor(Math.random() * 100)}</span>
-                      </div>
+                      <Box sx={{display: 'flex', justifyContent: {xs: 'space-between', sm: 'flex-start'}}}>
+                        <div className={styles['blog-info']}>
+                          <AccessTime fontSize={'small'}/>
+                          <span>{moment(blog.create_time).format('yyyy-MM-DD')}</span>
+                        </div>
+                        <div className={styles['blog-info']}>
+                          <VisibilityOutlined fontSize={'small'}/>
+                          {/* 随机显示浏览量 */}
+                          <span>{Math.floor(Math.random() * 100)}</span>
+                        </div>
+                      </Box>
                     </Box>
+                    {poster(blog)}
                   </div>
                 </Paper>
               </Link>
