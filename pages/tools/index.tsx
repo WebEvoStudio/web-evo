@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import {NextPage} from 'next';
 import {
-  Box, Button, ImageList, ImageListItem, ImageListItemBar, ListSubheader,
-  Toolbar,
+  Box, Button, ImageList, ImageListItem, ImageListItemBar, ListSubheader, Slider,
+  Toolbar, Typography,
 } from '@mui/material';
 import Uploader from '../../components/uploader';
 import FileUnit from '../../core/unit/file-unit';
@@ -30,6 +30,7 @@ const ToolsIndex: NextPage = () => {
   const [enhancing, setEnhancing] = useState(false);
   const [selectedImages, setSelectedImages] = useState<{file: File, path: string}[]>([]);
   const [enhancedImages, setEnhancedImages] = useState<string[]>([]);
+  const [cols, setCols] = useState(3);
   const run = async () => {
     setEnhancing(true);
     try {
@@ -69,6 +70,19 @@ const ToolsIndex: NextPage = () => {
       <CommonHead title={'工具-图像清晰度增强'} description={description} keywords={keywords}/>
       <Box sx={{flex: 1, background: '#eee'}}>
         <Toolbar sx={{display: 'flex', justifyContent: 'flex-end'}}>
+          <Box sx={{width: 200, display: 'flex', alignItems: 'center'}}>
+            <Typography sx={{whiteSpace: 'nowrap'}}>行数:</Typography>
+            <Slider
+              defaultValue={3}
+              step={1}
+              min={1}
+              max={8}
+              getAriaLabel={(value) => `${value}`}
+              marks
+              sx={{marginLeft: '12px'}}
+              onChangeCommitted={(e, value) => setCols(Number(value))}/>
+          </Box>
+          <Box sx={{flex: 1}}/>
           <Uploader onChange={(e) => setSelectedImages(e)}/>
           <LoadingButton
             sx={{color: '#fff', marginLeft: '10px'}}
@@ -87,7 +101,7 @@ const ToolsIndex: NextPage = () => {
           <Box sx={{flex: 1}}>
             <ListSubheader component="div">源文件</ListSubheader>
             <Box sx={{overflowY: 'scroll', height: 'calc(100vh - 190px)'}}>
-              <ImageList variant={'masonry'} cols={3}>
+              <ImageList variant={'masonry'} cols={cols}>
                 {selectedImages.map((image, index) => (
                   <ImageListItem key={index}>
                     <Box sx={{position: 'relative'}}>
@@ -107,7 +121,7 @@ const ToolsIndex: NextPage = () => {
           <Box sx={{flex: 1}}>
             <ListSubheader component="div">增强后</ListSubheader>
             <Box sx={{overflowY: 'scroll', height: 'calc(100vh - 190px)'}}>
-              <ImageList variant={'masonry'} cols={3}>
+              <ImageList variant={'masonry'} cols={cols}>
                 {enhancedImages.map((image, index) => (
                   <ImageListItem key={index}>
                     <Box sx={{position: 'relative'}}>
