@@ -32,7 +32,7 @@ function MyApp(props: MyAppProps) {
           {/* Google Analytics*/}
           <GoogleAnalytics measurementId={'G-YKCPHDYK53'}/>
           {/* microsoft clarity */}
-          <Script dangerouslySetInnerHTML={{
+          <Script id={'microsoft-clarity'} dangerouslySetInnerHTML={{
             __html: `
             (function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};

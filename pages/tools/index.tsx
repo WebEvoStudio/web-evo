@@ -1,23 +1,18 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import {NextPage} from 'next';
 import {
-  Box, Button, Collapse,
-  Drawer, ImageList, ImageListItem, ImageListItemBar, List,
-  ListItem,
-  ListItemButton,
-  ListItemIcon,
-  ListItemText, ListSubheader,
+  Box, Button, ImageList, ImageListItem, ImageListItemBar, ListSubheader,
   Toolbar,
 } from '@mui/material';
-import {ExpandLess, ExpandMore, Image as ImageIcon, AddPhotoAlternate} from '@mui/icons-material';
-import Uploader from '../components/uploader';
-import FileUnit from '../core/unit/file-unit';
-import Request from '../core/unit/request';
+import Uploader from '../../components/uploader';
+import FileUnit from '../../core/unit/file-unit';
+import Request from '../../core/unit/request';
 import JSZip from 'jszip';
 import moment from 'moment';
 import {SnackbarProvider, useSnackbar} from 'notistack';
-import CommonHead from '../components/common-head';
+import CommonHead from '../../components/common-head';
 import {LoadingButton} from '@mui/lab';
+import ToolLayout from '../../layouts/tool.layout';
 
 interface Menu {
   title: string;
@@ -27,32 +22,11 @@ interface Menu {
   children?: Menu[];
 }
 
-const Tools: NextPage = () => {
+const ToolsIndex: NextPage = () => {
   const description = '对低质图片进行去雾,无损放大,对比度增强等多种处理,优化重建高清图像.可用于提升相册图像质量,提升视频监控质量等.';
   const keywords = '图像增强,图片增强';
   const {enqueueSnackbar} = useSnackbar();
-  const [menus, setMenus] = useState<Menu[]>([]);
   const [enhancing, setEnhancing] = useState(false);
-  useEffect(() => {
-    setMenus([
-      {
-        title: '图像处理',
-        icon: <ImageIcon />,
-        href: '/tools/image',
-        open: true,
-        children: [
-          {
-            title: '图像清晰度增强',
-            icon: <AddPhotoAlternate />,
-            href: '/tools/image',
-          },
-        ],
-      },
-    ]);
-  }, []);
-  const handleClick = (index: number) => {
-    setMenus(menus.map((menu, _index) => _index === index ? {...menu, open: !menu.open} : menu));
-  };
   const [selectedImages, setSelectedImages] = useState<{file: File, path: string}[]>([]);
   const [enhancedImages, setEnhancedImages] = useState<string[]>([]);
   const run = async () => {
@@ -90,35 +64,8 @@ const Tools: NextPage = () => {
     });
   };
   return (
-    <Box sx={{display: 'flex', height: 'calc(100vh - 64px)'}}>
+    <ToolLayout>
       <CommonHead title={'工具-图像清晰度增强'} description={description} keywords={keywords}/>
-      <Drawer
-        variant="permanent"
-        sx={{[`& .MuiDrawer-paper`]: {boxSizing: 'border-box', position: 'relative'}}}>
-        <List>
-          {menus.map((menu, index) => (
-            <div key={index}>
-              <ListItemButton onClick={() => handleClick(index)}>
-                <ListItemIcon>{menu.icon}</ListItemIcon>
-                <ListItemText primary={menu.title}/>
-                {menu.open ? <ExpandLess /> : <ExpandMore />}
-              </ListItemButton>
-              {menu.children?.length && (
-                <Collapse in={menu.open}>
-                  <List disablePadding component="div">
-                    {menu.children.map((child, index) => (
-                      <ListItem button key={index} sx={{pl: 4}}>
-                        <ListItemIcon>{child.icon}</ListItemIcon>
-                        <ListItemText primary={child.title}/>
-                      </ListItem>
-                    ))}
-                  </List>
-                </Collapse>
-              )}
-            </div>
-          ))}
-        </List>
-      </Drawer>
       <Box sx={{flex: 1, background: '#eee'}}>
         <Toolbar>
           <Uploader onChange={(e) => setSelectedImages(e)}/>
@@ -174,12 +121,12 @@ const Tools: NextPage = () => {
           </Box>
         </Box>
       </Box>
-    </Box>
+    </ToolLayout>
   );
 };
 const IntegrationNotice = () => (
   <SnackbarProvider dense={true} maxSnack={1}>
-    <Tools/>
+    <ToolsIndex/>
   </SnackbarProvider>
 );
 export default IntegrationNotice;

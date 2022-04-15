@@ -21,7 +21,7 @@ const Index: NextPage = () => {
       <Container maxWidth={'md'} sx={{minHeight: 'calc(100vh - 56px)', display: 'flex', flexDirection: 'column'}}>
         <h1>Search</h1>
         {blogs.map((blog, index) => (
-          <Link href={`/blogs/${blog['_id']}`} key={index}>
+          <Link href={`/blogs/${blog['_id']}`} key={index} passHref>
             <Paper elevation={1} sx={{margin: '10px 0'}}>
               <div className={styles['blog-item']} key={index}>
                 <span className={styles['blog-title']}>{blog.title}</span>

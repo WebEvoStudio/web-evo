@@ -17,3 +17,4 @@ echo "开始 developer-center-web 镜像打包"
 docker build -t developer-center-web .
 echo "运行 developer-center-web 镜像：4206"
 docker run --name developer-center-web -p 4206:3000 -d developer-center-web
+echo "部署完成"

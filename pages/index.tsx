@@ -24,7 +24,7 @@ export default function Index() {
         <Image src={Images.undrawProudCoder} alt={''}/>
       </div>
       <div>
-        <Link href={'/blog'}>
+        <Link href={'/blog'} passHref>
           <div>
             <Button sx={{color: '#fff'}} color={'primary'} variant="contained">View our work</Button>
           </div>

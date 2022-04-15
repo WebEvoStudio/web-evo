@@ -25,7 +25,7 @@ function Blog({blogs}: {blogs: any[]}) {
         <div>
           <div className={styles['blog-wrapper']}>
             {blogs.map((blog, index) => (
-              <Link href={`/blogs/${blog['_id']}`} key={index}>
+              <Link href={`/blogs/${blog['_id']}`} key={index} passHref>
                 <Paper elevation={1} sx={{margin: '10px 0'}}>
                   <div className={styles['blog-item']} key={index}>
                     {poster(blog)}
