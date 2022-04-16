@@ -20,7 +20,7 @@ export default class MyDocument extends Document {
           {/* 360 搜索验证 */}
           <meta name="360-site-verification" content="77b0e1a676566c755d708af4c92a3524" />
           {/* 头条搜索验证 */}
-          <meta name="bytedance-verification-code" content="wSvyXEgEi6nNu3eh/eDe" />
+          <meta name="bytedance-verification-code" content="PwSvcyjJ+I/ikkOs7fGi" />
           <link rel="icon" href={'/favicon.png'} />
           <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"/>
           <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
