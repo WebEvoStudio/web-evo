@@ -3,7 +3,7 @@
   "short_name": "Web开发者中心",
   "theme_color": "#00B0FF",
   "background_color": "#ffffff",
-  "display": "fullscreen",
+  "display": "standalone",
   "orientation": "portrait",
   "scope": "/",
   "start_url": "/",
