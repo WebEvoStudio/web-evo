@@ -12,7 +12,7 @@
 # EXPOSE 3000
 # CMD [ "npm", "start" ]
 
-FROM node:16 as BUILD_IMAGE
+FROM node:16-alpine as BUILD_IMAGE
 WORKDIR /usr/src/app
 
 COPY package*.json ./
@@ -21,7 +21,7 @@ RUN npm install
 COPY . .
 # RUN npm run build
 RUN npm run build:post
-RUN npm prune --production
+# RUN npm prune --production
 
 FROM node:16-alpine
 WORKDIR /usr/src/app
