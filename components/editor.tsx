@@ -1,8 +1,8 @@
-import React from 'react';
+import React, {useEffect, useRef} from 'react';
 import {useState} from 'react';
 import {Editor} from '@bytemd/react';
 import 'bytemd/dist/index.min.css';
-import zhHans from 'bytemd/lib/locales/zh_Hans.json';
+import zhHans from 'bytemd/locales/zh_Hans.json';
 import styles from '../styles/editor.module.scss';
 import frontmatter from '@bytemd/plugin-frontmatter';
 import gfm from '@bytemd/plugin-gfm';
@@ -10,7 +10,17 @@ import {Button, Input, message} from 'antd';
 import clipboard from 'clipboardy';
 import axios from 'axios';
 import 'github-markdown-css/github-markdown-light.css';
-import {BytemdPlugin} from 'bytemd';
+import {BytemdEditorContext, BytemdPlugin} from 'bytemd';
+
+const pastePlugin = (): BytemdPlugin => {
+  return {
+    editorEffect(ctx: BytemdEditorContext): void | (() => void) {
+      ctx.editor.getInputField().addEventListener('onpaste', (e) => {
+        e.preventDefault();
+      });
+    },
+  };
+};
 
 /**
  * editor.tsx
@@ -20,9 +30,16 @@ import {BytemdPlugin} from 'bytemd';
 export default function EditorPage(props: {title?: string, value?: string, id?: string}) {
   const [value, setValue] = useState(props.value||'');
   const [title, setTitle] = useState(props.title||'');
-  const plugins: BytemdPlugin[] = [frontmatter(), gfm()];
+  const plugins: BytemdPlugin[] = [
+    frontmatter(),
+    gfm(),
+    pastePlugin(),
+  ];
   const isModify = !!props.id;
-  console.log(isModify);
+  const editorRef = useRef();
+  useEffect(() => {
+    console.log(editorRef);
+  }, []);
   const copy = () => {
     clipboard.write(
         JSON.stringify({title, mark_content: value}),
@@ -40,7 +57,6 @@ export default function EditorPage(props: {title?: string, value?: string, id?: 
         .catch((err) => message.error(err.message));
   };
   const modify = () => {
-    // message.warn('暂不支持修改').then();
     const url = `${process.env.NEXT_PUBLIC_BASE_URL}/api/blogs`;
     const requestData = {_id: props.id, title, mark_content: value};
     axios.put(url, requestData).then((res) => {
@@ -55,7 +71,11 @@ export default function EditorPage(props: {title?: string, value?: string, id?: 
         <Button onClick={copy}>复制到剪贴板</Button>
         <Button onClick={isModify ? modify : save}>{isModify ? '保存修改' : '发布'}</Button>
       </div>
-      <Editor value={value} locale={zhHans} plugins={plugins} onChange={(v: string) => setValue(v)}/>
+      <Editor
+        value={value}
+        plugins={plugins}
+        locale={zhHans}
+        onChange={(v: string) => setValue(v)}/>
     </div>
   );
 }
