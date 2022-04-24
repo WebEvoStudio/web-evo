@@ -18,7 +18,7 @@ const nextConfig = withPWA({
     runtimeCaching,
   },
   images: {
-    domains: ['pic3.zhimg.com', 'p3-juejin.byteimg.com'],
+    domains: ['pic3.zhimg.com', 'p3-juejin.byteimg.com', 'nextjs.org'],
   },
 });
 
