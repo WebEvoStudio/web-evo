@@ -11,6 +11,7 @@ import clipboard from 'clipboardy';
 import axios from 'axios';
 import 'github-markdown-css/github-markdown-light.css';
 import {BytemdPlugin} from 'bytemd';
+import {Image} from 'mdast';
 
 /**
  * editor.tsx
@@ -48,6 +49,13 @@ export default function EditorPage(props: {title?: string, value?: string, id?: 
       message.success('文章修改成功').then();
     }).catch((err) => message.error(err.message));
   };
+  const uploadImages = (files: File[]): Promise<Pick<Image, 'url' | 'alt' | 'title'>[]> => {
+    message.warn('暂不支持上传图片').then();
+    console.log(files);
+    return new Promise((resolve, reject) => {
+      resolve([]);
+    });
+  };
   return (
     <div>
       <div className={styles['actions']}>
@@ -55,7 +63,9 @@ export default function EditorPage(props: {title?: string, value?: string, id?: 
         <Button onClick={copy}>复制到剪贴板</Button>
         <Button onClick={isModify ? modify : save}>{isModify ? '保存修改' : '发布'}</Button>
       </div>
-      <Editor value={value} locale={zhHans} plugins={plugins} onChange={(v: string) => setValue(v)}/>
+      <Editor
+        value={value}
+        locale={zhHans} plugins={plugins} onChange={(v: string) => setValue(v)} uploadImages={uploadImages}/>
     </div>
   );
 }
