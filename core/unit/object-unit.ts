@@ -16,4 +16,19 @@ export default class ObjectUnit {
     }
     return params.substring(0, params.length - 1);
   }
+
+  /**
+   * object 转 FormData
+   * @param {Object} obj
+   * @return {FormData}
+   */
+  static toFormData(obj: any): FormData {
+    const formData = new FormData();
+    for (const key in obj) {
+      if (obj.hasOwnProperty(key)) {
+        formData.append(key, obj[key]);
+      }
+    }
+    return formData;
+  }
 }

@@ -6,55 +6,69 @@ import zhHans from 'bytemd/lib/locales/zh_Hans.json';
 import styles from '../styles/editor.module.scss';
 import frontmatter from '@bytemd/plugin-frontmatter';
 import gfm from '@bytemd/plugin-gfm';
-import {Button, Input, message} from 'antd';
+import {Button, Input} from 'antd';
 import clipboard from 'clipboardy';
 import axios from 'axios';
 import 'github-markdown-css/github-markdown-light.css';
 import {BytemdPlugin} from 'bytemd';
 import {Image} from 'mdast';
+import Request from '../core/unit/request';
+import ObjectUnit from '../core/unit/object-unit';
+import {SnackbarProvider, useSnackbar} from 'notistack';
 
 /**
  * editor.tsx
  * @param {any} props
  * @return {React.ReactElement}
  */
-export default function EditorPage(props: {title?: string, value?: string, id?: string}) {
+const EditorPage = (props: {title?: string, value?: string, id?: string}) => {
   const [value, setValue] = useState(props.value||'');
   const [title, setTitle] = useState(props.title||'');
   const plugins: BytemdPlugin[] = [frontmatter(), gfm()];
   const isModify = !!props.id;
-  console.log(isModify);
+  const {enqueueSnackbar} = useSnackbar();
   const copy = () => {
     clipboard.write(
         JSON.stringify({title, mark_content: value}),
-    ).then(() => message.success('内容已复制到剪贴板'));
+    ).then(() => enqueueSnackbar('内容已复制到剪贴板', {variant: 'success'}));
   };
   const save = () => {
     const url = `${process.env.NEXT_PUBLIC_BASE_URL}/api/blogs`;
     const requestData = {title, mark_content: value};
-    console.log(requestData);
     axios.post(url, requestData)
-        .then((res) => {
-          console.log(res.data);
-          message.success('文章发布成功').then();
-        })
-        .catch((err) => message.error(err.message));
+        .then((res) => enqueueSnackbar('文章发布成功', {variant: 'success'}))
+        .catch((err) => enqueueSnackbar(err.message, {variant: 'error'}));
   };
   const modify = () => {
-    // message.warn('暂不支持修改').then();
     const url = `${process.env.NEXT_PUBLIC_BASE_URL}/api/blogs`;
     const requestData = {_id: props.id, title, mark_content: value};
-    axios.put(url, requestData).then((res) => {
-      console.log(res.data);
-      message.success('文章修改成功').then();
-    }).catch((err) => message.error(err.message));
+    axios.put(url, requestData)
+        .then((res) => enqueueSnackbar('文章修改成功', {variant: 'success'}))
+        .catch((err) => enqueueSnackbar(err.message, {variant: 'error'}));
   };
-  const uploadImages = (files: File[]): Promise<Pick<Image, 'url' | 'alt' | 'title'>[]> => {
-    message.warn('暂不支持上传图片').then();
-    console.log(files);
-    return new Promise((resolve, reject) => {
-      resolve([]);
-    });
+  const uploadImages = async (files: File[]): Promise<Pick<Image, 'url' | 'alt' | 'title'>[]> => {
+    const response: Pick<Image, 'url' | 'alt' | 'title'>[] = [];
+    try {
+      if (files.length > 1) throw new Error('一次只能上传一张图片');
+      const fileName = files[0].name;
+      if (fileName.indexOf(' ') !== -1) throw new Error('文件名不允许包含空格');
+      const host = process.env['NEXT_PUBLIC_MIDDLEWARE_URL'];
+      const request = new Request(host);
+      const ossData = await request.get('/ali/oss/policy', {});
+      const headers = {'Content-Type': 'multipart/form-data'};
+      const {dir} = ossData;
+      const requestBody = ObjectUnit.toFormData({
+        key: dir.length ? `${dir}/${files[0].name}` : files[0].name,
+        ...ossData,
+        file: files[0],
+      });
+      const {filepath} = await request.post(ossData.host, requestBody, headers);
+      response.push({url: filepath, alt: '', title: ''});
+      return response;
+    } catch (e: any) {
+      enqueueSnackbar(e.message, {variant: 'error'});
+      throw new DOMException(e.message);
+    }
   };
   return (
     <div>
@@ -68,4 +82,10 @@ export default function EditorPage(props: {title?: string, value?: string, id?: 
         locale={zhHans} plugins={plugins} onChange={(v: string) => setValue(v)} uploadImages={uploadImages}/>
     </div>
   );
-}
+};
+const IntegrationNotice = (props: {title?: string, value?: string, id?: string}) => (
+  <SnackbarProvider dense={true} maxSnack={1} autoHideDuration={3000}>
+    <EditorPage {...props}/>
+  </SnackbarProvider>
+);
+export default IntegrationNotice;

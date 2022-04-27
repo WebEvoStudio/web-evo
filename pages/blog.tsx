@@ -8,13 +8,19 @@ import {Box, Container, Paper} from '@mui/material';
 import {AccessTime, VisibilityOutlined} from '@mui/icons-material';
 import moment from 'moment';
 import Image from 'next/image';
+import {ImageLoader} from 'next/dist/client/image';
 /**
  * Blog Page
  * @return {JSX.Element}
  */
 function Blog({blogs}: {blogs: any[]}) {
+  const loader: ImageLoader = ({src, config}) => {
+    return 'https://' + src;
+  };
   const poster = (blog: any) => {
     if (Markdown.getImgUrl(blog.mark_content).length) {
+      const url = Markdown.getImgUrl(blog.mark_content)[0];
+      const src = url.split('://')[1];
       return (
         <Box sx={{
           width: {xs: 'calc(100% + 60px)', sm: '100px'},
@@ -25,7 +31,7 @@ function Blog({blogs}: {blogs: any[]}) {
           margin: {xs: '0 -30px', sm: 0},
           marginTop: {xs: '-20px', sm: 0},
         }}>
-          <Image src={Markdown.getImgUrl(blog.mark_content)[0]} layout={'fill'} objectFit={'contain'}/>
+          <Image loader={loader} src={src} layout={'fill'} objectFit={'contain'}/>
         </Box>
       );
     }
