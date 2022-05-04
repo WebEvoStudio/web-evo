@@ -21,10 +21,16 @@ export default class Request {
    * @param {string} url
    * @param {Method} method
    * @param {any} data
+   * @param {any} headers
    * @return {Promise<AxiosResponse<any>>}
    */
-  request(url: string, method: Method, data?: {[index: string]: any}): Promise<any> {
-    const config = {...this.config, url, method, data};
+  request(
+      url: string,
+      method: Method,
+      data?: {[index: string]: any},
+      headers?: {[index: string]: string},
+  ): Promise<any> {
+    const config = {...this.config, url, method, data, headers};
     const instance = axios.create();
     instance.interceptors.response.use(this.responseInterceptor);
     return instance.request(config);
@@ -43,10 +49,11 @@ export default class Request {
    * POST请求
    * @param {string} url
    * @param {Object} data
+   * @param {Object} headers
    * @return {any}
    */
-  post(url: string, data: {[index: string]: any}): Promise<any> {
-    return this.request(url, 'post', data);
+  post(url: string, data: {[index: string]: any}, headers?: {[index: string]: string}): Promise<any> {
+    return this.request(url, 'post', data, headers);
   }
   /**
    * 响应拦截器
