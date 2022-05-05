@@ -6,22 +6,24 @@ import {AccessTime, VisibilityOutlined} from '@mui/icons-material';
 import moment from 'moment';
 import Link from 'next/link';
 import Image from 'next/image';
+import {ImageLoader} from 'next/dist/client/image';
 const BlogCard = ({blog}: any) => {
+  const loader: ImageLoader = ({src, config}) => 'https://' + src;
   const poster = (blog: any) => {
     if (Markdown.getImgUrl(blog.mark_content).length) {
+      const url = Markdown.getImgUrl(blog.mark_content)[0];
+      const src = url.split('://')[1];
       return (
         <Box sx={{
-          width: {xs: 'calc(100% + 20px)', sm: '100px'},
+          width: {xs: 'calc(100% + 60px)', sm: '100px'},
           height: {xs: '160px', sm: '100px'},
           position: 'relative',
           background: '#eee',
           borderRadius: '5px',
-          margin: {xs: '0 -10px', sm: 0},
-          marginTop: {xs: '-10px', sm: 0},
-          marginBottom: {xs: '10px', sm: 0},
-          marginLeft: {xs: '-10px', sm: '30px'},
+          margin: {xs: '0 -30px', sm: 0},
+          marginTop: {xs: '-20px', sm: 0},
         }}>
-          <Image src={Markdown.getImgUrl(blog.mark_content)[0]} layout={'fill'} objectFit={'contain'}/>
+          <Image loader={loader} src={src} layout={'fill'} objectFit={'contain'}/>
         </Box>
       );
     }

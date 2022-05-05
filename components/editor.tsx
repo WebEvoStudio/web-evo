@@ -6,11 +6,10 @@ import zhHans from 'bytemd/locales/zh_Hans.json';
 import styles from '../styles/editor.module.scss';
 import frontmatter from '@bytemd/plugin-frontmatter';
 import gfm from '@bytemd/plugin-gfm';
-import {Button, Input, message} from 'antd';
+import {Button, Input} from 'antd';
 import clipboard from 'clipboardy';
 import axios from 'axios';
 import 'github-markdown-css/github-markdown-light.css';
-import {BytemdPlugin} from 'bytemd';
 import {Image} from 'mdast';
 import Request from '../core/unit/request';
 import ObjectUnit from '../core/unit/object-unit';
@@ -101,7 +100,8 @@ const EditorPage = (props: {title?: string, value?: string, id?: string}) => {
         value={value}
         plugins={plugins}
         locale={zhHans}
-        onChange={(v: string) => setValue(v)}uploadImages={uploadImages}/>
+        onChange={(v: string) => setValue(v)}
+        uploadImages={uploadImages}/>
     </div>
   );
 };
