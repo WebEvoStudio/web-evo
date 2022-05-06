@@ -29,7 +29,7 @@ const ToolLayout = ({children}: any) => {
         children: [
           {
             title: '图像清晰度增强',
-            icon: <AddPhotoAlternate />,
+            icon: <AddPhotoAlternate/>,
             href: '/tools/image',
           },
         ],
@@ -56,7 +56,7 @@ const ToolLayout = ({children}: any) => {
                 <Collapse in={menu.open}>
                   <List disablePadding component="div">
                     {menu.children.map((child, index) => (
-                      <ListItem button key={index} sx={{pl: 4}}>
+                      <ListItem button key={index} sx={{pl: 4, color: '#00B0FF'}}>
                         <ListItemIcon>{child.icon}</ListItemIcon>
                         <ListItemText primary={child.title}/>
                       </ListItem>
