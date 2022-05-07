@@ -99,11 +99,6 @@ const Header = () => {
             <MenuIcon/>
           </IconButton>
         </Toolbar>
-        <ScrollTop>
-          <Fab color="primary" size="small" aria-label="scroll back to top">
-            <KeyboardArrowUp sx={{color: '#fff'}}/>
-          </Fab>
-        </ScrollTop>
       </AppBar>
       <Toolbar id="back-to-top-anchor"/>
       <Drawer
@@ -124,6 +119,13 @@ const Header = () => {
           </List>
         </Box>
       </Drawer>
+      <Box sx={{position: 'fixed', zIndex: 1}}>
+        <ScrollTop>
+          <Fab color="primary" size="small" aria-label="scroll back to top">
+            <KeyboardArrowUp sx={{color: '#fff'}}/>
+          </Fab>
+        </ScrollTop>
+      </Box>
     </Box>
   );
 };
