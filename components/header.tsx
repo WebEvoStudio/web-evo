@@ -60,9 +60,10 @@ const Header = () => {
       </Zoom>
     );
   };
+  const appBarStyle = {color: 'white', backgroundColor: 'rgba(0,176,255,0.7)', backdropFilter: 'blur(10px)'};
   return (
     <Box sx={{flexGrow: 1}}>
-      <AppBar position="fixed" sx={{color: 'white'}}>
+      <AppBar position="fixed" sx={appBarStyle}>
         <Toolbar>
           <Link href={'/'}>
             <a>
