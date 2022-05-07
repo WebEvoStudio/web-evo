@@ -11,7 +11,6 @@ import {Button} from '@mui/material';
  * @extends React.Component
  */
 export default function Index() {
-  // const options: any = require('/assets/jsons/particles.json');
   /**
    * render the component
    * @return {JSX.Element}
@@ -21,7 +20,7 @@ export default function Index() {
       <CommonHead/>
       <h1 className={styles['h1']}>欢迎来到Web开发人员中心</h1>
       <div className={styles['image']}>
-        <Image src={Images.undrawProudCoder} alt={''}/>
+        <Image src={Images.undrawProudCoder} alt={'骄傲的编码员'}/>
       </div>
       <div>
         <Link href={'/blog'} passHref>
@@ -32,17 +31,16 @@ export default function Index() {
       </div>
       <div className={styles['h1']}>我们是一个对网络开发充满热情的开发人员团队</div>
       <div className={styles['image']}>
-        <Image src={Images.undrawTeamCollaboration} alt={''}/>
+        <Image src={Images.undrawTeamCollaboration} alt={'团队协作'}/>
       </div>
       <div className={styles['h1']}>我们在这里帮助您构建您的Web项目</div>
       <div className={styles['image']}>
-        <Image src={Images.undrawUnderConstruction} alt={''}/>
+        <Image src={Images.undrawUnderConstruction} alt={'🚧正在施工🚧'}/>
       </div>
       <div className={styles['h1']}>我们提供丰富的技术文章支持，您可以在这里获得更多的帮助</div>
       <div className={styles['image']}>
-        <Image src={Images.undrawBlogPost} alt={''}/>
+        <Image src={Images.undrawBlogPost} alt={'博客文章'}/>
       </div>
-      {/* <Particles id="tsparticles" options={options}/>*/}
     </div>
   );
 }

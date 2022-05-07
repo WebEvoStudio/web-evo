@@ -1,4 +1,7 @@
 import React from 'react';
+import {Container} from '@mui/material';
+import {Images} from '../core/libs/images';
+import Image from 'next/image';
 
 /**
  * Contact page
@@ -6,12 +9,8 @@ import React from 'react';
  */
 export default function Contact() {
   return (
-    <div>
-      <h1>Contact</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-        doloremque, quidem, quisquam doloremque.
-      </p>
-    </div>
+    <Container maxWidth={'md'}>
+      <Image src={Images.undrawContactUs}/>
+    </Container>
   );
 }

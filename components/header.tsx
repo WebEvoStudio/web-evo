@@ -26,9 +26,9 @@ const Header = () => {
   const links: any[] = [
     // {path: '/about', name: 'About'},
     // {path: '/portfolio', name: 'Portfolio'},
-    {path: '/blog', name: 'Blog'},
-    {path: '/docs', name: 'Docs'},
-    // {path: '/contact', name: 'Contact'},
+    {path: '/blog', name: '博客'},
+    {path: '/docs', name: '文档'},
+    {path: '/contact', name: '联系'},
   ];
   const pathname = `/${useRouter().pathname.split('/')[1]}`;
   const [drawerState, setDrawerState] = useState(false);
@@ -68,7 +68,7 @@ const Header = () => {
           <Link href={'/'}>
             <a>
               <Box sx={{width: 50, display: 'flex', alignItem: 'center', mr: 2}}>
-                <Image src={Images.undrawDeveloperActivity}/>
+                <Image src={Images.undrawDeveloperActivity} alt={'开发进行中'}/>
               </Box>
             </a>
           </Link>
