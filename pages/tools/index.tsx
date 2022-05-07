@@ -14,6 +14,8 @@ import CommonHead from '../../components/common-head';
 import {LoadingButton} from '@mui/lab';
 import ToolLayout from '../../layouts/tool.layout';
 import {BuildCircle, Download} from '@mui/icons-material';
+import ObjectUnit from '../../core/unit/object-unit';
+import StringUnit from '../../core/unit/string-unit';
 
 interface Menu {
   title: string;
@@ -25,11 +27,25 @@ interface Menu {
 
 const ToolsIndex: NextPage = () => {
   const description = '对低质图片进行去雾,无损放大,对比度增强等多种处理,优化重建高清图像.可用于提升相册图像质量,提升视频监控质量等.';
-  const keywords = '图像增强,图片增强';
+  const keywords = '图像增强,图片增强,图像清晰度增强,图像清晰度优化,图片清晰度增强,图片清晰度优化,图像修复,图片修复,照片增强,照片优化';
   const {enqueueSnackbar} = useSnackbar();
   const [enhancing, setEnhancing] = useState(false);
   const [selectedImages, setSelectedImages] = useState<{file: File, path: string}[]>([]);
   const [enhancedImages, setEnhancedImages] = useState<string[]>([]);
+  const upload = async (files: File[]) => {
+    const host = process.env['NEXT_PUBLIC_MIDDLEWARE_URL'];
+    const request = new Request(host);
+    const ossData = await request.get('/ali/oss/policy', {});
+    const headers = {'Content-Type': 'multipart/form-data'};
+    let {dir} = ossData;
+    dir = 'enhance-result';
+    const requestBody = ObjectUnit.toFormData({
+      key: dir.length ? `${dir}/${files[0].name}` : files[0].name,
+      ...ossData,
+      file: files[0],
+    });
+    await request.post(ossData.host, requestBody, headers);
+  };
   const [cols, setCols] = useState(3);
   const run = async () => {
     setEnhancing(true);
@@ -43,6 +59,9 @@ const ToolsIndex: NextPage = () => {
       const base64ImageHead = base64Images.map((base64Image) => base64Image.split(',')[0]);
       setEnhancedImages(responses.map(({EnhancedImage}, index) => `${base64ImageHead[index]},${EnhancedImage}`));
       enqueueSnackbar('图像处理完成', {variant: 'success'});
+      const files = base64Images.map((item, index) => StringUnit.toFile(item, selectedImages[index].file.name));
+      console.log(files);
+      await upload(files);
     } catch (error: any) {
       enqueueSnackbar(error.message, {variant: 'error'});
     }

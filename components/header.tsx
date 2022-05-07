@@ -16,19 +16,19 @@ import {
 } from '@mui/material';
 import {KeyboardArrowUp, Menu as MenuIcon} from '@mui/icons-material';
 import MainSearch from './main-search';
-// import MainSearch from './main-search';
+import Image from 'next/image';
+import {Images} from '../core/libs/images';
 /**
  * Header component
  * @constructor
  */
 const Header = () => {
   const links: any[] = [
-    {path: '/', name: 'Home'},
     // {path: '/about', name: 'About'},
     // {path: '/portfolio', name: 'Portfolio'},
-    {path: '/blog', name: 'Blog'},
-    {path: '/docs', name: 'Docs'},
-    // {path: '/contact', name: 'Contact'},
+    {path: '/blog', name: '博客'},
+    {path: '/docs', name: '文档'},
+    {path: '/contact', name: '联系'},
   ];
   const pathname = `/${useRouter().pathname.split('/')[1]}`;
   const [drawerState, setDrawerState] = useState(false);
@@ -60,20 +60,18 @@ const Header = () => {
       </Zoom>
     );
   };
+  const appBarStyle = {color: 'white', backgroundColor: 'rgba(0,176,255,0.7)', backdropFilter: 'blur(10px)'};
   return (
     <Box sx={{flexGrow: 1}}>
-      <AppBar position="fixed" sx={{color: 'white'}}>
+      <AppBar position="fixed" sx={appBarStyle}>
         <Toolbar>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            sx={{display: {xs: 'flex', sm: 'none'}, mr: 2}}
-            onClick={() => setDrawerState(true)}
-          >
-            <MenuIcon/>
-          </IconButton>
+          <Link href={'/'}>
+            <a>
+              <Box sx={{width: 50, display: 'flex', alignItem: 'center', mr: 2}}>
+                <Image src={Images.undrawDeveloperActivity} alt={'开发进行中'}/>
+              </Box>
+            </a>
+          </Link>
           <Box sx={{display: {xs: 'none', sm: 'block'}}}>
             <nav className={style.nav}>
               {links.map((link, index) => (
@@ -90,12 +88,17 @@ const Header = () => {
           </Box>
           <MainSearch/>
           <Box sx={{flexGrow: 1}} />
+          <IconButton
+            size="large"
+            edge="start"
+            color="inherit"
+            aria-label="menu"
+            sx={{display: {xs: 'flex', sm: 'none'}, ml: 0}}
+            onClick={() => setDrawerState(true)}
+          >
+            <MenuIcon/>
+          </IconButton>
         </Toolbar>
-        <ScrollTop>
-          <Fab color="primary" size="small" aria-label="scroll back to top">
-            <KeyboardArrowUp sx={{color: '#fff'}}/>
-          </Fab>
-        </ScrollTop>
       </AppBar>
       <Toolbar id="back-to-top-anchor"/>
       <Drawer
@@ -116,6 +119,13 @@ const Header = () => {
           </List>
         </Box>
       </Drawer>
+      <Box sx={{position: 'fixed', zIndex: 1}}>
+        <ScrollTop>
+          <Fab color="primary" size="small" aria-label="scroll back to top">
+            <KeyboardArrowUp sx={{color: '#fff'}}/>
+          </Fab>
+        </ScrollTop>
+      </Box>
     </Box>
   );
 };
