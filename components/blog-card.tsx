@@ -15,13 +15,13 @@ const BlogCard = ({blog}: any) => {
       const src = url.split('://')[1];
       return (
         <Box sx={{
-          width: {xs: 'calc(100% + 60px)', sm: '100px'},
+          width: {xs: 'calc(100% + 20px)', sm: '100px'},
           height: {xs: '160px', sm: '100px'},
           position: 'relative',
           background: '#eee',
           borderRadius: '5px',
-          margin: {xs: '0 -30px', sm: 0},
-          marginTop: {xs: '-20px', sm: 0},
+          margin: {xs: '0 -10px', sm: 0},
+          marginTop: {xs: '-10px', sm: 0},
         }}>
           <Image loader={loader} src={src} layout={'fill'} objectFit={'contain'}/>
         </Box>
