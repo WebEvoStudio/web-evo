@@ -9,6 +9,7 @@ import theme from '../core/themes/theme';
 import {CacheProvider, EmotionCache} from '@emotion/react';
 import createEmotionCache from '../core/unit/createEmotionCache';
 import Script from 'next/script';
+import {SnackbarProvider} from 'notistack';
 
 const clientSideEmotionCache = createEmotionCache();
 
@@ -26,22 +27,24 @@ function MyApp(props: MyAppProps) {
   return (
     <CacheProvider value={emotionCache}>
       <ThemeProvider theme={theme}>
-        <BasicLayout>
-          <CssBaseline/>
-          <Component {...pageProps} />
-          {/* Google Analytics*/}
-          <GoogleAnalytics measurementId={'G-YKCPHDYK53'}/>
-          {/* microsoft clarity */}
-          <Script id={'microsoft-clarity'} dangerouslySetInnerHTML={{
-            __html: `
+        <SnackbarProvider dense={true} maxSnack={1} autoHideDuration={3000}>
+          <BasicLayout>
+            <CssBaseline/>
+            <Component {...pageProps} />
+            {/* Google Analytics*/}
+            <GoogleAnalytics measurementId={'G-YKCPHDYK53'}/>
+            {/* microsoft clarity */}
+            <Script id={'microsoft-clarity'} dangerouslySetInnerHTML={{
+              __html: `
             (function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
         t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "b91ge7rn7p");
             `,
-          }}/>
-        </BasicLayout>
+            }}/>
+          </BasicLayout>
+        </SnackbarProvider>
       </ThemeProvider>
     </CacheProvider>
   );
