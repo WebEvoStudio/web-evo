@@ -1,8 +1,12 @@
-import React from 'react';
+import React, {useMemo, useState} from 'react';
 import {Box, Button, Container, Grid, TextField, Typography} from '@mui/material';
 import {Images} from '../core/libs/images';
 import Image from 'next/image';
 import {useSnackbar} from 'notistack';
+import isEmail from 'validator/lib/isEmail';
+import isMobilePhone from 'validator/lib/isMobilePhone';
+import Request from '../core/unit/request';
+
 
 /**
  * Contact page
@@ -10,10 +14,40 @@ import {useSnackbar} from 'notistack';
  */
 export default function Contact() {
   const {enqueueSnackbar} = useSnackbar();
+  const [form, setForm] = useState({name: '', contact: '', email: '', mobilePhone: '', message: ''});
+  const [formError, setFormError] = useState({name: false, contact: false, message: false});
   const submit = (e: any) => {
     e.preventDefault();
-    enqueueSnackbar('暂未开放', {variant: 'info'});
+    // enqueueSnackbar('暂未开放', {variant: 'info'});
+    console.log(form);
+    const requestBody: any = {...form};
+    Object.keys(requestBody).forEach((key) => requestBody[key] === '' && delete requestBody[key]);
+    new Request(process.env['NEXT_PUBLIC_MIDDLEWARE_URL']).post('/customer', requestBody)
+        .then(() => {
+          enqueueSnackbar('提交成功', {variant: 'success'});
+          setForm({name: '', contact: '', email: '', mobilePhone: '', message: ''});
+        })
+        .catch((err) => enqueueSnackbar(err.message, {variant: 'error'}));
   };
+  const contactBlurHandler = () => {
+    if (form.email === '' && form.mobilePhone === '') return setFormError({...formError, contact: true});
+    if (form.contact !== '') {
+      setFormError({...formError, contact: true});
+      setForm({...form, email: '', mobilePhone: ''});
+      return;
+    }
+    setFormError({...formError, contact: false});
+  };
+  const contactChangeHandler = ({target: {value}}: any) => {
+    if (isEmail(value)) return setForm({...form, email: value, contact: ''});
+    if (isMobilePhone(value, 'zh-CN')) return setForm({...form, mobilePhone: value, contact: ''});
+    setForm({...form, contact: value});
+  };
+  const submitDisabled = useMemo(() => {
+    const isError = formError.name || formError.contact || formError.message;
+    const isInput = Object.values(form).some((v) => v !== '');
+    return isError || !isInput;
+  }, [form, formError]);
   return (
     <Container maxWidth={'md'}>
       <Image src={Images.undrawContactUs}/>
@@ -49,18 +83,34 @@ export default function Contact() {
                 <Box component={'form'} onSubmit={submit}>
                   <Grid container gap={2}>
                     <Grid item xs={12}>
-                      <TextField label={'Your name'} fullWidth disabled/>
+                      <TextField
+                        label={'你的名字'}
+                        fullWidth
+                        required error={formError.name}
+                        helperText={formError.name ? '名字是必须的' : ''}
+                        onBlur={() => setFormError({...formError, name: form.name === ''})}
+                        onChange={({target: {value}}) => setForm({...form, name: value})}/>
                     </Grid>
                     <Grid item xs={12}>
-                      <TextField label={'Your e-mail'} fullWidth disabled/>
+                      <TextField label={'你的邮件或手机号'} fullWidth required
+                        error={formError.contact}
+                        helperText={formError.contact ? '邮箱或手机号码格式不正确' : ''}
+                        onBlur={contactBlurHandler}
+                        onChange={contactChangeHandler}/>
                     </Grid>
                     <Grid item xs={12}>
-                      <TextField label={'Your message'} fullWidth multiline rows={4} disabled/>
+                      <TextField
+                        label={'你的信息'}
+                        fullWidth required multiline rows={4}
+                        error={formError.message}
+                        helperText={formError.message ? '信息是必须的' : ''}
+                        onBlur={() => setFormError({...formError, message: form.message === ''})}
+                        onChange={({target: {value}}) => setForm({...form, message: value})}/>
                     </Grid>
                     <Grid item xs={12}>
                       <Box sx={{display: 'flex', justifyContent: 'center'}}>
-                        <Button variant={'contained'} type={'submit'} disabled>
-                          <Typography variant={'h6'} color={'white'}>Submit</Typography>
+                        <Button variant={'contained'} type={'submit'} disabled={submitDisabled}>
+                          <Typography variant={'h6'} color={'white'}>提交</Typography>
                         </Button>
                       </Box>
                     </Grid>

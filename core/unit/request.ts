@@ -32,7 +32,7 @@ export default class Request {
   ): Promise<any> {
     const config = {...this.config, url, method, data, headers};
     const instance = axios.create();
-    instance.interceptors.response.use(this.responseInterceptor);
+    instance.interceptors.response.use(this.responseInterceptor, this.errorInterceptor);
     return instance.request(config);
   }
   /**
@@ -69,5 +69,14 @@ export default class Request {
         console.log(response);
         return Promise.reject(response);
     }
+  }
+  /**
+   * 错误拦截器
+   * @param {any} err
+   * @return {any}
+   */
+  errorInterceptor(err: any): any {
+    const error = {message: '服务器错误', ...err.response.data};
+    return Promise.reject(error);
   }
 }
