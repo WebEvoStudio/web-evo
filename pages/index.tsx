@@ -24,9 +24,9 @@ export default function Index() {
         <Image src={Images.undrawProudCoder} alt={'骄傲的编码员'}/>
       </div>
       <div>
-        <Link href={'/blog'} passHref>
+        <Link prefetch href={'/blog'} passHref>
           <div>
-            <Button sx={{color: '#fff'}} color={'primary'} variant="contained">View our work</Button>
+            <Button sx={{color: '#fff'}} color={'primary'} variant="contained">查看我们的工作</Button>
           </div>
         </Link>
       </div>
