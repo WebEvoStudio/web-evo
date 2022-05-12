@@ -1,4 +1,4 @@
-import React, {useEffect, useRef} from 'react';
+import React from 'react';
 import {useState} from 'react';
 import {Editor} from '@bytemd/react';
 import 'bytemd/dist/index.min.css';
@@ -6,15 +6,15 @@ import zhHans from 'bytemd/locales/zh_Hans.json';
 import styles from '../styles/editor.module.scss';
 import frontmatter from '@bytemd/plugin-frontmatter';
 import gfm from '@bytemd/plugin-gfm';
-import {Button, Input} from 'antd';
 import clipboard from 'clipboardy';
 import axios from 'axios';
 import 'github-markdown-css/github-markdown-light.css';
 import {Image} from 'mdast';
 import Request from '../core/unit/request';
 import ObjectUnit from '../core/unit/object-unit';
-import {SnackbarProvider, useSnackbar} from 'notistack';
+import {useSnackbar} from 'notistack';
 import {BytemdEditorContext, BytemdPlugin} from 'bytemd';
+import {Box, Button, TextField} from '@mui/material';
 
 const pastePlugin = (): BytemdPlugin => {
   return {
@@ -41,10 +41,6 @@ const EditorPage = (props: {title?: string, value?: string, id?: string}) => {
   ];
   const isModify = !!props.id;
   const {enqueueSnackbar} = useSnackbar();
-  const editorRef = useRef();
-  useEffect(() => {
-    console.log(editorRef);
-  }, []);
   const copy = () => {
     clipboard.write(
         JSON.stringify({title, mark_content: value}),
@@ -92,9 +88,12 @@ const EditorPage = (props: {title?: string, value?: string, id?: string}) => {
   return (
     <div>
       <div className={styles['actions']}>
-        <Input placeholder={'请输入标题'} defaultValue={title} onChange={({target: {value}}) => setTitle(value)}/>
-        <Button onClick={copy}>复制到剪贴板</Button>
-        <Button onClick={isModify ? modify : save}>{isModify ? '保存修改' : '发布'}</Button>
+        <Box sx={{flex: 1}} mr={2}>
+          <TextField label={'标题'} size={'small'} fullWidth value={title}
+            onChange={({target: {value}}) => setTitle(value)}/>
+        </Box>
+        <Button variant={'outlined'} sx={{mr: 2}} onClick={copy}>复制到剪贴板</Button>
+        <Button variant={'outlined'} onClick={isModify ? modify : save}>{isModify ? '保存修改' : '发布'}</Button>
       </div>
       <Editor
         value={value}
@@ -105,9 +104,4 @@ const EditorPage = (props: {title?: string, value?: string, id?: string}) => {
     </div>
   );
 };
-const IntegrationNotice = (props: {title?: string, value?: string, id?: string}) => (
-  <SnackbarProvider dense={true} maxSnack={1} autoHideDuration={3000}>
-    <EditorPage {...props}/>
-  </SnackbarProvider>
-);
-export default IntegrationNotice;
+export default EditorPage;
