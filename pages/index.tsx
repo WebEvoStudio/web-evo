@@ -6,6 +6,7 @@ import Image from 'next/image';
 import {Images} from '../core/libs/images';
 import {Button} from '@mui/material';
 
+
 /**
  * @class Index
  * @extends React.Component
