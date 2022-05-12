@@ -1,10 +1,10 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import styles from '../styles/hello.module.scss';
-import Link from 'next/link';
 import CommonHead from '../components/common-head';
 import Image from 'next/image';
 import {Images} from '../core/libs/images';
-import {Button} from '@mui/material';
+import {useRouter} from 'next/router';
+import {LoadingButton} from '@mui/lab';
 
 
 /**
@@ -12,6 +12,16 @@ import {Button} from '@mui/material';
  * @extends React.Component
  */
 export default function Index() {
+  const router = useRouter();
+  const [loading, setLoading] = useState(false);
+  useEffect(() => {
+    router.prefetch('/blog').then();
+  }, []);
+  const toBlog = async () => {
+    setLoading(true);
+    await router.push('/blog');
+    setLoading(false);
+  };
   /**
    * render the component
    * @return {JSX.Element}
@@ -24,11 +34,14 @@ export default function Index() {
         <Image src={Images.undrawProudCoder} alt={'骄傲的编码员'}/>
       </div>
       <div>
-        <Link prefetch href={'/blog'} passHref>
-          <div>
-            <Button sx={{color: '#fff'}} color={'primary'} variant="contained">查看我们的工作</Button>
-          </div>
-        </Link>
+        {/* <Link prefetch href={'/blog'} passHref>*/}
+        <div onClick={toBlog}>
+          <LoadingButton
+            sx={{color: '#fff'}}
+            loading={loading}
+            loadingIndicator={'Loading...'} color={'primary'} variant="contained">查看我们的工作</LoadingButton>
+        </div>
+        {/* </Link>*/}
       </div>
       <div className={styles['h1']}>我们是一个对网络开发充满热情的开发人员团队</div>
       <div className={styles['image']}>
