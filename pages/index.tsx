@@ -34,14 +34,12 @@ export default function Index() {
         <Image src={Images.undrawProudCoder} alt={'骄傲的编码员'}/>
       </div>
       <div>
-        {/* <Link prefetch href={'/blog'} passHref>*/}
         <div onClick={toBlog}>
           <LoadingButton
             sx={{color: '#fff'}}
             loading={loading}
             loadingIndicator={'Loading...'} color={'primary'} variant="contained">查看我们的工作</LoadingButton>
         </div>
-        {/* </Link>*/}
       </div>
       <div className={styles['h1']}>我们是一个对网络开发充满热情的开发人员团队</div>
       <div className={styles['image']}>
