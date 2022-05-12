@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useMemo, useState} from 'react';
 import {NextPage} from 'next';
 import {useRouter} from 'next/router';
 import axios from 'axios';
@@ -7,8 +7,8 @@ import CommonHead from '../../../components/common-head';
 
 const BlogsModify: NextPage = () => {
   const {id} = useRouter().query;
-  const title = '修改文章';
   const [blog, setBlog] = useState({title: '', mark_content: ''});
+  const title = useMemo(() => blog.title ? `修改文章 - ${blog.title}` : '加载中...', [blog]);
   useEffect(() => {
     if (id) {
       const url = `${process.env.NEXT_PUBLIC_BASE_URL}api/blogs?id=${id}`;
