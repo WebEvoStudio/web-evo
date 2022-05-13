@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useMemo, useState} from 'react';
 import styles from '../styles/blog.module.scss';
 import {Box, Paper} from '@mui/material';
 import Markdown from '../core/unit/markdown';
@@ -8,6 +8,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import {ImageLoader} from 'next/dist/client/image';
 const BlogCard = ({blog}: any) => {
+  const [elevation, setElevation] = useState(1);
+  const [viewCount, setViewCount] = useState(0);
   const loader: ImageLoader = ({src, config}) => 'https://' + src;
   const poster = (blog: any) => {
     if (Markdown.getImgUrl(blog.mark_content).length) {
@@ -22,18 +24,31 @@ const BlogCard = ({blog}: any) => {
           borderRadius: '5px',
           margin: {xs: '0 -10px', sm: 0},
           marginTop: {xs: '-10px', sm: 0},
+          ml: {xs: '-10px', sm: '10px'},
+          mb: {xs: '10px', sm: 0},
         }}>
           <Image loader={loader} src={src} layout={'fill'} objectFit={'contain'}/>
         </Box>
       );
     }
   };
+  const titleStyle = useMemo(() => ({
+    color: elevation === 1 ? '#000' : '#00B0FF',
+  }), [elevation]);
+  useEffect(() => {
+    setViewCount(Math.floor(Math.random() * 100));
+  }, []);
   return (
     <Link href={`/blogs/${blog['_id']}`} passHref>
-      <Paper elevation={1} sx={{margin: '10px 0', padding: '0 10px'}}>
+      <Paper
+        elevation={elevation}
+        sx={{margin: '10px 0', padding: '0 10px'}}
+        onMouseEnter={() => setElevation(5)}
+        onMouseLeave={() => setElevation(1)}
+      >
         <div className={styles['blog-item']}>
           <Box sx={{flex: 1, width: {xs: '100%', sm: 'auto'}}}>
-            <span className={styles['blog-title']}>{blog.title}</span>
+            <span className={styles['blog-title']} style={titleStyle}>{blog.title}</span>
             <div className={styles['blog-description']}>
               {Markdown.intercept(blog.mark_content, 155)}
             </div>
@@ -48,7 +63,7 @@ const BlogCard = ({blog}: any) => {
               <div className={styles['blog-info']}>
                 <VisibilityOutlined fontSize={'small'}/>
                 {/* 随机显示浏览量 */}
-                <span>{Math.floor(Math.random() * 100)}</span>
+                <span>{viewCount}</span>
               </div>
             </Box>
           </Box>

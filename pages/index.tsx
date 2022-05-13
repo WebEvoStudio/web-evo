@@ -15,11 +15,11 @@ export default function Index() {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
   useEffect(() => {
-    router.prefetch('/blog').then();
+    router.prefetch('/blogs').then();
   }, []);
   const toBlog = async () => {
     setLoading(true);
-    await router.push('/blog');
+    await router.push('/blogs');
     setLoading(false);
   };
   /**

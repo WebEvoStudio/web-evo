@@ -26,7 +26,7 @@ const Header = () => {
   const links: any[] = [
     // {path: '/about', name: 'About'},
     // {path: '/portfolio', name: 'Portfolio'},
-    {path: '/blog', name: '博客'},
+    {path: '/blogs', name: '博客'},
     {path: '/docs', name: '文档'},
     {path: '/contact', name: '联系'},
   ];

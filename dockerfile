@@ -9,6 +9,7 @@ WORKDIR /usr/src/app
 # COPY --from=deps /usr/src/app/node_modules ./node_modules
 COPY . .
 # RUN npm run build
+RUN npm run build:post
 
 FROM node:16-alpine AS runner
 WORKDIR /usr/src/app
