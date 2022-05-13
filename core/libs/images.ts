@@ -12,6 +12,7 @@ export class Images {
   static undrawEmpty = require('../../assets/svgs/undraw_empty_re_opql.svg');
   static undrawDeveloperActivity = require('../../assets/svgs/undraw_developer_activity_re_39tg.svg');
   static undrawContactUs = require('../../assets/svgs/undraw_contact_us_re_4qqt.svg');
+  static undrawPageNotFound = require('../../assets/svgs/undraw_page_not_found_re_e9o6.svg');
   static materialDesign = require('../../assets/images/material-design.png');
   static fluentDesign = require('../../assets/images/fluent-design.jpg');
   static antDesign = require('../../assets/svgs/ant-design.svg');
