@@ -1,15 +1,15 @@
 import React from 'react';
-import styles from '../styles/blog.module.scss';
-import CommonHead from '../components/common-head';
+import styles from '../../styles/blog.module.scss';
 import axios from 'axios';
 import {Container} from '@mui/material';
-import BlogCard from '../components/blog-card';
+import CommonHead from '../../components/common-head';
+import BlogCard from '../../components/blog-card';
 
 /**
  * Blog Page
  * @return {JSX.Element}
  */
-function Blog({blogs}: {blogs: any[]}) {
+function BlogsIndex({blogs}: {blogs: any[]}) {
   return (
     <Container maxWidth={'md'}>
       <div>
@@ -23,9 +23,9 @@ function Blog({blogs}: {blogs: any[]}) {
     </Container>
   );
 }
-Blog.getInitialProps = async (ctx: any) => {
+BlogsIndex.getInitialProps = async (ctx: any) => {
   const url = `${process.env.NEXT_PUBLIC_BASE_URL}api/blogs`;
   const res = await axios.get(url);
   return {blogs: res.data};
 };
-export default Blog;
+export default BlogsIndex;
