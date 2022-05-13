@@ -16,27 +16,27 @@ const theme = createTheme({
   typography: {
     h1: {
       fontSize: '68px',
-      fontWeight: 500,
+      fontWeight: 600,
     },
     h2: {
       fontSize: '42px',
-      fontWeight: 500,
+      fontWeight: 600,
     },
     h3: {
       fontSize: '32px',
-      fontWeight: 500,
+      fontWeight: 600,
     },
     h4: {
       fontSize: '28px',
-      fontWeight: 500,
+      fontWeight: 600,
     },
     h5: {
       fontSize: '24px',
-      fontWeight: 500,
+      fontWeight: 600,
     },
     h6: {
       fontSize: '20px',
-      fontWeight: 500,
+      fontWeight: 600,
     },
   },
 });

@@ -6,6 +6,7 @@ import {useSnackbar} from 'notistack';
 import isEmail from 'validator/lib/isEmail';
 import isMobilePhone from 'validator/lib/isMobilePhone';
 import Request from '../core/unit/request';
+import CommonHead from '../components/common-head';
 
 
 /**
@@ -18,7 +19,6 @@ export default function Contact() {
   const [formError, setFormError] = useState({name: false, contact: false, message: false});
   const submit = (e: any) => {
     e.preventDefault();
-    // enqueueSnackbar('暂未开放', {variant: 'info'});
     console.log(form);
     const requestBody: any = {...form};
     Object.keys(requestBody).forEach((key) => requestBody[key] === '' && delete requestBody[key]);
@@ -49,7 +49,8 @@ export default function Contact() {
     return isError || !isInput;
   }, [form, formError]);
   return (
-    <Container maxWidth={'md'}>
+    <Container maxWidth={'lg'}>
+      <CommonHead title={'联系 - Web开发人员中心'}/>
       <Image src={Images.undrawContactUs}/>
       <Box sx={{display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center'}}>
         <Typography
@@ -63,23 +64,28 @@ export default function Contact() {
             <Grid item xs={12} sm={4}>
               <Box sx={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                 <Typography variant={'h3'} fontSize={{sm: '42px'}} color={'#00B0FF'}>让我们谈谈</Typography>
-                <Box sx={{padding: '16px', textAlign: 'center'}}>
+                <Box sx={{padding: '16px', textAlign: 'center', mb: '48px'}}>
                   <Typography variant={'h6'}>联系电子邮件:</Typography>
-                  <Typography variant={'body1'}>dongjun1997@outllook.com</Typography>
+                  <a href={'mailto:dongjun1997@outllook.com?subject=你好!'}>
+                    <Typography variant={'body1'}>dongjun1997@outllook.com</Typography>
+                  </a>
                 </Box>
                 <Box sx={{padding: '16px', textAlign: 'center'}}>
                   <Typography variant={'h6'}>联系电话:</Typography>
-                  <Typography variant={'body1'}>+86-1869-179-1512</Typography>
+                  <a href={'tel:+86 18691791512'}>
+                    <Typography variant={'body1'}>+86 186 9179 1512</Typography>
+                  </a>
                 </Box>
               </Box>
             </Grid>
-            <Grid item xs={12} sm={8}>
+            <Grid item sx={{display: {xs: 'none', sm: 'block'}}} sm={2}/>
+            <Grid item xs={12} sm={6}>
               <Box sx={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                 <Typography
                   variant={'h3'}
                   fontSize={{sm: '42px'}}
                   color={'#00B0FF'}
-                  sx={{marginBottom: '10px', textAlign: 'center'}}>我们很乐意听取您的意见！</Typography>
+                  sx={{marginBottom: '10px', textAlign: 'center'}}>我们很乐意听取您的想法！</Typography>
                 <Box component={'form'} onSubmit={submit}>
                   <Grid container gap={2}>
                     <Grid item xs={12}>
@@ -109,7 +115,7 @@ export default function Contact() {
                     </Grid>
                     <Grid item xs={12}>
                       <Box sx={{display: 'flex', justifyContent: 'center'}}>
-                        <Button variant={'contained'} type={'submit'} disabled={submitDisabled}>
+                        <Button variant={'contained'} sx={{width: '150px'}} type={'submit'} disabled={submitDisabled}>
                           <Typography variant={'h6'} color={'white'}>提交</Typography>
                         </Button>
                       </Box>

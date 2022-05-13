@@ -2,11 +2,11 @@ FROM node:16-alpine AS deps
 WORKDIR /usr/src/app
 COPY package*.json ./
 RUN npm config set registry https://registry.npm.taobao.org
-# RUN npm install
+RUN npm install
 
 FROM node:16-alpine AS builder
 WORKDIR /usr/src/app
-# COPY --from=deps /usr/src/app/node_modules ./node_modules
+COPY --from=deps /usr/src/app/node_modules ./node_modules
 COPY . .
 # RUN npm run build
 RUN npm run build:post
