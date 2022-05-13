@@ -9,8 +9,10 @@ const Custom404 = () => {
     alignItems: 'center',
     justifyContent: 'center',
     height: '100vh',
-    position: 'relative',
-    bottom: '64px',
+    position: 'absolute',
+    top: '0',
+    left: '0',
+    right: '0',
   };
   return (
     <Box sx={pageSx}>
