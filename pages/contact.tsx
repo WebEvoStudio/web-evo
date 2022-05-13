@@ -51,8 +51,10 @@ export default function Contact() {
   return (
     <Container maxWidth={'lg'}>
       <CommonHead title={'联系 - Web开发人员中心'}/>
-      <Image src={Images.undrawContactUs}/>
       <Box sx={{display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center'}}>
+        <Box sx={{margin: '20px 0'}}>
+          <Image src={Images.undrawContactUs}/>
+        </Box>
         <Typography
           variant={'h1'}
           sx={{margin: '20px 0'}} fontSize={{xs: '38px', sm: '68px'}} color={'#00B0FF'}>我们能帮你什么吗？</Typography>
