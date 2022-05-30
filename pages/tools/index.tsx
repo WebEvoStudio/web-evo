@@ -27,7 +27,6 @@ interface Menu {
 
 const ToolsIndex: NextPage = () => {
   const description = '对低质图片进行去雾,无损放大,对比度增强等多种处理,优化重建高清图像.可用于提升相册图像质量,提升视频监控质量等.';
-  const keywords = '图像增强,图片增强,图像清晰度增强,图像清晰度优化,图片清晰度增强,图片清晰度优化,图像修复,图片修复,照片增强,照片优化';
   const {enqueueSnackbar} = useSnackbar();
   const [enhancing, setEnhancing] = useState(false);
   const [selectedImages, setSelectedImages] = useState<{file: File, path: string}[]>([]);
@@ -86,7 +85,7 @@ const ToolsIndex: NextPage = () => {
   };
   return (
     <ToolLayout>
-      <CommonHead title={'工具-图像清晰度增强'} description={description} keywords={keywords}/>
+      <CommonHead title={'工具-图像清晰度增强'} description={description}/>
       <Box sx={{flex: 1, background: '#eee'}}>
         <Toolbar sx={{display: 'flex', justifyContent: 'flex-end'}}>
           <Box sx={{width: 200, display: 'flex', alignItems: 'center'}}>
