@@ -1,8 +1,11 @@
 /** @type {import('next').NextConfig} */
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true',
+});
 const withPWA = require('next-pwa');
 const runtimeCaching = require('next-pwa/cache');
 const path = require('path');
-const nextConfig = withPWA({
+const nextConfig = {
   reactStrictMode: true,
   experimental: {
     outputStandalone: true,
@@ -23,6 +26,6 @@ const nextConfig = withPWA({
   images: {
     domains: ['pic3.zhimg.com', 'p3-juejin.byteimg.com', 'nextjs.org', 'developers-center.oss-cn-beijing.aliyuncs.com'],
   },
-});
+};
 
-module.exports = nextConfig;
+module.exports = withBundleAnalyzer(withPWA(nextConfig));
