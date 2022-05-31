@@ -28,17 +28,17 @@ export default class MyDocument extends Document {
           <link rel="manifest" href={'/manifest.json'} />
           <meta name="theme-color" content={theme.palette.primary.main} />
           <link rel="apple-touch-icon" href="/logo192.png"/>
-          {/* 谷歌广告*/}
-          <script
-            src={'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1031326139722537'}
-            crossOrigin={'anonymous'} async
-          />
           {/* Inject MUI styles first to match with the prepend: true configuration. */}
           {(this.props as any).emotionStyleTags}
         </Head>
         <body>
           <Main />
           <NextScript />
+          {/* 谷歌广告*/}
+          <script
+            src={'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1031326139722537'}
+            crossOrigin={'anonymous'} async
+          />
         </body>
       </Html>
     );
