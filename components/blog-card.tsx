@@ -1,4 +1,4 @@
-import React, {useEffect, useMemo, useState} from 'react';
+import React, {useMemo, useState} from 'react';
 import styles from '../styles/blog.module.scss';
 import {Box, Paper} from '@mui/material';
 import Markdown from '../core/unit/markdown';
@@ -9,11 +9,10 @@ import Image from 'next/image';
 import {ImageLoader} from 'next/dist/client/image';
 const BlogCard = ({blog}: any) => {
   const [elevation, setElevation] = useState(1);
-  const [viewCount, setViewCount] = useState(0);
-  const loader: ImageLoader = ({src, config}) => 'https://' + src;
+  const loader: ImageLoader = ({src}) => 'https://' + src;
   const poster = (blog: any) => {
-    if (Markdown.getImgUrl(blog.mark_content).length) {
-      const url = Markdown.getImgUrl(blog.mark_content)[0];
+    if (Markdown.getImgUrl(blog.markContent).length) {
+      const url = Markdown.getImgUrl(blog.markContent)[0];
       const src = url.split('://')[1];
       return (
         <Box sx={{
@@ -35,9 +34,6 @@ const BlogCard = ({blog}: any) => {
   const titleStyle = useMemo(() => ({
     color: elevation === 1 ? '#000' : '#00B0FF',
   }), [elevation]);
-  useEffect(() => {
-    setViewCount(Math.floor(Math.random() * 100));
-  }, []);
   return (
     <Link href={`/blogs/${blog['_id']}`} passHref>
       <Paper
@@ -50,7 +46,7 @@ const BlogCard = ({blog}: any) => {
           <Box sx={{flex: 1, width: {xs: '100%', sm: 'auto'}}}>
             <span className={styles['blog-title']} style={titleStyle}>{blog.title}</span>
             <div className={styles['blog-description']}>
-              {Markdown.intercept(blog.mark_content, 155)}
+              {Markdown.intercept(blog.markContent, 155)}
             </div>
             <Box sx={{
               display: 'flex',
@@ -63,7 +59,7 @@ const BlogCard = ({blog}: any) => {
               <div className={styles['blog-info']}>
                 <VisibilityOutlined fontSize={'small'}/>
                 {/* 随机显示浏览量 */}
-                <span>{viewCount}</span>
+                <span>{blog.viewCount}</span>
               </div>
             </Box>
           </Box>

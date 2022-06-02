@@ -47,18 +47,22 @@ const EditorPage = (props: {title?: string, value?: string, id?: string}) => {
     ).then(() => enqueueSnackbar('内容已复制到剪贴板', {variant: 'success'}));
   };
   const save = () => {
-    const url = `${process.env.NEXT_PUBLIC_BASE_URL}/api/blogs`;
-    const requestData = {title, mark_content: value};
+    const host = process.env['NEXT_PUBLIC_MIDDLEWARE_URL'];
+    const path = 'blogs';
+    const url = `${host}${path}`;
+    const requestData = {title, markContent: value};
     axios.post(url, requestData)
-        .then((res) => enqueueSnackbar('文章发布成功', {variant: 'success'}))
+        .then(() => enqueueSnackbar('文章发布成功', {variant: 'success'}))
         .catch((err) => enqueueSnackbar(err.message, {variant: 'error'}));
   };
   const modify = () => {
+    const host = process.env['NEXT_PUBLIC_MIDDLEWARE_URL'];
+    const path = 'blogs';
+    const url = `${host}${path}`;
     // message.warn('暂不支持修改').then();
-    const url = `${process.env.NEXT_PUBLIC_BASE_URL}/api/blogs`;
-    const requestData = {_id: props.id, title, mark_content: value};
+    const requestData = {_id: props.id, title, markContent: value};
     axios.put(url, requestData)
-        .then((res) => enqueueSnackbar('文章修改成功', {variant: 'success'}))
+        .then(() => enqueueSnackbar('文章修改成功', {variant: 'success'}))
         .catch((err) => enqueueSnackbar(err.message, {variant: 'error'}));
   };
   const uploadImages = async (files: File[]): Promise<Pick<Image, 'url' | 'alt' | 'title'>[]> => {

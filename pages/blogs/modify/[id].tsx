@@ -7,20 +7,22 @@ import CommonHead from '../../../components/common-head';
 
 const BlogsModify: NextPage = () => {
   const {id} = useRouter().query;
-  const [blog, setBlog] = useState({title: '', mark_content: ''});
+  const [blog, setBlog] = useState({title: '', markContent: ''});
   const title = useMemo(() => blog.title ? `修改文章 - ${blog.title}` : '加载中...', [blog]);
   useEffect(() => {
     if (id) {
-      const url = `${process.env.NEXT_PUBLIC_BASE_URL}api/blogs?id=${id}`;
+      const host = process.env['NEXT_PUBLIC_MIDDLEWARE_URL'];
+      const path = 'blogs';
+      const url = `${host}${path}/${id}`;
       axios.get(url).then(({data}) => {
-        setBlog({title: data.title, mark_content: data.mark_content});
+        setBlog({title: data.title, markContent: data.markContent});
       });
     }
   }, [id]);
   return (
     <div>
       <CommonHead title={title}/>
-      {blog.title !== '' ? <EditorPage title={blog.title} value={blog.mark_content} id={id?.toString()}/> : ''}
+      {blog.title !== '' ? <EditorPage title={blog.title} value={blog.markContent} id={id?.toString()}/> : ''}
     </div>
   );
 };

@@ -23,8 +23,10 @@ function BlogsIndex({blogs}: {blogs: any[]}) {
     </Container>
   );
 }
-BlogsIndex.getInitialProps = async (ctx: any) => {
-  const url = `${process.env.NEXT_PUBLIC_BASE_URL}api/blogs`;
+BlogsIndex.getInitialProps = async () => {
+  const host = process.env['NEXT_PUBLIC_MIDDLEWARE_URL'];
+  const path = 'blogs';
+  const url = `${host}${path}`;
   const res = await axios.get(url);
   return {blogs: res.data};
 };

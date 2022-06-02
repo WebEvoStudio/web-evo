@@ -7,7 +7,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   const fields: {loc: string, lastmod: string}[] = [];
   try {
     const host = 'http://developer.bulv.life';
-    const url = `${process.env.NEXT_PUBLIC_BASE_URL}api/blogs`;
+    const url = `${process.env.NEXT_PUBLIC_MIDDLEWARE_URL}blogs`;
     const response = await axios.get(url);
     fields.push(...response.data.map((blog: any) => ({
       loc: `${host}/blogs/${blog['_id']}`,

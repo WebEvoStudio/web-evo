@@ -11,14 +11,14 @@ import 'highlight.js/styles/github.css';
  * blog detail page
  * @return {React.ReactElement}
  */
-function BlogDetail({blog}: {blog: {title: string, mark_content: string}}) {
+function BlogDetail({blog}: {blog: {title: string, markContent: string}}) {
   const host: string = process.env.NEXT_PUBLIC_SITE_URL as string;
-  const content = Markdown.keywordToLink(blog.mark_content, host);
+  const content = Markdown.keywordToLink(blog.markContent, host);
   return (
     <Box sx={{background: '#f4f5f5'}}>
       <Container maxWidth={'md'}>
         <div className={style['blog']}>
-          <CommonHead title={blog.title} description={Markdown.intercept(blog.mark_content, 100)}/>
+          <CommonHead title={blog.title} description={Markdown.intercept(blog.markContent, 100)}/>
           <div className={style['blog-detail']}>
             <div className={style['blog-title']}>
               <h1>{blog.title}</h1>
@@ -36,7 +36,9 @@ function BlogDetail({blog}: {blog: {title: string, mark_content: string}}) {
 }
 BlogDetail.getInitialProps = async (ctx: any) => {
   const {id} = ctx.query;
-  const url = `${process.env.NEXT_PUBLIC_BASE_URL}api/blogs?id=${id}`;
+  const host = process.env['NEXT_PUBLIC_MIDDLEWARE_URL'];
+  const path = 'blogs';
+  const url = `${host}${path}/${id}`;
   const res = await axios.get(url);
   return {blog: res.data};
 };
