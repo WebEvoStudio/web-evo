@@ -45,7 +45,7 @@ export default function Index() {
               <LoadingButton
                 sx={{color: '#fff'}}
                 loading={loading}
-                loadingIndicator={'Loading...'} color={'primary'} variant="contained">查看我们的工作</LoadingButton>
+                loadingIndicator={'Loading...'} color={'primary'} variant="contained">查看我们的工作1</LoadingButton>
             </div>
           </Box>
         </Grid>
