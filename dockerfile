@@ -8,7 +8,7 @@ FROM node:16-alpine AS builder
 WORKDIR /usr/src/app
 COPY . .
 COPY --from=deps /usr/src/app/node_modules ./node_modules
-# RUN npm run build
+RUN npm run build
 RUN npm run build:post
 
 FROM node:16-alpine AS runner
