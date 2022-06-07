@@ -3,7 +3,6 @@ import Document, {Html, Main, NextScript, Head} from 'next/document';
 import createEmotionCache from '../core/unit/createEmotionCache';
 import createEmotionServer from '@emotion/server/create-instance';
 import theme from '../core/themes/theme';
-import Script from 'next/script';
 
 /**
  * Document
@@ -40,10 +39,6 @@ export default class MyDocument extends Document {
           {/*  src={'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1031326139722537'}*/}
           {/*  crossOrigin={'anonymous'} async*/}
           {/* />*/}
-          <Script
-            src={'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1031326139722537'}
-            crossOrigin={'anonymous'} async strategy={'lazyOnload'}
-          />
         </body>
       </Html>
     );
