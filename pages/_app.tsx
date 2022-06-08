@@ -45,7 +45,7 @@ function MyApp(props: MyAppProps) {
             }}/>
             <Script
               src={'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1031326139722537'}
-              crossOrigin={'anonymous'} async strategy={'lazyOnload'}
+              crossOrigin={'anonymous'} async strategy={'afterInteractive'}
             />
           </BasicLayout>
         </SnackbarProvider>

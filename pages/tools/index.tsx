@@ -88,8 +88,8 @@ const ToolsIndex: NextPage = () => {
       <CommonHead title={'工具-图像清晰度增强'} description={description}/>
       <Box sx={{flex: 1, background: '#eee'}}>
         <Toolbar sx={{display: 'flex', justifyContent: 'flex-end'}}>
-          <Box sx={{width: 200, display: 'flex', alignItems: 'center'}}>
-            <Typography sx={{whiteSpace: 'nowrap'}}>行数:</Typography>
+          <Box sx={{width: 200, display: {xs: 'none', sm: 'flex'}, alignItems: 'center'}}>
+            <Typography sx={{whiteSpace: 'nowrap'}}>列:</Typography>
             <Slider
               defaultValue={3}
               step={1}

@@ -36,6 +36,10 @@ const ToolLayout = ({children}: any) => {
       },
     ]);
   }, []);
+  const drawerStyle = {
+    [`& .MuiDrawer-paper`]: {boxSizing: 'border-box', position: 'relative'},
+    display: {xs: 'none', sm: 'block'},
+  };
   const handleClick = (index: number) => {
     setMenus(menus.map((menu, _index) => _index === index ? {...menu, open: !menu.open} : menu));
   };
@@ -43,7 +47,7 @@ const ToolLayout = ({children}: any) => {
     <Box sx={{display: 'flex', height: 'calc(100vh - 64px)'}}>
       <Drawer
         variant="permanent"
-        sx={{[`& .MuiDrawer-paper`]: {boxSizing: 'border-box', position: 'relative'}}}>
+        sx={drawerStyle}>
         <List>
           {menus.map((menu, index) => (
             <div key={index}>
