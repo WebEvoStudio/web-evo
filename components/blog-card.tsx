@@ -54,7 +54,7 @@ const BlogCard = ({blog}: any) => {
             }}>
               <div className={styles['blog-info']}>
                 <AccessTime fontSize={'small'}/>
-                <span>{moment(blog.create_time).format('yyyy-MM-DD')}</span>
+                <span>{moment(blog.createTime).format('yyyy-MM-DD')}</span>
               </div>
               <div className={styles['blog-info']}>
                 <VisibilityOutlined fontSize={'small'}/>
