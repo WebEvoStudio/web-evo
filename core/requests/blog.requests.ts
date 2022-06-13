@@ -12,5 +12,5 @@ export default class BlogRequests {
    * @param {string} query
    * @return {any}
    */
-  static search = (query: string) => new Request().get('api/blogs', {query});
+  static search = (query: string) => new Request().get('/blogs', {query});
 }

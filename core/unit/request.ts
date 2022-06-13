@@ -12,7 +12,7 @@ export default class Request {
    * @param {string} baseURL 请求地址
    */
   constructor(baseURL?: string) {
-    this.config.baseURL = process.env.NEXT_PUBLIC_BASE_URL;
+    this.config.baseURL = process.env.NEXT_PUBLIC_MIDDLEWARE_URL;
     if (baseURL) this.config.baseURL = baseURL;
   }
 
