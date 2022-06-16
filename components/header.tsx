@@ -28,6 +28,7 @@ const Header = () => {
     // {path: '/portfolio', name: 'Portfolio'},
     {path: '/blogs', name: '博客'},
     {path: '/docs', name: '文档'},
+    {path: '/tools', name: '工具'},
     {path: '/contact', name: '联系'},
   ];
   const pathname = `/${useRouter().pathname.split('/')[1]}`;
