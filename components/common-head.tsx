@@ -13,7 +13,8 @@ export default function CommonHead(props: {title?: string, description?: string,
     <Head>
       <title>{props.title||title}</title>
       <meta name={'description'} content={props.description||description}/>
-      <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1.0, user-scalable=0"/>
+      <meta name="viewport"
+        content="initial-scale=1, width=device-width, maximum-scale=1.0, user-scalable=0, viewport-fit=cover"/>
       {/* 百度验证*/}
       <meta name="baidu-site-verification" content="code-yx2HQhygQo" />
       {/* 必应验证*/}
