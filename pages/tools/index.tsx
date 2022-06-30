@@ -85,7 +85,7 @@ const ToolsIndex: NextPage = () => {
   };
   return (
     <ToolLayout>
-      <CommonHead title={'工具-图像清晰度增强'} description={description}/>
+      <CommonHead title={'工具 - Web开发人员中心'} description={description}/>
       <Box sx={{flex: 1, background: '#eee'}}>
         <Toolbar sx={{display: 'flex', justifyContent: 'flex-end'}}>
           <Box sx={{width: 200, display: {xs: 'none', sm: 'flex'}, alignItems: 'center'}}>
