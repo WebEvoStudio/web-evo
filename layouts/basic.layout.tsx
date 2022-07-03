@@ -16,26 +16,54 @@ import styles from '/styles/basic-layout.module.scss';
 export default function BasicLayout({children}: any) {
   const router = useRouter();
   const [isPwa, setIsPwa] = useState(false);
+  const [current, setCurrent] = useState(0);
   useEffect(() => {
+    console.log(router);
     setIsPwa(
         ['fullscreen', 'standalone', 'minimal-ui'].some(
             (displayMode) => window.matchMedia('(display-mode: ' + displayMode + ')').matches,
         ),
     );
   }, []);
+  useEffect(() => {
+    const pathname = `/${router.pathname.split('/')[1]}`;
+    const index = ['/', '/blogs', '/docs', '/tools', '/contact'].indexOf(pathname);
+    setCurrent(index);
+  }, [router]);
   const TabBar = () => {
     if (isPwa) {
       return (
         <Box>
-          <Paper className={styles['bottom-button']} sx={{position: 'fixed', bottom: 0, left: 0, right: 0}}
+          <Paper
+            className={styles['bottom-button']}
+            sx={{position: 'fixed', bottom: 0, left: 0, right: 0, zIndex: 1}}
             elevation={3}>
-            <BottomNavigation showLabels>
-              <BottomNavigationAction label="首页" icon={<HomeRounded />} onClick={() => router.push('/')}/>
-              <BottomNavigationAction label="博客" icon={<ArticleRounded />} onClick={() => router.push('/blogs')}/>
-              <BottomNavigationAction label="文档" icon={<SourceRounded />} onClick={() => router.push('/docs')}/>
+            <BottomNavigation showLabels value={current}>
               <BottomNavigationAction
-                label="工具" icon={<HomeRepairServiceRounded />} onClick={() => router.push('/tools')}/>
-              <BottomNavigationAction label="联系" icon={<ContactMailRounded />} onClick={() => router.push('/contact')}/>
+                label="首页"
+                icon={<HomeRounded />}
+                onClick={() => router.push('/')}
+              />
+              <BottomNavigationAction
+                label="博客"
+                icon={<ArticleRounded />}
+                onClick={() => router.push('/blogs')}
+              />
+              <BottomNavigationAction
+                label="文档"
+                icon={<SourceRounded />}
+                onClick={() => router.push('/docs')}
+              />
+              <BottomNavigationAction
+                label="工具"
+                icon={<HomeRepairServiceRounded />}
+                onClick={() => router.push('/tools')}
+              />
+              <BottomNavigationAction
+                label="联系"
+                icon={<ContactMailRounded />}
+                onClick={() => router.push('/contact')}
+              />
             </BottomNavigation>
           </Paper>
           <Box className={styles['bottom-button']} sx={{width: '100%', height: '100px'}}/>
