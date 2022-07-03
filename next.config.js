@@ -7,9 +7,7 @@ const runtimeCaching = require('next-pwa/cache');
 const path = require('path');
 const nextConfig = {
   reactStrictMode: true,
-  experimental: {
-    outputStandalone: true,
-  },
+  output: 'standalone',
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
   },
