@@ -11,9 +11,8 @@ import JSZip from 'jszip';
 import moment from 'moment';
 import {SnackbarProvider, useSnackbar} from 'notistack';
 import CommonHead from '../../components/common-head';
-import {LoadingButton} from '@mui/lab';
 import ToolLayout from '../../layouts/tool.layout';
-import {BuildCircle, Download} from '@mui/icons-material';
+import {Download} from '@mui/icons-material';
 import ObjectUnit from '../../core/unit/object-unit';
 import StringUnit from '../../core/unit/string-unit';
 
@@ -28,7 +27,6 @@ interface Menu {
 const ToolsIndex: NextPage = () => {
   const description = '对低质图片进行去雾,无损放大,对比度增强等多种处理,优化重建高清图像.可用于提升相册图像质量,提升视频监控质量等.';
   const {enqueueSnackbar} = useSnackbar();
-  const [enhancing, setEnhancing] = useState(false);
   const [selectedImages, setSelectedImages] = useState<{file: File, path: string}[]>([]);
   const [enhancedImages, setEnhancedImages] = useState<string[]>([]);
   const upload = async (files: File[]) => {
@@ -46,9 +44,11 @@ const ToolsIndex: NextPage = () => {
     await request.post(ossData.host, requestBody, headers);
   };
   const [cols, setCols] = useState(3);
+  const [running, setRunning] = useState(false);
   const run = async () => {
-    setEnhancing(true);
+    setRunning(true);
     try {
+      if (!selectedImages.length) return enqueueSnackbar('请选择图片', {variant: 'error'});
       const base64Images = (await Promise.all(selectedImages.map(({file}) => FileUnit.toBase64(file)))) as string[];
       const base64ImageContents = base64Images.map((base64Image) => base64Image.split(',')[1]);
       const host = process.env['NEXT_PUBLIC_MIDDLEWARE_URL'];
@@ -64,7 +64,7 @@ const ToolsIndex: NextPage = () => {
     } catch (error: any) {
       enqueueSnackbar(error.message, {variant: 'error'});
     }
-    setEnhancing(false);
+    setRunning(false);
   };
   const download = () => {
     const zip = new JSZip();
@@ -84,9 +84,9 @@ const ToolsIndex: NextPage = () => {
     });
   };
   return (
-    <ToolLayout>
+    <ToolLayout onRun={run} running={running} runText={'开始增强图片'}>
       <CommonHead title={'工具 - Web开发人员中心'} description={description}/>
-      <Box sx={{flex: 1, background: '#eee'}}>
+      <Box sx={{flex: 1, background: '#eee', height: '100%', display: 'flex', flexDirection: 'column'}}>
         <Toolbar sx={{display: 'flex', justifyContent: 'flex-end'}}>
           <Box sx={{width: 200, display: {xs: 'none', sm: 'flex'}, alignItems: 'center'}}>
             <Typography sx={{whiteSpace: 'nowrap'}}>列:</Typography>
@@ -102,23 +102,16 @@ const ToolsIndex: NextPage = () => {
           </Box>
           <Box sx={{flex: 1}}/>
           <Uploader onChange={(e) => setSelectedImages(e)}/>
-          <LoadingButton
-            sx={{color: '#fff', marginLeft: '10px'}}
-            variant="contained"
-            loading={enhancing}
-            loadingPosition="start"
-            startIcon={<BuildCircle/>}
-            onClick={run} disabled={!(selectedImages.length && !enhancedImages.length)}>开始增强</LoadingButton>
           <Button
             sx={{color: '#fff', marginLeft: '10px'}}
             variant="contained"
             startIcon={<Download/>}
             onClick={download} disabled={!enhancedImages.length}>一键下载</Button>
         </Toolbar>
-        <Box sx={{display: 'flex', width: '100%'}}>
-          <Box sx={{flex: 1}}>
+        <Box sx={{display: 'flex', width: '100%', height: 'calc(100% - 64px)'}}>
+          <Box sx={{flex: 1, display: 'flex', flexDirection: 'column', height: '100%'}}>
             <ListSubheader component="div">源文件</ListSubheader>
-            <Box sx={{overflowY: 'scroll', height: 'calc(100vh - 190px)'}}>
+            <Box sx={{flex: 1, overflowY: 'scroll'}}>
               <ImageList variant={'masonry'} cols={cols}>
                 {selectedImages.map((image, index) => (
                   <ImageListItem key={index}>
@@ -136,9 +129,9 @@ const ToolsIndex: NextPage = () => {
               </ImageList>
             </Box>
           </Box>
-          <Box sx={{flex: 1}}>
+          <Box sx={{flex: 1, display: 'flex'}} className={'flex-column'}>
             <ListSubheader component="div">增强后</ListSubheader>
-            <Box sx={{overflowY: 'scroll', height: 'calc(100vh - 190px)'}}>
+            <Box sx={{overflowY: 'scroll', flex: 1}}>
               <ImageList variant={'masonry'} cols={cols}>
                 {enhancedImages.map((image, index) => (
                   <ImageListItem key={index}>

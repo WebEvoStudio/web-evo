@@ -16,6 +16,9 @@ code {
   align-items: center;
   justify-content: center;
 }
+.flex-column {
+  flex-direction: column;
+}
 // 去除 a 标签 默认样式
 // 去除 a 标签 下划线
 a {
