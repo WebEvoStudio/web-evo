@@ -2,34 +2,34 @@ $OutputEncoding = New-Object -typename System.Text.UTF8Encoding
 $SHA256 = curl --header "Accept:application/vnd.docker.distribution.manifest.v2+json" -I -XGET  http://116.62.214.205:5000/v2/developer-center-web/manifests/116.62.214.205:5000/developer-center-web:latest
 
 echo $SHA256
-#echo "¿ªÊ¼ developer-center-web ¾µÏñ´ò°ü"
+#echo "ï¿½ï¿½Ê¼ developer-center-web ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½"
 #docker build -t "developer-center-web" .
-#echo "¾µÏñ´ò°üÍê³É: developer-center-web"
-#echo "¾µÏñÌí¼ÓTag: 116.62.214.205:5000/developer-center-web:latest"
+#echo "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: developer-center-web"
+#echo "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Tag: 116.62.214.205:5000/developer-center-web:latest"
 #docker tag developer-center-web:latest 116.62.214.205:5000/developer-center-web:latest
-#echo "¾µÏñÍÆËÍµ½²Ö¿â"
+#echo "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Íµï¿½ï¿½Ö¿ï¿½"
 #docker push 116.62.214.205:5000/developer-center-web:latest
-#echo "¾µÏñÍÆËÍµ½²Ö¿âÍê³É"
-#echo "¿ªÊ¼É¾³ý±¾µØ¾µÏñ"
+#echo "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Íµï¿½ï¿½Ö¿ï¿½ï¿½ï¿½ï¿½"
+#echo "ï¿½ï¿½Ê¼É¾ï¿½ï¿½ï¿½ï¿½ï¿½Ø¾ï¿½ï¿½ï¿½"
 #docker image rm 116.62.214.205:5000/developer-center-web:latest
-#echo "·¢²¼¾µÏñÍê³É"
+#echo "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½"
 
 
 #$CONTAINER_ID = (docker ps -a -q -f name="developer-center-web")
 #$IMAGE_ID=(docker images -q --filter reference="developer-center-web")
-#echo "ÈÝÆ÷ID: $CONTAINER_ID"
-#echo "¾µÏñID: $IMAGE_ID"
+#echo "ï¿½ï¿½ï¿½ï¿½ID: $CONTAINER_ID"
+#echo "ï¿½ï¿½ï¿½ï¿½ID: $IMAGE_ID"
 #if ($CONTAINER_ID) {
-#    echo "Í£Ö¹ÈÝÆ÷ developer-center-web"
+#    echo "Í£Ö¹ï¿½ï¿½ï¿½ï¿½ developer-center-web"
 #    docker stop $CONTAINER_ID
-#    echo "É¾³ý developer-center-web ÈÝÆ÷"
+#    echo "É¾ï¿½ï¿½ developer-center-web ï¿½ï¿½ï¿½ï¿½"
 #    docker rm $CONTAINER_ID
 #}
 #if ($IMAGE_ID) {
-#    echo "É¾³ý developer-center-web ¾µÏñ"
+#    echo "É¾ï¿½ï¿½ developer-center-web ï¿½ï¿½ï¿½ï¿½"
 #    docker rmi $IMAGE_ID
 #}
-#echo "¿ªÊ¼ developer-center-web ¾µÏñ´ò°ü"
+#echo "ï¿½ï¿½Ê¼ developer-center-web ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½"
 #docker build -t "developer-center-web" .
-#echo "ÔËÐÐ developer-center-web ¾µÏñ£º4206"
+#echo "ï¿½ï¿½ï¿½ï¿½ developer-center-web ï¿½ï¿½ï¿½ï¿½4206"
 #docker run --name "developer-center-web" -p 4206:3000 -d "developer-center-web"
