@@ -32,7 +32,7 @@ export default function Index() {
       <CommonHead/>
       <Grid container spacing={2}>
         <Grid item xs={12} md={6} sx={{order: 1}}>
-          <h1 className={styles['h1']}>欢迎来到Web开发人员中心</h1>
+          <h1 className={styles['h1']}>欢迎来到WebEvolution</h1>
 
           <Box className={styles['image']} sx={{display: {xs: 'block', md: 'none'}}}>
             <Image src={Images.undrawProudCoder} alt={'骄傲的编码员'}/>
@@ -59,6 +59,9 @@ export default function Index() {
         </Grid>
         <Grid item xs={12} md={6} sx={{order: {xs: 4, md: 5}}}>
           <div className={styles['h1']}>我们是一个对网络开发充满热情的开发人员团队</div>
+          <Typography variant={'body1'}>
+            我们乐于尝试新兴技术
+          </Typography>
         </Grid>
         <Grid item xs={12} md={6} sx={{order: {xs: 5, md: 4}}}>
           <div className={styles['image']}>

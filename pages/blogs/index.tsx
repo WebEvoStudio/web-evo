@@ -13,7 +13,7 @@ function BlogsIndex({blogs}: {blogs: any[]}) {
   return (
     <Container maxWidth={'md'}>
       <div>
-        <CommonHead title={'博客 - Web开发人员中心'}/>
+        <CommonHead title={'博客 - WebEvolution'}/>
         <div>
           <div className={styles['blog-wrapper']}>
             {blogs.map((blog, index) => (<BlogCard key={index} blog={blog}/>))}

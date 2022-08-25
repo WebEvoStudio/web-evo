@@ -85,7 +85,7 @@ const ToolsIndex: NextPage = () => {
   };
   return (
     <ToolLayout onRun={run} running={running} runText={'开始增强图片'}>
-      <CommonHead title={'工具 - Web开发人员中心'} description={description}/>
+      <CommonHead title={'工具 - WebEvolution'} description={description}/>
       <Box sx={{flex: 1, background: '#eee', height: '100%', display: 'flex', flexDirection: 'column'}}>
         <Toolbar sx={{display: 'flex', justifyContent: 'flex-end'}}>
           <Box sx={{width: 200, display: {xs: 'none', sm: 'flex'}, alignItems: 'center'}}>

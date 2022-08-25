@@ -7,7 +7,7 @@ import React from 'react';
  * @constructor
  */
 export default function CommonHead(props: {title?: string, description?: string, keywords?: string}) {
-  const title = 'Web开发人员中心';
+  const title = 'WebEvolution';
   const description = title + ' 是一个帮助web开发者成长的社区。我们以技术文章为核心的产品形态，为开发者提供纯粹、高质的技术文章。';
   return (
     <Head>

@@ -50,7 +50,7 @@ export default function Contact() {
   }, [form, formError]);
   return (
     <Container maxWidth={'lg'}>
-      <CommonHead title={'联系 - Web开发人员中心'}/>
+      <CommonHead title={'联系 - WebEvolution'}/>
       <Box sx={{display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center'}}>
         <Box sx={{margin: '20px 0'}}>
           <Image src={Images.undrawContactUs}/>
@@ -59,7 +59,7 @@ export default function Contact() {
           variant={'h1'}
           sx={{margin: '20px 0'}} fontSize={{xs: '38px', sm: '68px'}} color={'#00B0FF'}>我们能帮你什么吗？</Typography>
         <Typography variant={'body1'} sx={{marginBottom: '50px'}}>
-          填写下表，了解 Web开发人员中心 如何帮助您实现雄心勃勃的软件需求！
+          填写下表，了解 WebEvolution 如何帮助您实现雄心勃勃的软件需求！
         </Typography>
         <Box sx={{margin: '20px 0'}}>
           <Grid container spacing={6}>
