@@ -8,7 +8,7 @@ import frontmatter from '@bytemd/plugin-frontmatter';
 import gfm from '@bytemd/plugin-gfm';
 import clipboard from 'clipboardy';
 import axios from 'axios';
-import 'github-markdown-css/github-markdown-light.css';
+// import 'github-markdown-css/github-markdown-light.css';
 import {Image} from 'mdast';
 import Request from '../core/unit/request';
 import ObjectUnit from '../core/unit/object-unit';
