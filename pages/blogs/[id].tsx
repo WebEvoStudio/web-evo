@@ -1,12 +1,15 @@
 import React from 'react';
-import ReactMarkdown from 'react-markdown';
 import style from '../../styles/blog.module.scss';
 import CommonHead from '../../components/common-head';
 import axios from 'axios';
 import Markdown from '../../core/unit/markdown';
 import {Box, Container} from '@mui/material';
-import rehypeHighlight from 'rehype-highlight';
 import 'highlight.js/styles/github.css';
+import 'bytemd/dist/index.min.css';
+import {Viewer} from '@bytemd/react';
+import {BytemdPlugin} from 'bytemd';
+import frontmatter from '@bytemd/plugin-frontmatter';
+import gfm from '@bytemd/plugin-gfm';
 /**
  * blog detail page
  * @return {React.ReactElement}
@@ -14,6 +17,10 @@ import 'highlight.js/styles/github.css';
 function BlogDetail({blog}: {blog: {title: string, markContent: string}}) {
   const host: string = process.env.NEXT_PUBLIC_SITE_URL as string;
   const content = Markdown.keywordToLink(blog.markContent, host);
+  const plugins: BytemdPlugin[] = [
+    frontmatter(),
+    gfm(),
+  ];
   return (
     <Box sx={{background: '#f4f5f5'}}>
       <Container maxWidth={'md'}>
@@ -24,9 +31,7 @@ function BlogDetail({blog}: {blog: {title: string, markContent: string}}) {
               <h1>{blog.title}</h1>
             </div>
             <div className={style['blog-content']}>
-              <ReactMarkdown rehypePlugins={[rehypeHighlight]}>
-                {content}
-              </ReactMarkdown>
+              <Viewer value={content} plugins={plugins}/>
             </div>
           </div>
         </div>

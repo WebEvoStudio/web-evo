@@ -1,0 +1,6 @@
+pre {
+    background-color: #f8f9fa;
+    border: 1px solid #d2d3d7;
+//border-radius: 5px;
+    padding: clamp(1rem, 0.96rem + 0.18vw, 1.125rem);
+}
