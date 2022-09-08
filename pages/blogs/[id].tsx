@@ -25,7 +25,7 @@ function BlogDetail({blog}: {blog: {title: string, markContent: string}}) {
     <Box sx={{background: '#f4f5f5'}}>
       <Container maxWidth={'md'}>
         <div className={style['blog']}>
-          <CommonHead title={blog.title} description={Markdown.intercept(blog.markContent, 100)}/>
+          <CommonHead title={blog.title + ' - Web开发人员中心'} description={Markdown.intercept(blog.markContent, 100)}/>
           <div className={style['blog-detail']}>
             <div className={style['blog-title']}>
               <h1>{blog.title}</h1>
