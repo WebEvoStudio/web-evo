@@ -22,7 +22,12 @@ const nextConfig = {
     runtimeCaching,
   },
   images: {
-    domains: ['pic3.zhimg.com', 'p3-juejin.byteimg.com', 'nextjs.org', 'developers-center.oss-cn-beijing.aliyuncs.com'],
+    domains: [
+      'pic3.zhimg.com',
+      'p3-juejin.byteimg.com',
+      'nextjs.org',
+      'developers-center.oss-cn-beijing.aliyuncs.com',
+    ],
   },
 };
 

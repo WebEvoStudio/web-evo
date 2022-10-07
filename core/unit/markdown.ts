@@ -59,4 +59,34 @@ export default class Markdown {
     }
     return urls;
   }
+
+  /**
+   * 获取markdown文档的目录
+   * @param {string} source
+   * @return {string[]}
+   */
+  static getCatalog(source: string): string[] {
+    const reg = /##+(.*?)\n/g;
+    const result: RegExpMatchArray | null = source.match(reg);
+    const catalogs: string[] = [];
+    if (result?.length) {
+      catalogs.push(...result.map((item) => item.replace(/#+(.*?)\n/g, '$1')));
+    }
+    return catalogs;
+  }
+
+  /**
+   * 获取markdown文档的二级标题 不包含三级标题
+   * @param {string} source
+   * @return {string[]}
+   */
+  static getSecondTitle(source: string): string[] {
+    const reg = /##+(.*?)\n/g;
+    const result: RegExpMatchArray | null = source.match(reg);
+    const catalogs: string[] = [];
+    if (result?.length) {
+      catalogs.push(...result.map((item) => item.replace(/#+(.*?)\n/g, '$1')));
+    }
+    return catalogs;
+  }
 }
