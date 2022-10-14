@@ -69,7 +69,7 @@ export default function Contact() {
                 <Box sx={{padding: '16px', textAlign: 'center', mb: '48px'}}>
                   <Typography variant={'h6'}>联系电子邮件:</Typography>
                   <a href={'mailto:dongjun1997@outllook.com?subject=你好!'}>
-                    <Typography variant={'body1'}>dongjun1997@outllook.com</Typography>
+                    <Typography variant={'body1'}>dongjun1997@outlook.com</Typography>
                   </a>
                 </Box>
                 <Box sx={{padding: '16px', textAlign: 'center'}}>
