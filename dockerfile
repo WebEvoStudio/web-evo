@@ -1,7 +1,7 @@
 FROM node:16-alpine AS deps
 WORKDIR /usr/src/app
 COPY package*.json ./
-RUN npm config set registry https://registry.npm.taobao.org
+#RUN #npm config set registry https://registry.npm.taobao.org
 RUN npm install
 
 FROM node:16-alpine AS builder
