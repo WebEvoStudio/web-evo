@@ -32,7 +32,7 @@ function MyApp(props: MyAppProps) {
             <CssBaseline/>
             <Component {...pageProps} />
             {/* Google Analytics*/}
-            <GoogleAnalytics measurementId={'G-YKCPHDYK53'}/>
+            <GoogleAnalytics measurementId={'G-R8ZM6SVZ0K'}/>
             {/* microsoft clarity */}
             <Script id={'microsoft-clarity'} dangerouslySetInnerHTML={{
               __html: `
