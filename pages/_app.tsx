@@ -33,6 +33,19 @@ function MyApp(props: MyAppProps) {
             <Component {...pageProps} />
             {/* Google Analytics*/}
             <GoogleAnalytics measurementId={'G-YKCPHDYK53'}/>
+            {/* Google tag (gtag.js) - Google Analytics*/}
+            <Script id={''} async src="https://www.googletagmanager.com/gtag/js?id=UA-222824651-1">
+            </Script>
+            <Script id={'google-tag'} dangerouslySetInnerHTML={{
+              __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'UA-222824651-1');
+              `,
+            }}>
+            </Script>
             {/* microsoft clarity */}
             <Script id={'microsoft-clarity'} dangerouslySetInnerHTML={{
               __html: `
