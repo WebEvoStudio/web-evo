@@ -6,6 +6,7 @@ import {Images} from '../core/libs/images';
 import {useRouter} from 'next/router';
 import {LoadingButton} from '@mui/lab';
 import {Box, Container, Divider, Grid, Typography} from '@mui/material';
+import {ArrowDownward as ArrowDownwardIcon} from '@mui/icons-material';
 
 
 /**
@@ -14,14 +15,29 @@ import {Box, Container, Divider, Grid, Typography} from '@mui/material';
  */
 export default function Index() {
   const router = useRouter();
-  const [loading, setLoading] = useState(false);
+  const [loading] = useState(false);
+  const technologies: any[] = [
+    {id: 1, name: 'Angular', image: Images.angularLogo},
+    // eslint-disable-next-line max-len
+    {id: 2, name: 'React.js', image: Images.reactLogo},
+    {id: 3, name: 'Vue', image: Images.vueLogo},
+    {id: 4, name: 'Nest.js', image: Images.nestjsLogo},
+    {id: 5, name: 'Nuxt.js', image: Images.nuxtJsLogo},
+    {id: 6, name: 'Next.js', image: Images.nextJsLogo},
+  ];
   useEffect(() => {
     router.prefetch('/blogs').then();
   }, []);
   const toBlog = async () => {
-    setLoading(true);
-    await router.push('/blogs');
-    setLoading(false);
+    // setLoading(true);
+    // await router.push('#technologies');
+    // setLoading(false);
+    const anchorElement = document.getElementById('technologies');
+    if (anchorElement) {
+      anchorElement.scrollIntoView(
+          {behavior: 'smooth'},
+      );
+    }
   };
   /**
    * render the component
@@ -32,20 +48,23 @@ export default function Index() {
       <CommonHead/>
       <Grid container spacing={2}>
         <Grid item xs={12} md={6} sx={{order: 1}}>
-          <h1 className={styles['h1']}>欢迎来到WebEvolution</h1>
+          <h1 className={styles['h1']}>Web Evolution 不仅仅是一家软件开发工作室</h1>
 
           <Box className={styles['image']} sx={{display: {xs: 'block', md: 'none'}}}>
             <Image src={Images.undrawProudCoder} alt={'骄傲的编码员'}/>
           </Box>
           <Typography variant={'body1'}>
-            我们是一个帮助web开发人员的团队，我们希望通过这个平台，让更多的人学习web技术，从而提高自己的工作效率。同时，我们也希望通过这个平台，为我们提供一个展示自己的舞台，让更多的人看到我们的实力。
+            我们是一支由创新驱动的团队，我们通过融合最聪明的技术思想和尖端技术来实现不可能的目标。
           </Typography>
           <Box sx={{mt: 4}}>
             <div onClick={toBlog}>
               <LoadingButton
                 sx={{color: '#fff'}}
                 loading={loading}
-                loadingIndicator={'Loading...'} color={'primary'} variant="contained">查看我们的工作</LoadingButton>
+                loadingIndicator={'Loading...'} color={'primary'} variant="contained">
+                <span>查看我们的技术堆栈</span>
+                <ArrowDownwardIcon sx={{ml: 1}}/>
+              </LoadingButton>
             </div>
           </Box>
         </Grid>
@@ -59,9 +78,6 @@ export default function Index() {
         </Grid>
         <Grid item xs={12} md={6} sx={{order: {xs: 4, md: 5}}}>
           <div className={styles['h1']}>我们是一个对网络开发充满热情的开发人员团队</div>
-          <Typography variant={'body1'}>
-            我们乐于尝试新兴技术
-          </Typography>
         </Grid>
         <Grid item xs={12} md={6} sx={{order: {xs: 5, md: 4}}}>
           <div className={styles['image']}>
@@ -89,6 +105,33 @@ export default function Index() {
           <div className={styles['image']}>
             <Image src={Images.undrawBlogPost} alt={'博客文章'}/>
           </div>
+        </Grid>
+        <Grid item xs={12} sx={{order: 12}}>
+          <Divider/>
+        </Grid>
+        <Grid item xs={12} md={6} sx={{order: {xs: 13}}} id={'technologies'}>
+          <div className={styles['h1']}>技术堆栈</div>
+        </Grid>
+        <Grid item xs={12} md={6} sx={{order: {xs: 14}}}>
+          <Box sx={{display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around', my: 2}}>
+            {technologies.map((it, index) => (
+              <Box
+                key={index}
+                sx={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  width: '30%',
+                  mb: 1,
+                }}>
+                <div>
+                  <Image src={it.image} width={50} height={50}></Image>
+                </div>
+                <Typography variant={'body1'} sx={{overflow: 'hidden'}}>{it.name}</Typography>
+              </Box>
+            ))}
+          </Box>
+          <Box sx={{mb: 6}}/>
         </Grid>
       </Grid>
     </Container>

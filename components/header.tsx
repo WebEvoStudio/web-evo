@@ -26,10 +26,10 @@ const Header = () => {
   const links: any[] = [
     // {path: '/about', name: 'About'},
     // {path: '/portfolio', name: 'Portfolio'},
-    {path: '/courses', name: '课程'},
+    // {path: '/courses', name: '课程'},
     {path: '/blogs', name: '博客'},
-    {path: '/docs', name: '文档'},
-    {path: '/tools', name: '工具'},
+    // {path: '/docs', name: '文档'},
+    // {path: '/tools', name: '工具'},
     {path: '/contact', name: '联系'},
   ];
   const pathname = `/${useRouter().pathname.split('/')[1]}`;

@@ -26,6 +26,7 @@ const nextConfig = {
       'p3-juejin.byteimg.com',
       'nextjs.org',
       'developers-center.oss-cn-beijing.aliyuncs.com',
+      'angular.io',
     ],
   },
 };
