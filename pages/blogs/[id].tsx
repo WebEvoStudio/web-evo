@@ -24,17 +24,22 @@ function BlogDetail({blog}: {blog: {title: string, markContent: string}}) {
   return (
     <Box sx={{background: '#f4f5f5'}}>
       <Container maxWidth={'md'}>
-        <div className={style['blog']}>
-          <CommonHead title={blog.title + ' - Web Evolution'} description={Markdown.intercept(blog.markContent, 100)}/>
-          <div className={style['blog-detail']}>
-            <div className={style['blog-title']}>
-              <h1>{blog.title}</h1>
-            </div>
-            <div className={style['blog-content']} data-clarity-region="article">
-              <Viewer value={content} plugins={plugins}/>
+        <article data-clarity-region="article">
+          <div className={style['blog']}>
+            <CommonHead
+              title={blog.title + ' - Web Evolution'}
+              description={Markdown.intercept(blog.markContent, 100)}
+            />
+            <div className={style['blog-detail']}>
+              <div className={style['blog-title']}>
+                <h1>{blog.title}</h1>
+              </div>
+              <div className={style['blog-content']}>
+                <Viewer value={content} plugins={plugins}/>
+              </div>
             </div>
           </div>
-        </div>
+        </article>
       </Container>
     </Box>
   );
