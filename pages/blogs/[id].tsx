@@ -30,7 +30,7 @@ function BlogDetail({blog}: {blog: {title: string, markContent: string}}) {
             <div className={style['blog-title']}>
               <h1>{blog.title}</h1>
             </div>
-            <div className={style['blog-content']}>
+            <div className={style['blog-content']} data-clarity-region="article">
               <Viewer value={content} plugins={plugins}/>
             </div>
           </div>
