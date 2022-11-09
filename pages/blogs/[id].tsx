@@ -22,7 +22,7 @@ function BlogDetail({blog}: {blog: {title: string, markContent: string}}) {
     gfm(),
   ];
   return (
-    <Box sx={{background: '#f4f5f5'}}>
+    <Box >
       <Container maxWidth={'md'}>
         <article data-clarity-region="article">
           <div className={style['blog']}>

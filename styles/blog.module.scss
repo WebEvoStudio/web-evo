@@ -1,7 +1,7 @@
 @media all {
   .blog {
     &-title {
-      background-color: #ffffff;
+      //background-color: #ffffff;
       h1 {
         padding: 10px;
         font-size: 24px;
@@ -24,7 +24,7 @@
     }
     &-title {
       font-weight: 600;
-      color: #2e3135;
+      //color: #2e3135;
       font-size: 18px;
     }
     &-description {
@@ -34,14 +34,14 @@
     }
     &-detail {
       padding: 20px 0;
-      background-color: #f4f5f5;
+      //background-color: #f4f5f5;
     }
     &-content {
     //  text-align: left;
-      background-color: #fff;
+    //  background-color: #fff;
       padding: 30px;
       pre {
-        background-color: #f8f9fa;
+        background-color: transparent;
         border: 1px solid #d2d3d7;
         padding: clamp(1rem, 0.96rem + 0.18vw, 1.125rem);
         overflow-x: scroll;
