@@ -68,22 +68,20 @@ const Header = () => {
       <AppBar position="fixed" sx={appBarStyle}>
         <Toolbar>
           <Link href={'/'}>
-            <a>
-              <Box sx={{width: 50, display: 'flex', alignItem: 'center', mr: 2}}>
-                <Image src={Images.undrawDeveloperActivity} alt={'开发进行中'}/>
-              </Box>
-            </a>
+            <Box sx={{width: 50, display: 'flex', alignItem: 'center', mr: 2}}>
+              <Image width={50} src={Images.undrawDeveloperActivity} alt={'开发进行中'}/>
+            </Box>
           </Link>
           <Box sx={{display: {xs: 'none', sm: 'block'}}}>
             <nav className={style.nav}>
               {links.map((link, index) => (
                 <Link key={index} href={link.path}>
-                  <a
+                  <span
                     className={style.link}
                     style={{color: pathname === link.path? variables.primaryColor:''}}
                   >
                     {link.name}
-                  </a>
+                  </span>
                 </Link>
               ))}
             </nav>

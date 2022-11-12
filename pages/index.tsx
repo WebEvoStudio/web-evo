@@ -35,13 +35,16 @@ export default function Index() {
   const [loading, setLoading] = useState(false);
   const technologies: any[] = [
     {id: 1, name: 'Angular', image: Images.angularLogo},
-    // eslint-disable-next-line max-len
     {id: 2, name: 'React.js', image: Images.reactLogo},
     {id: 3, name: 'Vue', image: Images.vueLogo},
     {id: 4, name: 'Nest.js', image: Images.nestjsLogo},
     {id: 5, name: 'Nuxt.js', image: Images.nuxtJsLogo},
     {id: 6, name: 'Next.js', image: Images.nextJsLogo},
   ];
+  const imageStyle = {
+    width: '100%',
+    height: 'auto',
+  };
   useEffect(() => {
     router.prefetch('/blogs').then();
   }, []);
@@ -70,7 +73,11 @@ export default function Index() {
           <h1 className={styles['h1']}>Web Evolution 不仅仅是一家软件开发工作室</h1>
 
           <Box className={styles['image']} sx={{display: {xs: 'block', md: 'none'}}}>
-            <Image src={Images.undrawProudCoder} alt={'骄傲的编码员'}/>
+            <Image
+              alt={'骄傲的编码员'}
+              src={Images.undrawProudCoder}
+              style={imageStyle}
+            />
           </Box>
           <Typography variant={'body1'}>
             我们是一支由创新驱动的团队，我们通过融合最聪明的技术思想和尖端技术来实现不可能的目标。
@@ -78,7 +85,7 @@ export default function Index() {
           <Box sx={{mt: 4}}>
             <div onClick={toTechnologies}>
               <Button
-                sx={{color: '#fff'}}
+                sx={{color: '#fff', width: '100%', borderRadius: '2rem'}}
                 color={'primary'} variant="contained">
                 <span>查看我们的技术堆栈</span>
                 <SouthIcon sx={{ml: 1}}/>
@@ -88,7 +95,11 @@ export default function Index() {
         </Grid>
         <Grid item xs={12} md={6} sx={{order: 2}}>
           <Box className={styles['image']} sx={{display: {xs: 'none', md: 'block'}}}>
-            <Image src={Images.undrawProudCoder} alt={'骄傲的编码员'}/>
+            <Image
+              src={Images.undrawProudCoder}
+              alt={'骄傲的编码员'}
+              style={imageStyle}
+            />
           </Box>
         </Grid>
         <Grid item xs={12} sx={{order: 3}}>
@@ -97,7 +108,11 @@ export default function Index() {
         <Grid item xs={12} md={6} sx={{order: {xs: 4, md: 5}}}>
           <div className={styles['h1']}>优先事项：培养专业技术成长</div>
           <Box className={styles['image']} sx={{display: {xs: 'block', md: 'none'}}}>
-            <Image src={Images.undrawTeamCollaboration} alt={'骄傲的编码员'}/>
+            <Image
+              src={Images.undrawTeamCollaboration}
+              alt={'骄傲的编码员'}
+              style={imageStyle}
+            />
           </Box>
           <List>
             <ListItem>
@@ -128,7 +143,7 @@ export default function Index() {
           <Box>
             <div onClick={toBlog}>
               <LoadingButton
-                sx={{color: '#fff'}}
+                sx={{color: '#fff', width: '100%', borderRadius: '2rem'}}
                 loading={loading}
                 loadingIndicator={'Loading...'} color={'primary'} variant="contained">
                 <span>访问博客</span>
@@ -139,7 +154,11 @@ export default function Index() {
         </Grid>
         <Grid item xs={12} md={6} sx={{order: {xs: 5, md: 4}}}>
           <Box className={styles['image']} sx={{display: {xs: 'none', md: 'block'}}}>
-            <Image src={Images.undrawTeamCollaboration} alt={'团队协作'}/>
+            <Image
+              src={Images.undrawTeamCollaboration}
+              alt={'团队协作'}
+              style={imageStyle}
+            />
           </Box>
         </Grid>
         <Grid item xs={12} sx={{order: 6}}>
@@ -161,7 +180,7 @@ export default function Index() {
                   mb: 1,
                 }}>
                 <div>
-                  <Image src={it.image} width={50} height={50}></Image>
+                  <Image alt={it.name} src={it.image} width={50} height={50}></Image>
                 </div>
                 <Typography variant={'body1'} sx={{overflow: 'hidden'}}>{it.name}</Typography>
               </Box>
@@ -177,7 +196,11 @@ export default function Index() {
         </Grid>
         <Grid item xs={12} md={6} sx={{order: {xs: 11, md: 10}}}>
           <div className={styles['image']}>
-            <Image src={Images.undrawUnderConstruction} alt={'🚧正在施工🚧'}/>
+            <Image
+              src={Images.undrawUnderConstruction}
+              alt={'🚧正在施工🚧'}
+              style={imageStyle}
+            />
           </div>
         </Grid>
         <Grid item xs={12} sx={{order: 12}}>
@@ -188,7 +211,11 @@ export default function Index() {
         </Grid>
         <Grid item xs={12} md={6} sx={{order: {xs: 14, md: 14}}}>
           <div className={styles['image']}>
-            <Image src={Images.undrawBlogPost} alt={'博客文章'}/>
+            <Image
+              src={Images.undrawBlogPost}
+              alt={'博客文章'}
+              style={imageStyle}
+            />
           </div>
         </Grid>
       </Grid>

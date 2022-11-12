@@ -53,7 +53,11 @@ export default function Contact() {
       <CommonHead title={'联系 - WebEvolution'}/>
       <Box sx={{display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center'}}>
         <Box sx={{margin: '20px 0'}}>
-          <Image src={Images.undrawContactUs}/>
+          <Image
+            alt={'contact us'}
+            src={Images.undrawContactUs}
+            style={{width: '100%', height: 'auto'}}
+          />
         </Box>
         <Typography
           variant={'h1'}
