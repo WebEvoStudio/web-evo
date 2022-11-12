@@ -5,7 +5,7 @@ import style from './header.module.scss';
 import variables from '../styles/variables.module.scss';
 import {
   AppBar,
-  Box,
+  Box, Button,
   Drawer,
   Fab,
   IconButton, List,
@@ -62,14 +62,37 @@ const Header = () => {
       </Zoom>
     );
   };
-  const appBarStyle = {color: 'white', backgroundColor: 'rgba(0,176,255,0.7)', backdropFilter: 'blur(10px)'};
+  const toContact = () => {
+    router.push('/contact').then();
+  };
+  const appBarStyle = {color: 'white', backgroundColor: '#121212'};
   return (
     <Box sx={{flexGrow: 1}}>
-      <AppBar position="fixed" sx={appBarStyle}>
-        <Toolbar>
+      <AppBar position="fixed" sx={appBarStyle} elevation={0}>
+        <Toolbar
+          sx={{
+            display: 'flex',
+            flexDirection: {xs: 'row-reverse', sm: 'row'},
+            justifyContent: 'space-between',
+          }}
+        >
+          <Box sx={{display: {xs: 'block', sm: 'none'}}}>
+            <Button
+              variant={'outlined'}
+              size={'small'}
+              sx={{borderRadius: '1rem', fontSize: '12px'}}
+              onClick={() => toContact()}
+            >取得联系</Button>
+          </Box>
           <Link href={'/'}>
-            <Box sx={{width: 50, display: 'flex', alignItem: 'center', mr: 2}}>
-              <Image width={50} src={Images.undrawDeveloperActivity} alt={'开发进行中'}/>
+            <Box sx={{display: 'flex', alignItem: 'center', mr: {xs: 0, sm: 2}}}>
+              <Box sx={{display: {xs: 'flex', sm: 'none'}, alignItems: 'center', mr: 1}}>
+                <Image width={20} src={Images.undrawDeveloperActivity} alt={'开发进行中'}/>
+              </Box>
+              <Box sx={{display: {xs: 'none', sm: 'block'}}}>
+                <Image width={50} src={Images.undrawDeveloperActivity} alt={'开发进行中'}/>
+              </Box>
+              <Box sx={{display: {xs: 'flex', sm: 'none'}, alignItems: 'center'}}>Web Evolution</Box>
             </Box>
           </Link>
           <Box sx={{display: {xs: 'none', sm: 'block'}}}>
@@ -86,8 +109,10 @@ const Header = () => {
               ))}
             </nav>
           </Box>
-          <MainSearch/>
-          <Box sx={{flexGrow: 1}} />
+          <Box sx={{display: {xs: 'none', sm: 'block'}}}>
+            <MainSearch/>
+          </Box>
+          <Box sx={{flexGrow: 1, display: {xs: 'none', sm: 'block'}}} />
           <IconButton
             size="large"
             edge="start"
