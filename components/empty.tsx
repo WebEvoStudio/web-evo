@@ -6,7 +6,7 @@ const Empty = ({description}: {description?: string}) => {
   return (
     <Box sx={{textAlign: 'center'}}>
       <Box sx={{width: 200}}>
-        <Image src={Images.undrawEmpty}/>
+        <Image alt={''} src={Images.undrawEmpty}/>
       </Box>
       <span>{description||'这里什么都没有'}</span>
     </Box>

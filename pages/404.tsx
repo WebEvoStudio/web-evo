@@ -22,7 +22,7 @@ const Custom404 = () => {
   return (
     <Box sx={pageSx}>
       <Box sx={{width: '260px'}}>
-        <Image src={Images.undrawPageNotFound}/>
+        <Image alt={''} src={Images.undrawPageNotFound}/>
       </Box>
       <Typography variant={'h4'} sx={{mt: 4}}>Page not found</Typography>
       <Button variant={'contained'} sx={{mt: 4}} onClick={backToHome}>Back to home</Button>

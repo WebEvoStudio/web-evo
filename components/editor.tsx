@@ -9,7 +9,6 @@ import gfm from '@bytemd/plugin-gfm';
 import clipboard from 'clipboardy';
 import axios from 'axios';
 // import 'github-markdown-css/github-markdown-light.css';
-import {Image} from 'mdast';
 import Request from '../core/unit/request';
 import ObjectUnit from '../core/unit/object-unit';
 import {useSnackbar} from 'notistack';
@@ -65,8 +64,8 @@ const EditorPage = (props: {title?: string, value?: string, id?: string}) => {
         .then(() => enqueueSnackbar('文章修改成功', {variant: 'success'}))
         .catch((err) => enqueueSnackbar(err.message, {variant: 'error'}));
   };
-  const uploadImages = async (files: File[]): Promise<Pick<Image, 'url' | 'alt' | 'title'>[]> => {
-    const response: Pick<Image, 'url' | 'alt' | 'title'>[] = [];
+  const uploadImages = async (files: File[]): Promise<any[]> => {
+    const response: any[] = [];
     try {
       if (files.length > 1) throw new Error('一次只能上传一张图片');
       const fileName = files[0].name;

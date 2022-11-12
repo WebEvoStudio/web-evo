@@ -49,7 +49,7 @@ function CoursesIndex() {
                   {it.counter}
                 </Box>
                 <Box>
-                  <Image src={''} width={'360px'} height={'240'}></Image>
+                  <Image alt={''} src={''} width={360} height={'240'}></Image>
                 </Box>
                 <Box sx={{fontSize: 'clamp(1.125rem, 1.09rem + 0.18vw, 1.25rem)'}}>{it.title}</Box>
                 <Box sx={{fontSize: 'clamp(0.75rem, 0.71rem + 0.18vw, 0.875rem);'}}> {it.description}</Box>
