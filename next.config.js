@@ -12,9 +12,9 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 const nextConfig = {
   reactStrictMode: true,
   output: 'standalone',
-  sassOptions: {
-    includePaths: [path.join(__dirname, 'styles')],
-  },
+  // sassOptions: {
+  //   includePaths: [path.join(__dirname, 'styles')],
+  // },
   env: {
     NEXT_PUBLIC_BASE_URL: process.env.BASE_URL,
     NEXT_PUBLIC_SITE_URL: process.env.SITE_URL,

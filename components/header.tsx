@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import {useRouter} from 'next/router';
 import Link from 'next/link';
 import style from './header.module.scss';
 import variables from '../styles/variables.module.scss';
@@ -18,11 +17,13 @@ import {KeyboardArrowUp, Menu as MenuIcon} from '@mui/icons-material';
 import MainSearch from './main-search';
 import Image from 'next/image';
 import {Images} from '../core/libs/images';
+import {usePathname, useRouter} from 'next/navigation';
 /**
  * Header component
  * @constructor
  */
 const Header = () => {
+  const pathname = usePathname();
   const links: any[] = [
     // {path: '/about', name: 'About'},
     // {path: '/portfolio', name: 'Portfolio'},
@@ -32,7 +33,7 @@ const Header = () => {
     // {path: '/tools', name: '工具'},
     {path: '/contact', name: '联系'},
   ];
-  const pathname = `/${useRouter().pathname.split('/')[1]}`;
+  const pathName = `/${pathname?.split('/')[1]}`;
   const [drawerState, setDrawerState] = useState(false);
   const router = useRouter();
   const ScrollTop = ({window, children}: {window?: () => Window, children: React.ReactElement}) => {
@@ -63,7 +64,7 @@ const Header = () => {
     );
   };
   const toContact = () => {
-    router.push('/contact').then();
+    router.push('/contact');
   };
   const appBarStyle = {color: 'white', backgroundColor: '#121212'};
   return (
@@ -101,7 +102,7 @@ const Header = () => {
                 <Link key={index} href={link.path}>
                   <span
                     className={style.link}
-                    style={{color: pathname === link.path? variables.primaryColor:''}}
+                    style={{color: pathName === link.path? variables.primaryColor:'white'}}
                   >
                     {link.name}
                   </span>
@@ -135,7 +136,7 @@ const Header = () => {
           <List>
             {links.map((link, index) => (
               <ListItem key={index} button onClick={() => {
-                router.push(link.path).then();
+                router.push(link.path);
                 setDrawerState(false);
               }}>
                 <ListItemText>{link.name}</ListItemText>

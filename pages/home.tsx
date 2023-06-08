@@ -1,9 +1,10 @@
+'use client';
 import React, {useEffect, useState} from 'react';
 import styles from '../styles/hello.module.scss';
 import CommonHead from '../components/common-head';
 import Image from 'next/image';
 import {Images} from '../core/libs/images';
-import {useRouter} from 'next/router';
+import {useRouter} from 'next/navigation';
 import {LoadingButton} from '@mui/lab';
 import {
   Box,
@@ -27,10 +28,10 @@ import {
 
 
 /**
- * @class Index
+ * @class Home
  * @extends React.Component
  */
-export default function Index() {
+export default function Home() {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
   const technologies: any[] = [
@@ -46,7 +47,7 @@ export default function Index() {
     height: 'auto',
   };
   useEffect(() => {
-    router.prefetch('/blogs').then();
+    router.prefetch('/blogs');
   }, []);
   const toTechnologies = async () => {
     const anchorElement = document.getElementById('technologies');
@@ -80,7 +81,7 @@ export default function Index() {
             />
           </Box>
           <Typography variant={'body1'}>
-            我们是一支由创新驱动的团队，我们通过融合最聪明的技术思想和尖端技术来实现不可能的目标。
+              我们是一支由创新驱动的团队，我们通过融合最聪明的技术思想和尖端技术来实现不可能的目标。
           </Typography>
           <Box sx={{mt: 4}}>
             <div onClick={toTechnologies}>

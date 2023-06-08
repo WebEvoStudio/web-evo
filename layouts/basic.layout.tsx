@@ -1,11 +1,13 @@
+'use client';
 import React, {useEffect, useState} from 'react';
 import Header from '../components/header';
-import {BottomNavigation, BottomNavigationAction, Box, Paper} from '@mui/material';
+import {BottomNavigation, BottomNavigationAction, Box, CssBaseline, Paper, ThemeProvider} from '@mui/material';
 import {
   HomeRounded, ArticleRounded, SourceRounded, HomeRepairServiceRounded, ContactMailRounded,
 } from '@mui/icons-material';
-import {useRouter} from 'next/router';
-import styles from '/styles/basic-layout.module.scss';
+import {usePathname, useRouter} from 'next/navigation';
+import styles from './basic-layout.module.css';
+import theme from '../core/themes/theme';
 
 /**
  * basic.layout.tsx
@@ -15,6 +17,7 @@ import styles from '/styles/basic-layout.module.scss';
  */
 export default function BasicLayout({children}: any) {
   const router = useRouter();
+  const pathname = usePathname();
   const [isPwa, setIsPwa] = useState(false);
   const [current, setCurrent] = useState(0);
   useEffect(() => {
@@ -26,8 +29,8 @@ export default function BasicLayout({children}: any) {
     );
   }, []);
   useEffect(() => {
-    const pathname = `/${router.pathname.split('/')[1]}`;
-    const index = ['/', '/blogs', '/docs', '/tools', '/contact'].indexOf(pathname);
+    const path = `/${pathname?.split('/')[1]}`;
+    const index = ['/', '/blogs', '/docs', '/tools', '/contact'].indexOf(path);
     setCurrent(index);
   }, [router]);
   const TabBar = () => {
@@ -74,9 +77,12 @@ export default function BasicLayout({children}: any) {
   };
   return (
     <>
-      {!isPwa ? <Header /> : null}
-      {children}
-      <TabBar/>
+      <ThemeProvider theme={theme}>
+        <CssBaseline/>
+        {!isPwa ? <Header /> : null}
+        {children}
+        <TabBar/>
+      </ThemeProvider>
     </>
   );
 }
