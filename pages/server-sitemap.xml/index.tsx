@@ -1,9 +1,8 @@
-import {GetServerSideProps} from 'next';
 import {getServerSideSitemap} from 'next-sitemap';
 import axios from 'axios';
 
 const SitemapIndex = () => {};
-export const getServerSideProps: GetServerSideProps = async (context) => {
+export const getServerSideProps: (context: any) => Promise<Response> = async (context) => {
   const fields: {loc: string, lastmod: string}[] = [];
   try {
     const host = 'https://web-evo.bulv.life';

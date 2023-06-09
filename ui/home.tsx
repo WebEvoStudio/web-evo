@@ -25,6 +25,7 @@ import {
   East as EastIcon,
   South as SouthIcon,
 } from '@mui/icons-material';
+import Icons from "../core/libs/icons";
 
 
 /**
@@ -107,7 +108,7 @@ export default function Home() {
           <Divider/>
         </Grid>
         <Grid item xs={12} md={6} sx={{order: {xs: 4, md: 5}}}>
-          <div className={styles['h1']}>优先事项：培养专业技术成长</div>
+          <div className={styles['h1']}>优先事项1：培养专业技术成长</div>
           <Box className={styles['image']} sx={{display: {xs: 'block', md: 'none'}}}>
             <Image
               src={Images.undrawTeamCollaboration}
@@ -165,10 +166,100 @@ export default function Home() {
         <Grid item xs={12} sx={{order: 6}}>
           <Divider/>
         </Grid>
-        <Grid item xs={12} md={6} sx={{order: {xs: 7}}} id={'technologies'}>
+        <Grid item xs={12} md={6} sx={{order: {xs: 8, md: 7}}}>
+          <div className={styles['h1']}>优先事项2: 让外包更人性化</div>
+          <Box className={styles['image']} sx={{display: {xs: 'block', md: 'none'}}}>
+            <Image src={Images.undrawEngineeringTeam} alt={'工程团队'} style={imageStyle}/>
+          </Box>
+          <List>
+            <ListItem>
+              <ListItemIcon>
+                <Icons.Comment/>
+              </ListItemIcon>
+              <ListItemText>加强沟通</ListItemText>
+            </ListItem>
+            <ListItem>
+              <ListItemIcon>
+                <Icons.PersonOff/>
+              </ListItemIcon>
+              <ListItemText>减少官僚主义</ListItemText>
+            </ListItem>
+            <ListItem>
+              <ListItemIcon>
+                <Icons.SafetyDivider/>
+              </ListItemIcon>
+              <ListItemText>扁平化公司结构</ListItemText>
+            </ListItem>
+            <ListItem>
+              <ListItemIcon>
+                <Icons.Group/>
+              </ListItemIcon>
+              <ListItemText>我们都是公司内部和客户的合作伙伴</ListItemText>
+            </ListItem>
+          </List>
+        </Grid>
+        <Grid item xs={12} md={6} sx={{order: {xs: 7, md: 8}}}>
+          <Box className={styles['image']} sx={{display: {xs: 'none', md: 'block'}}}>
+            <Image
+              src={Images.undrawEngineeringTeam}
+              alt={'工程团队'}
+              style={imageStyle}
+            />
+          </Box>
+        </Grid>
+        <Grid item xs={12} sx={{order: 9}}>
+          <Divider/>
+        </Grid>
+
+        <Grid item xs={12} md={6} sx={{order: {xs: 10, md: 11}}}>
+          <div className={styles['h1']}>优先事项3: 让最复杂的想法栩栩如生</div>
+          <Box className={styles['image']} sx={{display: {xs: 'block', md: 'none'}}}>
+            <Image src={Images.undrawSolutionMindset} alt={'解决方案思维'} style={imageStyle}/>
+          </Box>
+          <List>
+            <ListItem>
+              <ListItemIcon>
+                <Icons.TrendingUp/>
+              </ListItemIcon>
+              <ListItemText>将技术推向极限</ListItemText>
+            </ListItem>
+            <ListItem>
+              <ListItemIcon>
+                <Icons.Biotech/>
+              </ListItemIcon>
+              <ListItemText>在公司内部建立独特的专业知识</ListItemText>
+            </ListItem>
+            <ListItem>
+              <ListItemIcon>
+                <Icons.DesktopMac/>
+              </ListItemIcon>
+              <ListItemText>掌握尖端技术</ListItemText>
+            </ListItem>
+            <ListItem>
+              <ListItemIcon>
+                <Icons.PsychologyAlt/>
+              </ListItemIcon>
+              <ListItemText>始终找到满足客户业务需求的方法</ListItemText>
+            </ListItem>
+          </List>
+        </Grid>
+        <Grid item xs={12} md={6} sx={{order: {xs: 11, md: 10}}}>
+          <Box className={styles['image']} sx={{display: {xs: 'none', md: 'block'}}}>
+            <Image
+              src={Images.undrawSolutionMindset}
+              alt={'解决方案思维'}
+              style={imageStyle}
+            />
+          </Box>
+        </Grid>
+        <Grid item xs={12} sx={{order: 12}}>
+          <Divider/>
+        </Grid>
+
+        <Grid item xs={12} md={6} sx={{order: {xs: 13}}} id={'technologies'}>
           <div className={styles['h1']}>技术堆栈</div>
         </Grid>
-        <Grid item xs={12} md={6} sx={{order: {xs: 8}}}>
+        <Grid item xs={12} md={6} sx={{order: {xs: 14}}}>
           <Box sx={{display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around', my: 2}}>
             {technologies.map((it, index) => (
               <Box
@@ -189,13 +280,13 @@ export default function Home() {
           </Box>
           <Box sx={{mb: 6}}/>
         </Grid>
-        <Grid item xs={12} sx={{order: 9}}>
+        <Grid item xs={12} sx={{order: 15}}>
           <Divider/>
         </Grid>
-        <Grid item xs={12} md={6} sx={{order: {xs: 10, md: 11}}}>
+        <Grid item xs={12} md={6} sx={{order: {xs: 16, md: 17}}}>
           <div className={styles['h1']}>我们在这里帮助您构建您的Web项目</div>
         </Grid>
-        <Grid item xs={12} md={6} sx={{order: {xs: 11, md: 10}}}>
+        <Grid item xs={12} md={6} sx={{order: {xs: 17, md: 16}}}>
           <div className={styles['image']}>
             <Image
               src={Images.undrawUnderConstruction}
@@ -204,13 +295,13 @@ export default function Home() {
             />
           </div>
         </Grid>
-        <Grid item xs={12} sx={{order: 12}}>
+        <Grid item xs={12} sx={{order: 18}}>
           <Divider/>
         </Grid>
-        <Grid item xs={12} md={6} sx={{order: {xs: 13, md: 13}}}>
+        <Grid item xs={12} md={6} sx={{order: {xs: 19, md: 19}}}>
           <div className={styles['h1']}>我们提供丰富的技术文章支持，您可以在这里获得更多的帮助</div>
         </Grid>
-        <Grid item xs={12} md={6} sx={{order: {xs: 14, md: 14}}}>
+        <Grid item xs={12} md={6} sx={{order: {xs: 20, md: 20}}}>
           <div className={styles['image']}>
             <Image
               src={Images.undrawBlogPost}
