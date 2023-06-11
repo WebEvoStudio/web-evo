@@ -25,7 +25,7 @@ import {
   East as EastIcon,
   South as SouthIcon,
 } from '@mui/icons-material';
-import Icons from "../core/libs/icons";
+import Icons from '../core/libs/icons';
 
 
 /**
