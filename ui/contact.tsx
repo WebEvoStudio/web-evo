@@ -1,3 +1,4 @@
+'use client';
 import React, {useMemo, useState} from 'react';
 import {Box, Button, Container, Grid, TextField, Typography} from '@mui/material';
 import {Images} from '../core/libs/images';
@@ -63,7 +64,7 @@ export default function Contact() {
           variant={'h1'}
           sx={{margin: '20px 0'}} fontSize={{xs: '38px', sm: '68px'}} color={'#00B0FF'}>我们能帮你什么吗？</Typography>
         <Typography variant={'body1'} sx={{marginBottom: '50px'}}>
-          填写下表，了解 WebEvolution 如何帮助您实现雄心勃勃的软件需求！
+          联系我们，了解 WebEvolution 如何帮助您实现雄心勃勃的软件需求！如对我们的任何计划或服务有任何疑问，请随时与我们联系。 我们将在 24 小时内回复您！
         </Typography>
         <Box sx={{margin: '20px 0'}}>
           <Grid container spacing={6}>
@@ -92,11 +93,12 @@ export default function Contact() {
                   fontSize={{sm: '42px'}}
                   color={'#00B0FF'}
                   sx={{marginBottom: '10px', textAlign: 'center'}}>我们很乐意听取您的想法！</Typography>
+                <Typography variant={'body1'} sx={{marginBottom: '40px'}}>不确定您需要什么？ 让我们集思广益，我们可以如何提供帮助！</Typography>
                 <Box component={'form'} onSubmit={submit}>
                   <Grid container gap={2}>
                     <Grid item xs={12}>
                       <TextField
-                        label={'你的名字'}
+                        label={'您的名字'}
                         fullWidth
                         required error={formError.name}
                         helperText={formError.name ? '名字是必须的' : ''}
@@ -104,7 +106,7 @@ export default function Contact() {
                         onChange={({target: {value}}) => setForm({...form, name: value})}/>
                     </Grid>
                     <Grid item xs={12}>
-                      <TextField label={'你的邮件或手机号'} fullWidth required
+                      <TextField label={'您的邮件或手机号'} fullWidth required
                         error={formError.contact}
                         helperText={formError.contact ? '邮箱或手机号码格式不正确' : ''}
                         onBlur={contactBlurHandler}
@@ -112,10 +114,10 @@ export default function Contact() {
                     </Grid>
                     <Grid item xs={12}>
                       <TextField
-                        label={'你的信息'}
+                        label={'您的需求信息'}
                         fullWidth required multiline rows={4}
                         error={formError.message}
-                        helperText={formError.message ? '信息是必须的' : ''}
+                        helperText={formError.message ? '需求信息是必须的' : ''}
                         onBlur={() => setFormError({...formError, message: form.message === ''})}
                         onChange={({target: {value}}) => setForm({...form, message: value})}/>
                     </Grid>

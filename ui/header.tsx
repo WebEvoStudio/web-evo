@@ -25,13 +25,13 @@ import MainSearch from '../components/main-search';
 const Header = () => {
   const pathname = usePathname();
   const links: any[] = [
+    {path: '/blogs', name: '博客'},
+    {path: '/contact', name: '联系'},
     // {path: '/about', name: 'About'},
     // {path: '/portfolio', name: 'Portfolio'},
     // {path: '/courses', name: '课程'},
-    {path: '/blogs', name: '博客'},
     // {path: '/docs', name: '文档'},
     // {path: '/tools', name: '工具'},
-    {path: '/contact', name: '联系'},
   ];
   const pathName = `/${pathname?.split('/')[1]}`;
   const [drawerState, setDrawerState] = useState(false);

@@ -3,6 +3,7 @@ import {Metadata} from 'next';
 import BasicLayout from '../layouts/basic.layout';
 import GoogleAnalytics from '@bradgarropy/next-google-analytics';
 import Script from 'next/script';
+import '../styles/globals.css';
 // import 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap';
 
 export const metadata: Metadata = {
