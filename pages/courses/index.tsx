@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
 import {Box, Container, Grid, Typography} from '@mui/material';
-import Header from '../../components/header';
 import CommonHead from '../../components/common-head';
 import {School} from '@mui/icons-material';
 import Image from 'next/image';
 import Link from 'next/link';
+import Header from '../../ui/header';
 
 
 /**
