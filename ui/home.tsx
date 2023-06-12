@@ -108,7 +108,7 @@ export default function Home() {
           <Divider/>
         </Grid>
         <Grid item xs={12} md={6} sx={{order: {xs: 4, md: 5}}}>
-          <div className={styles['h1']}>优先事项1：培养专业技术成长</div>
+          <div className={styles['h1']}>优先事项一：培养专业技术成长</div>
           <Box className={styles['image']} sx={{display: {xs: 'block', md: 'none'}}}>
             <Image
               src={Images.undrawTeamCollaboration}
@@ -167,7 +167,7 @@ export default function Home() {
           <Divider/>
         </Grid>
         <Grid item xs={12} md={6} sx={{order: {xs: 8, md: 7}}}>
-          <div className={styles['h1']}>优先事项2: 让外包更人性化</div>
+          <div className={styles['h1']}>优先事项二：让外包更人性化</div>
           <Box className={styles['image']} sx={{display: {xs: 'block', md: 'none'}}}>
             <Image src={Images.undrawEngineeringTeam} alt={'工程团队'} style={imageStyle}/>
           </Box>
@@ -212,7 +212,7 @@ export default function Home() {
         </Grid>
 
         <Grid item xs={12} md={6} sx={{order: {xs: 10, md: 11}}}>
-          <div className={styles['h1']}>优先事项3: 让最复杂的想法栩栩如生</div>
+          <div className={styles['h1']}>优先事项三：让最复杂的想法栩栩如生</div>
           <Box className={styles['image']} sx={{display: {xs: 'block', md: 'none'}}}>
             <Image src={Images.undrawSolutionMindset} alt={'解决方案思维'} style={imageStyle}/>
           </Box>

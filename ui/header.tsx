@@ -14,10 +14,10 @@ import {
   Zoom,
 } from '@mui/material';
 import {KeyboardArrowUp, Menu as MenuIcon} from '@mui/icons-material';
-import MainSearch from './main-search';
 import Image from 'next/image';
 import {Images} from '../core/libs/images';
 import {usePathname, useRouter} from 'next/navigation';
+import MainSearch from '../components/main-search';
 /**
  * Header component
  * @constructor
@@ -67,6 +67,19 @@ const Header = () => {
     router.push('/contact');
   };
   const appBarStyle = {color: 'white', backgroundColor: '#121212'};
+  const getTouch = () => {
+    if (pathName !== '/contact') {
+      return (
+        <Button
+          variant={'outlined'}
+          size={'small'}
+          sx={{borderRadius: '1rem', fontSize: '12px'}}
+          onClick={() => toContact()}
+        >取得联系</Button>
+      );
+    }
+    return (<></>);
+  };
   return (
     <Box sx={{flexGrow: 1}}>
       <AppBar position="fixed" sx={appBarStyle} elevation={0}>
@@ -78,12 +91,7 @@ const Header = () => {
           }}
         >
           <Box sx={{display: {xs: 'block', sm: 'none'}}}>
-            <Button
-              variant={'outlined'}
-              size={'small'}
-              sx={{borderRadius: '1rem', fontSize: '12px'}}
-              onClick={() => toContact()}
-            >取得联系</Button>
+            {getTouch()}
           </Box>
           <Link href={'/'}>
             <Box sx={{display: 'flex', alignItem: 'center', mr: {xs: 0, sm: 2}}}>

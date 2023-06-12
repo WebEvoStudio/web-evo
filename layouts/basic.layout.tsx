@@ -1,6 +1,5 @@
 'use client';
 import React, {useEffect, useState} from 'react';
-import Header from '../components/header';
 import {BottomNavigation, BottomNavigationAction, Box, CssBaseline, Paper, ThemeProvider} from '@mui/material';
 import {
   HomeRounded, ArticleRounded, SourceRounded, HomeRepairServiceRounded, ContactMailRounded,
@@ -8,6 +7,7 @@ import {
 import {usePathname, useRouter} from 'next/navigation';
 import styles from './basic-layout.module.css';
 import theme from '../core/themes/theme';
+import Header from '../ui/header';
 
 /**
  * basic.layout.tsx
