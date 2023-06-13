@@ -1,17 +1,17 @@
-FROM node:16-alpine AS deps
+FROM node:18-alpine AS deps
 WORKDIR /usr/src/app
 COPY package*.json ./
 RUN npm install pnpm -g
 RUN pnpm install
 
-FROM node:16-alpine AS builder
+FROM node:18-alpine AS builder
 WORKDIR /usr/src/app
 COPY . .
 COPY --from=deps /usr/src/app/node_modules ./node_modules
 RUN npm run build
 RUN npm run build:post
 
-FROM node:16-alpine AS runner
+FROM node:18-alpine AS runner
 WORKDIR /usr/src/app
 ENV NODE_ENV production
 RUN addgroup --system --gid 1001 nodejs
