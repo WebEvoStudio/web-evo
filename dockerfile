@@ -24,7 +24,8 @@ RUN adduser --system --uid 1001 nextjs
 COPY next.config.js ./
 COPY public ./public
 COPY package.json ./
-COPY .next ./
+COPY .next/standalone ./
+COPY .next/static ./.next/static
 USER nextjs
 EXPOSE 3000
 ENV PORT 3000
