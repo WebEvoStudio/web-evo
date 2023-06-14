@@ -10,7 +10,9 @@
 
 # production
 /build
-.next
+.next/*
+!.next/static
+!.next/standalone
 
 # ides
 .idea
