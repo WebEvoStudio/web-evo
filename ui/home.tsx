@@ -1,7 +1,6 @@
 'use client';
 import React, {useEffect, useState} from 'react';
 import styles from '../styles/hello.module.scss';
-import CommonHead from '../components/common-head';
 import Image from 'next/image';
 import {Images} from '../core/libs/images';
 import {useRouter} from 'next/navigation';
@@ -63,13 +62,19 @@ export default function Home() {
     await router.push('/blogs');
     setLoading(false);
   };
+  const HomeDivider = ({order}: {order: number}) => {
+    return (
+      <Grid item xs={12} sx={{order}}>
+        <Divider/>
+      </Grid>
+    );
+  };
   /**
    * render the component
    * @return {JSX.Element}
    */
   return (
     <Container maxWidth={'lg'}>
-      <CommonHead/>
       <Grid container spacing={2}>
         <Grid item xs={12} md={6} sx={{order: 1}}>
           <h1 className={styles['h1']}>Web Evolution 不仅仅是一家软件开发工作室</h1>
@@ -104,9 +109,7 @@ export default function Home() {
             />
           </Box>
         </Grid>
-        <Grid item xs={12} sx={{order: 3}}>
-          <Divider/>
-        </Grid>
+        <HomeDivider order={3}/>
         <Grid item xs={12} md={6} sx={{order: {xs: 4, md: 5}}}>
           <div className={styles['h1']}>优先事项一：培养专业技术成长</div>
           <Box className={styles['image']} sx={{display: {xs: 'block', md: 'none'}}}>
@@ -163,9 +166,7 @@ export default function Home() {
             />
           </Box>
         </Grid>
-        <Grid item xs={12} sx={{order: 6}}>
-          <Divider/>
-        </Grid>
+        <HomeDivider order={6}/>
         <Grid item xs={12} md={6} sx={{order: {xs: 8, md: 7}}}>
           <div className={styles['h1']}>优先事项二：让外包更人性化</div>
           <Box className={styles['image']} sx={{display: {xs: 'block', md: 'none'}}}>
@@ -207,10 +208,7 @@ export default function Home() {
             />
           </Box>
         </Grid>
-        <Grid item xs={12} sx={{order: 9}}>
-          <Divider/>
-        </Grid>
-
+        <HomeDivider order={9}/>
         <Grid item xs={12} md={6} sx={{order: {xs: 10, md: 11}}}>
           <div className={styles['h1']}>优先事项三：让最复杂的想法栩栩如生</div>
           <Box className={styles['image']} sx={{display: {xs: 'block', md: 'none'}}}>
@@ -252,10 +250,7 @@ export default function Home() {
             />
           </Box>
         </Grid>
-        <Grid item xs={12} sx={{order: 12}}>
-          <Divider/>
-        </Grid>
-
+        <HomeDivider order={12}/>
         <Grid item xs={12} md={6} sx={{order: {xs: 13}}} id={'technologies'}>
           <div className={styles['h1']}>技术堆栈</div>
         </Grid>
@@ -279,36 +274,6 @@ export default function Home() {
             ))}
           </Box>
           <Box sx={{mb: 6}}/>
-        </Grid>
-        <Grid item xs={12} sx={{order: 15}}>
-          <Divider/>
-        </Grid>
-        <Grid item xs={12} md={6} sx={{order: {xs: 16, md: 17}}}>
-          <div className={styles['h1']}>我们在这里帮助您构建您的Web项目</div>
-        </Grid>
-        <Grid item xs={12} md={6} sx={{order: {xs: 17, md: 16}}}>
-          <div className={styles['image']}>
-            <Image
-              src={Images.undrawUnderConstruction}
-              alt={'🚧正在施工🚧'}
-              style={imageStyle}
-            />
-          </div>
-        </Grid>
-        <Grid item xs={12} sx={{order: 18}}>
-          <Divider/>
-        </Grid>
-        <Grid item xs={12} md={6} sx={{order: {xs: 19, md: 19}}}>
-          <div className={styles['h1']}>我们提供丰富的技术文章支持，您可以在这里获得更多的帮助</div>
-        </Grid>
-        <Grid item xs={12} md={6} sx={{order: {xs: 20, md: 20}}}>
-          <div className={styles['image']}>
-            <Image
-              src={Images.undrawBlogPost}
-              alt={'博客文章'}
-              style={imageStyle}
-            />
-          </div>
         </Grid>
       </Grid>
     </Container>

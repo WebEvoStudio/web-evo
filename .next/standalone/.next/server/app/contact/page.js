@@ -432,11 +432,11 @@ __webpack_require__.r(__webpack_exports__);
 /***/ 436905:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 929976))
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 899896))
 
 /***/ }),
 
-/***/ 929976:
+/***/ 899896:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -578,8 +578,53 @@ var axios = __webpack_require__(10121);
     }
 }
 
-// EXTERNAL MODULE: ./components/common-head.tsx
-var common_head = __webpack_require__(70716);
+// EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.5_@babel+core@7.22.5_react-dom@18.2.0_react@18.2.0_sass@1.63.3/node_modules/next/dist/client/components/noop-head.js
+var noop_head = __webpack_require__(358615);
+var noop_head_default = /*#__PURE__*/__webpack_require__.n(noop_head);
+;// CONCATENATED MODULE: ./components/common-head.tsx
+
+
+
+/**
+ * CommonHead
+ * @param {any} props
+ * @constructor
+ */ function CommonHead(props) {
+    const title = "WebEvolution";
+    const description = title + " 是一个帮助web开发者成长的社区。我们以技术文章为核心的产品形态，为开发者提供纯粹、高质的技术文章。";
+    return /*#__PURE__*/ (0,jsx_runtime_.jsxs)((noop_head_default()), {
+        children: [
+            /*#__PURE__*/ jsx_runtime_.jsx("title", {
+                children: props.title || title
+            }),
+            /*#__PURE__*/ jsx_runtime_.jsx("meta", {
+                name: "description",
+                content: props.description || description
+            }),
+            /*#__PURE__*/ jsx_runtime_.jsx("meta", {
+                name: "viewport",
+                content: "initial-scale=1, width=device-width, maximum-scale=1.0, user-scalable=0, viewport-fit=cover"
+            }),
+            /*#__PURE__*/ jsx_runtime_.jsx("meta", {
+                name: "baidu-site-verification",
+                content: "code-yx2HQhygQo"
+            }),
+            /*#__PURE__*/ jsx_runtime_.jsx("meta", {
+                name: "msvalidate.01",
+                content: "AB78A0C987D3AEA34B969889512FF33E"
+            }),
+            /*#__PURE__*/ jsx_runtime_.jsx("meta", {
+                name: "google-site-verification",
+                content: "4rS5gjy4-tFOdJO4HvDg0_E4QNcB1D1YeZo29iS4hIY"
+            }),
+            /*#__PURE__*/ jsx_runtime_.jsx("meta", {
+                name: "baidu_union_verify",
+                content: "50312ad0c63983b3fe6c2e2a6e10c386"
+            })
+        ]
+    });
+}
+
 ;// CONCATENATED MODULE: ./ui/contact.tsx
 /* __next_internal_client_entry_do_not_use__ default auto */ 
 
@@ -679,7 +724,7 @@ var common_head = __webpack_require__(70716);
     return /*#__PURE__*/ (0,jsx_runtime_.jsxs)(node.Container, {
         maxWidth: "lg",
         children: [
-            /*#__PURE__*/ jsx_runtime_.jsx(common_head/* default */.Z, {
+            /*#__PURE__*/ jsx_runtime_.jsx(CommonHead, {
                 title: "联系 - WebEvolution"
             }),
             /*#__PURE__*/ (0,jsx_runtime_.jsxs)(node.Box, {
@@ -984,7 +1029,7 @@ const __default__ = proxy.default;
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [756,730,582,915], () => (__webpack_exec__(613746)));
+var __webpack_exports__ = __webpack_require__.X(0, [756,591,891,427], () => (__webpack_exec__(613746)));
 module.exports = __webpack_exports__;
 
 })();
