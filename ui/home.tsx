@@ -25,6 +25,7 @@ import {
   South as SouthIcon,
 } from '@mui/icons-material';
 import Icons from '../core/libs/icons';
+import HomeServices from "./home-services";
 
 
 /**
@@ -67,6 +68,36 @@ export default function Home() {
       <Grid item xs={12} sx={{order}}>
         <Divider/>
       </Grid>
+    );
+  };
+  const HomePiece = ({
+    orders,
+    items,
+    align,
+    poster,
+    title,
+  }: {
+    orders: number[],
+    items: JSX.Element[],
+    align: 'start' | 'end',
+    poster: {src: string, alt: string},
+    title: string,
+  }) => {
+    return (
+      <>
+        <Grid item xs={12} md={6} sx={{order: {xs: orders[0], md: align === 'start' ? orders[0] : orders[1]}}}>
+          <div className={styles['h1']}>{title}</div>
+          <Box className={styles['image']} sx={{display: {xs: 'block', md: 'none'}}}>
+            <Image src={poster.src} alt={poster.alt} style={imageStyle}/>
+          </Box>
+          {items[0]}
+        </Grid>
+        <Grid item xs={12} md={6} sx={{order: {xs: orders[1], md: align === 'start' ? orders[1] : orders[0]}}}>
+          <Box className={styles['image']} sx={{display: {xs: 'none', md: 'block'}}}>
+            <Image src={poster.src} alt={poster.alt} style={imageStyle}/>
+          </Box>
+        </Grid>
+      </>
     );
   };
   /**
@@ -275,6 +306,29 @@ export default function Home() {
           </Box>
           <Box sx={{mb: 6}}/>
         </Grid>
+        <HomeDivider order={15}/>
+        <HomePiece
+          align={'end'}
+          orders={[16, 17]}
+          poster={{src: Images.undrawServices, alt: '服务'}}
+          title={'服务'}
+          items={[
+            <>
+              <HomeServices/>
+            </>,
+            <>
+            </>,
+          ]}
+        />
+        {/* <HomeDivider order={18}/>*/}
+        {/* <HomePiece*/}
+        {/*  align={'start'}*/}
+        {/*  orders={[19, 20]}*/}
+        {/*  items={[*/}
+        {/*    <div>title</div>,*/}
+        {/*    <div>content</div>,*/}
+        {/*  ]}*/}
+        {/* />*/}
       </Grid>
     </Container>
   );

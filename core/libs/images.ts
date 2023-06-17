@@ -15,6 +15,14 @@ export class Images {
   static undrawPageNotFound = require('../../assets/svgs/undraw_page_not_found_re_e9o6.svg');
   static undrawEngineeringTeam = require('../../assets/svgs/undraw_engineering_team_a7n2.svg');
   static undrawSolutionMindset = require('../../assets/svgs/undraw_solution_mindset_re_57bf.svg');
+  static undrawServices = require('../../assets/svgs/undraw_services_re_hu5n.svg');
+  static undrawDesigner = require('../../assets/svgs/undraw_designer_re_5v95.svg');
+  static undrawSoftwareEngineer = require('../../assets/svgs/undraw_software_engineer_re_tnjc.svg');
+  static undrawQaEngineers = require('../../assets/svgs/undraw_qa_engineers_dg-5-p.svg');
+  static undrawDevProductivity = require('../../assets/svgs/undraw_dev_productivity_re_fylf.svg');
+  static undrawMaintenance = require('../../assets/svgs/undraw_maintenance_re_59vn.svg');
+  static undrawAnalytics = require('../../assets/svgs/undraw_analytics_re_dkf8.svg');
+  static undrawDesignComponents = require('../../assets/svgs/undraw_design_components_9vy6.svg');
   static materialDesign = require('../../assets/images/material-design.png');
   static fluentDesign = require('../../assets/images/fluent-design.jpg');
   static antDesign = require('../../assets/svgs/ant-design.svg');

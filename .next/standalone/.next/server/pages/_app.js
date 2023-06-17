@@ -4,7 +4,7 @@ exports.id = 888;
 exports.ids = [888];
 exports.modules = {
 
-/***/ 298220:
+/***/ 12741:
 /***/ ((module) => {
 
 // Exports
@@ -15,7 +15,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 279778:
+/***/ 222004:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -25,7 +25,7 @@ __webpack_require__.r(__webpack_exports__);
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
   config: () => (/* binding */ config),
-  "default": () => (/* binding */ next_route_loaderpage_2F_app_absolutePagePath_private_next_pages_2F_app_tsx_preferredRegion_),
+  "default": () => (/* binding */ next_route_loaderpage_2F_app_absolutePagePath_private_next_pages_2F_app_tsx_preferredRegion_middlewareConfig_e30_3D_),
   getServerSideProps: () => (/* binding */ getServerSideProps),
   getStaticPaths: () => (/* binding */ getStaticPaths),
   getStaticProps: () => (/* binding */ getStaticProps),
@@ -45,30 +45,30 @@ __webpack_require__.d(_app_namespaceObject, {
   "default": () => (_app)
 });
 
-// EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.5_@babel+core@7.22.5_react-dom@18.2.0_react@18.2.0_sass@1.63.3/node_modules/next/dist/server/future/route-modules/pages/module.js
-var pages_module = __webpack_require__(132032);
+// EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.6_@babel+core@7.22.5_react-dom@18.2.0_react@18.2.0_sass@1.63.3/node_modules/next/dist/server/future/route-modules/pages/module.js
+var pages_module = __webpack_require__(378507);
 var module_default = /*#__PURE__*/__webpack_require__.n(pages_module);
-// EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.5_@babel+core@7.22.5_react-dom@18.2.0_react@18.2.0_sass@1.63.3/node_modules/next/dist/build/webpack/loaders/next-route-loader/helpers.js
-var helpers = __webpack_require__(702184);
+// EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.6_@babel+core@7.22.5_react-dom@18.2.0_react@18.2.0_sass@1.63.3/node_modules/next/dist/build/webpack/loaders/next-route-loader/helpers.js
+var helpers = __webpack_require__(613902);
 // EXTERNAL MODULE: ./node_modules/.pnpm/react@18.2.0/node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(511527);
 // EXTERNAL MODULE: external "react"
 var external_react_ = __webpack_require__(616689);
 // EXTERNAL MODULE: ./styles/globals.css
-var globals = __webpack_require__(88347);
+var globals = __webpack_require__(762220);
 // EXTERNAL MODULE: external "@mui/material"
 var material_ = __webpack_require__(965692);
 // EXTERNAL MODULE: external "@mui/icons-material"
 var icons_material_ = __webpack_require__(247915);
-// EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.5_@babel+core@7.22.5_react-dom@18.2.0_react@18.2.0_sass@1.63.3/node_modules/next/navigation.js
-var navigation = __webpack_require__(688220);
+// EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.6_@babel+core@7.22.5_react-dom@18.2.0_react@18.2.0_sass@1.63.3/node_modules/next/navigation.js
+var navigation = __webpack_require__(761519);
 // EXTERNAL MODULE: ./layouts/basic-layout.module.css
-var basic_layout_module = __webpack_require__(298220);
+var basic_layout_module = __webpack_require__(12741);
 var basic_layout_module_default = /*#__PURE__*/__webpack_require__.n(basic_layout_module);
 // EXTERNAL MODULE: ./core/themes/theme.ts
-var theme = __webpack_require__(824923);
+var theme = __webpack_require__(324706);
 // EXTERNAL MODULE: ./ui/header.tsx + 1 modules
-var header = __webpack_require__(870158);
+var header = __webpack_require__(160163);
 ;// CONCATENATED MODULE: ./layouts/basic.layout.tsx
 /* __next_internal_client_entry_do_not_use__ default auto */ 
 
@@ -83,7 +83,7 @@ var header = __webpack_require__(870158);
  * @param {any} children
  * @constructor
  * @return {JSX.Element}
- */ function BasicLayout({ children  }) {
+ */ function BasicLayout({ children }) {
     const router = (0,navigation.useRouter)();
     const pathname = (0,navigation.usePathname)();
     const [isPwa, setIsPwa] = (0,external_react_.useState)(false);
@@ -181,16 +181,16 @@ var header = __webpack_require__(870158);
 }
 
 // EXTERNAL MODULE: ./styles/index.scss
-var styles = __webpack_require__(421589);
+var styles = __webpack_require__(471301);
 ;// CONCATENATED MODULE: external "@bradgarropy/next-google-analytics"
 const next_google_analytics_namespaceObject = require("@bradgarropy/next-google-analytics");
 var next_google_analytics_default = /*#__PURE__*/__webpack_require__.n(next_google_analytics_namespaceObject);
 ;// CONCATENATED MODULE: external "@emotion/react"
 const react_namespaceObject = require("@emotion/react");
 // EXTERNAL MODULE: ./core/unit/createEmotionCache.ts
-var createEmotionCache = __webpack_require__(753440);
-// EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.5_@babel+core@7.22.5_react-dom@18.2.0_react@18.2.0_sass@1.63.3/node_modules/next/script.js
-var script = __webpack_require__(743317);
+var createEmotionCache = __webpack_require__(649553);
+// EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.6_@babel+core@7.22.5_react-dom@18.2.0_react@18.2.0_sass@1.63.3/node_modules/next/script.js
+var script = __webpack_require__(608187);
 var script_default = /*#__PURE__*/__webpack_require__.n(script);
 // EXTERNAL MODULE: external "notistack"
 var external_notistack_ = __webpack_require__(373142);
@@ -213,7 +213,7 @@ const clientSideEmotionCache = (0,createEmotionCache/* default */.Z)();
  * @constructor
  * @return {JSX.Element}
  */ function MyApp(props) {
-    const { Component , pageProps , emotionCache =clientSideEmotionCache  } = props;
+    const { Component, pageProps, emotionCache = clientSideEmotionCache } = props;
     return /*#__PURE__*/ jsx_runtime.jsx(react_namespaceObject.CacheProvider, {
         value: emotionCache,
         children: /*#__PURE__*/ jsx_runtime.jsx(material_.ThemeProvider, {
@@ -257,7 +257,7 @@ const clientSideEmotionCache = (0,createEmotionCache/* default */.Z)();
 }
 /* harmony default export */ const _app = (MyApp);
 
-;// CONCATENATED MODULE: ./node_modules/.pnpm/next@13.4.5_@babel+core@7.22.5_react-dom@18.2.0_react@18.2.0_sass@1.63.3/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js?page=%2F_app&absolutePagePath=private-next-pages%2F_app.tsx&preferredRegion=!
+;// CONCATENATED MODULE: ./node_modules/.pnpm/next@13.4.6_@babel+core@7.22.5_react-dom@18.2.0_react@18.2.0_sass@1.63.3/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js?page=%2F_app&absolutePagePath=private-next-pages%2F_app.tsx&preferredRegion=&middlewareConfig=e30%3D!
 
         // Next.js Route Loader
         
@@ -267,7 +267,7 @@ const clientSideEmotionCache = (0,createEmotionCache/* default */.Z)();
         
 
         // Re-export the component (should be the default export).
-        /* harmony default export */ const next_route_loaderpage_2F_app_absolutePagePath_private_next_pages_2F_app_tsx_preferredRegion_ = ((0,helpers/* hoist */.l)(_app_namespaceObject, "default"));
+        /* harmony default export */ const next_route_loaderpage_2F_app_absolutePagePath_private_next_pages_2F_app_tsx_preferredRegion_middlewareConfig_e30_3D_ = ((0,helpers/* hoist */.l)(_app_namespaceObject, "default"));
 
         // Re-export methods.
         const getStaticProps = (0,helpers/* hoist */.l)(_app_namespaceObject, "getStaticProps")
@@ -292,14 +292,14 @@ const clientSideEmotionCache = (0,createEmotionCache/* default */.Z)();
 
 /***/ }),
 
-/***/ 88347:
+/***/ 762220:
 /***/ (() => {
 
 
 
 /***/ }),
 
-/***/ 421589:
+/***/ 471301:
 /***/ (() => {
 
 
@@ -545,7 +545,7 @@ module.exports = require("react-dom");
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [87,527,547,538,983,756,220,317,818,158,753], () => (__webpack_exec__(279778)));
+var __webpack_exports__ = __webpack_require__.X(0, [536,527,795,106,197,223,519,187,104,163,116], () => (__webpack_exec__(222004)));
 module.exports = __webpack_exports__;
 
 })();

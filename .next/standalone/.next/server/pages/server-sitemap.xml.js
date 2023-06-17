@@ -5,7 +5,7 @@ exports.id = 773;
 exports.ids = [773];
 exports.modules = {
 
-/***/ 405606:
+/***/ 931151:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 // ESM COMPAT FLAG
@@ -14,8 +14,8 @@ __webpack_require__.r(__webpack_exports__);
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
   config: () => (/* binding */ config),
-  "default": () => (/* binding */ next_route_loaderpage_2Fserver_sitemap_xml_absolutePagePath_private_next_pages_2Fserver_sitemap_xml_2Findex_tsx_preferredRegion_),
-  getServerSideProps: () => (/* binding */ next_route_loaderpage_2Fserver_sitemap_xml_absolutePagePath_private_next_pages_2Fserver_sitemap_xml_2Findex_tsx_preferredRegion_getServerSideProps),
+  "default": () => (/* binding */ next_route_loaderpage_2Fserver_sitemap_xml_absolutePagePath_private_next_pages_2Fserver_sitemap_xml_2Findex_tsx_preferredRegion_middlewareConfig_e30_3D_),
+  getServerSideProps: () => (/* binding */ next_route_loaderpage_2Fserver_sitemap_xml_absolutePagePath_private_next_pages_2Fserver_sitemap_xml_2Findex_tsx_preferredRegion_middlewareConfig_e30_3D_getServerSideProps),
   getStaticPaths: () => (/* binding */ getStaticPaths),
   getStaticProps: () => (/* binding */ getStaticProps),
   reportWebVitals: () => (/* binding */ reportWebVitals),
@@ -35,13 +35,13 @@ __webpack_require__.d(server_sitemap_xml_namespaceObject, {
   getServerSideProps: () => (getServerSideProps)
 });
 
-// EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.5_@babel+core@7.22.5_react-dom@18.2.0_react@18.2.0_sass@1.63.3/node_modules/next/dist/server/future/route-modules/pages/module.js
-var pages_module = __webpack_require__(132032);
+// EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.6_@babel+core@7.22.5_react-dom@18.2.0_react@18.2.0_sass@1.63.3/node_modules/next/dist/server/future/route-modules/pages/module.js
+var pages_module = __webpack_require__(378507);
 var module_default = /*#__PURE__*/__webpack_require__.n(pages_module);
-// EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.5_@babel+core@7.22.5_react-dom@18.2.0_react@18.2.0_sass@1.63.3/node_modules/next/dist/build/webpack/loaders/next-route-loader/helpers.js
-var helpers = __webpack_require__(702184);
-// EXTERNAL MODULE: ./node_modules/.pnpm/next-sitemap@4.1.3_@next+env@13.4.5_next@13.4.5/node_modules/next-sitemap/dist/esm/ssr/sitemap.js + 2 modules
-var sitemap = __webpack_require__(739649);
+// EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.6_@babel+core@7.22.5_react-dom@18.2.0_react@18.2.0_sass@1.63.3/node_modules/next/dist/build/webpack/loaders/next-route-loader/helpers.js
+var helpers = __webpack_require__(613902);
+// EXTERNAL MODULE: ./node_modules/.pnpm/next-sitemap@4.1.3_@next+env@13.4.6_next@13.4.6/node_modules/next-sitemap/dist/esm/ssr/sitemap.js + 2 modules
+var sitemap = __webpack_require__(479533);
 // EXTERNAL MODULE: external "axios"
 var external_axios_ = __webpack_require__(752167);
 var external_axios_default = /*#__PURE__*/__webpack_require__.n(external_axios_);
@@ -66,7 +66,7 @@ const getServerSideProps = async (context)=>{
 };
 /* harmony default export */ const server_sitemap_xml = (SitemapIndex);
 
-;// CONCATENATED MODULE: ./node_modules/.pnpm/next@13.4.5_@babel+core@7.22.5_react-dom@18.2.0_react@18.2.0_sass@1.63.3/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js?page=%2Fserver-sitemap.xml&absolutePagePath=private-next-pages%2Fserver-sitemap.xml%2Findex.tsx&preferredRegion=!
+;// CONCATENATED MODULE: ./node_modules/.pnpm/next@13.4.6_@babel+core@7.22.5_react-dom@18.2.0_react@18.2.0_sass@1.63.3/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js?page=%2Fserver-sitemap.xml&absolutePagePath=private-next-pages%2Fserver-sitemap.xml%2Findex.tsx&preferredRegion=&middlewareConfig=e30%3D!
 
         // Next.js Route Loader
         
@@ -76,12 +76,12 @@ const getServerSideProps = async (context)=>{
         
 
         // Re-export the component (should be the default export).
-        /* harmony default export */ const next_route_loaderpage_2Fserver_sitemap_xml_absolutePagePath_private_next_pages_2Fserver_sitemap_xml_2Findex_tsx_preferredRegion_ = ((0,helpers/* hoist */.l)(server_sitemap_xml_namespaceObject, "default"));
+        /* harmony default export */ const next_route_loaderpage_2Fserver_sitemap_xml_absolutePagePath_private_next_pages_2Fserver_sitemap_xml_2Findex_tsx_preferredRegion_middlewareConfig_e30_3D_ = ((0,helpers/* hoist */.l)(server_sitemap_xml_namespaceObject, "default"));
 
         // Re-export methods.
         const getStaticProps = (0,helpers/* hoist */.l)(server_sitemap_xml_namespaceObject, "getStaticProps")
         const getStaticPaths = (0,helpers/* hoist */.l)(server_sitemap_xml_namespaceObject, "getStaticPaths")
-        const next_route_loaderpage_2Fserver_sitemap_xml_absolutePagePath_private_next_pages_2Fserver_sitemap_xml_2Findex_tsx_preferredRegion_getServerSideProps = (0,helpers/* hoist */.l)(server_sitemap_xml_namespaceObject, "getServerSideProps")
+        const next_route_loaderpage_2Fserver_sitemap_xml_absolutePagePath_private_next_pages_2Fserver_sitemap_xml_2Findex_tsx_preferredRegion_middlewareConfig_e30_3D_getServerSideProps = (0,helpers/* hoist */.l)(server_sitemap_xml_namespaceObject, "getServerSideProps")
         const config = (0,helpers/* hoist */.l)(server_sitemap_xml_namespaceObject, "config")
         const reportWebVitals = (0,helpers/* hoist */.l)(server_sitemap_xml_namespaceObject, "reportWebVitals")
 
@@ -129,7 +129,7 @@ module.exports = require("next/dist/server/render.js");
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [87,649], () => (__webpack_exec__(405606)));
+var __webpack_exports__ = __webpack_require__.X(0, [536,533], () => (__webpack_exec__(931151)));
 module.exports = __webpack_exports__;
 
 })();

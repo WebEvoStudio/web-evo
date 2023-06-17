@@ -5,7 +5,7 @@ exports.id = 660;
 exports.ids = [660];
 exports.modules = {
 
-/***/ 943301:
+/***/ 465422:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 // ESM COMPAT FLAG
@@ -14,7 +14,7 @@ __webpack_require__.r(__webpack_exports__);
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
   config: () => (/* binding */ config),
-  "default": () => (/* binding */ next_route_loaderpage_2F_document_absolutePagePath_private_next_pages_2F_document_tsx_preferredRegion_),
+  "default": () => (/* binding */ next_route_loaderpage_2F_document_absolutePagePath_private_next_pages_2F_document_tsx_preferredRegion_middlewareConfig_e30_3D_),
   getServerSideProps: () => (/* binding */ getServerSideProps),
   getStaticPaths: () => (/* binding */ getStaticPaths),
   getStaticProps: () => (/* binding */ getStaticProps),
@@ -34,25 +34,25 @@ __webpack_require__.d(_document_namespaceObject, {
   "default": () => (MyDocument)
 });
 
-// EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.5_@babel+core@7.22.5_react-dom@18.2.0_react@18.2.0_sass@1.63.3/node_modules/next/dist/server/future/route-modules/pages/module.js
-var pages_module = __webpack_require__(132032);
+// EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.6_@babel+core@7.22.5_react-dom@18.2.0_react@18.2.0_sass@1.63.3/node_modules/next/dist/server/future/route-modules/pages/module.js
+var pages_module = __webpack_require__(378507);
 var module_default = /*#__PURE__*/__webpack_require__.n(pages_module);
-// EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.5_@babel+core@7.22.5_react-dom@18.2.0_react@18.2.0_sass@1.63.3/node_modules/next/dist/build/webpack/loaders/next-route-loader/helpers.js
-var helpers = __webpack_require__(702184);
+// EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.6_@babel+core@7.22.5_react-dom@18.2.0_react@18.2.0_sass@1.63.3/node_modules/next/dist/build/webpack/loaders/next-route-loader/helpers.js
+var helpers = __webpack_require__(613902);
 // EXTERNAL MODULE: ./node_modules/.pnpm/react@18.2.0/node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(511527);
 // EXTERNAL MODULE: external "react"
 var external_react_ = __webpack_require__(616689);
-// EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.5_@babel+core@7.22.5_react-dom@18.2.0_react@18.2.0_sass@1.63.3/node_modules/next/document.js
-var next_document = __webpack_require__(543970);
+// EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.6_@babel+core@7.22.5_react-dom@18.2.0_react@18.2.0_sass@1.63.3/node_modules/next/document.js
+var next_document = __webpack_require__(688217);
 var document_default = /*#__PURE__*/__webpack_require__.n(next_document);
 // EXTERNAL MODULE: ./core/unit/createEmotionCache.ts
-var createEmotionCache = __webpack_require__(753440);
+var createEmotionCache = __webpack_require__(649553);
 ;// CONCATENATED MODULE: external "@emotion/server/create-instance"
 const create_instance_namespaceObject = require("@emotion/server/create-instance");
 var create_instance_default = /*#__PURE__*/__webpack_require__.n(create_instance_namespaceObject);
 // EXTERNAL MODULE: ./core/themes/theme.ts
-var theme = __webpack_require__(824923);
+var theme = __webpack_require__(324706);
 ;// CONCATENATED MODULE: ./pages/_document.tsx
 
 
@@ -123,7 +123,7 @@ MyDocument.getInitialProps = async (ctx)=>{
     // You can consider sharing the same emotion cache between all the SSR requests to speed up performance.
     // However, be aware that it can have global side effects.
     const cache = (0,createEmotionCache/* default */.Z)();
-    const { extractCriticalToChunks  } = create_instance_default()(cache);
+    const { extractCriticalToChunks } = create_instance_default()(cache);
     ctx.renderPage = ()=>originalRenderPage({
             enhanceApp: (App)=>function EnhanceApp(props) {
                     return /*#__PURE__*/ jsx_runtime.jsx(App, {
@@ -149,7 +149,7 @@ MyDocument.getInitialProps = async (ctx)=>{
     };
 };
 
-;// CONCATENATED MODULE: ./node_modules/.pnpm/next@13.4.5_@babel+core@7.22.5_react-dom@18.2.0_react@18.2.0_sass@1.63.3/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js?page=%2F_document&absolutePagePath=private-next-pages%2F_document.tsx&preferredRegion=!
+;// CONCATENATED MODULE: ./node_modules/.pnpm/next@13.4.6_@babel+core@7.22.5_react-dom@18.2.0_react@18.2.0_sass@1.63.3/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js?page=%2F_document&absolutePagePath=private-next-pages%2F_document.tsx&preferredRegion=&middlewareConfig=e30%3D!
 
         // Next.js Route Loader
         
@@ -159,7 +159,7 @@ MyDocument.getInitialProps = async (ctx)=>{
         
 
         // Re-export the component (should be the default export).
-        /* harmony default export */ const next_route_loaderpage_2F_document_absolutePagePath_private_next_pages_2F_document_tsx_preferredRegion_ = ((0,helpers/* hoist */.l)(_document_namespaceObject, "default"));
+        /* harmony default export */ const next_route_loaderpage_2F_document_absolutePagePath_private_next_pages_2F_document_tsx_preferredRegion_middlewareConfig_e30_3D_ = ((0,helpers/* hoist */.l)(_document_namespaceObject, "default"));
 
         // Re-export methods.
         const getStaticProps = (0,helpers/* hoist */.l)(_document_namespaceObject, "getStaticProps")
@@ -275,7 +275,7 @@ module.exports = require("react");
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [87,527,970,753], () => (__webpack_exec__(943301)));
+var __webpack_exports__ = __webpack_require__.X(0, [536,527,217,116], () => (__webpack_exec__(465422)));
 module.exports = __webpack_exports__;
 
 })();

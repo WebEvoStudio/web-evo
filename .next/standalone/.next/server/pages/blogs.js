@@ -5,7 +5,7 @@ exports.id = 55;
 exports.ids = [55];
 exports.modules = {
 
-/***/ 2266:
+/***/ 143135:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 // ESM COMPAT FLAG
@@ -14,7 +14,7 @@ __webpack_require__.r(__webpack_exports__);
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
   config: () => (/* binding */ config),
-  "default": () => (/* binding */ next_route_loaderpage_2Fblogs_absolutePagePath_private_next_pages_2Fblogs_2Findex_tsx_preferredRegion_),
+  "default": () => (/* binding */ next_route_loaderpage_2Fblogs_absolutePagePath_private_next_pages_2Fblogs_2Findex_tsx_preferredRegion_middlewareConfig_e30_3D_),
   getServerSideProps: () => (/* binding */ getServerSideProps),
   getStaticPaths: () => (/* binding */ getStaticPaths),
   getStaticProps: () => (/* binding */ getStaticProps),
@@ -34,17 +34,17 @@ __webpack_require__.d(blogs_namespaceObject, {
   "default": () => (blogs)
 });
 
-// EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.5_@babel+core@7.22.5_react-dom@18.2.0_react@18.2.0_sass@1.63.3/node_modules/next/dist/server/future/route-modules/pages/module.js
-var pages_module = __webpack_require__(132032);
+// EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.6_@babel+core@7.22.5_react-dom@18.2.0_react@18.2.0_sass@1.63.3/node_modules/next/dist/server/future/route-modules/pages/module.js
+var pages_module = __webpack_require__(378507);
 var module_default = /*#__PURE__*/__webpack_require__.n(pages_module);
-// EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.5_@babel+core@7.22.5_react-dom@18.2.0_react@18.2.0_sass@1.63.3/node_modules/next/dist/build/webpack/loaders/next-route-loader/helpers.js
-var helpers = __webpack_require__(702184);
+// EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.6_@babel+core@7.22.5_react-dom@18.2.0_react@18.2.0_sass@1.63.3/node_modules/next/dist/build/webpack/loaders/next-route-loader/helpers.js
+var helpers = __webpack_require__(613902);
 // EXTERNAL MODULE: ./node_modules/.pnpm/react@18.2.0/node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(511527);
 // EXTERNAL MODULE: external "react"
 var external_react_ = __webpack_require__(616689);
 // EXTERNAL MODULE: ./styles/blog.module.scss
-var blog_module = __webpack_require__(81829);
+var blog_module = __webpack_require__(952461);
 var blog_module_default = /*#__PURE__*/__webpack_require__.n(blog_module);
 // EXTERNAL MODULE: external "axios"
 var external_axios_ = __webpack_require__(752167);
@@ -52,9 +52,9 @@ var external_axios_default = /*#__PURE__*/__webpack_require__.n(external_axios_)
 // EXTERNAL MODULE: external "@mui/material"
 var material_ = __webpack_require__(965692);
 // EXTERNAL MODULE: ./components/common-head.tsx
-var common_head = __webpack_require__(806530);
+var common_head = __webpack_require__(596974);
 // EXTERNAL MODULE: ./components/blog-card.tsx
-var blog_card = __webpack_require__(472495);
+var blog_card = __webpack_require__(357097);
 ;// CONCATENATED MODULE: ./pages/blogs/index.tsx
 
 
@@ -66,7 +66,7 @@ var blog_card = __webpack_require__(472495);
 /**
  * Blog Page
  * @return {JSX.Element}
- */ function BlogsIndex({ blogs  }) {
+ */ function BlogsIndex({ blogs }) {
     return /*#__PURE__*/ jsx_runtime.jsx(material_.Container, {
         maxWidth: "md",
         children: /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
@@ -97,7 +97,7 @@ BlogsIndex.getInitialProps = async ()=>{
 };
 /* harmony default export */ const blogs = (BlogsIndex);
 
-;// CONCATENATED MODULE: ./node_modules/.pnpm/next@13.4.5_@babel+core@7.22.5_react-dom@18.2.0_react@18.2.0_sass@1.63.3/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js?page=%2Fblogs&absolutePagePath=private-next-pages%2Fblogs%2Findex.tsx&preferredRegion=!
+;// CONCATENATED MODULE: ./node_modules/.pnpm/next@13.4.6_@babel+core@7.22.5_react-dom@18.2.0_react@18.2.0_sass@1.63.3/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js?page=%2Fblogs&absolutePagePath=private-next-pages%2Fblogs%2Findex.tsx&preferredRegion=&middlewareConfig=e30%3D!
 
         // Next.js Route Loader
         
@@ -107,7 +107,7 @@ BlogsIndex.getInitialProps = async ()=>{
         
 
         // Re-export the component (should be the default export).
-        /* harmony default export */ const next_route_loaderpage_2Fblogs_absolutePagePath_private_next_pages_2Fblogs_2Findex_tsx_preferredRegion_ = ((0,helpers/* hoist */.l)(blogs_namespaceObject, "default"));
+        /* harmony default export */ const next_route_loaderpage_2Fblogs_absolutePagePath_private_next_pages_2Fblogs_2Findex_tsx_preferredRegion_middlewareConfig_e30_3D_ = ((0,helpers/* hoist */.l)(blogs_namespaceObject, "default"));
 
         // Re-export methods.
         const getStaticProps = (0,helpers/* hoist */.l)(blogs_namespaceObject, "getStaticProps")
@@ -321,7 +321,7 @@ module.exports = require("react");
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [87,527,547,538,983,530,359,495], () => (__webpack_exec__(2266)));
+var __webpack_exports__ = __webpack_require__.X(0, [536,527,795,106,223,974,352,97], () => (__webpack_exec__(143135)));
 module.exports = __webpack_exports__;
 
 })();

@@ -13,8 +13,8 @@
   "/docs": "pages/docs.html",
   "/portfolio": "pages/portfolio.html",
   "/search": "pages/search.html",
-  "/_error": "pages/_error.js",
   "/tools": "pages/tools.html",
+  "/_error": "pages/_error.js",
   "/server-sitemap.xml": "pages/server-sitemap.xml.js",
   "/404": "pages/404.html"
 }

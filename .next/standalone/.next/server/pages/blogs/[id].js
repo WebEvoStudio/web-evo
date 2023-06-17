@@ -4,7 +4,7 @@ exports.id = 268;
 exports.ids = [268];
 exports.modules = {
 
-/***/ 81829:
+/***/ 952461:
 /***/ ((module) => {
 
 // Exports
@@ -21,7 +21,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 589305:
+/***/ 458840:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -31,7 +31,7 @@ __webpack_require__.r(__webpack_exports__);
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
   config: () => (/* binding */ config),
-  "default": () => (/* binding */ next_route_loaderpage_2Fblogs_2F_5Bid_5D_absolutePagePath_private_next_pages_2Fblogs_2F_5Bid_5D_tsx_preferredRegion_),
+  "default": () => (/* binding */ next_route_loaderpage_2Fblogs_2F_5Bid_5D_absolutePagePath_private_next_pages_2Fblogs_2F_5Bid_5D_tsx_preferredRegion_middlewareConfig_e30_3D_),
   getServerSideProps: () => (/* binding */ getServerSideProps),
   getStaticPaths: () => (/* binding */ getStaticPaths),
   getStaticProps: () => (/* binding */ getStaticProps),
@@ -51,31 +51,31 @@ __webpack_require__.d(_id_namespaceObject, {
   "default": () => (_id_)
 });
 
-// EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.5_@babel+core@7.22.5_react-dom@18.2.0_react@18.2.0_sass@1.63.3/node_modules/next/dist/server/future/route-modules/pages/module.js
-var pages_module = __webpack_require__(132032);
+// EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.6_@babel+core@7.22.5_react-dom@18.2.0_react@18.2.0_sass@1.63.3/node_modules/next/dist/server/future/route-modules/pages/module.js
+var pages_module = __webpack_require__(378507);
 var module_default = /*#__PURE__*/__webpack_require__.n(pages_module);
-// EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.5_@babel+core@7.22.5_react-dom@18.2.0_react@18.2.0_sass@1.63.3/node_modules/next/dist/build/webpack/loaders/next-route-loader/helpers.js
-var helpers = __webpack_require__(702184);
+// EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.6_@babel+core@7.22.5_react-dom@18.2.0_react@18.2.0_sass@1.63.3/node_modules/next/dist/build/webpack/loaders/next-route-loader/helpers.js
+var helpers = __webpack_require__(613902);
 // EXTERNAL MODULE: ./node_modules/.pnpm/react@18.2.0/node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(511527);
 // EXTERNAL MODULE: external "react"
 var external_react_ = __webpack_require__(616689);
 // EXTERNAL MODULE: ./styles/blog.module.scss
-var blog_module = __webpack_require__(81829);
+var blog_module = __webpack_require__(952461);
 var blog_module_default = /*#__PURE__*/__webpack_require__.n(blog_module);
 // EXTERNAL MODULE: ./components/common-head.tsx
-var common_head = __webpack_require__(806530);
+var common_head = __webpack_require__(596974);
 // EXTERNAL MODULE: external "axios"
 var external_axios_ = __webpack_require__(752167);
 var external_axios_default = /*#__PURE__*/__webpack_require__.n(external_axios_);
 // EXTERNAL MODULE: ./core/unit/markdown.ts
-var markdown = __webpack_require__(92359);
+var markdown = __webpack_require__(391352);
 // EXTERNAL MODULE: external "@mui/material"
 var material_ = __webpack_require__(965692);
 // EXTERNAL MODULE: ./node_modules/.pnpm/highlight.js@11.8.0/node_modules/highlight.js/styles/github.css
-var github = __webpack_require__(450490);
+var github = __webpack_require__(275269);
 // EXTERNAL MODULE: ./node_modules/.pnpm/bytemd@1.21.0/node_modules/bytemd/dist/index.min.css
-var index_min = __webpack_require__(411584);
+var index_min = __webpack_require__(793579);
 // EXTERNAL MODULE: external "@bytemd/react"
 var react_ = __webpack_require__(266511);
 // EXTERNAL MODULE: external "@bytemd/plugin-frontmatter"
@@ -100,7 +100,7 @@ var plugin_gfm_default = /*#__PURE__*/__webpack_require__.n(plugin_gfm_);
 /**
  * blog detail page
  * @return {React.ReactElement}
- */ function BlogDetail({ blog  }) {
+ */ function BlogDetail({ blog }) {
     const host = "http://developer.bulv.life/";
     const content = markdown/* default */.Z.keywordToLink(blog.markContent, host);
     const plugins = [
@@ -144,7 +144,7 @@ var plugin_gfm_default = /*#__PURE__*/__webpack_require__.n(plugin_gfm_);
     });
 }
 BlogDetail.getInitialProps = async (ctx)=>{
-    const { id  } = ctx.query;
+    const { id } = ctx.query;
     const host = "https://web-evo-server.bulv.life/";
     const path = "blogs";
     const url = `${host}${path}/${id}`;
@@ -155,7 +155,7 @@ BlogDetail.getInitialProps = async (ctx)=>{
 };
 /* harmony default export */ const _id_ = (BlogDetail);
 
-;// CONCATENATED MODULE: ./node_modules/.pnpm/next@13.4.5_@babel+core@7.22.5_react-dom@18.2.0_react@18.2.0_sass@1.63.3/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js?page=%2Fblogs%2F%5Bid%5D&absolutePagePath=private-next-pages%2Fblogs%2F%5Bid%5D.tsx&preferredRegion=!
+;// CONCATENATED MODULE: ./node_modules/.pnpm/next@13.4.6_@babel+core@7.22.5_react-dom@18.2.0_react@18.2.0_sass@1.63.3/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js?page=%2Fblogs%2F%5Bid%5D&absolutePagePath=private-next-pages%2Fblogs%2F%5Bid%5D.tsx&preferredRegion=&middlewareConfig=e30%3D!
 
         // Next.js Route Loader
         
@@ -165,7 +165,7 @@ BlogDetail.getInitialProps = async (ctx)=>{
         
 
         // Re-export the component (should be the default export).
-        /* harmony default export */ const next_route_loaderpage_2Fblogs_2F_5Bid_5D_absolutePagePath_private_next_pages_2Fblogs_2F_5Bid_5D_tsx_preferredRegion_ = ((0,helpers/* hoist */.l)(_id_namespaceObject, "default"));
+        /* harmony default export */ const next_route_loaderpage_2Fblogs_2F_5Bid_5D_absolutePagePath_private_next_pages_2Fblogs_2F_5Bid_5D_tsx_preferredRegion_middlewareConfig_e30_3D_ = ((0,helpers/* hoist */.l)(_id_namespaceObject, "default"));
 
         // Re-export methods.
         const getStaticProps = (0,helpers/* hoist */.l)(_id_namespaceObject, "getStaticProps")
@@ -190,14 +190,14 @@ BlogDetail.getInitialProps = async (ctx)=>{
 
 /***/ }),
 
-/***/ 411584:
+/***/ 793579:
 /***/ (() => {
 
 
 
 /***/ }),
 
-/***/ 450490:
+/***/ 275269:
 /***/ (() => {
 
 
@@ -283,7 +283,7 @@ module.exports = require("react");
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [87,527,530,359], () => (__webpack_exec__(589305)));
+var __webpack_exports__ = __webpack_require__.X(0, [536,527,974,352], () => (__webpack_exec__(458840)));
 module.exports = __webpack_exports__;
 
 })();
