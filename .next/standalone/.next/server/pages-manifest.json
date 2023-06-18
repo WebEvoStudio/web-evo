@@ -1,7 +1,7 @@
 {
   "/_app": "pages/_app.js",
-  "/_document": "pages/_document.js",
   "/40444": "pages/40444.html",
+  "/_document": "pages/_document.js",
   "/about": "pages/about.html",
   "/blogs/[id]": "pages/blogs/[id].js",
   "/blogs": "pages/blogs.js",
@@ -10,11 +10,10 @@
   "/courses/[id]": "pages/courses/[id].html",
   "/courses": "pages/courses.html",
   "/docs/[id]": "pages/docs/[id].js",
-  "/docs": "pages/docs.html",
-  "/_error": "pages/_error.js",
   "/portfolio": "pages/portfolio.html",
+  "/docs": "pages/docs.html",
   "/search": "pages/search.html",
   "/tools": "pages/tools.html",
-  "/server-sitemap.xml": "pages/server-sitemap.xml.js",
+  "/_error": "pages/_error.js",
   "/404": "pages/404.html"
 }
