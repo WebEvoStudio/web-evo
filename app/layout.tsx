@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     '360-site-verification': '77b0e1a676566c755d708af4c92a3524',
     'bytedance-verification-code': 'wSvyXEgEi6nNu3eh/eDe',
     'theme-color': '#00B0FF',
-    'baidu-site-verification': 'code-yx2HQhygQo',
+    'baidu-site-verification': 'codeva-owAlD1JaUc',
     'msvalidate.01': 'AB78A0C987D3AEA34B969889512FF33E',
     // 谷歌验证
     'google-site-verification': '4rS5gjy4-tFOdJO4HvDg0_E4QNcB1D1YeZo29iS4hIY',
