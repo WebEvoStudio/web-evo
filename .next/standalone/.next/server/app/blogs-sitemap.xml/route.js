@@ -62,19 +62,22 @@ var node_polyfill_headers = __webpack_require__(901991);
 // EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.6_@babel+core@7.22.5_react-dom@18.2.0_react@18.2.0_sass@1.63.3/node_modules/next/dist/server/future/route-modules/app-route/module.js
 var app_route_module = __webpack_require__(328459);
 var module_default = /*#__PURE__*/__webpack_require__.n(app_route_module);
-// EXTERNAL MODULE: ./node_modules/.pnpm/next-sitemap@4.1.3_@next+env@13.4.6_next@13.4.6/node_modules/next-sitemap/dist/esm/ssr/sitemap-index.js + 2 modules
-var sitemap_index = __webpack_require__(275016);
+// EXTERNAL MODULE: ./node_modules/.pnpm/next-sitemap@4.1.3_@next+env@13.4.6_next@13.4.6/node_modules/next-sitemap/dist/esm/ssr/sitemap.js + 2 modules
+var sitemap = __webpack_require__(33285);
 ;// CONCATENATED MODULE: ./app/blogs-sitemap.xml/route.ts
 
 /**
  * Blogs Route
  * @constructor
  */ async function GET() {
-    const host = "https://web-evo.bulv.life/";
+    const fields = [];
+    const host = "https://web-evo.bulv.life";
     const url = `${"https://web-evo-server.bulv.life/"}blogs`;
     const response = await (await fetch(url)).json();
-    const blogUrls = response.map((it)=>`${host}/blogs/${it["_id"]}`);
-    return (0,sitemap_index/* getServerSideSitemapIndex */.f)(blogUrls);
+    fields.push(...response.map((it)=>({
+            loc: `${host}/blogs/${it["_id"]}`
+        })));
+    return (0,sitemap/* getServerSideSitemap */.M)(fields);
 }
 
 ;// CONCATENATED MODULE: ./node_modules/.pnpm/next@13.4.6_@babel+core@7.22.5_react-dom@18.2.0_react@18.2.0_sass@1.63.3/node_modules/next/dist/build/webpack/loaders/next-app-loader.js?page=%2Fblogs-sitemap.xml%2Froute&name=app%2Fblogs-sitemap.xml%2Froute&pagePath=private-next-app-dir%2Fblogs-sitemap.xml%2Froute.ts&appDir=%2FUsers%2Fcityhunter%2FDocuments%2FWorkSpace%2Fpersonal-site%2Fapp&appPaths=%2Fblogs-sitemap.xml%2Froute&pageExtensions=tsx&pageExtensions=ts&pageExtensions=jsx&pageExtensions=js&basePath=&assetPrefix=&nextConfigOutput=standalone&preferredRegion=&middlewareConfig=e30%3D!
@@ -115,7 +118,7 @@ var sitemap_index = __webpack_require__(275016);
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [197,854,830], () => (__webpack_exec__(80805)));
+var __webpack_exports__ = __webpack_require__.X(0, [197,854,153], () => (__webpack_exec__(80805)));
 module.exports = __webpack_exports__;
 
 })();

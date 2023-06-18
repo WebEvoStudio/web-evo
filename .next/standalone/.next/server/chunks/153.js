@@ -1,6 +1,6 @@
 "use strict";
-exports.id = 830;
-exports.ids = [830];
+exports.id = 153;
+exports.ids = [153];
 exports.modules = {
 
 /***/ 590386:
@@ -5064,16 +5064,52 @@ function removeTrailingSlash(route) {
 
 /***/ }),
 
-/***/ 275016:
+/***/ 33285:
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  f: () => (/* binding */ getServerSideSitemapIndex)
+  M: () => (/* binding */ getServerSideSitemap)
 });
 
-// UNUSED EXPORTS: getServerSideSitemapIndexLegacy
+// UNUSED EXPORTS: getServerSideSitemapLegacy
+
+;// CONCATENATED MODULE: ./node_modules/.pnpm/next-sitemap@4.1.3_@next+env@13.4.6_next@13.4.6/node_modules/next-sitemap/dist/esm/ssr/response.js
+/**
+ * Send XML response, supports legacy pages directory
+ * @param ctx
+ * @param content
+ * @returns
+ */ const response_withXMLResponseLegacy = (ctx, content)=>{
+    if (ctx?.res) {
+        const { res } = ctx;
+        // Set header
+        res.setHeader("Content-Type", "text/xml");
+        // Write the sitemap context to resonse
+        res.write(content);
+        // End response
+        res.end();
+    }
+    // Empty props
+    return {
+        props: {}
+    };
+};
+/**
+ * Send XML response, as next13+ route response
+ * @param content
+ * @param headers Custom request headers
+ * @returns
+ */ const withXMLResponse = (content, headers = {})=>{
+    return new Response(content, {
+        status: 200,
+        headers: {
+            "Content-Type": "text/xml",
+            ...headers
+        }
+    });
+};
 
 ;// CONCATENATED MODULE: ./node_modules/.pnpm/next-sitemap@4.1.3_@next+env@13.4.6_next@13.4.6/node_modules/next-sitemap/dist/esm/builders/sitemap-builder.js
 /**
@@ -5267,67 +5303,31 @@ __webpack_require__.d(__webpack_exports__, {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/.pnpm/next-sitemap@4.1.3_@next+env@13.4.6_next@13.4.6/node_modules/next-sitemap/dist/esm/ssr/response.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/next-sitemap@4.1.3_@next+env@13.4.6_next@13.4.6/node_modules/next-sitemap/dist/esm/ssr/sitemap.js
+
+
 /**
- * Send XML response, supports legacy pages directory
+ * Generate server side sitemaps, supports legacy pages directory
  * @param ctx
- * @param content
+ * @param fields
  * @returns
- */ const response_withXMLResponseLegacy = (ctx, content)=>{
-    if (ctx?.res) {
-        const { res } = ctx;
-        // Set header
-        res.setHeader("Content-Type", "text/xml");
-        // Write the sitemap context to resonse
-        res.write(content);
-        // End response
-        res.end();
-    }
-    // Empty props
-    return {
-        props: {}
-    };
+ */ const getServerSideSitemapLegacy = async (ctx, fields)=>{
+    // Generate sitemap xml
+    const contents = new SitemapBuilder().buildSitemapXml(fields);
+    // Send response
+    return withXMLResponseLegacy(ctx, contents);
 };
 /**
- * Send XML response, as next13+ route response
- * @param content
+ * Generate server side sitemaps, support next13+ route.{ts,js} file.
+ * To continue using inside pages directory, import `getServerSideSitemapLegacy` instead.
+ * @param fields
  * @param headers Custom request headers
  * @returns
- */ const withXMLResponse = (content, headers = {})=>{
-    return new Response(content, {
-        status: 200,
-        headers: {
-            "Content-Type": "text/xml",
-            ...headers
-        }
-    });
-};
-
-;// CONCATENATED MODULE: ./node_modules/.pnpm/next-sitemap@4.1.3_@next+env@13.4.6_next@13.4.6/node_modules/next-sitemap/dist/esm/ssr/sitemap-index.js
-
-
-/**
- * Generate index sitemaps on server side, support pages directory
- * @param ctx
- * @param sitemaps
- * @returns
- */ const getServerSideSitemapIndexLegacy = async (ctx, sitemaps)=>{
-    // Generate index sitemap xml content
-    const indexContents = new SitemapBuilder().buildSitemapIndexXml(sitemaps);
-    // Return response
-    return withXMLResponseLegacy(ctx, indexContents);
-};
-/**
- * Generate index sitemaps on server side, support next13+ route.{ts,js} file.
- * To continue using inside pages directory, import `getServerSideSitemapIndexLegacy` instead.
- * @param sitemaps
- * @param headers Custom request headers
- * @returns
- */ const getServerSideSitemapIndex = async (sitemaps, headers = {})=>{
-    // Generate index sitemap xml content
-    const indexContents = new sitemap_builder_SitemapBuilder().buildSitemapIndexXml(sitemaps);
-    // Return response
-    return withXMLResponse(indexContents, headers);
+ */ const getServerSideSitemap = async (fields, headers = {})=>{
+    // Generate sitemap xml
+    const contents = new sitemap_builder_SitemapBuilder().buildSitemapXml(fields);
+    // Send response
+    return withXMLResponse(contents, headers);
 };
 
 
