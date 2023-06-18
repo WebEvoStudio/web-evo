@@ -101,7 +101,7 @@ var plugin_gfm_default = /*#__PURE__*/__webpack_require__.n(plugin_gfm_);
  * blog detail page
  * @return {React.ReactElement}
  */ function BlogDetail({ blog }) {
-    const host = "http://developer.bulv.life/";
+    const host = "https://web-evo.bulv.life/";
     const content = markdown/* default */.Z.keywordToLink(blog.markContent, host);
     const plugins = [
         plugin_frontmatter_default()(),
