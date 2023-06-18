@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description: 'Web Evo(网络进化) 是一个现代网络咨询工作室，致力于帮助公司企业和个人实现数字化转型。我们提供设计、架构、开发、运营、产品指导等服务。',
   other: {
     '360-site-verification': '77b0e1a676566c755d708af4c92a3524',
-    'bytedance-verification-code': 'PwSvcyjJ+I/ikkOs7fGi',
+    'bytedance-verification-code': 'wSvyXEgEi6nNu3eh/eDe',
     'theme-color': '#00B0FF',
     'baidu-site-verification': 'code-yx2HQhygQo',
     'msvalidate.01': 'AB78A0C987D3AEA34B969889512FF33E',

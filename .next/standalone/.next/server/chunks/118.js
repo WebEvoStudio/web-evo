@@ -1,14 +1,14 @@
-exports.id = 190;
-exports.ids = [190];
+exports.id = 118;
+exports.ids = [118];
 exports.modules = {
 
-/***/ 267053:
+/***/ 515344:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
 Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 552972, 23));
 Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 611925, 23));
-Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 723955, 23));
 Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 714280, 23));
+Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 723955, 23));
 Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 873185, 23))
 
 /***/ }),
@@ -751,7 +751,7 @@ const metadata = {
     description: "Web Evo(网络进化) 是一个现代网络咨询工作室，致力于帮助公司企业和个人实现数字化转型。我们提供设计、架构、开发、运营、产品指导等服务。",
     other: {
         "360-site-verification": "77b0e1a676566c755d708af4c92a3524",
-        "bytedance-verification-code": "PwSvcyjJ+I/ikkOs7fGi",
+        "bytedance-verification-code": "wSvyXEgEi6nNu3eh/eDe",
         "theme-color": "#00B0FF",
         "baidu-site-verification": "code-yx2HQhygQo",
         "msvalidate.01": "AB78A0C987D3AEA34B969889512FF33E",
