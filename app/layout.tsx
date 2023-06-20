@@ -10,7 +10,6 @@ export const metadata: Metadata = {
   title: 'Web Evolution Studio',
   description: 'Web Evo(网络进化) 是一个现代网络咨询工作室，致力于帮助公司企业和个人实现数字化转型。我们提供设计、架构、开发、运营、产品指导等服务。',
   other: {
-    '360-site-verification': '77b0e1a676566c755d708af4c92a3524',
     'bytedance-verification-code': 'wSvyXEgEi6nNu3eh/eDe',
     'theme-color': '#00B0FF',
     'baidu-site-verification': 'codeva-owAlD1JaUc',
@@ -19,6 +18,14 @@ export const metadata: Metadata = {
     'google-site-verification': '4rS5gjy4-tFOdJO4HvDg0_E4QNcB1D1YeZo29iS4hIY',
     // 百度联盟验证
     'baidu_union_verify': '50312ad0c63983b3fe6c2e2a6e10c386',
+    // Yandex 验证
+    'yandex-verification': '00c7edad29c9e045',
+    // 搜狗验证
+    'sogou_site_verification': 'NxKIJOaIjm',
+    // 360 验证
+    '360-site-verification': '026caef9c5d27d14371524ad882a339f',
+    // 神马验证
+    'shenma-site-verification': 'ced0831a368866ea173608f4f067519f_1687251755',
   },
   icons: {
     icon: '/favicon.png',
