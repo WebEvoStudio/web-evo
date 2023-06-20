@@ -765,7 +765,7 @@ const metadata = {
         // 360 验证
         "360-site-verification": "026caef9c5d27d14371524ad882a339f",
         // 神马验证
-        "shenma-site-verification": "ced0831a368866ea173608f4f067519f_1687252421"
+        "shenma-site-verification": "ced0831a368866ea173608f4f067519f_1687252992"
     },
     icons: {
         icon: "/favicon.png",
