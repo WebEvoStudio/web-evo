@@ -1,17 +1,6 @@
-exports.id = 118;
-exports.ids = [118];
+exports.id = 856;
+exports.ids = [856];
 exports.modules = {
-
-/***/ 515344:
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
-
-Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 552972, 23));
-Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 611925, 23));
-Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 714280, 23));
-Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 723955, 23));
-Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 873185, 23))
-
-/***/ }),
 
 /***/ 119696:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
@@ -93,6 +82,9 @@ Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_re
     }
     static{
         this.undrawDesignComponents = __webpack_require__(663498);
+    }
+    static{
+        this.undrawTeamwork = __webpack_require__(559649);
     }
     static{
         this.materialDesign = __webpack_require__(296266);
@@ -1171,6 +1163,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({"src":"/_next/static/media/undraw_team_collaboration_re_ow29.5c81ef87.svg","height":505,"width":936,"blurWidth":0,"blurHeight":0});
+
+/***/ }),
+
+/***/ 559649:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({"src":"/_next/static/media/undraw_teamwork_hpdk.ae05862c.svg","height":462,"width":897,"blurWidth":0,"blurHeight":0});
 
 /***/ }),
 

@@ -1,9 +1,9 @@
 "use strict";
-exports.id = 147;
-exports.ids = [147];
+exports.id = 295;
+exports.ids = [295];
 exports.modules = {
 
-/***/ 86147:
+/***/ 715295:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 
@@ -60,8 +60,31 @@ const services = [
 
 // EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.6_@babel+core@7.22.5_react-dom@18.2.0_react@18.2.0_sass@1.63.3/node_modules/next/navigation.js
 var navigation = __webpack_require__(444019);
+;// CONCATENATED MODULE: ./ui/components/ripple-box.tsx
+/* __next_internal_client_entry_do_not_use__ default auto */ 
+
+
+const RippleBox = ({ children, ripple })=>{
+    if (ripple) {
+        return /*#__PURE__*/ jsx_runtime_.jsx(node.Box, {
+            component: node.Button,
+            sx: {
+                width: "100%",
+                padding: 0
+            },
+            children: children
+        });
+    } else {
+        return /*#__PURE__*/ jsx_runtime_.jsx(node.Box, {
+            children: children
+        });
+    }
+};
+/* harmony default export */ const ripple_box = (RippleBox);
+
 ;// CONCATENATED MODULE: ./ui/home-services.tsx
 /* __next_internal_client_entry_do_not_use__ default auto */ 
+
 
 
 
@@ -82,45 +105,43 @@ const HomeServices = ({ isDesc } = {
                 xs: 12,
                 md: 6,
                 onClick: ()=>toServices(),
-                children: /*#__PURE__*/ jsx_runtime_.jsx(node.Card, {
-                    component: node.Button,
-                    sx: {
-                        width: "100%",
-                        height: "100%"
-                    },
-                    disableRipple: isDesc,
-                    disableTouchRipple: isDesc,
-                    children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)(node.CardContent, {
+                children: /*#__PURE__*/ jsx_runtime_.jsx(ripple_box, {
+                    ripple: !isDesc,
+                    children: /*#__PURE__*/ jsx_runtime_.jsx(node.Card, {
                         sx: {
-                            display: "flex",
-                            flexDirection: "column",
-                            alignItems: "center"
+                            width: "100%"
                         },
-                        children: [
-                            /*#__PURE__*/ jsx_runtime_.jsx(node.ButtonBase, {
-                                disableRipple: !isDesc,
-                                disableTouchRipple: !isDesc,
-                                children: /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
-                                    src: service.image,
-                                    alt: service.title,
-                                    height: 80
+                        children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)(node.CardContent, {
+                            sx: {
+                                display: "flex",
+                                flexDirection: "column",
+                                alignItems: "center"
+                            },
+                            children: [
+                                /*#__PURE__*/ jsx_runtime_.jsx(ripple_box, {
+                                    ripple: isDesc,
+                                    children: /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
+                                        src: service.image,
+                                        alt: service.title,
+                                        height: 80
+                                    })
+                                }),
+                                /*#__PURE__*/ jsx_runtime_.jsx(node.Typography, {
+                                    variant: "h6",
+                                    sx: {
+                                        mt: 2
+                                    },
+                                    children: service.title
+                                }),
+                                isDesc && /*#__PURE__*/ jsx_runtime_.jsx(node.Typography, {
+                                    variant: "body2",
+                                    sx: {
+                                        mt: 2
+                                    },
+                                    children: service.description
                                 })
-                            }),
-                            /*#__PURE__*/ jsx_runtime_.jsx(node.Typography, {
-                                variant: "h6",
-                                sx: {
-                                    mt: 2
-                                },
-                                children: service.title
-                            }),
-                            isDesc && /*#__PURE__*/ jsx_runtime_.jsx(node.Typography, {
-                                variant: "body2",
-                                sx: {
-                                    mt: 2
-                                },
-                                children: service.description
-                            })
-                        ]
+                            ]
+                        })
                     })
                 })
             }, index))

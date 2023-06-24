@@ -384,8 +384,8 @@ var icons_material = __webpack_require__(144305);
     PsychologyAlt: icons_material/* PsychologyAlt */.ADS
 });
 
-// EXTERNAL MODULE: ./ui/home-services.tsx + 1 modules
-var home_services = __webpack_require__(86147);
+// EXTERNAL MODULE: ./ui/home-services.tsx + 2 modules
+var home_services = __webpack_require__(715295);
 ;// CONCATENATED MODULE: ./ui/home.tsx
 /* __next_internal_client_entry_do_not_use__ default auto */ 
 
@@ -455,6 +455,9 @@ var home_services = __webpack_require__(86147);
         setLoading(true);
         await router.push("/blogs");
         setLoading(false);
+    };
+    const toAbout = async ()=>{
+        router.push("/about");
     };
     const HomeDivider = ({ order })=>{
         return /*#__PURE__*/ jsx_runtime_.jsx(material_node.Grid, {
@@ -573,8 +576,8 @@ var home_services = __webpack_require__(86147);
                                 mt: 4
                             },
                             children: /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                                onClick: toTechnologies,
-                                children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)(material_node.Button, {
+                                onClick: toAbout,
+                                children: /*#__PURE__*/ jsx_runtime_.jsx(material_node.Button, {
                                     sx: {
                                         color: "#fff",
                                         width: "100%",
@@ -582,16 +585,9 @@ var home_services = __webpack_require__(86147);
                                     },
                                     color: "primary",
                                     variant: "contained",
-                                    children: [
-                                        /*#__PURE__*/ jsx_runtime_.jsx("span", {
-                                            children: "查看我们的技术堆栈"
-                                        }),
-                                        /*#__PURE__*/ jsx_runtime_.jsx(icons_material/* South */.tI9, {
-                                            sx: {
-                                                ml: 1
-                                            }
-                                        })
-                                    ]
+                                    children: /*#__PURE__*/ jsx_runtime_.jsx("span", {
+                                        children: "了解更多信息"
+                                    })
                                 })
                             })
                         })
@@ -926,6 +922,33 @@ var home_services = __webpack_require__(86147);
                                     ]
                                 })
                             ]
+                        }),
+                        /*#__PURE__*/ jsx_runtime_.jsx(material_node.Box, {
+                            sx: {
+                                mt: 4
+                            },
+                            children: /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                                onClick: toTechnologies,
+                                children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)(material_node.Button, {
+                                    sx: {
+                                        color: "#fff",
+                                        width: "100%",
+                                        borderRadius: "2rem"
+                                    },
+                                    color: "primary",
+                                    variant: "contained",
+                                    children: [
+                                        /*#__PURE__*/ jsx_runtime_.jsx("span", {
+                                            children: "查看我们的技术堆栈"
+                                        }),
+                                        /*#__PURE__*/ jsx_runtime_.jsx(icons_material/* South */.tI9, {
+                                            sx: {
+                                                ml: 1
+                                            }
+                                        })
+                                    ]
+                                })
+                            })
                         })
                     ]
                 }),
@@ -1039,7 +1062,9 @@ var home_services = __webpack_require__(86147);
                     title: "服务",
                     items: [
                         /*#__PURE__*/ jsx_runtime_.jsx(jsx_runtime_.Fragment, {
-                            children: /*#__PURE__*/ jsx_runtime_.jsx(home_services/* default */.Z, {})
+                            children: /*#__PURE__*/ jsx_runtime_.jsx(home_services/* default */.Z, {
+                                isDesc: false
+                            })
                         }),
                         /*#__PURE__*/ jsx_runtime_.jsx(jsx_runtime_.Fragment, {})
                     ]
@@ -1117,7 +1142,7 @@ const __default__ = proxy.default;
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [197,854,119,599,118,147], () => (__webpack_exec__(402763)));
+var __webpack_exports__ = __webpack_require__.X(0, [197,854,119,599,856,53,295], () => (__webpack_exec__(402763)));
 module.exports = __webpack_exports__;
 
 })();

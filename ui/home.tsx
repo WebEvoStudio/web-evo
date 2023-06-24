@@ -25,7 +25,7 @@ import {
   South as SouthIcon,
 } from '@mui/icons-material';
 import Icons from '../core/libs/icons';
-import HomeServices from "./home-services";
+import HomeServices from './home-services';
 
 
 /**
@@ -62,6 +62,9 @@ export default function Home() {
     setLoading(true);
     await router.push('/blogs');
     setLoading(false);
+  };
+  const toAbout = async () => {
+    router.push('/about');
   };
   const HomeDivider = ({order}: {order: number}) => {
     return (
@@ -121,12 +124,11 @@ export default function Home() {
               我们是一支由创新驱动的团队，我们通过融合最聪明的技术思想和尖端技术来实现不可能的目标。
           </Typography>
           <Box sx={{mt: 4}}>
-            <div onClick={toTechnologies}>
+            <div onClick={toAbout}>
               <Button
                 sx={{color: '#fff', width: '100%', borderRadius: '2rem'}}
                 color={'primary'} variant="contained">
-                <span>查看我们的技术堆栈</span>
-                <SouthIcon sx={{ml: 1}}/>
+                <span>了解更多信息</span>
               </Button>
             </div>
           </Box>
@@ -271,6 +273,16 @@ export default function Home() {
               <ListItemText>始终找到满足客户业务需求的方法</ListItemText>
             </ListItem>
           </List>
+          <Box sx={{mt: 4}}>
+            <div onClick={toTechnologies}>
+              <Button
+                sx={{color: '#fff', width: '100%', borderRadius: '2rem'}}
+                color={'primary'} variant="contained">
+                <span>查看我们的技术堆栈</span>
+                <SouthIcon sx={{ml: 1}}/>
+              </Button>
+            </div>
+          </Box>
         </Grid>
         <Grid item xs={12} md={6} sx={{order: {xs: 11, md: 10}}}>
           <Box className={styles['image']} sx={{display: {xs: 'none', md: 'block'}}}>
@@ -314,7 +326,7 @@ export default function Home() {
           title={'服务'}
           items={[
             <>
-              <HomeServices/>
+              <HomeServices isDesc={false}/>
             </>,
             <>
             </>,

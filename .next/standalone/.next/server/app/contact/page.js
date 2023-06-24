@@ -994,7 +994,8 @@ __webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "default": () => (/* binding */ Page)
+  "default": () => (/* binding */ Page),
+  metadata: () => (/* binding */ metadata)
 });
 
 // EXTERNAL MODULE: external "next/dist/compiled/react/jsx-runtime"
@@ -1020,6 +1021,9 @@ const __default__ = proxy.default;
 
 
 
+const metadata = {
+    title: "Web Evo - 联系我们"
+};
 /**
  * app/contact
  * @constructor
@@ -1037,7 +1041,7 @@ const __default__ = proxy.default;
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [197,854,119,490,118], () => (__webpack_exec__(543938)));
+var __webpack_exports__ = __webpack_require__.X(0, [197,854,119,490,856,53], () => (__webpack_exec__(543938)));
 module.exports = __webpack_exports__;
 
 })();

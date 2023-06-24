@@ -23,6 +23,7 @@ export class Images {
   static undrawMaintenance = require('../../assets/svgs/undraw_maintenance_re_59vn.svg');
   static undrawAnalytics = require('../../assets/svgs/undraw_analytics_re_dkf8.svg');
   static undrawDesignComponents = require('../../assets/svgs/undraw_design_components_9vy6.svg');
+  static undrawTeamwork = require('../../assets/svgs/undraw_teamwork_hpdk.svg');
   static materialDesign = require('../../assets/images/material-design.png');
   static fluentDesign = require('../../assets/images/fluent-design.jpg');
   static antDesign = require('../../assets/svgs/ant-design.svg');

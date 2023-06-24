@@ -333,6 +333,17 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ 789038:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({"src":"/_next/static/media/undraw_teamwork_hpdk.ae05862c.svg","height":462,"width":897,"blurWidth":0,"blurHeight":0});
+
+/***/ }),
+
 /***/ 277176:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -415,6 +426,9 @@ __webpack_require__.r(__webpack_exports__);
     }
     static{
         this.undrawDesignComponents = __webpack_require__(769250);
+    }
+    static{
+        this.undrawTeamwork = __webpack_require__(789038);
     }
     static{
         this.materialDesign = __webpack_require__(173918);
