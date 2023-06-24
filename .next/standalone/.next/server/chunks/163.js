@@ -256,7 +256,7 @@ const MainSearch = ()=>{
                                             mr: 1
                                         },
                                         children: /*#__PURE__*/ jsx_runtime.jsx((image_default()), {
-                                            width: 20,
+                                            width: 24,
                                             src: libs_images/* Images */.r.undrawDeveloperActivity,
                                             alt: "开发进行中"
                                         })
@@ -282,7 +282,7 @@ const MainSearch = ()=>{
                                             },
                                             alignItems: "center"
                                         },
-                                        children: "Web Evolution"
+                                        children: "Web Evo"
                                     })
                                 ]
                             })

@@ -408,7 +408,7 @@ const MainSearch = ()=>{
                                             mr: 1
                                         },
                                         children: /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
-                                            width: 20,
+                                            width: 24,
                                             src: libs_images/* Images */.r.undrawDeveloperActivity,
                                             alt: "开发进行中"
                                         })
@@ -434,7 +434,7 @@ const MainSearch = ()=>{
                                             },
                                             alignItems: "center"
                                         },
-                                        children: "Web Evolution"
+                                        children: "Web Evo"
                                     })
                                 ]
                             })
@@ -739,8 +739,9 @@ var globals = __webpack_require__(281426);
 
 // import 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap';
 const metadata = {
-    title: "Web Evolution Studio",
-    description: "Web Evo(网络进化) 是一个现代网络咨询工作室，致力于帮助公司企业和个人实现数字化转型。我们提供设计、架构、开发、运营、产品指导等服务。",
+    title: "Web Evo",
+    description: "Web Evo全称Web Evolution (网络进化) 是一个现代网络咨询工作室，致力于帮助公司企业和个人实现数字化转型。我们提供设计、架构、开发、运营、产品指导等服务。",
+    keywords: "Web Evo, Web-Evo, Wev Evolution, WebEvo, web evo, webevo",
     other: {
         "bytedance-verification-code": "wSvyXEgEi6nNu3eh/eDe",
         "theme-color": "#00B0FF",

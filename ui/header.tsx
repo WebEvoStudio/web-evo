@@ -96,12 +96,12 @@ const Header = () => {
           <Link href={'/'}>
             <Box sx={{display: 'flex', alignItem: 'center', mr: {xs: 0, sm: 2}}}>
               <Box sx={{display: {xs: 'flex', sm: 'none'}, alignItems: 'center', mr: 1}}>
-                <Image width={20} src={Images.undrawDeveloperActivity} alt={'开发进行中'}/>
+                <Image width={24} src={Images.undrawDeveloperActivity} alt={'开发进行中'}/>
               </Box>
               <Box sx={{display: {xs: 'none', sm: 'block'}}}>
                 <Image width={50} src={Images.undrawDeveloperActivity} alt={'开发进行中'}/>
               </Box>
-              <Box sx={{display: {xs: 'flex', sm: 'none'}, alignItems: 'center'}}>Web Evolution</Box>
+              <Box sx={{display: {xs: 'flex', sm: 'none'}, alignItems: 'center'}}>Web Evo</Box>
             </Box>
           </Link>
           <Box sx={{display: {xs: 'none', sm: 'block'}}}>

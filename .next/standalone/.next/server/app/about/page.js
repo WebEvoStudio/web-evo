@@ -341,83 +341,31 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 515344:
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
-
-Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 552972, 23));
-Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 611925, 23));
-Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 714280, 23));
-Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 723955, 23));
-Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 873185, 23))
-
-/***/ }),
-
 /***/ 499075:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 672465))
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 16001))
 
 /***/ }),
 
-/***/ 672465:
+/***/ 16001:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-// ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
-
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, {
-  "default": () => (/* binding */ about)
-});
-
-// EXTERNAL MODULE: external "next/dist/compiled/react/jsx-runtime"
-var jsx_runtime_ = __webpack_require__(556786);
-// EXTERNAL MODULE: external "next/dist/compiled/react"
-var react_ = __webpack_require__(18038);
-// EXTERNAL MODULE: ./node_modules/.pnpm/@mui+material@5.13.4_@emotion+react@11.11.1_@emotion+styled@11.11.0_@types+react@18.2.9_react-dom@18.2.0_react@18.2.0/node_modules/@mui/material/node/index.js
-var node = __webpack_require__(159035);
-;// CONCATENATED MODULE: ./ui/components/section.tsx
-/* __next_internal_client_entry_do_not_use__ default auto */ 
-
-
-const Section = (props)=>{
-    const { children, title = "Title", desc = "Description" } = props;
-    return /*#__PURE__*/ jsx_runtime_.jsx("section", {
-        children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)(node.Box, {
-            sx: {
-                paddingTop: "64px",
-                paddingBottom: "20px"
-            },
-            children: [
-                /*#__PURE__*/ jsx_runtime_.jsx(node.Typography, {
-                    variant: "h1",
-                    fontSize: 32,
-                    sx: {
-                        marginBottom: "48px"
-                    },
-                    children: title
-                }),
-                /*#__PURE__*/ jsx_runtime_.jsx(node.Typography, {
-                    variant: "body1",
-                    sx: {
-                        mb: "56px"
-                    },
-                    children: desc
-                }),
-                children
-            ]
-        })
-    });
-};
-/* harmony default export */ const section = (Section);
-
-// EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.6_@babel+core@7.22.5_react-dom@18.2.0_react@18.2.0_sass@1.63.3/node_modules/next/image.js
-var next_image = __webpack_require__(801806);
-var image_default = /*#__PURE__*/__webpack_require__.n(next_image);
-// EXTERNAL MODULE: ./core/libs/images.ts
-var libs_images = __webpack_require__(278754);
-;// CONCATENATED MODULE: ./ui/pages/about.tsx
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(556786);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(18038);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(159035);
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_mui_material__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _components_section__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(367071);
+/* harmony import */ var next_image__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(801806);
+/* harmony import */ var next_image__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_image__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _core_libs_images__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(278754);
 /* __next_internal_client_entry_do_not_use__ default auto */ 
 
 
@@ -427,18 +375,19 @@ var libs_images = __webpack_require__(278754);
 const About = ()=>{
     const sections = [
         {
-            title: "我们是谁",
-            desc: "我们与客户和同事的专业和友好，我们互相对待，就像我们想要的对待一样。 我们的工作环境强调平等，透明度……和宠物友好的氛围！ 这就是网络进化的全部内容:)",
-            children: /*#__PURE__*/ jsx_runtime_.jsx(node.Box, {
+            title: "关于 Web Evo",
+            // eslint-disable-next-line max-len
+            desc: "Web Evo全称Web Evolution (网络进化) 是一个现代网络咨询工作室，致力于帮助公司企业和个人实现数字化转型。我们提供设计、架构、开发、运营、产品指导等服务。我们注重成员之间的相互尊重和相互理解，以及与客户之间的良好沟通。我们致力于为客户提供最好的服务，同时也关注员工的福利和工作环境。",
+            children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_5__.Box, {
                 sx: {
                     width: "100%"
                 },
-                children: /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
+                children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_image__WEBPACK_IMPORTED_MODULE_3___default()), {
                     style: {
                         width: "100%",
                         height: "auto"
                     },
-                    src: libs_images/* Images */.r.undrawTeamwork,
+                    src: _core_libs_images__WEBPACK_IMPORTED_MODULE_4__/* .Images */ .r.undrawTeamwork,
                     alt: "团队工作"
                 })
             })
@@ -477,17 +426,17 @@ const About = ()=>{
                         content: "我们在 Web Evo 及其他领域营造支持和友好的氛围。"
                     }
                 ];
-                return /*#__PURE__*/ jsx_runtime_.jsx(node.Box, {
-                    children: /*#__PURE__*/ jsx_runtime_.jsx(node.Stepper, {
+                return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_5__.Box, {
+                    children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_5__.Stepper, {
                         orientation: "vertical",
-                        children: steps.map((it, index)=>/*#__PURE__*/ (0,jsx_runtime_.jsxs)(node.Step, {
+                        children: steps.map((it, index)=>/*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_5__.Step, {
                                 expanded: true,
                                 completed: true,
                                 children: [
-                                    /*#__PURE__*/ jsx_runtime_.jsx(node.StepLabel, {
+                                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_5__.StepLabel, {
                                         children: it.label
                                     }),
-                                    /*#__PURE__*/ jsx_runtime_.jsx(node.StepContent, {
+                                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_5__.StepContent, {
                                         children: it.content
                                     })
                                 ]
@@ -499,19 +448,19 @@ const About = ()=>{
         {
             title: "团队文化",
             desc: "我们相信，使开发世界变得更加美好，在哪里可以与您的团队交付最佳成绩，并使他们拥有最佳实践，或者使所有人更加了解教育。",
-            children: /*#__PURE__*/ jsx_runtime_.jsx(jsx_runtime_.Fragment, {})
+            children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {})
         }
     ];
-    return /*#__PURE__*/ jsx_runtime_.jsx(node.Container, {
+    return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_5__.Container, {
         "max-width": "lg",
-        children: sections.map((it, index)=>/*#__PURE__*/ jsx_runtime_.jsx(section, {
+        children: sections.map((it, index)=>/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_section__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .Z, {
                 title: it.title,
                 desc: it.desc,
                 children: it.children
             }, index))
     });
 };
-/* harmony default export */ const about = (About);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (About);
 
 
 /***/ }),
@@ -571,7 +520,7 @@ const AboutPage = ()=>{
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [197,854,119,856], () => (__webpack_exec__(897334)));
+var __webpack_exports__ = __webpack_require__.X(0, [197,854,119,856,587,71], () => (__webpack_exec__(897334)));
 module.exports = __webpack_exports__;
 
 })();

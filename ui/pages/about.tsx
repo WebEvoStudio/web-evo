@@ -7,8 +7,9 @@ import {Images} from '../../core/libs/images';
 const About = () => {
   const sections = [
     {
-      title: '我们是谁',
-      desc: '我们与客户和同事的专业和友好，我们互相对待，就像我们想要的对待一样。 我们的工作环境强调平等，透明度……和宠物友好的氛围！ 这就是网络进化的全部内容:)',
+      title: '关于 Web Evo',
+      // eslint-disable-next-line max-len
+      desc: 'Web Evo全称Web Evolution (网络进化) 是一个现代网络咨询工作室，致力于帮助公司企业和个人实现数字化转型。我们提供设计、架构、开发、运营、产品指导等服务。我们注重成员之间的相互尊重和相互理解，以及与客户之间的良好沟通。我们致力于为客户提供最好的服务，同时也关注员工的福利和工作环境。',
       children: (
         <Box sx={{width: '100%'}}>
           <Image style={{width: '100%', height: 'auto'}} src={Images.undrawTeamwork} alt='团队工作'></Image>

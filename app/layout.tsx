@@ -7,8 +7,9 @@ import '../styles/globals.css';
 // import 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap';
 
 export const metadata: Metadata = {
-  title: 'Web Evolution Studio',
-  description: 'Web Evo(网络进化) 是一个现代网络咨询工作室，致力于帮助公司企业和个人实现数字化转型。我们提供设计、架构、开发、运营、产品指导等服务。',
+  title: 'Web Evo',
+  description: 'Web Evo全称Web Evolution (网络进化) 是一个现代网络咨询工作室，致力于帮助公司企业和个人实现数字化转型。我们提供设计、架构、开发、运营、产品指导等服务。',
+  keywords: 'Web Evo, Web-Evo, Wev Evolution, WebEvo, web evo, webevo',
   other: {
     'bytedance-verification-code': 'wSvyXEgEi6nNu3eh/eDe',
     'theme-color': '#00B0FF',
