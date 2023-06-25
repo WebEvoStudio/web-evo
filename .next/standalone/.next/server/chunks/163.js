@@ -144,6 +144,10 @@ const MainSearch = ()=>{
     const pathname = (0,navigation.usePathname)();
     const links = [
         {
+            path: "/about",
+            name: "关于"
+        },
+        {
             path: "/blogs",
             name: "博客"
         },

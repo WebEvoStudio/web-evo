@@ -1,6 +1,17 @@
-exports.id = 856;
-exports.ids = [856];
+exports.id = 118;
+exports.ids = [118];
 exports.modules = {
+
+/***/ 515344:
+/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+
+Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 552972, 23));
+Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 611925, 23));
+Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 714280, 23));
+Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 723955, 23));
+Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 873185, 23))
+
+/***/ }),
 
 /***/ 119696:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
@@ -296,6 +307,10 @@ const MainSearch = ()=>{
     const pathname = (0,navigation.usePathname)();
     const links = [
         {
+            path: "/about",
+            name: "关于"
+        },
+        {
             path: "/blogs",
             name: "博客"
         },
@@ -562,11 +577,11 @@ const MainSearch = ()=>{
     const [current, setCurrent] = (0,react_.useState)(0);
     (0,react_.useEffect)(()=>{
         console.log(router);
-        setIsPwa([
-            "fullscreen",
-            "standalone",
-            "minimal-ui"
-        ].some((displayMode)=>window.matchMedia("(display-mode: " + displayMode + ")").matches));
+    // setIsPwa(
+    //     ['fullscreen', 'standalone', 'minimal-ui'].some(
+    //         (displayMode) => window.matchMedia('(display-mode: ' + displayMode + ')').matches,
+    //     ),
+    // );
     }, []);
     (0,react_.useEffect)(()=>{
         const path = `/${pathname?.split("/")[1]}`;

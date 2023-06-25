@@ -341,17 +341,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 515344:
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
-
-Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 552972, 23));
-Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 611925, 23));
-Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 714280, 23));
-Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 723955, 23));
-Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 873185, 23))
-
-/***/ }),
-
 /***/ 282476:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
@@ -757,7 +746,7 @@ const BlogsPage = async ()=>{
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [197,854,119,912,856,71], () => (__webpack_exec__(670209)));
+var __webpack_exports__ = __webpack_require__.X(0, [197,854,119,912,118,71], () => (__webpack_exec__(670209)));
 module.exports = __webpack_exports__;
 
 })();

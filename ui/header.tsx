@@ -25,6 +25,7 @@ import MainSearch from '../components/main-search';
 const Header = () => {
   const pathname = usePathname();
   const links: any[] = [
+    {path: '/about', name: '关于'},
     {path: '/blogs', name: '博客'},
     {path: '/contact', name: '联系'},
     // {path: '/about', name: 'About'},

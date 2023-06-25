@@ -22,11 +22,11 @@ export default function BasicLayout({children}: any) {
   const [current, setCurrent] = useState(0);
   useEffect(() => {
     console.log(router);
-    setIsPwa(
-        ['fullscreen', 'standalone', 'minimal-ui'].some(
-            (displayMode) => window.matchMedia('(display-mode: ' + displayMode + ')').matches,
-        ),
-    );
+    // setIsPwa(
+    //     ['fullscreen', 'standalone', 'minimal-ui'].some(
+    //         (displayMode) => window.matchMedia('(display-mode: ' + displayMode + ')').matches,
+    //     ),
+    // );
   }, []);
   useEffect(() => {
     const path = `/${pathname?.split('/')[1]}`;

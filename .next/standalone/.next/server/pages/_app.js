@@ -90,11 +90,11 @@ var header = __webpack_require__(160163);
     const [current, setCurrent] = (0,external_react_.useState)(0);
     (0,external_react_.useEffect)(()=>{
         console.log(router);
-        setIsPwa([
-            "fullscreen",
-            "standalone",
-            "minimal-ui"
-        ].some((displayMode)=>window.matchMedia("(display-mode: " + displayMode + ")").matches));
+    // setIsPwa(
+    //     ['fullscreen', 'standalone', 'minimal-ui'].some(
+    //         (displayMode) => window.matchMedia('(display-mode: ' + displayMode + ')').matches,
+    //     ),
+    // );
     }, []);
     (0,external_react_.useEffect)(()=>{
         const path = `/${pathname?.split("/")[1]}`;
