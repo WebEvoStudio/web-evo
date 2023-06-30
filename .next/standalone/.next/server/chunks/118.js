@@ -1,14 +1,14 @@
-exports.id = 190;
-exports.ids = [190];
+exports.id = 118;
+exports.ids = [118];
 exports.modules = {
 
-/***/ 267053:
+/***/ 515344:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
 Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 552972, 23));
 Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 611925, 23));
-Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 723955, 23));
 Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 714280, 23));
+Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 723955, 23));
 Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 873185, 23))
 
 /***/ }),
@@ -726,6 +726,20 @@ const MainSearch = ()=>{
                                 }, i))
                         })
                     ]
+                }),
+                /*#__PURE__*/ jsx_runtime_.jsx(node.Box, {
+                    sx: {
+                        mt: 2,
+                        display: "flex",
+                        justifyContent: "center"
+                    },
+                    children: /*#__PURE__*/ jsx_runtime_.jsx("a", {
+                        href: "https://www.digitalocean.com/?refcode=691dc5c1ac63&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge",
+                        children: /*#__PURE__*/ jsx_runtime_.jsx("img", {
+                            src: "https://web-platforms.sfo2.digitaloceanspaces.com/WWW/Badge%203.svg",
+                            alt: "DigitalOcean Referral Badge"
+                        })
+                    })
                 }),
                 /*#__PURE__*/ (0,jsx_runtime_.jsxs)(node.Box, {
                     sx: {

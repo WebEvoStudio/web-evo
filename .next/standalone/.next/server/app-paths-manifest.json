@@ -1,8 +1,8 @@
 {
   "/page": "app/page.js",
-  "/contact/page": "app/contact/page.js",
-  "/about/page": "app/about/page.js",
   "/blogs/page": "app/blogs/page.js",
-  "/services/page": "app/services/page.js",
-  "/blogs-sitemap.xml/route": "app/blogs-sitemap.xml/route.js"
+  "/about/page": "app/about/page.js",
+  "/blogs-sitemap.xml/route": "app/blogs-sitemap.xml/route.js",
+  "/contact/page": "app/contact/page.js",
+  "/services/page": "app/services/page.js"
 }

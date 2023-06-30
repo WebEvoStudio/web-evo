@@ -5,13 +5,13 @@
   "/_document": "pages/_document.js",
   "/blogs/[id]": "pages/blogs/[id].js",
   "/blogs/modify/[id]": "pages/blogs/modify/[id].html",
-  "/courses/[id]": "pages/courses/[id].html",
   "/blogs/publish": "pages/blogs/publish.html",
-  "/docs/[id]": "pages/docs/[id].js",
+  "/courses/[id]": "pages/courses/[id].html",
   "/docs": "pages/docs.html",
-  "/tools": "pages/tools.html",
+  "/docs/[id]": "pages/docs/[id].js",
   "/courses": "pages/courses.html",
   "/search": "pages/search.html",
+  "/tools": "pages/tools.html",
   "/portfolio": "pages/portfolio.html",
   "/404": "pages/404.html"
 }

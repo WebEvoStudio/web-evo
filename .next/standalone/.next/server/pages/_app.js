@@ -246,6 +246,20 @@ var link_default = /*#__PURE__*/__webpack_require__.n(next_link);
                         })
                     ]
                 }),
+                /*#__PURE__*/ jsx_runtime.jsx(material_.Box, {
+                    sx: {
+                        mt: 2,
+                        display: "flex",
+                        justifyContent: "center"
+                    },
+                    children: /*#__PURE__*/ jsx_runtime.jsx("a", {
+                        href: "https://www.digitalocean.com/?refcode=691dc5c1ac63&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge",
+                        children: /*#__PURE__*/ jsx_runtime.jsx("img", {
+                            src: "https://web-platforms.sfo2.digitaloceanspaces.com/WWW/Badge%203.svg",
+                            alt: "DigitalOcean Referral Badge"
+                        })
+                    })
+                }),
                 /*#__PURE__*/ (0,jsx_runtime.jsxs)(material_.Box, {
                     sx: {
                         display: "flex",
