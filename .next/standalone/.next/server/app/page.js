@@ -295,7 +295,7 @@ __webpack_require__.r(__webpack_exports__);
         '',
         {
         children: ['__PAGE__', {}, {
-          page: [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 325614)), "/Users/cityhunter/Documents/WorkSpace/personal-site/app/page.tsx"],
+          page: [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 765583)), "/Users/cityhunter/Documents/WorkSpace/personal-site/app/page.tsx"],
           
         }]
       },
@@ -332,14 +332,14 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 611388:
+/***/ 624492:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 820563))
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 557339))
 
 /***/ }),
 
-/***/ 820563:
+/***/ 557339:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -386,7 +386,7 @@ var icons_material = __webpack_require__(144305);
 
 // EXTERNAL MODULE: ./ui/home-services.tsx + 2 modules
 var home_services = __webpack_require__(715295);
-;// CONCATENATED MODULE: ./ui/home.tsx
+;// CONCATENATED MODULE: ./ui/pages/home.tsx
 /* __next_internal_client_entry_do_not_use__ default auto */ 
 
 
@@ -453,7 +453,7 @@ var home_services = __webpack_require__(715295);
     };
     const toBlog = async ()=>{
         setLoading(true);
-        await router.push("/blogs");
+        router.push("/blogs");
         setLoading(false);
     };
     const toAbout = async ()=>{
@@ -469,7 +469,8 @@ var home_services = __webpack_require__(715295);
             children: /*#__PURE__*/ jsx_runtime_.jsx(material_node.Divider, {})
         });
     };
-    const HomePiece = ({ orders, items, align, poster, title })=>{
+    const HomePiece = (props)=>{
+        const { orders, align, poster, title, children } = props;
         return /*#__PURE__*/ (0,jsx_runtime_.jsxs)(jsx_runtime_.Fragment, {
             children: [
                 /*#__PURE__*/ (0,jsx_runtime_.jsxs)(material_node.Grid, {
@@ -501,7 +502,7 @@ var home_services = __webpack_require__(715295);
                                 style: imageStyle
                             })
                         }),
-                        items[0]
+                        children
                     ]
                 }),
                 /*#__PURE__*/ jsx_runtime_.jsx(material_node.Grid, {
@@ -541,35 +542,20 @@ var home_services = __webpack_require__(715295);
             container: true,
             spacing: 2,
             children: [
-                /*#__PURE__*/ (0,jsx_runtime_.jsxs)(material_node.Grid, {
-                    item: true,
-                    xs: 12,
-                    md: 6,
-                    sx: {
-                        order: 1
+                /*#__PURE__*/ (0,jsx_runtime_.jsxs)(HomePiece, {
+                    align: "start",
+                    orders: [
+                        1,
+                        2
+                    ],
+                    poster: {
+                        src: libs_images/* Images */.r.undrawProudCoder,
+                        alt: "骄傲的编码员"
                     },
+                    title: "Web Evo - 可信赖的技术合作伙伴",
                     children: [
-                        /*#__PURE__*/ jsx_runtime_.jsx("h1", {
-                            className: (hello_module_default()).h1,
-                            children: "Web Evolution 不仅仅是一家软件开发工作室"
-                        }),
-                        /*#__PURE__*/ jsx_runtime_.jsx(material_node.Box, {
-                            className: (hello_module_default()).image,
-                            sx: {
-                                display: {
-                                    xs: "block",
-                                    md: "none"
-                                }
-                            },
-                            children: /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
-                                alt: "骄傲的编码员",
-                                src: libs_images/* Images */.r.undrawProudCoder,
-                                style: imageStyle
-                            })
-                        }),
                         /*#__PURE__*/ jsx_runtime_.jsx(material_node.Typography, {
-                            variant: "body1",
-                            children: "我们是一支由创新驱动的团队，我们通过融合最聪明的技术思想和尖端技术来实现不可能的目标。"
+                            children: "我们通过加速开发流程，填补您软件项目中的技术空白，帮助您实现更好的结果，并在减少部署时间的同时提供高质量的解决方案。"
                         }),
                         /*#__PURE__*/ jsx_runtime_.jsx(material_node.Box, {
                             sx: {
@@ -592,28 +578,6 @@ var home_services = __webpack_require__(715295);
                             })
                         })
                     ]
-                }),
-                /*#__PURE__*/ jsx_runtime_.jsx(material_node.Grid, {
-                    item: true,
-                    xs: 12,
-                    md: 6,
-                    sx: {
-                        order: 2
-                    },
-                    children: /*#__PURE__*/ jsx_runtime_.jsx(material_node.Box, {
-                        className: (hello_module_default()).image,
-                        sx: {
-                            display: {
-                                xs: "none",
-                                md: "block"
-                            }
-                        },
-                        children: /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
-                            src: libs_images/* Images */.r.undrawProudCoder,
-                            alt: "骄傲的编码员",
-                            style: imageStyle
-                        })
-                    })
                 }),
                 /*#__PURE__*/ jsx_runtime_.jsx(HomeDivider, {
                     order: 3
@@ -1060,14 +1024,9 @@ var home_services = __webpack_require__(715295);
                         alt: "服务"
                     },
                     title: "服务",
-                    items: [
-                        /*#__PURE__*/ jsx_runtime_.jsx(jsx_runtime_.Fragment, {
-                            children: /*#__PURE__*/ jsx_runtime_.jsx(home_services/* default */.Z, {
-                                isDesc: false
-                            })
-                        }),
-                        /*#__PURE__*/ jsx_runtime_.jsx(jsx_runtime_.Fragment, {})
-                    ]
+                    children: /*#__PURE__*/ jsx_runtime_.jsx(home_services/* default */.Z, {
+                        isDesc: false
+                    })
                 })
             ]
         })
@@ -1090,7 +1049,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 325614:
+/***/ 765583:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -1108,9 +1067,9 @@ var jsx_runtime_ = __webpack_require__(556786);
 var react_shared_subset = __webpack_require__(452970);
 // EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.6_@babel+core@7.22.5_react-dom@18.2.0_react@18.2.0_sass@1.63.3/node_modules/next/dist/build/webpack/loaders/next-flight-loader/module-proxy.js
 var module_proxy = __webpack_require__(506604);
-;// CONCATENATED MODULE: ./ui/home.tsx
+;// CONCATENATED MODULE: ./ui/pages/home.tsx
 
-const proxy = (0,module_proxy.createProxy)(String.raw`/Users/cityhunter/Documents/WorkSpace/personal-site/ui/home.tsx`)
+const proxy = (0,module_proxy.createProxy)(String.raw`/Users/cityhunter/Documents/WorkSpace/personal-site/ui/pages/home.tsx`)
 
 // Accessing the __esModule property and exporting $$typeof are required here.
 // The __esModule getter forces the proxy target to create the default export
@@ -1142,7 +1101,7 @@ const __default__ = proxy.default;
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [197,854,119,599,118,295], () => (__webpack_exec__(402763)));
+var __webpack_exports__ = __webpack_require__.X(0, [197,854,119,599,190,295], () => (__webpack_exec__(402763)));
 module.exports = __webpack_exports__;
 
 })();

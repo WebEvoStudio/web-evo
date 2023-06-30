@@ -6,7 +6,7 @@ import {
   AppBar,
   Box, Button,
   Drawer,
-  Fab,
+  Fab, Fade,
   IconButton, List,
   ListItem,
   ListItemText, Toolbar,
@@ -69,17 +69,17 @@ const Header = () => {
   };
   const appBarStyle = {color: 'white', backgroundColor: '#121212'};
   const getTouch = () => {
-    if (pathName !== '/contact') {
-      return (
+    const isShowing = pathName !== '/contact';
+    return (
+      <Fade in={isShowing}>
         <Button
           variant={'outlined'}
           size={'small'}
-          sx={{borderRadius: '1rem', fontSize: '12px'}}
+          sx={{borderRadius: '1rem', fontSize: '12px', visibility: isShowing ? 'visible' : 'hidden'}}
           onClick={() => toContact()}
         >取得联系</Button>
-      );
-    }
-    return (<></>);
+      </Fade>
+    );
   };
   return (
     <Box sx={{flexGrow: 1}}>

@@ -69,8 +69,19 @@ var basic_layout_module_default = /*#__PURE__*/__webpack_require__.n(basic_layou
 var theme = __webpack_require__(324706);
 // EXTERNAL MODULE: ./ui/header.tsx + 1 modules
 var header = __webpack_require__(160163);
+// EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.6_@babel+core@7.22.5_react-dom@18.2.0_react@18.2.0_sass@1.63.3/node_modules/next/image.js
+var next_image = __webpack_require__(250106);
+var image_default = /*#__PURE__*/__webpack_require__.n(next_image);
+// EXTERNAL MODULE: ./core/libs/images.ts
+var libs_images = __webpack_require__(88104);
+// EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.6_@babel+core@7.22.5_react-dom@18.2.0_react@18.2.0_sass@1.63.3/node_modules/next/link.js
+var next_link = __webpack_require__(396223);
+var link_default = /*#__PURE__*/__webpack_require__.n(next_link);
 ;// CONCATENATED MODULE: ./layouts/basic.layout.tsx
 /* __next_internal_client_entry_do_not_use__ default auto */ 
+
+
+
 
 
 
@@ -167,6 +178,105 @@ var header = __webpack_require__(160163);
         }
         return null;
     };
+    const Footer = ()=>{
+        const connects = [];
+        return /*#__PURE__*/ (0,jsx_runtime.jsxs)("footer", {
+            children: [
+                /*#__PURE__*/ (0,jsx_runtime.jsxs)(material_.Box, {
+                    sx: {
+                        borderTop: 2,
+                        paddingTop: "20px",
+                        borderColor: "divider",
+                        display: "flex",
+                        flexDirection: {
+                            xs: "column-reverse",
+                            md: "column"
+                        },
+                        alignItems: "center"
+                    },
+                    children: [
+                        /*#__PURE__*/ jsx_runtime.jsx((link_default()), {
+                            href: "/",
+                            children: /*#__PURE__*/ (0,jsx_runtime.jsxs)(material_.Box, {
+                                sx: {
+                                    display: "flex",
+                                    alignItems: "center"
+                                },
+                                children: [
+                                    /*#__PURE__*/ jsx_runtime.jsx((image_default()), {
+                                        src: libs_images/* Images */.r.undrawDeveloperActivity,
+                                        width: 56,
+                                        alt: "Web Evo Logo"
+                                    }),
+                                    /*#__PURE__*/ (0,jsx_runtime.jsxs)(material_.Box, {
+                                        sx: {
+                                            ml: 1,
+                                            textAlign: "center"
+                                        },
+                                        children: [
+                                            /*#__PURE__*/ jsx_runtime.jsx(material_.Typography, {
+                                                fontWeight: "bold",
+                                                fontSize: 18,
+                                                color: "primary",
+                                                children: "WebEvo"
+                                            }),
+                                            /*#__PURE__*/ jsx_runtime.jsx(material_.Typography, {
+                                                fontWeight: "bold",
+                                                children: "STUDIO"
+                                            })
+                                        ]
+                                    })
+                                ]
+                            })
+                        }),
+                        /*#__PURE__*/ jsx_runtime.jsx(material_.Box, {
+                            sx: {
+                                display: "flex",
+                                width: "100%",
+                                justifyContent: "center"
+                            },
+                            children: connects.map((it, i)=>/*#__PURE__*/ jsx_runtime.jsx(material_.Box, {
+                                    sx: {
+                                        width: "20%",
+                                        textAlign: "center",
+                                        mb: 1
+                                    },
+                                    children: it.icon
+                                }, i))
+                        })
+                    ]
+                }),
+                /*#__PURE__*/ (0,jsx_runtime.jsxs)(material_.Box, {
+                    sx: {
+                        display: "flex",
+                        flexDirection: "column",
+                        justifyContent: "center",
+                        mt: {
+                            xs: 2,
+                            md: 3.5
+                        },
+                        pb: 3
+                    },
+                    children: [
+                        /*#__PURE__*/ jsx_runtime.jsx(material_.Typography, {
+                            textAlign: "center",
+                            fontSize: 14,
+                            children: "\xa9 2023, Web Evo All Rights Reserved"
+                        }),
+                        /*#__PURE__*/ jsx_runtime.jsx((link_default()), {
+                            href: "/privacy-policy",
+                            children: /*#__PURE__*/ jsx_runtime.jsx(material_.Typography, {
+                                color: "primary",
+                                textAlign: "center",
+                                fontSize: 14,
+                                children: "Privacy Policy"
+                            })
+                        })
+                    ]
+                })
+            ]
+        });
+    };
     return /*#__PURE__*/ jsx_runtime.jsx(jsx_runtime.Fragment, {
         children: /*#__PURE__*/ (0,jsx_runtime.jsxs)(material_.ThemeProvider, {
             theme: theme/* default */.Z,
@@ -174,7 +284,8 @@ var header = __webpack_require__(160163);
                 /*#__PURE__*/ jsx_runtime.jsx(material_.CssBaseline, {}),
                 !isPwa ? /*#__PURE__*/ jsx_runtime.jsx(header/* default */.Z, {}) : null,
                 children,
-                /*#__PURE__*/ jsx_runtime.jsx(TabBar, {})
+                /*#__PURE__*/ jsx_runtime.jsx(TabBar, {}),
+                /*#__PURE__*/ jsx_runtime.jsx(Footer, {})
             ]
         })
     });

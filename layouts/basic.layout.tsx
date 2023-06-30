@@ -1,6 +1,14 @@
 'use client';
 import React, {useEffect, useState} from 'react';
-import {BottomNavigation, BottomNavigationAction, Box, CssBaseline, Paper, ThemeProvider} from '@mui/material';
+import {
+  BottomNavigation,
+  BottomNavigationAction,
+  Box,
+  CssBaseline,
+  Paper,
+  ThemeProvider,
+  Typography,
+} from '@mui/material';
 import {
   HomeRounded, ArticleRounded, SourceRounded, HomeRepairServiceRounded, ContactMailRounded,
 } from '@mui/icons-material';
@@ -8,6 +16,10 @@ import {usePathname, useRouter} from 'next/navigation';
 import styles from './basic-layout.module.css';
 import theme from '../core/themes/theme';
 import Header from '../ui/header';
+import Image from 'next/image';
+import {Images} from '../core/libs/images';
+import {MdiQqchat, MdiWechat} from '../ui/components/material-design-icons';
+import Link from 'next/link';
 
 /**
  * basic.layout.tsx
@@ -75,6 +87,47 @@ export default function BasicLayout({children}: any) {
     }
     return null;
   };
+  const Footer = () => {
+    const connects: any[] = [
+      // {icon: <MdiWechat fontSize={24}/>},
+      // {icon: <MdiQqchat fontSize={24}/>},
+    ];
+    return (
+      <footer>
+        <Box sx={{
+          borderTop: 2,
+          paddingTop: '20px',
+          borderColor: 'divider',
+          display: 'flex',
+          flexDirection: {xs: 'column-reverse', md: 'column'},
+          alignItems: 'center',
+        }}>
+          <Link href={'/'}>
+            <Box sx={{display: 'flex', alignItems: 'center'}}>
+              <Image src={Images.undrawDeveloperActivity} width={56} alt={'Web Evo Logo'}/>
+              <Box sx={{ml: 1, textAlign: 'center'}}>
+                <Typography fontWeight={'bold'} fontSize={18} color={'primary'}>WebEvo</Typography>
+                <Typography fontWeight={'bold'}>STUDIO</Typography>
+              </Box>
+            </Box>
+          </Link>
+          <Box sx={{display: 'flex', width: '100%', justifyContent: 'center'}}>
+            {connects.map((it, i) => (
+              <Box key={i} sx={{width: '20%', textAlign: 'center', mb: 1}}>
+                {it.icon}
+              </Box>
+            ))}
+          </Box>
+        </Box>
+        <Box sx={{display: 'flex', flexDirection: 'column', justifyContent: 'center', mt: {xs: 2, md: 3.5}, pb: 3}}>
+          <Typography textAlign={'center'} fontSize={14}>© 2023, Web Evo All Rights Reserved</Typography>
+          <Link href={'/privacy-policy'}>
+            <Typography color={'primary'} textAlign={'center'} fontSize={14}>Privacy Policy</Typography>
+          </Link>
+        </Box>
+      </footer>
+    );
+  };
   return (
     <>
       <ThemeProvider theme={theme}>
@@ -82,6 +135,7 @@ export default function BasicLayout({children}: any) {
         {!isPwa ? <Header /> : null}
         {children}
         <TabBar/>
+        <Footer />
       </ThemeProvider>
     </>
   );

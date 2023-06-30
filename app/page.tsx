@@ -1,5 +1,5 @@
 import React from 'react';
-import Home from '../ui/home';
+import Home from '../ui/pages/home';
 
 /**
  * app/page.tsx

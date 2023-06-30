@@ -196,19 +196,21 @@ const MainSearch = ()=>{
         backgroundColor: "#121212"
     };
     const getTouch = ()=>{
-        if (pathName !== "/contact") {
-            return /*#__PURE__*/ jsx_runtime.jsx(material_.Button, {
+        const isShowing = pathName !== "/contact";
+        return /*#__PURE__*/ jsx_runtime.jsx(material_.Fade, {
+            in: isShowing,
+            children: /*#__PURE__*/ jsx_runtime.jsx(material_.Button, {
                 variant: "outlined",
                 size: "small",
                 sx: {
                     borderRadius: "1rem",
-                    fontSize: "12px"
+                    fontSize: "12px",
+                    visibility: isShowing ? "visible" : "hidden"
                 },
                 onClick: ()=>toContact(),
                 children: "取得联系"
-            });
-        }
-        return /*#__PURE__*/ jsx_runtime.jsx(jsx_runtime.Fragment, {});
+            })
+        });
     };
     return /*#__PURE__*/ (0,jsx_runtime.jsxs)(material_.Box, {
         sx: {

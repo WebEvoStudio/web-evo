@@ -394,7 +394,7 @@ __webpack_require__.r(__webpack_exports__);
         'contact',
         {
         children: ['__PAGE__', {}, {
-          page: [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 423103)), "/Users/cityhunter/Documents/WorkSpace/personal-site/app/contact/page.tsx"],
+          page: [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 879841)), "/Users/cityhunter/Documents/WorkSpace/personal-site/app/contact/page.tsx"],
           
         }]
       },
@@ -437,14 +437,14 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 116919:
+/***/ 856853:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 417892))
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 496039))
 
 /***/ }),
 
-/***/ 417892:
+/***/ 496039:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -633,7 +633,7 @@ var noop_head_default = /*#__PURE__*/__webpack_require__.n(noop_head);
     });
 }
 
-;// CONCATENATED MODULE: ./ui/contact.tsx
+;// CONCATENATED MODULE: ./ui/pages/contact.tsx
 /* __next_internal_client_entry_do_not_use__ default auto */ 
 
 
@@ -985,7 +985,7 @@ var noop_head_default = /*#__PURE__*/__webpack_require__.n(noop_head);
 
 /***/ }),
 
-/***/ 423103:
+/***/ 879841:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -1004,9 +1004,9 @@ var jsx_runtime_ = __webpack_require__(556786);
 var react_shared_subset = __webpack_require__(452970);
 // EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.6_@babel+core@7.22.5_react-dom@18.2.0_react@18.2.0_sass@1.63.3/node_modules/next/dist/build/webpack/loaders/next-flight-loader/module-proxy.js
 var module_proxy = __webpack_require__(506604);
-;// CONCATENATED MODULE: ./ui/contact.tsx
+;// CONCATENATED MODULE: ./ui/pages/contact.tsx
 
-const proxy = (0,module_proxy.createProxy)(String.raw`/Users/cityhunter/Documents/WorkSpace/personal-site/ui/contact.tsx`)
+const proxy = (0,module_proxy.createProxy)(String.raw`/Users/cityhunter/Documents/WorkSpace/personal-site/ui/pages/contact.tsx`)
 
 // Accessing the __esModule property and exporting $$typeof are required here.
 // The __esModule getter forces the proxy target to create the default export
@@ -1041,7 +1041,7 @@ const metadata = {
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [197,854,119,490,118], () => (__webpack_exec__(543938)));
+var __webpack_exports__ = __webpack_require__.X(0, [197,854,119,490,190], () => (__webpack_exec__(543938)));
 module.exports = __webpack_exports__;
 
 })();

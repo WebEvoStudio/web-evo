@@ -1,14 +1,14 @@
-exports.id = 118;
-exports.ids = [118];
+exports.id = 190;
+exports.ids = [190];
 exports.modules = {
 
-/***/ 515344:
+/***/ 267053:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
 Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 552972, 23));
 Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 611925, 23));
-Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 714280, 23));
 Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 723955, 23));
+Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 714280, 23));
 Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 873185, 23))
 
 /***/ }),
@@ -359,19 +359,21 @@ const MainSearch = ()=>{
         backgroundColor: "#121212"
     };
     const getTouch = ()=>{
-        if (pathName !== "/contact") {
-            return /*#__PURE__*/ jsx_runtime_.jsx(node.Button, {
+        const isShowing = pathName !== "/contact";
+        return /*#__PURE__*/ jsx_runtime_.jsx(node.Fade, {
+            in: isShowing,
+            children: /*#__PURE__*/ jsx_runtime_.jsx(node.Button, {
                 variant: "outlined",
                 size: "small",
                 sx: {
                     borderRadius: "1rem",
-                    fontSize: "12px"
+                    fontSize: "12px",
+                    visibility: isShowing ? "visible" : "hidden"
                 },
                 onClick: ()=>toContact(),
                 children: "取得联系"
-            });
-        }
-        return /*#__PURE__*/ jsx_runtime_.jsx(jsx_runtime_.Fragment, {});
+            })
+        });
     };
     return /*#__PURE__*/ (0,jsx_runtime_.jsxs)(node.Box, {
         sx: {
@@ -565,6 +567,9 @@ const MainSearch = ()=>{
 
 
 
+
+
+
 /**
  * basic.layout.tsx
  * @param {any} children
@@ -654,6 +659,105 @@ const MainSearch = ()=>{
         }
         return null;
     };
+    const Footer = ()=>{
+        const connects = [];
+        return /*#__PURE__*/ (0,jsx_runtime_.jsxs)("footer", {
+            children: [
+                /*#__PURE__*/ (0,jsx_runtime_.jsxs)(node.Box, {
+                    sx: {
+                        borderTop: 2,
+                        paddingTop: "20px",
+                        borderColor: "divider",
+                        display: "flex",
+                        flexDirection: {
+                            xs: "column-reverse",
+                            md: "column"
+                        },
+                        alignItems: "center"
+                    },
+                    children: [
+                        /*#__PURE__*/ jsx_runtime_.jsx((link_default()), {
+                            href: "/",
+                            children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)(node.Box, {
+                                sx: {
+                                    display: "flex",
+                                    alignItems: "center"
+                                },
+                                children: [
+                                    /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
+                                        src: libs_images/* Images */.r.undrawDeveloperActivity,
+                                        width: 56,
+                                        alt: "Web Evo Logo"
+                                    }),
+                                    /*#__PURE__*/ (0,jsx_runtime_.jsxs)(node.Box, {
+                                        sx: {
+                                            ml: 1,
+                                            textAlign: "center"
+                                        },
+                                        children: [
+                                            /*#__PURE__*/ jsx_runtime_.jsx(node.Typography, {
+                                                fontWeight: "bold",
+                                                fontSize: 18,
+                                                color: "primary",
+                                                children: "WebEvo"
+                                            }),
+                                            /*#__PURE__*/ jsx_runtime_.jsx(node.Typography, {
+                                                fontWeight: "bold",
+                                                children: "STUDIO"
+                                            })
+                                        ]
+                                    })
+                                ]
+                            })
+                        }),
+                        /*#__PURE__*/ jsx_runtime_.jsx(node.Box, {
+                            sx: {
+                                display: "flex",
+                                width: "100%",
+                                justifyContent: "center"
+                            },
+                            children: connects.map((it, i)=>/*#__PURE__*/ jsx_runtime_.jsx(node.Box, {
+                                    sx: {
+                                        width: "20%",
+                                        textAlign: "center",
+                                        mb: 1
+                                    },
+                                    children: it.icon
+                                }, i))
+                        })
+                    ]
+                }),
+                /*#__PURE__*/ (0,jsx_runtime_.jsxs)(node.Box, {
+                    sx: {
+                        display: "flex",
+                        flexDirection: "column",
+                        justifyContent: "center",
+                        mt: {
+                            xs: 2,
+                            md: 3.5
+                        },
+                        pb: 3
+                    },
+                    children: [
+                        /*#__PURE__*/ jsx_runtime_.jsx(node.Typography, {
+                            textAlign: "center",
+                            fontSize: 14,
+                            children: "\xa9 2023, Web Evo All Rights Reserved"
+                        }),
+                        /*#__PURE__*/ jsx_runtime_.jsx((link_default()), {
+                            href: "/privacy-policy",
+                            children: /*#__PURE__*/ jsx_runtime_.jsx(node.Typography, {
+                                color: "primary",
+                                textAlign: "center",
+                                fontSize: 14,
+                                children: "Privacy Policy"
+                            })
+                        })
+                    ]
+                })
+            ]
+        });
+    };
     return /*#__PURE__*/ jsx_runtime_.jsx(jsx_runtime_.Fragment, {
         children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)(node.ThemeProvider, {
             theme: themes_theme,
@@ -661,7 +765,8 @@ const MainSearch = ()=>{
                 /*#__PURE__*/ jsx_runtime_.jsx(node.CssBaseline, {}),
                 !isPwa ? /*#__PURE__*/ jsx_runtime_.jsx(header, {}) : null,
                 children,
-                /*#__PURE__*/ jsx_runtime_.jsx(TabBar, {})
+                /*#__PURE__*/ jsx_runtime_.jsx(TabBar, {}),
+                /*#__PURE__*/ jsx_runtime_.jsx(Footer, {})
             ]
         })
     });

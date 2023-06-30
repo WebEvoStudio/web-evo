@@ -1,13 +1,13 @@
 'use client';
 import React, {useMemo, useState} from 'react';
 import {Box, Button, Container, Grid, TextField, Typography} from '@mui/material';
-import {Images} from '../core/libs/images';
+import {Images} from '../../core/libs/images';
 import Image from 'next/image';
 import {useSnackbar} from 'notistack';
 import isEmail from 'validator/lib/isEmail';
 import isMobilePhone from 'validator/lib/isMobilePhone';
-import Request from '../core/unit/request';
-import CommonHead from '../components/common-head';
+import Request from '../../core/unit/request';
+import CommonHead from '../../components/common-head';
 
 
 /**

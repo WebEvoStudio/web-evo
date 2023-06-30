@@ -1,8 +1,8 @@
 'use client';
 import React, {useEffect, useState} from 'react';
-import styles from '../styles/hello.module.scss';
+import styles from '../../styles/hello.module.scss';
 import Image from 'next/image';
-import {Images} from '../core/libs/images';
+import {Images} from '../../core/libs/images';
 import {useRouter} from 'next/navigation';
 import {LoadingButton} from '@mui/lab';
 import {
@@ -24,8 +24,8 @@ import {
   East as EastIcon,
   South as SouthIcon,
 } from '@mui/icons-material';
-import Icons from '../core/libs/icons';
-import HomeServices from './home-services';
+import Icons from '../../core/libs/icons';
+import HomeServices from '../home-services';
 
 
 /**
@@ -60,7 +60,7 @@ export default function Home() {
   };
   const toBlog = async () => {
     setLoading(true);
-    await router.push('/blogs');
+    router.push('/blogs');
     setLoading(false);
   };
   const toAbout = async () => {
@@ -73,19 +73,14 @@ export default function Home() {
       </Grid>
     );
   };
-  const HomePiece = ({
-    orders,
-    items,
-    align,
-    poster,
-    title,
-  }: {
+  const HomePiece = (props: {
     orders: number[],
-    items: JSX.Element[],
     align: 'start' | 'end',
     poster: {src: string, alt: string},
-    title: string,
+    title: string | JSX.Element,
+    children: JSX.Element | JSX.Element[],
   }) => {
+    const {orders, align, poster, title, children} = props;
     return (
       <>
         <Grid item xs={12} md={6} sx={{order: {xs: orders[0], md: align === 'start' ? orders[0] : orders[1]}}}>
@@ -93,7 +88,7 @@ export default function Home() {
           <Box className={styles['image']} sx={{display: {xs: 'block', md: 'none'}}}>
             <Image src={poster.src} alt={poster.alt} style={imageStyle}/>
           </Box>
-          {items[0]}
+          {children}
         </Grid>
         <Grid item xs={12} md={6} sx={{order: {xs: orders[1], md: align === 'start' ? orders[1] : orders[0]}}}>
           <Box className={styles['image']} sx={{display: {xs: 'none', md: 'block'}}}>
@@ -110,19 +105,13 @@ export default function Home() {
   return (
     <Container maxWidth={'lg'}>
       <Grid container spacing={2}>
-        <Grid item xs={12} md={6} sx={{order: 1}}>
-          <h1 className={styles['h1']}>Web Evolution 不仅仅是一家软件开发工作室</h1>
-
-          <Box className={styles['image']} sx={{display: {xs: 'block', md: 'none'}}}>
-            <Image
-              alt={'骄傲的编码员'}
-              src={Images.undrawProudCoder}
-              style={imageStyle}
-            />
-          </Box>
-          <Typography variant={'body1'}>
-              我们是一支由创新驱动的团队，我们通过融合最聪明的技术思想和尖端技术来实现不可能的目标。
-          </Typography>
+        <HomePiece
+          align={'start'}
+          orders={[1, 2]}
+          poster={{src: Images.undrawProudCoder, alt: '骄傲的编码员'}}
+          title={'Web Evo - 可信赖的技术合作伙伴'}
+        >
+          <Typography>我们通过加速开发流程，填补您软件项目中的技术空白，帮助您实现更好的结果，并在减少部署时间的同时提供高质量的解决方案。</Typography>
           <Box sx={{mt: 4}}>
             <div onClick={toAbout}>
               <Button
@@ -132,16 +121,29 @@ export default function Home() {
               </Button>
             </div>
           </Box>
-        </Grid>
-        <Grid item xs={12} md={6} sx={{order: 2}}>
-          <Box className={styles['image']} sx={{display: {xs: 'none', md: 'block'}}}>
-            <Image
-              src={Images.undrawProudCoder}
-              alt={'骄傲的编码员'}
-              style={imageStyle}
-            />
-          </Box>
-        </Grid>
+        </HomePiece>
+        {/* <Grid item xs={12} md={6} sx={{order: 1}}>*/}
+        {/* <h1 className={styles['h1']}>Web Evolution 不仅仅是一家软件开发工作室</h1>*/}
+        {/* <Box className={styles['image']} sx={{display: {xs: 'block', md: 'none'}}}>*/}
+        {/*  <Image*/}
+        {/*    alt={'骄傲的编码员'}*/}
+        {/*    src={Images.undrawProudCoder}*/}
+        {/*    style={imageStyle}*/}
+        {/*  />*/}
+        {/* </Box>*/}
+        {/* <Typography variant={'body1'}>*/}
+        {/*    我们是一支由创新驱动的团队，我们通过融合最聪明的技术思想和尖端技术来实现不可能的目标。*/}
+        {/* </Typography>*/}
+        {/* </Grid>*/}
+        {/* <Grid item xs={12} md={6} sx={{order: 2}}>*/}
+        {/*  <Box className={styles['image']} sx={{display: {xs: 'none', md: 'block'}}}>*/}
+        {/*    <Image*/}
+        {/*      src={Images.undrawProudCoder}*/}
+        {/*      alt={'骄傲的编码员'}*/}
+        {/*      style={imageStyle}*/}
+        {/*    />*/}
+        {/*  </Box>*/}
+        {/* </Grid>*/}
         <HomeDivider order={3}/>
         <Grid item xs={12} md={6} sx={{order: {xs: 4, md: 5}}}>
           <div className={styles['h1']}>优先事项一：培养专业技术成长</div>
@@ -324,14 +326,9 @@ export default function Home() {
           orders={[16, 17]}
           poster={{src: Images.undrawServices, alt: '服务'}}
           title={'服务'}
-          items={[
-            <>
-              <HomeServices isDesc={false}/>
-            </>,
-            <>
-            </>,
-          ]}
-        />
+        >
+          <HomeServices isDesc={false} />
+        </HomePiece>
         {/* <HomeDivider order={18}/>*/}
         {/* <HomePiece*/}
         {/*  align={'start'}*/}

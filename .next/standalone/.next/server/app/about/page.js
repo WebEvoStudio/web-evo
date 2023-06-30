@@ -520,7 +520,7 @@ const AboutPage = ()=>{
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [197,854,119,118,71], () => (__webpack_exec__(897334)));
+var __webpack_exports__ = __webpack_require__.X(0, [197,854,119,190,71], () => (__webpack_exec__(897334)));
 module.exports = __webpack_exports__;
 
 })();
