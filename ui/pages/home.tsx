@@ -79,12 +79,13 @@ export default function Home() {
     poster: {src: string, alt: string},
     title: string | JSX.Element,
     children: JSX.Element | JSX.Element[],
+    first?: boolean,
   }) => {
-    const {orders, align, poster, title, children} = props;
+    const {orders, align, poster, title, children, first = false} = props;
     return (
       <>
         <Grid item xs={12} md={6} sx={{order: {xs: orders[0], md: align === 'start' ? orders[0] : orders[1]}}}>
-          <div className={styles['h1']}>{title}</div>
+          <Typography variant={first ? 'h1' : 'h2'} className={styles['h1']}>{title}</Typography>
           <Box className={styles['image']} sx={{display: {xs: 'block', md: 'none'}}}>
             <Image src={poster.src} alt={poster.alt} style={imageStyle}/>
           </Box>
@@ -110,6 +111,7 @@ export default function Home() {
           orders={[1, 2]}
           poster={{src: Images.undrawProudCoder, alt: '骄傲的编码员'}}
           title={'Web Evo - 可信赖的技术合作伙伴'}
+          first={true}
         >
           <Typography>我们通过加速开发流程，填补您软件项目中的技术空白，帮助您实现更好的结果，并在减少部署时间的同时提供高质量的解决方案。</Typography>
           <Box sx={{mt: 4}}>

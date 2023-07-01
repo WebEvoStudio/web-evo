@@ -236,7 +236,7 @@ module.exports = require("next/dist/shared/lib/utils/warn-once.js");
 
 /***/ }),
 
-/***/ 897334:
+/***/ 979527:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -264,30 +264,30 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   staticGenerationBailout: () => (/* reexport safe */ next_dist_client_components_static_generation_bailout__WEBPACK_IMPORTED_MODULE_7__.staticGenerationBailout),
 /* harmony export */   tree: () => (/* binding */ tree)
 /* harmony export */ });
-/* harmony import */ var next_dist_client_components_app_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(746746);
+/* harmony import */ var next_dist_client_components_app_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(587566);
 /* harmony import */ var next_dist_client_components_app_router__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(next_dist_client_components_app_router__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var next_dist_client_components_layout_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(550486);
+/* harmony import */ var next_dist_client_components_layout_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(178245);
 /* harmony import */ var next_dist_client_components_layout_router__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_dist_client_components_layout_router__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var next_dist_client_components_render_from_template_context__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(160707);
+/* harmony import */ var next_dist_client_components_render_from_template_context__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(404871);
 /* harmony import */ var next_dist_client_components_render_from_template_context__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_dist_client_components_render_from_template_context__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var next_dist_client_components_error_boundary__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(564457);
+/* harmony import */ var next_dist_client_components_error_boundary__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(988998);
 /* harmony import */ var next_dist_client_components_error_boundary__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_dist_client_components_error_boundary__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var next_dist_client_components_static_generation_async_storage__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(273863);
+/* harmony import */ var next_dist_client_components_static_generation_async_storage__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(237407);
 /* harmony import */ var next_dist_client_components_static_generation_async_storage__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_dist_client_components_static_generation_async_storage__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var next_dist_client_components_request_async_storage__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(985645);
+/* harmony import */ var next_dist_client_components_request_async_storage__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(346894);
 /* harmony import */ var next_dist_client_components_request_async_storage__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(next_dist_client_components_request_async_storage__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var next_dist_client_components_action_async_storage__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(191303);
+/* harmony import */ var next_dist_client_components_action_async_storage__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(929881);
 /* harmony import */ var next_dist_client_components_action_async_storage__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(next_dist_client_components_action_async_storage__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var next_dist_client_components_static_generation_bailout__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(53030);
+/* harmony import */ var next_dist_client_components_static_generation_bailout__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(831378);
 /* harmony import */ var next_dist_client_components_static_generation_bailout__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(next_dist_client_components_static_generation_bailout__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var next_dist_client_components_static_generation_searchparams_bailout_provider__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(901764);
+/* harmony import */ var next_dist_client_components_static_generation_searchparams_bailout_provider__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(696897);
 /* harmony import */ var next_dist_client_components_static_generation_searchparams_bailout_provider__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(next_dist_client_components_static_generation_searchparams_bailout_provider__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var next_dist_client_components_searchparams_bailout_proxy__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(900986);
+/* harmony import */ var next_dist_client_components_searchparams_bailout_proxy__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(139968);
 /* harmony import */ var next_dist_client_components_searchparams_bailout_proxy__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(next_dist_client_components_searchparams_bailout_proxy__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var next_dist_client_components_hooks_server_context__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(275999);
+/* harmony import */ var next_dist_client_components_hooks_server_context__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(736567);
 /* harmony import */ var next_dist_client_components_hooks_server_context__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(next_dist_client_components_hooks_server_context__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var react_server_dom_webpack_server_edge__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(506201);
-/* harmony import */ var next_dist_server_app_render_rsc_preloads__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(258782);
+/* harmony import */ var react_server_dom_webpack_server_edge__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(253594);
+/* harmony import */ var next_dist_server_app_render_rsc_preloads__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(242012);
 /* harmony import */ var next_dist_server_app_render_rsc_preloads__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(next_dist_server_app_render_rsc_preloads__WEBPACK_IMPORTED_MODULE_12__);
 
     const tree = {
@@ -298,7 +298,7 @@ __webpack_require__.r(__webpack_exports__);
         'about',
         {
         children: ['__PAGE__', {}, {
-          page: [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 535180)), "/Users/cityhunter/Documents/WorkSpace/personal-site/app/about/page.tsx"],
+          page: [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 293791)), "/Users/cityhunter/Documents/WorkSpace/personal-site/app/about/page.tsx"],
           
         }]
       },
@@ -309,7 +309,7 @@ __webpack_require__.r(__webpack_exports__);
       ]
       },
         {
-          'layout': [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 356252)), "/Users/cityhunter/Documents/WorkSpace/personal-site/app/layout.tsx"],
+          'layout': [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 491910)), "/Users/cityhunter/Documents/WorkSpace/personal-site/app/layout.tsx"],
           
         }
       ]
@@ -341,14 +341,14 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 499075:
+/***/ 834217:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 16001))
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 720327))
 
 /***/ }),
 
-/***/ 16001:
+/***/ 720327:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -362,10 +362,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(159035);
 /* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_mui_material__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _components_section__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(367071);
-/* harmony import */ var next_image__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(801806);
+/* harmony import */ var _components_section__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(98156);
+/* harmony import */ var next_image__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(635560);
 /* harmony import */ var next_image__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_image__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _core_libs_images__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(278754);
+/* harmony import */ var _core_libs_images__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(701743);
 /* __next_internal_client_entry_do_not_use__ default auto */ 
 
 
@@ -454,6 +454,7 @@ const About = ()=>{
     return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_5__.Container, {
         "max-width": "lg",
         children: sections.map((it, index)=>/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_section__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .Z, {
+                first: index === 0,
                 title: it.title,
                 desc: it.desc,
                 children: it.children
@@ -465,7 +466,7 @@ const About = ()=>{
 
 /***/ }),
 
-/***/ 535180:
+/***/ 293791:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -480,10 +481,10 @@ __webpack_require__.d(__webpack_exports__, {
 
 // EXTERNAL MODULE: external "next/dist/compiled/react/jsx-runtime"
 var jsx_runtime_ = __webpack_require__(556786);
-// EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.6_@babel+core@7.22.5_react-dom@18.2.0_react@18.2.0_sass@1.63.3/node_modules/next/dist/compiled/react/react.shared-subset.js
-var react_shared_subset = __webpack_require__(452970);
-// EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.6_@babel+core@7.22.5_react-dom@18.2.0_react@18.2.0_sass@1.63.3/node_modules/next/dist/build/webpack/loaders/next-flight-loader/module-proxy.js
-var module_proxy = __webpack_require__(506604);
+// EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.7_@babel+core@7.22.5_react-dom@18.2.0_react@18.2.0_sass@1.63.3/node_modules/next/dist/compiled/react/react.shared-subset.js
+var react_shared_subset = __webpack_require__(278142);
+// EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.7_@babel+core@7.22.5_react-dom@18.2.0_react@18.2.0_sass@1.63.3/node_modules/next/dist/build/webpack/loaders/next-flight-loader/module-proxy.js
+var module_proxy = __webpack_require__(473248);
 ;// CONCATENATED MODULE: ./ui/pages/about.tsx
 
 const proxy = (0,module_proxy.createProxy)(String.raw`/Users/cityhunter/Documents/WorkSpace/personal-site/ui/pages/about.tsx`)
@@ -497,18 +498,36 @@ const __default__ = proxy.default;
 
 
 /* harmony default export */ const about = (__default__);
+// EXTERNAL MODULE: ./core/config/main.config.ts
+var main_config = __webpack_require__(97344);
 ;// CONCATENATED MODULE: ./app/about/page.tsx
 
 
 
+
 const metadata = {
-    title: "Web Evo - 关于我们",
-    description: "我们与客户和同事的专业和友好，我们互相对待，就像我们想要的对待一样。 我们的工作环境强调平等，透明度……和宠物友好的氛围！ 这就是网络进化的全部内容:)"
+    ...main_config/* commonMetadata */.R,
+    title: `${main_config/* commonMetadata */.R.title} - 关于我们`
 };
 const AboutPage = ()=>{
     return /*#__PURE__*/ jsx_runtime_.jsx(about, {});
 };
 /* harmony default export */ const page = (AboutPage);
+
+
+/***/ }),
+
+/***/ 97344:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   R: () => (/* binding */ commonMetadata)
+/* harmony export */ });
+const commonMetadata = {
+    title: "Web Evo",
+    description: "我们与客户和同事的专业和友好，我们互相对待，就像我们想要的对待一样。 我们的工作环境强调平等，透明度……和宠物友好的氛围！ 这就是网络进化的全部内容:)"
+};
 
 
 /***/ })
@@ -520,7 +539,7 @@ const AboutPage = ()=>{
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [197,854,119,118,71], () => (__webpack_exec__(897334)));
+var __webpack_exports__ = __webpack_require__.X(0, [498,835,686,248,250,156], () => (__webpack_exec__(979527)));
 module.exports = __webpack_exports__;
 
 })();

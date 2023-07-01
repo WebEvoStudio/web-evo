@@ -4,7 +4,7 @@ exports.id = 888;
 exports.ids = [888];
 exports.modules = {
 
-/***/ 12741:
+/***/ 841236:
 /***/ ((module) => {
 
 // Exports
@@ -15,7 +15,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 222004:
+/***/ 886960:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -45,37 +45,37 @@ __webpack_require__.d(_app_namespaceObject, {
   "default": () => (_app)
 });
 
-// EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.6_@babel+core@7.22.5_react-dom@18.2.0_react@18.2.0_sass@1.63.3/node_modules/next/dist/server/future/route-modules/pages/module.js
-var pages_module = __webpack_require__(378507);
+// EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.7_@babel+core@7.22.5_react-dom@18.2.0_react@18.2.0_sass@1.63.3/node_modules/next/dist/server/future/route-modules/pages/module.js
+var pages_module = __webpack_require__(725329);
 var module_default = /*#__PURE__*/__webpack_require__.n(pages_module);
-// EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.6_@babel+core@7.22.5_react-dom@18.2.0_react@18.2.0_sass@1.63.3/node_modules/next/dist/build/webpack/loaders/next-route-loader/helpers.js
-var helpers = __webpack_require__(613902);
+// EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.7_@babel+core@7.22.5_react-dom@18.2.0_react@18.2.0_sass@1.63.3/node_modules/next/dist/build/webpack/loaders/next-route-loader/helpers.js
+var helpers = __webpack_require__(769548);
 // EXTERNAL MODULE: ./node_modules/.pnpm/react@18.2.0/node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(511527);
 // EXTERNAL MODULE: external "react"
 var external_react_ = __webpack_require__(616689);
 // EXTERNAL MODULE: ./styles/globals.css
-var globals = __webpack_require__(762220);
+var globals = __webpack_require__(385251);
 // EXTERNAL MODULE: external "@mui/material"
 var material_ = __webpack_require__(965692);
 // EXTERNAL MODULE: external "@mui/icons-material"
 var icons_material_ = __webpack_require__(247915);
-// EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.6_@babel+core@7.22.5_react-dom@18.2.0_react@18.2.0_sass@1.63.3/node_modules/next/navigation.js
-var navigation = __webpack_require__(761519);
+// EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.7_@babel+core@7.22.5_react-dom@18.2.0_react@18.2.0_sass@1.63.3/node_modules/next/navigation.js
+var navigation = __webpack_require__(6724);
 // EXTERNAL MODULE: ./layouts/basic-layout.module.css
-var basic_layout_module = __webpack_require__(12741);
+var basic_layout_module = __webpack_require__(841236);
 var basic_layout_module_default = /*#__PURE__*/__webpack_require__.n(basic_layout_module);
 // EXTERNAL MODULE: ./core/themes/theme.ts
-var theme = __webpack_require__(324706);
+var theme = __webpack_require__(16463);
 // EXTERNAL MODULE: ./ui/header.tsx + 1 modules
-var header = __webpack_require__(160163);
-// EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.6_@babel+core@7.22.5_react-dom@18.2.0_react@18.2.0_sass@1.63.3/node_modules/next/image.js
-var next_image = __webpack_require__(250106);
+var header = __webpack_require__(940410);
+// EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.7_@babel+core@7.22.5_react-dom@18.2.0_react@18.2.0_sass@1.63.3/node_modules/next/image.js
+var next_image = __webpack_require__(658928);
 var image_default = /*#__PURE__*/__webpack_require__.n(next_image);
 // EXTERNAL MODULE: ./core/libs/images.ts
-var libs_images = __webpack_require__(88104);
-// EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.6_@babel+core@7.22.5_react-dom@18.2.0_react@18.2.0_sass@1.63.3/node_modules/next/link.js
-var next_link = __webpack_require__(396223);
+var libs_images = __webpack_require__(849945);
+// EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.7_@babel+core@7.22.5_react-dom@18.2.0_react@18.2.0_sass@1.63.3/node_modules/next/link.js
+var next_link = __webpack_require__(588018);
 var link_default = /*#__PURE__*/__webpack_require__.n(next_link);
 ;// CONCATENATED MODULE: ./layouts/basic.layout.tsx
 /* __next_internal_client_entry_do_not_use__ default auto */ 
@@ -306,16 +306,16 @@ var link_default = /*#__PURE__*/__webpack_require__.n(next_link);
 }
 
 // EXTERNAL MODULE: ./styles/index.scss
-var styles = __webpack_require__(471301);
+var styles = __webpack_require__(734087);
 ;// CONCATENATED MODULE: external "@bradgarropy/next-google-analytics"
 const next_google_analytics_namespaceObject = require("@bradgarropy/next-google-analytics");
 var next_google_analytics_default = /*#__PURE__*/__webpack_require__.n(next_google_analytics_namespaceObject);
 ;// CONCATENATED MODULE: external "@emotion/react"
 const react_namespaceObject = require("@emotion/react");
 // EXTERNAL MODULE: ./core/unit/createEmotionCache.ts
-var createEmotionCache = __webpack_require__(649553);
-// EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.6_@babel+core@7.22.5_react-dom@18.2.0_react@18.2.0_sass@1.63.3/node_modules/next/script.js
-var script = __webpack_require__(608187);
+var createEmotionCache = __webpack_require__(679353);
+// EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.7_@babel+core@7.22.5_react-dom@18.2.0_react@18.2.0_sass@1.63.3/node_modules/next/script.js
+var script = __webpack_require__(69328);
 var script_default = /*#__PURE__*/__webpack_require__.n(script);
 // EXTERNAL MODULE: external "notistack"
 var external_notistack_ = __webpack_require__(373142);
@@ -382,7 +382,7 @@ const clientSideEmotionCache = (0,createEmotionCache/* default */.Z)();
 }
 /* harmony default export */ const _app = (MyApp);
 
-;// CONCATENATED MODULE: ./node_modules/.pnpm/next@13.4.6_@babel+core@7.22.5_react-dom@18.2.0_react@18.2.0_sass@1.63.3/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js?page=%2F_app&absolutePagePath=private-next-pages%2F_app.tsx&preferredRegion=&middlewareConfig=e30%3D!
+;// CONCATENATED MODULE: ./node_modules/.pnpm/next@13.4.7_@babel+core@7.22.5_react-dom@18.2.0_react@18.2.0_sass@1.63.3/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js?page=%2F_app&absolutePagePath=private-next-pages%2F_app.tsx&preferredRegion=&middlewareConfig=e30%3D!
 
         // Next.js Route Loader
         
@@ -417,14 +417,14 @@ const clientSideEmotionCache = (0,createEmotionCache/* default */.Z)();
 
 /***/ }),
 
-/***/ 762220:
+/***/ 385251:
 /***/ (() => {
 
 
 
 /***/ }),
 
-/***/ 471301:
+/***/ 734087:
 /***/ (() => {
 
 
@@ -670,7 +670,7 @@ module.exports = require("react-dom");
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [747,197,795,106,223,519,187,104,163,116], () => (__webpack_exec__(222004)));
+var __webpack_exports__ = __webpack_require__.X(0, [408,498,634,928,18,724,328,945,410,495], () => (__webpack_exec__(886960)));
 module.exports = __webpack_exports__;
 
 })();

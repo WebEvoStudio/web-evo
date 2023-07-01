@@ -26,7 +26,7 @@ const BlogCard = ({blog}: any) => {
           ml: {xs: '-10px', sm: '10px'},
           mb: {xs: '10px', sm: 0},
         }}>
-          <Image alt={''} loader={loader} src={src} layout={'fill'} objectFit={'contain'}/>
+          <Image alt={blog.title} loader={loader} src={src} layout={'fill'} objectFit={'contain'}/>
         </Box>
       );
     }

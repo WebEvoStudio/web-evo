@@ -14,7 +14,7 @@ function BlogsIndex({blogs}: {blogs: any[]}) {
     <Box>
       <Box sx={{backgroundColor: '#303136'}}>
         <Container maxWidth={'md'}>
-          <Section title='博客' desc='我们为开发人员和客户提供的最新消息和案例' backgroundColor='#303136'/>
+          <Section first={true} title='博客' desc='我们为开发人员和客户提供的最新消息和案例' backgroundColor='#303136'/>
         </Container>
       </Box>
       <Container maxWidth={'md'}>

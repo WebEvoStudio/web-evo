@@ -52,7 +52,7 @@ const About = () => {
   return (
     <Container max-width={'lg'}>
       {sections.map((it, index) => (
-        <Section key={index} title={it.title} desc={it.desc}>
+        <Section key={index} first={index === 0} title={it.title} desc={it.desc}>
           {it.children}
         </Section>
       ))}

@@ -33,7 +33,7 @@ module.exports = require("next/dist/compiled/cookie");
 
 /***/ }),
 
-/***/ 80805:
+/***/ 957838:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 // ESM COMPAT FLAG
@@ -57,13 +57,13 @@ __webpack_require__.d(route_namespaceObject, {
   GET: () => (GET)
 });
 
-// EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.6_@babel+core@7.22.5_react-dom@18.2.0_react@18.2.0_sass@1.63.3/node_modules/next/dist/server/node-polyfill-headers.js
-var node_polyfill_headers = __webpack_require__(901991);
-// EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.6_@babel+core@7.22.5_react-dom@18.2.0_react@18.2.0_sass@1.63.3/node_modules/next/dist/server/future/route-modules/app-route/module.js
-var app_route_module = __webpack_require__(328459);
+// EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.7_@babel+core@7.22.5_react-dom@18.2.0_react@18.2.0_sass@1.63.3/node_modules/next/dist/server/node-polyfill-headers.js
+var node_polyfill_headers = __webpack_require__(830865);
+// EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.7_@babel+core@7.22.5_react-dom@18.2.0_react@18.2.0_sass@1.63.3/node_modules/next/dist/server/future/route-modules/app-route/module.js
+var app_route_module = __webpack_require__(894248);
 var module_default = /*#__PURE__*/__webpack_require__.n(app_route_module);
-// EXTERNAL MODULE: ./node_modules/.pnpm/next-sitemap@4.1.3_@next+env@13.4.6_next@13.4.6/node_modules/next-sitemap/dist/esm/ssr/sitemap.js + 2 modules
-var sitemap = __webpack_require__(33285);
+// EXTERNAL MODULE: ./node_modules/.pnpm/next-sitemap@4.1.3_@next+env@13.4.7_next@13.4.7/node_modules/next-sitemap/dist/esm/ssr/sitemap.js + 2 modules
+var sitemap = __webpack_require__(897826);
 ;// CONCATENATED MODULE: ./app/blogs-sitemap.xml/route.ts
 
 /**
@@ -80,7 +80,7 @@ var sitemap = __webpack_require__(33285);
     return (0,sitemap/* getServerSideSitemap */.M)(fields);
 }
 
-;// CONCATENATED MODULE: ./node_modules/.pnpm/next@13.4.6_@babel+core@7.22.5_react-dom@18.2.0_react@18.2.0_sass@1.63.3/node_modules/next/dist/build/webpack/loaders/next-app-loader.js?page=%2Fblogs-sitemap.xml%2Froute&name=app%2Fblogs-sitemap.xml%2Froute&pagePath=private-next-app-dir%2Fblogs-sitemap.xml%2Froute.ts&appDir=%2FUsers%2Fcityhunter%2FDocuments%2FWorkSpace%2Fpersonal-site%2Fapp&appPaths=%2Fblogs-sitemap.xml%2Froute&pageExtensions=tsx&pageExtensions=ts&pageExtensions=jsx&pageExtensions=js&basePath=&assetPrefix=&nextConfigOutput=standalone&preferredRegion=&middlewareConfig=e30%3D!
+;// CONCATENATED MODULE: ./node_modules/.pnpm/next@13.4.7_@babel+core@7.22.5_react-dom@18.2.0_react@18.2.0_sass@1.63.3/node_modules/next/dist/build/webpack/loaders/next-app-loader.js?page=%2Fblogs-sitemap.xml%2Froute&name=app%2Fblogs-sitemap.xml%2Froute&pagePath=private-next-app-dir%2Fblogs-sitemap.xml%2Froute.ts&appDir=%2FUsers%2Fcityhunter%2FDocuments%2FWorkSpace%2Fpersonal-site%2Fapp&appPaths=%2Fblogs-sitemap.xml%2Froute&pageExtensions=tsx&pageExtensions=ts&pageExtensions=jsx&pageExtensions=js&basePath=&assetPrefix=&nextConfigOutput=standalone&preferredRegion=&middlewareConfig=e30%3D!
 
     
 
@@ -118,7 +118,7 @@ var sitemap = __webpack_require__(33285);
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [197,854,153], () => (__webpack_exec__(80805)));
+var __webpack_exports__ = __webpack_require__.X(0, [498,835,197], () => (__webpack_exec__(957838)));
 module.exports = __webpack_exports__;
 
 })();

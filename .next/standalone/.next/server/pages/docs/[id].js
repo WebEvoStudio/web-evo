@@ -5,7 +5,7 @@ exports.id = 823;
 exports.ids = [823];
 exports.modules = {
 
-/***/ 165051:
+/***/ 65968:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 // ESM COMPAT FLAG
@@ -34,11 +34,11 @@ __webpack_require__.d(_id_namespaceObject, {
   "default": () => (_id_)
 });
 
-// EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.6_@babel+core@7.22.5_react-dom@18.2.0_react@18.2.0_sass@1.63.3/node_modules/next/dist/server/future/route-modules/pages/module.js
-var pages_module = __webpack_require__(378507);
+// EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.7_@babel+core@7.22.5_react-dom@18.2.0_react@18.2.0_sass@1.63.3/node_modules/next/dist/server/future/route-modules/pages/module.js
+var pages_module = __webpack_require__(725329);
 var module_default = /*#__PURE__*/__webpack_require__.n(pages_module);
-// EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.6_@babel+core@7.22.5_react-dom@18.2.0_react@18.2.0_sass@1.63.3/node_modules/next/dist/build/webpack/loaders/next-route-loader/helpers.js
-var helpers = __webpack_require__(613902);
+// EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.7_@babel+core@7.22.5_react-dom@18.2.0_react@18.2.0_sass@1.63.3/node_modules/next/dist/build/webpack/loaders/next-route-loader/helpers.js
+var helpers = __webpack_require__(769548);
 // EXTERNAL MODULE: ./node_modules/.pnpm/react@18.2.0/node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(511527);
 // EXTERNAL MODULE: external "react"
@@ -46,7 +46,7 @@ var external_react_ = __webpack_require__(616689);
 // EXTERNAL MODULE: external "@mui/material"
 var material_ = __webpack_require__(965692);
 // EXTERNAL MODULE: ./core/libs/docs.ts
-var docs = __webpack_require__(441823);
+var docs = __webpack_require__(98823);
 ;// CONCATENATED MODULE: ./pages/docs/[id].tsx
 
 
@@ -77,7 +77,7 @@ DocsDetail.getInitialProps = async (ctx)=>{
 };
 /* harmony default export */ const _id_ = (DocsDetail);
 
-;// CONCATENATED MODULE: ./node_modules/.pnpm/next@13.4.6_@babel+core@7.22.5_react-dom@18.2.0_react@18.2.0_sass@1.63.3/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js?page=%2Fdocs%2F%5Bid%5D&absolutePagePath=private-next-pages%2Fdocs%2F%5Bid%5D.tsx&preferredRegion=&middlewareConfig=e30%3D!
+;// CONCATENATED MODULE: ./node_modules/.pnpm/next@13.4.7_@babel+core@7.22.5_react-dom@18.2.0_react@18.2.0_sass@1.63.3/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js?page=%2Fdocs%2F%5Bid%5D&absolutePagePath=private-next-pages%2Fdocs%2F%5Bid%5D.tsx&preferredRegion=&middlewareConfig=e30%3D!
 
         // Next.js Route Loader
         
@@ -147,7 +147,7 @@ module.exports = require("react");
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [747,104,77], () => (__webpack_exec__(165051)));
+var __webpack_exports__ = __webpack_require__.X(0, [408,945,453], () => (__webpack_exec__(65968)));
 module.exports = __webpack_exports__;
 
 })();
