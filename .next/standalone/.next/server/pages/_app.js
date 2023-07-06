@@ -4,18 +4,18 @@ exports.id = 888;
 exports.ids = [888];
 exports.modules = {
 
-/***/ 841236:
+/***/ 429029:
 /***/ ((module) => {
 
 // Exports
 module.exports = {
-	"bottom-button": "basic-layout_bottom-button__GZzI2"
+	"bottom-button": "basic-layout_bottom-button__BEYAT"
 };
 
 
 /***/ }),
 
-/***/ 886960:
+/***/ 424853:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -62,8 +62,8 @@ var material_ = __webpack_require__(965692);
 var icons_material_ = __webpack_require__(247915);
 // EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.7_@babel+core@7.22.5_react-dom@18.2.0_react@18.2.0_sass@1.63.3/node_modules/next/navigation.js
 var navigation = __webpack_require__(6724);
-// EXTERNAL MODULE: ./layouts/basic-layout.module.css
-var basic_layout_module = __webpack_require__(841236);
+// EXTERNAL MODULE: ./ui/layouts/basic-layout.module.css
+var basic_layout_module = __webpack_require__(429029);
 var basic_layout_module_default = /*#__PURE__*/__webpack_require__.n(basic_layout_module);
 // EXTERNAL MODULE: ./core/themes/theme.ts
 var theme = __webpack_require__(16463);
@@ -77,7 +77,7 @@ var libs_images = __webpack_require__(849945);
 // EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.7_@babel+core@7.22.5_react-dom@18.2.0_react@18.2.0_sass@1.63.3/node_modules/next/link.js
 var next_link = __webpack_require__(588018);
 var link_default = /*#__PURE__*/__webpack_require__.n(next_link);
-;// CONCATENATED MODULE: ./layouts/basic.layout.tsx
+;// CONCATENATED MODULE: ./ui/layouts/basic.layout.tsx
 /* __next_internal_client_entry_do_not_use__ default auto */ 
 
 
@@ -670,7 +670,7 @@ module.exports = require("react-dom");
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [408,498,634,928,18,724,328,945,410,495], () => (__webpack_exec__(886960)));
+var __webpack_exports__ = __webpack_require__.X(0, [408,498,634,928,18,724,328,945,410,495], () => (__webpack_exec__(424853)));
 module.exports = __webpack_exports__;
 
 })();

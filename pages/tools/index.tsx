@@ -11,7 +11,7 @@ import JSZip from 'jszip';
 import moment from 'moment';
 import {SnackbarProvider, useSnackbar} from 'notistack';
 import CommonHead from '../../components/common-head';
-import ToolLayout from '../../layouts/tool.layout';
+import ToolLayout from '../../ui/layouts/tool.layout';
 import {Download} from '@mui/icons-material';
 import ObjectUnit from '../../core/unit/object-unit';
 import StringUnit from '../../core/unit/string-unit';

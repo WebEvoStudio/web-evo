@@ -309,7 +309,7 @@ __webpack_require__.r(__webpack_exports__);
       ]
       },
         {
-          'layout': [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 491910)), "/Users/cityhunter/Documents/WorkSpace/personal-site/app/layout.tsx"],
+          'layout': [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 211319)), "/Users/cityhunter/Documents/WorkSpace/personal-site/app/layout.tsx"],
           
         }
       ]
@@ -447,7 +447,7 @@ const commonMetadata = {
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [498,835,686,248,250], () => (__webpack_exec__(472550)));
+var __webpack_exports__ = __webpack_require__.X(0, [498,835,686,889], () => (__webpack_exec__(472550)));
 module.exports = __webpack_exports__;
 
 })();

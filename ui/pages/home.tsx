@@ -85,7 +85,7 @@ export default function Home() {
     return (
       <>
         <Grid item xs={12} md={6} sx={{order: {xs: orders[0], md: align === 'start' ? orders[0] : orders[1]}}}>
-          <Typography variant={first ? 'h1' : 'h2'} className={styles['h1']}>{title}</Typography>
+          <Typography variant={first ? 'h1' : 'h2'} fontSize={24} sx={{my: 2.5}}>{title}</Typography>
           <Box className={styles['image']} sx={{display: {xs: 'block', md: 'none'}}}>
             <Image src={poster.src} alt={poster.alt} style={imageStyle}/>
           </Box>

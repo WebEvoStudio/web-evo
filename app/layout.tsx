@@ -1,6 +1,6 @@
 import React from 'react';
 import {Metadata} from 'next';
-import BasicLayout from '../layouts/basic.layout';
+import BasicLayout from '../ui/layouts/basic.layout';
 import GoogleAnalytics from '@bradgarropy/next-google-analytics';
 import Script from 'next/script';
 import '../styles/globals.css';

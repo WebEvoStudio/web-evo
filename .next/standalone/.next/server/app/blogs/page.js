@@ -309,7 +309,7 @@ __webpack_require__.r(__webpack_exports__);
       ]
       },
         {
-          'layout': [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 491910)), "/Users/cityhunter/Documents/WorkSpace/personal-site/app/layout.tsx"],
+          'layout': [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 211319)), "/Users/cityhunter/Documents/WorkSpace/personal-site/app/layout.tsx"],
           
         }
       ]
@@ -344,7 +344,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ 96945:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 526805))
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 443030))
 
 /***/ }),
 
@@ -445,7 +445,7 @@ Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_re
 
 /***/ }),
 
-/***/ 526805:
+/***/ 443030:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -461,166 +461,114 @@ __webpack_require__.d(__webpack_exports__, {
 var jsx_runtime_ = __webpack_require__(556786);
 // EXTERNAL MODULE: external "next/dist/compiled/react"
 var react_ = __webpack_require__(18038);
-// EXTERNAL MODULE: ./styles/blog.module.scss
-var blog_module = __webpack_require__(276258);
-var blog_module_default = /*#__PURE__*/__webpack_require__.n(blog_module);
 // EXTERNAL MODULE: ./node_modules/.pnpm/@mui+material@5.13.4_@emotion+react@11.11.1_@emotion+styled@11.11.0_@types+react@18.2.9_react-dom@18.2.0_react@18.2.0/node_modules/@mui/material/node/index.js
 var node = __webpack_require__(159035);
+// EXTERNAL MODULE: ./ui/components/section.tsx
+var section = __webpack_require__(98156);
 // EXTERNAL MODULE: ./core/unit/markdown.ts
 var markdown = __webpack_require__(336249);
-// EXTERNAL MODULE: ./node_modules/.pnpm/@mui+icons-material@5.11.16_@mui+material@5.13.4_@types+react@18.2.9_react@18.2.0/node_modules/@mui/icons-material/index.js
-var icons_material = __webpack_require__(144305);
+// EXTERNAL MODULE: ./core/libs/images.ts
+var libs_images = __webpack_require__(701743);
 // EXTERNAL MODULE: ./node_modules/.pnpm/moment@2.29.4/node_modules/moment/moment.js
 var moment = __webpack_require__(901912);
 var moment_default = /*#__PURE__*/__webpack_require__.n(moment);
 // EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.7_@babel+core@7.22.5_react-dom@18.2.0_react@18.2.0_sass@1.63.3/node_modules/next/link.js
 var next_link = __webpack_require__(265514);
 var link_default = /*#__PURE__*/__webpack_require__.n(next_link);
-// EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.7_@babel+core@7.22.5_react-dom@18.2.0_react@18.2.0_sass@1.63.3/node_modules/next/image.js
-var next_image = __webpack_require__(635560);
-var image_default = /*#__PURE__*/__webpack_require__.n(next_image);
-;// CONCATENATED MODULE: ./components/blog-card.tsx
+;// CONCATENATED MODULE: ./ui/components/blog-card.tsx
+/* __next_internal_client_entry_do_not_use__ BlogCard auto */ 
 
 
 
 
 
 
-
-
-
-const BlogCard = ({ blog })=>{
-    const [elevation, setElevation] = (0,react_.useState)(1);
-    const loader = ({ src })=>"https://" + src;
-    const poster = (blog)=>{
-        if (markdown/* default */.Z.getImgUrl(blog.markContent).length) {
-            const url = markdown/* default */.Z.getImgUrl(blog.markContent)[0];
-            const src = url.split("://")[1];
-            return /*#__PURE__*/ jsx_runtime_.jsx(node.Box, {
+const BlogCard = (props)=>{
+    const { blog } = props;
+    const Poster = ({ markContent })=>{
+        if (markdown/* default */.Z.getImgUrl(markContent).length) {
+            const url = markdown/* default */.Z.getImgUrl(markContent)[0];
+            // const src = url.split('://')[1];
+            return /*#__PURE__*/ jsx_runtime_.jsx(node.CardMedia, {
+                component: "img",
+                image: url,
                 sx: {
-                    width: {
-                        xs: "calc(100% + 20px)",
-                        sm: "100px"
-                    },
-                    height: {
-                        xs: "160px",
-                        sm: "100px"
-                    },
-                    position: "relative",
-                    background: "#eee",
-                    borderRadius: "5px",
-                    margin: {
-                        xs: "0 -10px",
-                        sm: 0
-                    },
-                    marginTop: {
-                        xs: "-10px",
-                        sm: 0
-                    },
-                    ml: {
-                        xs: "-10px",
-                        sm: "10px"
-                    },
-                    mb: {
-                        xs: "10px",
-                        sm: 0
-                    }
-                },
-                children: /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
-                    alt: blog.title,
-                    loader: loader,
-                    src: src,
-                    layout: "fill",
-                    objectFit: "contain"
-                })
+                    aspectRatio: "5/3",
+                    objectFit: "cover"
+                }
             });
         }
     };
-    const titleStyle = (0,react_.useMemo)(()=>({
-            color: elevation === 1 ? "#000" : "#00B0FF"
-        }), [
-        elevation
-    ]);
-    return /*#__PURE__*/ jsx_runtime_.jsx((link_default()), {
-        href: `/blogs/${blog["_id"]}`,
-        passHref: true,
-        children: /*#__PURE__*/ jsx_runtime_.jsx(node.Paper, {
-            elevation: elevation,
-            sx: {
-                margin: "10px 0",
-                padding: "0 10px"
-            },
-            onMouseEnter: ()=>setElevation(5),
-            onMouseLeave: ()=>setElevation(1),
-            children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
-                className: (blog_module_default())["blog-item"],
+    return /*#__PURE__*/ jsx_runtime_.jsx(node.Box, {
+        component: "article",
+        sx: {
+            height: "100%"
+        },
+        children: /*#__PURE__*/ jsx_runtime_.jsx((link_default()), {
+            href: `/blogs/${blog["_id"]}`,
+            style: {},
+            children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)(node.Card, {
+                sx: {
+                    my: 0,
+                    p: 2,
+                    height: "100%"
+                },
                 children: [
+                    /*#__PURE__*/ jsx_runtime_.jsx(Poster, {
+                        markContent: blog.markContent
+                    }),
+                    /*#__PURE__*/ jsx_runtime_.jsx(node.Typography, {
+                        variant: "h2",
+                        fontSize: "20px",
+                        sx: {
+                            mt: 2
+                        },
+                        children: blog.title
+                    }),
+                    /*#__PURE__*/ jsx_runtime_.jsx(node.Typography, {
+                        sx: {
+                            mt: 2
+                        },
+                        children: markdown/* default */.Z.intercept(blog.markContent, 155)
+                    }),
                     /*#__PURE__*/ (0,jsx_runtime_.jsxs)(node.Box, {
                         sx: {
-                            flex: 1,
-                            width: {
-                                xs: "100%",
-                                sm: "auto"
-                            }
+                            mt: 2,
+                            display: "flex"
                         },
                         children: [
-                            /*#__PURE__*/ jsx_runtime_.jsx("span", {
-                                className: (blog_module_default())["blog-title"],
-                                style: titleStyle,
-                                children: blog.title
-                            }),
-                            /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                                className: (blog_module_default())["blog-description"],
-                                children: markdown/* default */.Z.intercept(blog.markContent, 155)
+                            /*#__PURE__*/ jsx_runtime_.jsx(node.Avatar, {
+                                src: libs_images/* Images */.r.undrawDeveloperActivity.default.src,
+                                sx: {
+                                    width: 32,
+                                    height: 32
+                                }
                             }),
                             /*#__PURE__*/ (0,jsx_runtime_.jsxs)(node.Box, {
                                 sx: {
-                                    display: "flex",
-                                    justifyContent: {
-                                        xs: "space-between",
-                                        sm: "flex-start"
-                                    }
+                                    ml: 1
                                 },
                                 children: [
-                                    /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
-                                        className: (blog_module_default())["blog-info"],
-                                        children: [
-                                            /*#__PURE__*/ jsx_runtime_.jsx(icons_material/* AccessTime */.Z2A, {
-                                                fontSize: "small"
-                                            }),
-                                            /*#__PURE__*/ jsx_runtime_.jsx("span", {
-                                                children: moment_default()(blog.createTime).format("yyyy-MM-DD")
-                                            })
-                                        ]
+                                    /*#__PURE__*/ jsx_runtime_.jsx(node.Typography, {
+                                        fontSize: 12,
+                                        children: "Web Evo"
                                     }),
-                                    /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
-                                        className: (blog_module_default())["blog-info"],
-                                        children: [
-                                            /*#__PURE__*/ jsx_runtime_.jsx(icons_material/* VisibilityOutlined */.Nww, {
-                                                fontSize: "small"
-                                            }),
-                                            /*#__PURE__*/ jsx_runtime_.jsx("span", {
-                                                children: blog.viewCount
-                                            })
-                                        ]
+                                    /*#__PURE__*/ jsx_runtime_.jsx(node.Typography, {
+                                        fontSize: 12,
+                                        children: moment_default()(blog.createTime).format("yyyy-MM-DD")
                                     })
                                 ]
                             })
                         ]
-                    }),
-                    poster(blog)
+                    })
                 ]
             })
         })
     });
 };
-/* harmony default export */ const blog_card = (BlogCard);
 
-// EXTERNAL MODULE: ./ui/components/section.tsx
-var section = __webpack_require__(98156);
 ;// CONCATENATED MODULE: ./ui/pages/blogs.tsx
 /* __next_internal_client_entry_do_not_use__ default auto */ 
-
 
 
 
@@ -636,7 +584,7 @@ var section = __webpack_require__(98156);
                     backgroundColor: "#303136"
                 },
                 children: /*#__PURE__*/ jsx_runtime_.jsx(node.Container, {
-                    maxWidth: "md",
+                    maxWidth: "lg",
                     children: /*#__PURE__*/ jsx_runtime_.jsx(section/* default */.Z, {
                         first: true,
                         title: "博客",
@@ -646,13 +594,23 @@ var section = __webpack_require__(98156);
                 })
             }),
             /*#__PURE__*/ jsx_runtime_.jsx(node.Container, {
-                maxWidth: "md",
+                maxWidth: "lg",
                 children: /*#__PURE__*/ jsx_runtime_.jsx("div", {
                     children: /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                        children: /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                            className: (blog_module_default())["blog-wrapper"],
-                            children: blogs.map((blog, index)=>/*#__PURE__*/ jsx_runtime_.jsx(blog_card, {
-                                    blog: blog
+                        children: /*#__PURE__*/ jsx_runtime_.jsx(node.Grid, {
+                            container: true,
+                            sx: {
+                                py: 2
+                            },
+                            spacing: 2,
+                            children: blogs.map((blog, index)=>/*#__PURE__*/ jsx_runtime_.jsx(node.Grid, {
+                                    item: true,
+                                    xs: 12,
+                                    sm: 6,
+                                    md: 4,
+                                    children: /*#__PURE__*/ jsx_runtime_.jsx(BlogCard, {
+                                        blog: blog
+                                    }, index)
                                 }, index))
                         })
                     })
@@ -662,23 +620,6 @@ var section = __webpack_require__(98156);
     });
 }
 /* harmony default export */ const blogs = (BlogsIndex);
-
-
-/***/ }),
-
-/***/ 276258:
-/***/ ((module) => {
-
-// Exports
-module.exports = {
-	"blog-title": "blog_blog-title__Gmvl2",
-	"blog-wrapper": "blog_blog-wrapper__0CEwN",
-	"blog-item": "blog_blog-item__OCot5",
-	"blog-description": "blog_blog-description___UyYQ",
-	"blog-detail": "blog_blog-detail__KHx54",
-	"blog-content": "blog_blog-content__2MaPg",
-	"blog-info": "blog_blog-info__X7qiP"
-};
 
 
 /***/ }),
@@ -747,7 +688,7 @@ const BlogsPage = async ()=>{
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [498,835,686,912,248,250,156], () => (__webpack_exec__(869506)));
+var __webpack_exports__ = __webpack_require__.X(0, [498,835,686,912,889,156], () => (__webpack_exec__(869506)));
 module.exports = __webpack_exports__;
 
 })();

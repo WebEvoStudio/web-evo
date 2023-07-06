@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/globals.css';
 import {AppProps} from 'next/app';
-import BasicLayout from '../layouts/basic.layout';
+import BasicLayout from '../ui/layouts/basic.layout';
 import '../styles/index.scss';
 import GoogleAnalytics from '@bradgarropy/next-google-analytics';
 import {CssBaseline, ThemeProvider} from '@mui/material';
