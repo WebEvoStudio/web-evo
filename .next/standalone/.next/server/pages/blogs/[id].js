@@ -4,7 +4,7 @@ exports.id = 268;
 exports.ids = [268];
 exports.modules = {
 
-/***/ 172313:
+/***/ 220138:
 /***/ ((module) => {
 
 // Exports
@@ -21,7 +21,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 467451:
+/***/ 856068:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -61,15 +61,15 @@ var jsx_runtime = __webpack_require__(511527);
 // EXTERNAL MODULE: external "react"
 var external_react_ = __webpack_require__(616689);
 // EXTERNAL MODULE: ./styles/blog.module.scss
-var blog_module = __webpack_require__(172313);
+var blog_module = __webpack_require__(220138);
 var blog_module_default = /*#__PURE__*/__webpack_require__.n(blog_module);
 // EXTERNAL MODULE: ./components/common-head.tsx
-var common_head = __webpack_require__(824375);
+var common_head = __webpack_require__(209851);
 // EXTERNAL MODULE: external "axios"
 var external_axios_ = __webpack_require__(752167);
 var external_axios_default = /*#__PURE__*/__webpack_require__.n(external_axios_);
 // EXTERNAL MODULE: ./core/unit/markdown.ts
-var markdown = __webpack_require__(165445);
+var markdown = __webpack_require__(755689);
 // EXTERNAL MODULE: external "@mui/material"
 var material_ = __webpack_require__(965692);
 // EXTERNAL MODULE: ./node_modules/.pnpm/highlight.js@11.8.0/node_modules/highlight.js/styles/github.css
@@ -283,7 +283,7 @@ module.exports = require("react");
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [408,375,445], () => (__webpack_exec__(467451)));
+var __webpack_exports__ = __webpack_require__.X(0, [408,608,689], () => (__webpack_exec__(856068)));
 module.exports = __webpack_exports__;
 
 })();

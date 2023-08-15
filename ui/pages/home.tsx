@@ -27,7 +27,6 @@ import {
 import Icons from '../../core/libs/icons';
 import HomeServices from '../home-services';
 
-
 /**
  * @class Home
  * @extends React.Component
@@ -46,6 +45,7 @@ export default function Home() {
   const imageStyle = {
     width: '100%',
     height: 'auto',
+    // filter: 'drop-shadow(#f00 80px 0)',
   };
   useEffect(() => {
     router.prefetch('/blogs');
@@ -113,7 +113,7 @@ export default function Home() {
           title={'Web Evo - 可信赖的技术合作伙伴'}
           first={true}
         >
-          <Typography>我们通过加速开发流程，填补您软件项目中的技术空白，帮助您实现更好的结果，并在减少部署时间的同时提供高质量的解决方案。</Typography>
+          <Typography className={''}>我们通过加速开发流程，填补您软件项目中的技术空白，帮助您实现更好的结果，并在减少部署时间的同时提供高质量的解决方案。</Typography>
           <Box sx={{mt: 4}}>
             <div onClick={toAbout}>
               <Button

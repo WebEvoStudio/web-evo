@@ -75,7 +75,13 @@ const Header = () => {
         <Button
           variant={'outlined'}
           size={'small'}
-          sx={{borderRadius: '1rem', fontSize: '12px', visibility: isShowing ? 'visible' : 'hidden'}}
+          sx={{
+            borderRadius: '1rem',
+            fontSize: '12px',
+            visibility: isShowing ? 'visible' : 'hidden',
+            color: 'var(--vp-c-brand)',
+            borderColor: 'var(--vp-c-brand)',
+          }}
           onClick={() => toContact()}
         >取得联系</Button>
       </Fade>

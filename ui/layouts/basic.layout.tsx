@@ -18,8 +18,8 @@ import theme from '../../core/themes/theme';
 import Header from '../header';
 import Image from 'next/image';
 import {Images} from '../../core/libs/images';
-import {MdiQqchat, MdiWechat} from '../components/material-design-icons';
 import Link from 'next/link';
+import '../../styles/rainbow.css';
 
 /**
  * basic.layout.tsx

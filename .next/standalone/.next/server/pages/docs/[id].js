@@ -5,7 +5,7 @@ exports.id = 823;
 exports.ids = [823];
 exports.modules = {
 
-/***/ 65968:
+/***/ 184186:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 // ESM COMPAT FLAG
@@ -46,7 +46,7 @@ var external_react_ = __webpack_require__(616689);
 // EXTERNAL MODULE: external "@mui/material"
 var material_ = __webpack_require__(965692);
 // EXTERNAL MODULE: ./core/libs/docs.ts
-var docs = __webpack_require__(98823);
+var docs = __webpack_require__(460472);
 ;// CONCATENATED MODULE: ./pages/docs/[id].tsx
 
 
@@ -147,7 +147,7 @@ module.exports = require("react");
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [408,945,453], () => (__webpack_exec__(65968)));
+var __webpack_exports__ = __webpack_require__.X(0, [408,810,472], () => (__webpack_exec__(184186)));
 module.exports = __webpack_exports__;
 
 })();

@@ -7,6 +7,7 @@ const withPWA = require('next-pwa')({
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 });
+const unoCSS = require('@unocss/webpack').default;
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -27,6 +28,13 @@ const nextConfig = {
       'developers-center.oss-cn-beijing.aliyuncs.com',
       'angular.io',
     ],
+  },
+  webpack: (config) => {
+    config.cache = false;
+    config.plugins.push(
+        unoCSS(),
+    );
+    return config;
   },
 };
 

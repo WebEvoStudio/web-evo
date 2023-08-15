@@ -2,7 +2,7 @@ exports.id = 928;
 exports.ids = [928];
 exports.modules = {
 
-/***/ 221790:
+/***/ 548240:
 /***/ ((module, exports, __webpack_require__) => {
 
 "use strict";
@@ -19,7 +19,7 @@ Object.defineProperty(exports, "default", ({
 const _interop_require_default = __webpack_require__(150659);
 const _interop_require_wildcard = __webpack_require__(599969);
 const _react = /*#__PURE__*/ _interop_require_wildcard._(__webpack_require__(616689));
-const _head = /*#__PURE__*/ _interop_require_default._(__webpack_require__(497634));
+const _head = /*#__PURE__*/ _interop_require_default._(__webpack_require__(17088));
 const _imageblursvg = __webpack_require__(764486);
 const _imageconfig = __webpack_require__(435843);
 const _imageconfigcontext = __webpack_require__(450744);
@@ -502,7 +502,7 @@ if ((typeof exports.default === "function" || typeof exports.default === "object
 /***/ 658928:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-module.exports = __webpack_require__(221790)
+module.exports = __webpack_require__(548240)
 
 
 /***/ })

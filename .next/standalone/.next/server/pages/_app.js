@@ -4,7 +4,7 @@ exports.id = 888;
 exports.ids = [888];
 exports.modules = {
 
-/***/ 429029:
+/***/ 447556:
 /***/ ((module) => {
 
 // Exports
@@ -15,7 +15,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 424853:
+/***/ 976431:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -63,22 +63,25 @@ var icons_material_ = __webpack_require__(247915);
 // EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.7_@babel+core@7.22.5_react-dom@18.2.0_react@18.2.0_sass@1.63.3/node_modules/next/navigation.js
 var navigation = __webpack_require__(6724);
 // EXTERNAL MODULE: ./ui/layouts/basic-layout.module.css
-var basic_layout_module = __webpack_require__(429029);
+var basic_layout_module = __webpack_require__(447556);
 var basic_layout_module_default = /*#__PURE__*/__webpack_require__.n(basic_layout_module);
 // EXTERNAL MODULE: ./core/themes/theme.ts
-var theme = __webpack_require__(16463);
+var theme = __webpack_require__(627879);
 // EXTERNAL MODULE: ./ui/header.tsx + 1 modules
-var header = __webpack_require__(940410);
+var header = __webpack_require__(373831);
 // EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.7_@babel+core@7.22.5_react-dom@18.2.0_react@18.2.0_sass@1.63.3/node_modules/next/image.js
 var next_image = __webpack_require__(658928);
 var image_default = /*#__PURE__*/__webpack_require__.n(next_image);
 // EXTERNAL MODULE: ./core/libs/images.ts
-var libs_images = __webpack_require__(849945);
+var libs_images = __webpack_require__(409810);
 // EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.7_@babel+core@7.22.5_react-dom@18.2.0_react@18.2.0_sass@1.63.3/node_modules/next/link.js
 var next_link = __webpack_require__(588018);
 var link_default = /*#__PURE__*/__webpack_require__.n(next_link);
+// EXTERNAL MODULE: ./styles/rainbow.css
+var rainbow = __webpack_require__(775034);
 ;// CONCATENATED MODULE: ./ui/layouts/basic.layout.tsx
 /* __next_internal_client_entry_do_not_use__ default auto */ 
+
 
 
 
@@ -313,13 +316,19 @@ var next_google_analytics_default = /*#__PURE__*/__webpack_require__.n(next_goog
 ;// CONCATENATED MODULE: external "@emotion/react"
 const react_namespaceObject = require("@emotion/react");
 // EXTERNAL MODULE: ./core/unit/createEmotionCache.ts
-var createEmotionCache = __webpack_require__(679353);
+var createEmotionCache = __webpack_require__(626390);
 // EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.7_@babel+core@7.22.5_react-dom@18.2.0_react@18.2.0_sass@1.63.3/node_modules/next/script.js
 var script = __webpack_require__(69328);
 var script_default = /*#__PURE__*/__webpack_require__.n(script);
 // EXTERNAL MODULE: external "notistack"
 var external_notistack_ = __webpack_require__(373142);
+// EXTERNAL MODULE: ./node_modules/.pnpm/@unocss+reset@0.55.0/node_modules/@unocss/reset/tailwind.css
+var tailwind = __webpack_require__(387141);
+// EXTERNAL MODULE: ./_virtual_%2F__uno.css
+var _virtual_2F_uno = __webpack_require__(804786);
 ;// CONCATENATED MODULE: ./pages/_app.tsx
+
+
 
 
 
@@ -417,6 +426,13 @@ const clientSideEmotionCache = (0,createEmotionCache/* default */.Z)();
 
 /***/ }),
 
+/***/ 804786:
+/***/ (() => {
+
+
+
+/***/ }),
+
 /***/ 385251:
 /***/ (() => {
 
@@ -425,6 +441,13 @@ const clientSideEmotionCache = (0,createEmotionCache/* default */.Z)();
 /***/ }),
 
 /***/ 734087:
+/***/ (() => {
+
+
+
+/***/ }),
+
+/***/ 775034:
 /***/ (() => {
 
 
@@ -670,7 +693,7 @@ module.exports = require("react-dom");
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [408,498,634,928,18,724,328,945,410,495], () => (__webpack_exec__(424853)));
+var __webpack_exports__ = __webpack_require__.X(0, [408,785,88,928,18,724,710,810,831,691], () => (__webpack_exec__(976431)));
 module.exports = __webpack_exports__;
 
 })();
