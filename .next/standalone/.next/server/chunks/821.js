@@ -43,7 +43,7 @@ const Section = (props)=>{
                     },
                     children: desc
                 }),
-                children
+                children ?? ""
             ]
         })
     });

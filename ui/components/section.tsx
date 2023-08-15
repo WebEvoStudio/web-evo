@@ -6,7 +6,7 @@ const Section = (props: {
   children?: React.ReactNode,
   first?: boolean,
   title?: string,
-  desc?: string,
+  desc?: string | React.ReactNode,
   backgroundColor?: string
 }) => {
   const {
@@ -21,7 +21,7 @@ const Section = (props: {
       <Box sx={{paddingTop: '64px', paddingBottom: '20px', backgroundColor}}>
         <Typography variant={first ? 'h1' : 'h2'} fontSize={32} sx={{marginBottom: '48px'}}>{title}</Typography>
         <Typography variant={'body1'} sx={{mb: '56px'}}>{desc}</Typography>
-        {children}
+        {children??''}
       </Box>
     </section>
   );
