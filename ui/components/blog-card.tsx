@@ -22,6 +22,7 @@ export const BlogCard = (props: {blog: any}) => {
         />
       );
     }
+    return (<Box></Box>);
   };
   return (
     <Box component={'article'} sx={{height: '100%'}}>

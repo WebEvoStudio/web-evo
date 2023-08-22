@@ -36,4 +36,6 @@ export class Images {
   static nestjsLogo = require('../../assets/svgs/nest.js.svg');
   static nuxtJsLogo = require('../../assets/svgs/nuxt.js.svg');
   static nextJsLogo = require('../../assets/images/next.js.png');
+
+  static topleRestaurant = require('../../assets/images/tople-restaurant.png');
 }

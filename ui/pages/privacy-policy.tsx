@@ -2,6 +2,7 @@
 import React from 'react';
 import {Container} from '@mui/material';
 import Section from '../components/section';
+import Link from 'next/link';
 
 export const PrivacyPolicy = () => {
   const siteUrl = 'https://web-evo.bulv.life/';
@@ -11,9 +12,17 @@ export const PrivacyPolicy = () => {
       title: '隐私政策',
       desc: (
         <div>
-          <div>{siteName}.（“我们”，“我们”或“我们的”）操作 {siteUrl} 网站（此处称为“站点”）。</div>
-          {/* eslint-disable-next-line max-len */}
-          <div>此页面在您使用我们的服务以及与该数据相关联的选择时，将向您告知我们有关收集，使用和披露个人数据的政策。 我们使用您的数据来提供和改进网站。 使用本网站，您同意根据本政策收集和使用信息。 除非本隐私政策中另有定义，否则本隐私政策中使用的术语与我们条款和条件中的含义相同，可以从 {siteUrl} 中访问。</div>
+          <div>
+            <span>{siteName}.（“我们”，“我们”或“我们的”）操作 </span>
+            <Link href={siteUrl}>{siteUrl}</Link>
+            <span>网站（此处称为“站点”）。</span>
+          </div>
+          <div>
+            {/* eslint-disable-next-line max-len */}
+            <span>此页面在您使用我们的服务以及与该数据相关联的选择时，将向您告知我们有关收集，使用和披露个人数据的政策。 我们使用您的数据来提供和改进网站。 使用本网站，您同意根据本政策收集和使用信息。 除非本隐私政策中另有定义，否则本隐私政策中使用的术语与我们条款和条件中的含义相同，可以从 </span>
+            <Link href={siteUrl}>{siteUrl}</Link>
+            <span>中访问。</span>
+          </div>
         </div>
       ),
     },

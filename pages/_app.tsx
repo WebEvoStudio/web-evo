@@ -10,8 +10,8 @@ import {CacheProvider, EmotionCache} from '@emotion/react';
 import createEmotionCache from '../core/unit/createEmotionCache';
 import Script from 'next/script';
 import {SnackbarProvider} from 'notistack';
-import '@unocss/reset/tailwind.css';
-import 'uno.css';
+// import '@unocss/reset/tailwind.css';
+// import 'uno.css';
 
 const clientSideEmotionCache = createEmotionCache();
 

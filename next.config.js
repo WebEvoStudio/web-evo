@@ -1,4 +1,5 @@
 const runtimeCaching = require('next-pwa/cache');
+const path = require('path');
 const withPWA = require('next-pwa')({
   dest: 'public',
   disable: process.env.NODE_ENV === 'development',
@@ -10,11 +11,12 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 const unoCSS = require('@unocss/webpack').default;
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  experimental: {},
   reactStrictMode: true,
   output: 'standalone',
-  // sassOptions: {
-  //   includePaths: [path.join(__dirname, 'styles')],
-  // },
+  sassOptions: {
+    includePaths: [path.join(__dirname, 'styles')],
+  },
   env: {
     NEXT_PUBLIC_BASE_URL: process.env.BASE_URL,
     NEXT_PUBLIC_SITE_URL: process.env.SITE_URL,
@@ -37,5 +39,8 @@ const nextConfig = {
     return config;
   },
 };
-
-module.exports = withBundleAnalyzer(withPWA(nextConfig));
+const config = process.env.NODE_ENV === 'development' ? nextConfig : withPWA(nextConfig);
+// module.exports = withBundleAnalyzer(withPWA(nextConfig));
+// module.exports = withPWA(nextConfig);
+// module.exports = nextConfig;
+module.exports = config;
