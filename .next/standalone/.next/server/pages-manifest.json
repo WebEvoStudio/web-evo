@@ -1,0 +1,17 @@
+{
+  "/_error": "pages/_error.js",
+  "/40444": "pages/40444.html",
+  "/blogs/[id]": "pages/blogs/[id].js",
+  "/_app": "pages/_app.js",
+  "/_document": "pages/_document.js",
+  "/blogs/modify/[id]": "pages/blogs/modify/[id].html",
+  "/blogs/publish": "pages/blogs/publish.html",
+  "/courses/[id]": "pages/courses/[id].html",
+  "/courses": "pages/courses.html",
+  "/docs/[id]": "pages/docs/[id].js",
+  "/docs": "pages/docs.html",
+  "/search": "pages/search.html",
+  "/tools": "pages/tools.html",
+  "/portfolio": "pages/portfolio.html",
+  "/404": "pages/404.html"
+}

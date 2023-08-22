@@ -1,0 +1,12 @@
+{
+  "/page": "/",
+  "/services/page": "/services",
+  "/blogs-sitemap.xml/route": "/blogs-sitemap.xml",
+  "/blogs/page": "/blogs",
+  "/about/page": "/about",
+  "/contact/page": "/contact",
+  "/projects/page": "/projects",
+  "/privacy-policy/page": "/privacy-policy",
+  "/tools/markdown-to-pdf/page": "/tools/markdown-to-pdf",
+  "/dashboard/page": "/dashboard"
+}
