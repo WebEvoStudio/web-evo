@@ -313,10 +313,51 @@ const routeModule = new AppPageRouteModule({
 
 /***/ }),
 
+/***/ 18849:
+/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+
+Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 80507, 23));
+Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 61627, 23));
+Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 78202, 23));
+Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 3037, 23));
+Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 52979, 23));
+Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 38200, 23))
+
+/***/ }),
+
 /***/ 97152:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 47935))
+
+/***/ }),
+
+/***/ 58319:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   q: () => (/* binding */ projects)
+/* harmony export */ });
+/* harmony import */ var _core_libs_images__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(21202);
+
+const projects = [
+    {
+        name: "特浦乐餐厅小程序",
+        description: "特浦乐快餐主打“出餐快，吃的香”，坚持用新鲜的食材认真做好每一道菜，让顾客在享受美食的同时也能享受便捷的服务。",
+        headerImg: _core_libs_images__WEBPACK_IMPORTED_MODULE_0__/* .Images */ .r.topleRestaurant,
+        sortServices: [
+            "微信小程序",
+            "前端"
+        ],
+        sortTechnologies: [
+            "uni-app",
+            "vue",
+            "UnoCss"
+        ]
+    }
+];
+
 
 /***/ }),
 
@@ -428,8 +469,7 @@ var projects = __webpack_require__(58319);
     const [loading, setLoading] = (0,react_.useState)(false);
     const technologies = [
         {
-            id: 3,
-            name: "Vue",
+            name: "vue",
             image: libs_images/* Images */.r.vueLogo
         }
     ];
@@ -536,9 +576,13 @@ var projects = __webpack_require__(58319);
     };
     const fontSizes = {
         title: "clamp(1.5rem, 1.29rem + 1.07vw, 2.25rem)",
+        subtitle: "clamp(1.3rem, 1.09rem + 1.07vw, 2.05rem)",
         content: "clamp(1rem, 0.96rem + 0.18vw, 1.125rem)"
     };
     const [current, setCurrent] = (0,react_.useState)(0);
+    const currentProject = (0,react_.useMemo)(()=>projects/* projects */.q.filter((it)=>it.sortTechnologies?.includes(technologies[current].name)).at(0), [
+        current
+    ]);
     /**
    * render the component
    * @return {JSX.Element}
@@ -552,7 +596,7 @@ var projects = __webpack_require__(58319);
                     /*#__PURE__*/ jsx_runtime_.jsx(material_node.Grid, {
                         item: true,
                         xs: 12,
-                        md: 6,
+                        md: 7,
                         children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)(material_node.Card, {
                             elevation: 0,
                             variant: "outlined",
@@ -564,7 +608,14 @@ var projects = __webpack_require__(58319);
                                     subheader: "About Web Evo"
                                 }),
                                 /*#__PURE__*/ jsx_runtime_.jsx(material_node.CardMedia, {
+                                    sx: {
+                                        display: "flex",
+                                        justifyContent: "center"
+                                    },
                                     children: /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
+                                        style: {
+                                            maxWidth: 380
+                                        },
                                         layout: "responsive",
                                         src: libs_images/* Images */.r.undrawProudCoder,
                                         alt: "骄傲的编码员"
@@ -603,7 +654,7 @@ var projects = __webpack_require__(58319);
                     /*#__PURE__*/ jsx_runtime_.jsx(material_node.Grid, {
                         item: true,
                         xs: 12,
-                        md: 6,
+                        md: 5,
                         children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)(material_node.Card, {
                             variant: "outlined",
                             sx: {
@@ -629,8 +680,8 @@ var projects = __webpack_require__(58319);
                                                 label: it.name,
                                                 value: key,
                                                 icon: /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
-                                                    width: 40,
-                                                    height: 40,
+                                                    width: 36.5,
+                                                    height: 36.5,
                                                     src: it.image,
                                                     alt: ""
                                                 }),
@@ -639,11 +690,30 @@ var projects = __webpack_require__(58319);
                                     })
                                 }),
                                 /*#__PURE__*/ jsx_runtime_.jsx(material_node.CardMedia, {
-                                    children: /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
-                                        src: projects/* projects */.q.at(0).headerImg,
-                                        alt: "",
-                                        layout: "responsive"
+                                    children: /*#__PURE__*/ jsx_runtime_.jsx(material_node.CardActionArea, {
+                                        children: /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
+                                            src: currentProject?.headerImg,
+                                            alt: "",
+                                            layout: "responsive"
+                                        })
                                     })
+                                }),
+                                /*#__PURE__*/ (0,jsx_runtime_.jsxs)(material_node.CardContent, {
+                                    children: [
+                                        /*#__PURE__*/ jsx_runtime_.jsx(material_node.Typography, {
+                                            fontSize: fontSizes.subtitle,
+                                            children: currentProject?.name
+                                        }),
+                                        /*#__PURE__*/ jsx_runtime_.jsx(material_node.Typography, {
+                                            sx: {
+                                                whiteSpace: "nowrap",
+                                                overflow: "hidden",
+                                                textOverflow: "ellipsis"
+                                            },
+                                            fontSize: fontSizes.content,
+                                            children: currentProject?.description
+                                        })
+                                    ]
                                 })
                             ]
                         })
@@ -654,9 +724,6 @@ var projects = __webpack_require__(58319);
                 container: true,
                 spacing: 2,
                 children: [
-                    /*#__PURE__*/ jsx_runtime_.jsx(HomeDivider, {
-                        order: 3
-                    }),
                     /*#__PURE__*/ (0,jsx_runtime_.jsxs)(material_node.Grid, {
                         item: true,
                         xs: 12,
@@ -1017,75 +1084,6 @@ var projects = __webpack_require__(58319);
                         })
                     }),
                     /*#__PURE__*/ jsx_runtime_.jsx(HomeDivider, {
-                        order: 12
-                    }),
-                    /*#__PURE__*/ jsx_runtime_.jsx(material_node.Grid, {
-                        item: true,
-                        xs: 12,
-                        md: 6,
-                        sx: {
-                            order: {
-                                xs: 13
-                            }
-                        },
-                        id: "technologies",
-                        children: /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                            className: (hello_module_default()).h1,
-                            children: "技术堆栈"
-                        })
-                    }),
-                    /*#__PURE__*/ (0,jsx_runtime_.jsxs)(material_node.Grid, {
-                        item: true,
-                        xs: 12,
-                        md: 6,
-                        sx: {
-                            order: {
-                                xs: 14
-                            }
-                        },
-                        children: [
-                            /*#__PURE__*/ jsx_runtime_.jsx(material_node.Box, {
-                                sx: {
-                                    display: "flex",
-                                    flexWrap: "wrap",
-                                    justifyContent: "space-around",
-                                    my: 2
-                                },
-                                children: technologies.map((it, index)=>/*#__PURE__*/ (0,jsx_runtime_.jsxs)(material_node.Box, {
-                                        sx: {
-                                            display: "flex",
-                                            flexDirection: "column",
-                                            alignItems: "center",
-                                            width: "30%",
-                                            mb: 1
-                                        },
-                                        children: [
-                                            /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                                                children: /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
-                                                    alt: it.name,
-                                                    src: it.image,
-                                                    width: 50,
-                                                    height: 50
-                                                })
-                                            }),
-                                            /*#__PURE__*/ jsx_runtime_.jsx(material_node.Typography, {
-                                                variant: "body1",
-                                                sx: {
-                                                    overflow: "hidden"
-                                                },
-                                                children: it.name
-                                            })
-                                        ]
-                                    }, index))
-                            }),
-                            /*#__PURE__*/ jsx_runtime_.jsx(material_node.Box, {
-                                sx: {
-                                    mb: 6
-                                }
-                            })
-                        ]
-                    }),
-                    /*#__PURE__*/ jsx_runtime_.jsx(HomeDivider, {
                         order: 15
                     }),
                     /*#__PURE__*/ jsx_runtime_.jsx(HomePiece, {
@@ -1177,7 +1175,7 @@ const __default__ = proxy.default;
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [906,383,88,34,960,868,864], () => (__webpack_exec__(49996)));
+var __webpack_exports__ = __webpack_require__.X(0, [906,383,88,34,960,868], () => (__webpack_exec__(49996)));
 module.exports = __webpack_exports__;
 
 })();

@@ -329,6 +329,35 @@ Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_re
 
 /***/ }),
 
+/***/ 58319:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   q: () => (/* binding */ projects)
+/* harmony export */ });
+/* harmony import */ var _core_libs_images__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(21202);
+
+const projects = [
+    {
+        name: "特浦乐餐厅小程序",
+        description: "特浦乐快餐主打“出餐快，吃的香”，坚持用新鲜的食材认真做好每一道菜，让顾客在享受美食的同时也能享受便捷的服务。",
+        headerImg: _core_libs_images__WEBPACK_IMPORTED_MODULE_0__/* .Images */ .r.topleRestaurant,
+        sortServices: [
+            "微信小程序",
+            "前端"
+        ],
+        sortTechnologies: [
+            "uni-app",
+            "vue",
+            "UnoCss"
+        ]
+    }
+];
+
+
+/***/ }),
+
 /***/ 75910:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -522,7 +551,7 @@ const ProjectsPage = ()=>/*#__PURE__*/ jsx_runtime_.jsx(e0, {});
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [906,383,88,960,6,864], () => (__webpack_exec__(13249)));
+var __webpack_exports__ = __webpack_require__.X(0, [906,383,88,960,295,6], () => (__webpack_exec__(13249)));
 module.exports = __webpack_exports__;
 
 })();

@@ -1,5 +1,5 @@
 'use client';
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useMemo, useState} from 'react';
 import styles from '../../styles/hello.module.scss';
 import Image from 'next/image';
 import {Images} from '../../core/libs/images';
@@ -14,7 +14,7 @@ import {
   Typography,
   List,
   ListItemText,
-  ListItemIcon, Button, Card, CardContent, CardMedia, CardHeader, CardActions, Tabs, Tab,
+  ListItemIcon, Button, Card, CardContent, CardMedia, CardHeader, CardActions, Tabs, Tab, CardActionArea,
 } from '@mui/material';
 import {
   School as SchoolIcon,
@@ -36,7 +36,7 @@ export default function Home() {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
   const technologies: any[] = [
-    {id: 3, name: 'Vue', image: Images.vueLogo},
+    {name: 'vue', image: Images.vueLogo},
     // {id: 1, name: 'Angular', image: Images.angularLogo},
     // {id: 2, name: 'React.js', image: Images.reactLogo},
     // {id: 4, name: 'Nest.js', image: Images.nestjsLogo},
@@ -102,9 +102,11 @@ export default function Home() {
   };
   const fontSizes = {
     title: 'clamp(1.5rem, 1.29rem + 1.07vw, 2.25rem)',
+    subtitle: 'clamp(1.3rem, 1.09rem + 1.07vw, 2.05rem)',
     content: 'clamp(1rem, 0.96rem + 0.18vw, 1.125rem)',
   };
   const [current, setCurrent] = useState(0);
+  const currentProject = useMemo(() => projects.filter((it) => it.sortTechnologies?.includes(technologies[current].name)).at(0), [current]);
   /**
    * render the component
    * @return {JSX.Element}
@@ -112,11 +114,11 @@ export default function Home() {
   return (
     <Container maxWidth={'lg'}>
       <Grid container spacing={3}>
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} md={7}>
           <Card elevation={0} variant={'outlined'} sx={{mt: 2}}>
             <CardHeader subheader={'About Web Evo'}></CardHeader>
-            <CardMedia>
-              <Image layout={'responsive'} src={Images.undrawProudCoder} alt={'骄傲的编码员'}></Image>
+            <CardMedia sx={{display: 'flex', justifyContent: 'center'}}>
+              <Image style={{maxWidth: 380}} layout={'responsive'} src={Images.undrawProudCoder} alt={'骄傲的编码员'}></Image>
             </CardMedia>
             <CardContent>
               <Typography component={'h1'} fontSize={fontSizes.title}>
@@ -138,115 +140,39 @@ export default function Home() {
             </CardActions>
           </Card>
         </Grid>
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} md={5}>
           <Card variant={'outlined'} sx={{mt: 2, pb: 0}}>
             <CardHeader subheader={'技术堆栈'}></CardHeader>
             <CardActions sx={{p: 0}}>
-              {/* <Box sx={{display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around'}}>*/}
-              {/*  {technologies.map((it, index) => (*/}
-              {/*    <Box*/}
-              {/*      key={index}*/}
-              {/*      sx={{*/}
-              {/*        display: 'flex',*/}
-              {/*        flexDirection: 'column',*/}
-              {/*        alignItems: 'center',*/}
-              {/*        width: '30%',*/}
-              {/*        mb: 1,*/}
-              {/*      }}>*/}
-              {/*      <div>*/}
-              {/*        <Image alt={it.name} src={it.image} width={50} height={50}></Image>*/}
-              {/*      </div>*/}
-              {/*      <Typography variant={'body1'} sx={{overflow: 'hidden'}}>{it.name}</Typography>*/}
-              {/*    </Box>*/}
-              {/*  ))}*/}
-              {/* </Box>*/}
               <Tabs value={current} sx={{pa: 0, p: 0, padding: 0}}>
                 {technologies.map((it, key) => (
                   <Tab
                     key={key}
                     label={it.name}
                     value={key}
-                    icon={<Image width={40} height={40} src={it.image} alt={''}></Image>}
+                    icon={<Image width={36.5} height={36.5} src={it.image} alt={''}></Image>}
                     onClick={() => setCurrent(key)}
                   ></Tab>
                 ))}
               </Tabs>
             </CardActions>
             <CardMedia>
-              <Image src={projects.at(0)!.headerImg!} alt={''} layout={'responsive'}></Image>
+              <CardActionArea>
+                <Image
+                    src={currentProject?.headerImg!}
+                    alt={''} layout={'responsive'}
+                ></Image>
+              </CardActionArea>
             </CardMedia>
-            {/* <CardContent></CardContent>*/}
+             <CardContent>
+               <Typography fontSize={fontSizes.subtitle}>{currentProject?.name}</Typography>
+               <Typography sx={{whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis'}} fontSize={fontSizes.content}>{currentProject?.description}</Typography>
+             </CardContent>
           </Card>
         </Grid>
       </Grid>
 
-      {/* <Section*/}
-      {/*  title={'技术堆栈'}*/}
-      {/*  desc={*/}
-      {/*    <Box sx={{display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around', my: 2}}>*/}
-      {/*      {technologies.map((it, index) => (*/}
-      {/*        <Box*/}
-      {/*          key={index}*/}
-      {/*          sx={{*/}
-      {/*            display: 'flex',*/}
-      {/*            flexDirection: 'column',*/}
-      {/*            alignItems: 'center',*/}
-      {/*            width: '30%',*/}
-      {/*            mb: 1,*/}
-      {/*          }}>*/}
-      {/*          <div>*/}
-      {/*            <Image alt={it.name} src={it.image} width={50} height={50}></Image>*/}
-      {/*          </div>*/}
-      {/*          <Typography variant={'body1'} sx={{overflow: 'hidden'}}>{it.name}</Typography>*/}
-      {/*        </Box>*/}
-      {/*      ))}*/}
-      {/*    </Box>*/}
-      {/*  }>*/}
-      {/*  <ProjectCard project={projects.at(0)!}></ProjectCard>*/}
-      {/* </Section>*/}
-
       <Grid container spacing={2}>
-        {/* <HomePiece*/}
-        {/*  align={'start'}*/}
-        {/*  orders={[1, 2]}*/}
-        {/*  poster={{src: Images.undrawProudCoder, alt: '骄傲的编码员'}}*/}
-        {/*  title={'Web Evo - 可信赖的技术合作伙伴'}*/}
-        {/*  first={true}*/}
-        {/* >*/}
-        {/*  <Typography className={''}>我们通过加速开发流程，填补您软件项目中的技术空白，帮助您实现更好的结果，并在减少部署时间的同时提供高质量的解决方案。</Typography>*/}
-        {/*  <Box sx={{mt: 4}}>*/}
-        {/*    <div onClick={toAbout}>*/}
-        {/*      <Button*/}
-        {/*        sx={{color: '#fff', width: '100%', borderRadius: '2rem'}}*/}
-        {/*        color={'primary'} variant="contained">*/}
-        {/*        <span>了解更多信息</span>*/}
-        {/*      </Button>*/}
-        {/*    </div>*/}
-        {/*  </Box>*/}
-        {/* </HomePiece>*/}
-        {/* <Grid item xs={12} md={6} sx={{order: 1}}>*/}
-        {/* <h1 className={styles['h1']}>Web Evolution 不仅仅是一家软件开发工作室</h1>*/}
-        {/* <Box className={styles['image']} sx={{display: {xs: 'block', md: 'none'}}}>*/}
-        {/*  <Image*/}
-        {/*    alt={'骄傲的编码员'}*/}
-        {/*    src={Images.undrawProudCoder}*/}
-        {/*    style={imageStyle}*/}
-        {/*  />*/}
-        {/* </Box>*/}
-        {/* <Typography variant={'body1'}>*/}
-        {/*    我们是一支由创新驱动的团队，我们通过融合最聪明的技术思想和尖端技术来实现不可能的目标。*/}
-        {/* </Typography>*/}
-        {/* </Grid>*/}
-        {/* <Grid item xs={12} md={6} sx={{order: 2}}>*/}
-        {/*  <Box className={styles['image']} sx={{display: {xs: 'none', md: 'block'}}}>*/}
-        {/*    <Image*/}
-        {/*      src={Images.undrawProudCoder}*/}
-        {/*      alt={'骄傲的编码员'}*/}
-        {/*      style={imageStyle}*/}
-        {/*    />*/}
-        {/*  </Box>*/}
-        {/* </Grid>*/}
-        <HomeDivider order={3}/>
         <Grid item xs={12} md={6} sx={{order: {xs: 4, md: 5}}}>
           <div className={styles['h1']}>优先事项一：培养专业技术成长</div>
           <Box className={styles['image']} sx={{display: {xs: 'block', md: 'none'}}}>
@@ -396,31 +322,6 @@ export default function Home() {
               style={imageStyle}
             />
           </Box>
-        </Grid>
-        <HomeDivider order={12}/>
-        <Grid item xs={12} md={6} sx={{order: {xs: 13}}} id={'technologies'}>
-          <div className={styles['h1']}>技术堆栈</div>
-        </Grid>
-        <Grid item xs={12} md={6} sx={{order: {xs: 14}}}>
-          <Box sx={{display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around', my: 2}}>
-            {technologies.map((it, index) => (
-              <Box
-                key={index}
-                sx={{
-                  display: 'flex',
-                  flexDirection: 'column',
-                  alignItems: 'center',
-                  width: '30%',
-                  mb: 1,
-                }}>
-                <div>
-                  <Image alt={it.name} src={it.image} width={50} height={50}></Image>
-                </div>
-                <Typography variant={'body1'} sx={{overflow: 'hidden'}}>{it.name}</Typography>
-              </Box>
-            ))}
-          </Box>
-          <Box sx={{mb: 6}}/>
         </Grid>
         <HomeDivider order={15}/>
         <HomePiece
