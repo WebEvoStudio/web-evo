@@ -14,7 +14,7 @@ import {
   Typography,
   List,
   ListItemText,
-  ListItemIcon, Button,
+  ListItemIcon, Button, Card, CardContent, CardMedia, CardHeader, CardActions, Tabs, Tab,
 } from '@mui/material';
 import {
   School as SchoolIcon,
@@ -26,6 +26,7 @@ import {
 } from '@mui/icons-material';
 import Icons from '../../core/libs/icons';
 import HomeServices from '../home-services';
+import {projects} from '../../data/projects';
 
 /**
  * @class Home
@@ -35,12 +36,12 @@ export default function Home() {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
   const technologies: any[] = [
-    {id: 1, name: 'Angular', image: Images.angularLogo},
-    {id: 2, name: 'React.js', image: Images.reactLogo},
     {id: 3, name: 'Vue', image: Images.vueLogo},
-    {id: 4, name: 'Nest.js', image: Images.nestjsLogo},
-    {id: 5, name: 'Nuxt.js', image: Images.nuxtJsLogo},
-    {id: 6, name: 'Next.js', image: Images.nextJsLogo},
+    // {id: 1, name: 'Angular', image: Images.angularLogo},
+    // {id: 2, name: 'React.js', image: Images.reactLogo},
+    // {id: 4, name: 'Nest.js', image: Images.nestjsLogo},
+    // {id: 5, name: 'Nuxt.js', image: Images.nuxtJsLogo},
+    // {id: 6, name: 'Next.js', image: Images.nextJsLogo},
   ];
   const imageStyle = {
     width: '100%',
@@ -99,31 +100,130 @@ export default function Home() {
       </>
     );
   };
+  const fontSizes = {
+    title: 'clamp(1.5rem, 1.29rem + 1.07vw, 2.25rem)',
+    content: 'clamp(1rem, 0.96rem + 0.18vw, 1.125rem)',
+  };
+  const [current, setCurrent] = useState(0);
   /**
    * render the component
    * @return {JSX.Element}
    */
   return (
     <Container maxWidth={'lg'}>
-      <Grid container spacing={2}>
-        <HomePiece
-          align={'start'}
-          orders={[1, 2]}
-          poster={{src: Images.undrawProudCoder, alt: '骄傲的编码员'}}
-          title={'Web Evo - 可信赖的技术合作伙伴'}
-          first={true}
-        >
-          <Typography className={''}>我们通过加速开发流程，填补您软件项目中的技术空白，帮助您实现更好的结果，并在减少部署时间的同时提供高质量的解决方案。</Typography>
-          <Box sx={{mt: 4}}>
-            <div onClick={toAbout}>
+      <Grid container spacing={3}>
+        <Grid item xs={12} md={6}>
+          <Card elevation={0} variant={'outlined'} sx={{mt: 2}}>
+            <CardHeader subheader={'About Web Evo'}></CardHeader>
+            <CardMedia>
+              <Image layout={'responsive'} src={Images.undrawProudCoder} alt={'骄傲的编码员'}></Image>
+            </CardMedia>
+            <CardContent>
+              <Typography component={'h1'} fontSize={fontSizes.title}>
+                Web Evo - 可信赖的技术合作伙伴
+              </Typography>
+              <Typography fontSize={fontSizes.content}>
+                我们通过加速开发流程，填补您软件项目中的技术空白，帮助您实现更好的结果，并在减少部署时间的同时提供高质量的解决方案。
+              </Typography>
+            </CardContent>
+            <CardActions>
               <Button
-                sx={{color: '#fff', width: '100%', borderRadius: '2rem'}}
-                color={'primary'} variant="contained">
+                size={'large'}
+                sx={{width: '100%'}}
+                color={'primary'} variant="contained"
+                onClick={toAbout}
+              >
                 <span>了解更多信息</span>
               </Button>
-            </div>
-          </Box>
-        </HomePiece>
+            </CardActions>
+          </Card>
+        </Grid>
+        <Grid item xs={12} md={6}>
+          <Card variant={'outlined'} sx={{mt: 2, pb: 0}}>
+            <CardHeader subheader={'技术堆栈'}></CardHeader>
+            <CardActions sx={{p: 0}}>
+              {/* <Box sx={{display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around'}}>*/}
+              {/*  {technologies.map((it, index) => (*/}
+              {/*    <Box*/}
+              {/*      key={index}*/}
+              {/*      sx={{*/}
+              {/*        display: 'flex',*/}
+              {/*        flexDirection: 'column',*/}
+              {/*        alignItems: 'center',*/}
+              {/*        width: '30%',*/}
+              {/*        mb: 1,*/}
+              {/*      }}>*/}
+              {/*      <div>*/}
+              {/*        <Image alt={it.name} src={it.image} width={50} height={50}></Image>*/}
+              {/*      </div>*/}
+              {/*      <Typography variant={'body1'} sx={{overflow: 'hidden'}}>{it.name}</Typography>*/}
+              {/*    </Box>*/}
+              {/*  ))}*/}
+              {/* </Box>*/}
+              <Tabs value={current} sx={{pa: 0, p: 0, padding: 0}}>
+                {technologies.map((it, key) => (
+                  <Tab
+                    key={key}
+                    label={it.name}
+                    value={key}
+                    icon={<Image width={40} height={40} src={it.image} alt={''}></Image>}
+                    onClick={() => setCurrent(key)}
+                  ></Tab>
+                ))}
+              </Tabs>
+            </CardActions>
+            <CardMedia>
+              <Image src={projects.at(0)!.headerImg!} alt={''} layout={'responsive'}></Image>
+            </CardMedia>
+            {/* <CardContent></CardContent>*/}
+          </Card>
+        </Grid>
+      </Grid>
+
+      {/* <Section*/}
+      {/*  title={'技术堆栈'}*/}
+      {/*  desc={*/}
+      {/*    <Box sx={{display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around', my: 2}}>*/}
+      {/*      {technologies.map((it, index) => (*/}
+      {/*        <Box*/}
+      {/*          key={index}*/}
+      {/*          sx={{*/}
+      {/*            display: 'flex',*/}
+      {/*            flexDirection: 'column',*/}
+      {/*            alignItems: 'center',*/}
+      {/*            width: '30%',*/}
+      {/*            mb: 1,*/}
+      {/*          }}>*/}
+      {/*          <div>*/}
+      {/*            <Image alt={it.name} src={it.image} width={50} height={50}></Image>*/}
+      {/*          </div>*/}
+      {/*          <Typography variant={'body1'} sx={{overflow: 'hidden'}}>{it.name}</Typography>*/}
+      {/*        </Box>*/}
+      {/*      ))}*/}
+      {/*    </Box>*/}
+      {/*  }>*/}
+      {/*  <ProjectCard project={projects.at(0)!}></ProjectCard>*/}
+      {/* </Section>*/}
+
+      <Grid container spacing={2}>
+        {/* <HomePiece*/}
+        {/*  align={'start'}*/}
+        {/*  orders={[1, 2]}*/}
+        {/*  poster={{src: Images.undrawProudCoder, alt: '骄傲的编码员'}}*/}
+        {/*  title={'Web Evo - 可信赖的技术合作伙伴'}*/}
+        {/*  first={true}*/}
+        {/* >*/}
+        {/*  <Typography className={''}>我们通过加速开发流程，填补您软件项目中的技术空白，帮助您实现更好的结果，并在减少部署时间的同时提供高质量的解决方案。</Typography>*/}
+        {/*  <Box sx={{mt: 4}}>*/}
+        {/*    <div onClick={toAbout}>*/}
+        {/*      <Button*/}
+        {/*        sx={{color: '#fff', width: '100%', borderRadius: '2rem'}}*/}
+        {/*        color={'primary'} variant="contained">*/}
+        {/*        <span>了解更多信息</span>*/}
+        {/*      </Button>*/}
+        {/*    </div>*/}
+        {/*  </Box>*/}
+        {/* </HomePiece>*/}
         {/* <Grid item xs={12} md={6} sx={{order: 1}}>*/}
         {/* <h1 className={styles['h1']}>Web Evolution 不仅仅是一家软件开发工作室</h1>*/}
         {/* <Box className={styles['image']} sx={{display: {xs: 'block', md: 'none'}}}>*/}

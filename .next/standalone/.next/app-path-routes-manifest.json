@@ -1,12 +1,12 @@
 {
   "/page": "/",
   "/services/page": "/services",
+  "/about/page": "/about",
+  "/privacy-policy/page": "/privacy-policy",
   "/blogs-sitemap.xml/route": "/blogs-sitemap.xml",
   "/blogs/page": "/blogs",
-  "/about/page": "/about",
-  "/contact/page": "/contact",
   "/projects/page": "/projects",
-  "/privacy-policy/page": "/privacy-policy",
+  "/contact/page": "/contact",
   "/tools/markdown-to-pdf/page": "/tools/markdown-to-pdf",
   "/dashboard/page": "/dashboard"
 }

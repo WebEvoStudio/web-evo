@@ -325,106 +325,108 @@ const routeModule = new AppPageRouteModule({
 /***/ 19814:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 92853))
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 75910))
 
 /***/ }),
 
-/***/ 92853:
+/***/ 75910:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
+// ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   Projects: () => (/* binding */ Projects)
-/* harmony export */ });
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(56786);
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(18038);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(64155);
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_mui_material__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _components_section__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(47006);
-/* harmony import */ var _core_libs_images__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(21202);
-/* harmony import */ var next_image__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(23097);
-/* harmony import */ var next_image__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_image__WEBPACK_IMPORTED_MODULE_4__);
-/* __next_internal_client_entry_do_not_use__ Projects auto */ 
 
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  Projects: () => (/* binding */ Projects)
+});
+
+// EXTERNAL MODULE: external "next/dist/compiled/react/jsx-runtime"
+var jsx_runtime_ = __webpack_require__(56786);
+// EXTERNAL MODULE: external "next/dist/compiled/react"
+var react_ = __webpack_require__(18038);
+// EXTERNAL MODULE: ./node_modules/.pnpm/@mui+material@5.13.4_@emotion+react@11.11.1_@emotion+styled@11.11.0_@types+react@18.2.9_react-dom@18.2.0_react@18.2.0/node_modules/@mui/material/node/index.js
+var node = __webpack_require__(64155);
+// EXTERNAL MODULE: ./ui/components/section.tsx
+var section = __webpack_require__(47006);
+// EXTERNAL MODULE: ./core/libs/images.ts
+var libs_images = __webpack_require__(21202);
+// EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.19_@babel+core@7.22.5_react-dom@18.2.0_react@18.2.0_sass@1.63.3/node_modules/next/image.js
+var next_image = __webpack_require__(23097);
+var image_default = /*#__PURE__*/__webpack_require__.n(next_image);
+;// CONCATENATED MODULE: ./ui/components/project-card.tsx
 
 
 
 
 class Project {
 }
-const Projects = ()=>{
-    console.info(_core_libs_images__WEBPACK_IMPORTED_MODULE_3__/* .Images */ .r.topleRestaurant);
-    const projects = [
-        {
-            name: "特浦乐餐厅小程序",
-            headerImg: _core_libs_images__WEBPACK_IMPORTED_MODULE_3__/* .Images */ .r.topleRestaurant,
-            sortServices: [
-                "微信小程序",
-                "前端"
-            ],
-            sortTechnologies: [
-                "uni-app",
-                "vue",
-                "UnoCss"
-            ]
-        }
-    ];
-    const ProductCard = ({ project })=>{
-        return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_5__.Card, {
-            children: [
-                /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_5__.CardActionArea, {
-                    children: [
-                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_5__.CardMedia, {
-                            children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_image__WEBPACK_IMPORTED_MODULE_4___default()), {
-                                src: project.headerImg,
-                                alt: "",
-                                layout: "responsive"
-                            })
-                        }),
-                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_5__.CardContent, {
-                            children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_5__.Typography, {
-                                children: project.name
-                            })
+const ProjectCard = ({ project })=>{
+    return /*#__PURE__*/ (0,jsx_runtime_.jsxs)(node.Card, {
+        children: [
+            /*#__PURE__*/ (0,jsx_runtime_.jsxs)(node.CardActionArea, {
+                children: [
+                    /*#__PURE__*/ jsx_runtime_.jsx(node.CardMedia, {
+                        children: /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
+                            src: project.headerImg,
+                            alt: "",
+                            layout: "responsive"
                         })
-                    ]
-                }),
-                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_5__.CardActions, {
-                    children: project.sortServices?.map((it, key)=>/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_5__.Chip, {
-                            variant: "outlined",
-                            label: it
-                        }, key))
-                })
-            ]
-        });
-    };
+                    }),
+                    /*#__PURE__*/ jsx_runtime_.jsx(node.CardContent, {
+                        children: /*#__PURE__*/ jsx_runtime_.jsx(node.Typography, {
+                            children: project.name
+                        })
+                    })
+                ]
+            }),
+            /*#__PURE__*/ jsx_runtime_.jsx(node.CardActions, {
+                children: project.sortServices?.map((it, key)=>/*#__PURE__*/ jsx_runtime_.jsx(node.Chip, {
+                        variant: "outlined",
+                        label: it
+                    }, key))
+            })
+        ]
+    });
+};
+
+// EXTERNAL MODULE: ./data/projects.ts
+var projects = __webpack_require__(58319);
+;// CONCATENATED MODULE: ./ui/pages/projects.tsx
+/* __next_internal_client_entry_do_not_use__ Projects auto */ 
+
+
+
+
+
+
+const Projects = ()=>{
+    console.info(libs_images/* Images */.r.topleRestaurant);
     const Tags = ()=>{
-        return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+        return /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
             children: [
-                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_5__.Chip, {
+                /*#__PURE__*/ jsx_runtime_.jsx(node.Chip, {
                     variant: "outlined",
                     label: "所有的",
                     sx: {
                         mx: .5
                     }
                 }),
-                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_5__.Chip, {
+                /*#__PURE__*/ jsx_runtime_.jsx(node.Chip, {
                     variant: "outlined",
                     label: "web",
                     sx: {
                         mx: .5
                     }
                 }),
-                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_5__.Chip, {
+                /*#__PURE__*/ jsx_runtime_.jsx(node.Chip, {
                     variant: "outlined",
                     label: "mobile",
                     sx: {
                         mx: .5
                     }
                 }),
-                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_5__.Chip, {
+                /*#__PURE__*/ jsx_runtime_.jsx(node.Chip, {
                     variant: "outlined",
                     label: "react",
                     sx: {
@@ -434,12 +436,12 @@ const Projects = ()=>{
             ]
         });
     };
-    return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_5__.Container, {
+    return /*#__PURE__*/ jsx_runtime_.jsx(node.Container, {
         maxWidth: "lg",
-        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_section__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .Z, {
+        children: /*#__PURE__*/ jsx_runtime_.jsx(section/* default */.Z, {
             title: "Projects",
-            desc: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(Tags, {}),
-            children: projects.map((it, key)=>/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(ProductCard, {
+            desc: /*#__PURE__*/ jsx_runtime_.jsx(Tags, {}),
+            children: projects/* projects */.q.map((it, key)=>/*#__PURE__*/ jsx_runtime_.jsx(ProjectCard, {
                     project: it
                 }, key))
         })
@@ -520,7 +522,7 @@ const ProjectsPage = ()=>/*#__PURE__*/ jsx_runtime_.jsx(e0, {});
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [906,383,88,960,503,6], () => (__webpack_exec__(13249)));
+var __webpack_exports__ = __webpack_require__.X(0, [906,383,88,960,6,864], () => (__webpack_exec__(13249)));
 module.exports = __webpack_exports__;
 
 })();
