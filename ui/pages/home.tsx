@@ -1,8 +1,8 @@
 'use client';
-import React, {useEffect, useMemo, useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import styles from '../../styles/hello.module.scss';
 import Image from 'next/image';
-import {Images} from '../../core/libs/images';
+import {Images, uniAppLogo} from '../../core/libs/images';
 import {useRouter} from 'next/navigation';
 import {LoadingButton} from '@mui/lab';
 import {
@@ -27,6 +27,7 @@ import {
 import Icons from '../../core/libs/icons';
 import HomeServices from '../home-services';
 import {projects} from '../../data/projects';
+import {Project} from '../components/project-card';
 
 /**
  * @class Home
@@ -37,6 +38,7 @@ export default function Home() {
   const [loading, setLoading] = useState(false);
   const technologies: any[] = [
     {name: 'vue', image: Images.vueLogo},
+    {name: 'uni-app', image: uniAppLogo},
     // {id: 1, name: 'Angular', image: Images.angularLogo},
     // {id: 2, name: 'React.js', image: Images.reactLogo},
     // {id: 4, name: 'Nest.js', image: Images.nestjsLogo},
@@ -106,7 +108,17 @@ export default function Home() {
     content: 'clamp(1rem, 0.96rem + 0.18vw, 1.125rem)',
   };
   const [current, setCurrent] = useState(0);
-  const currentProject = useMemo(() => projects.filter((it) => it.sortTechnologies?.includes(technologies[current].name)).at(0), [current]);
+  const [currentProject, setCurrentProject] = useState<Project>();
+  useEffect(() => {
+    setTimeout(
+        () => setCurrentProject(
+            projects
+                .filter((it) => it.sortTechnologies?.includes(technologies[current].name))
+                .at(0),
+        ),
+        500,
+    );
+  }, [current]);
   /**
    * render the component
    * @return {JSX.Element}
@@ -159,15 +171,18 @@ export default function Home() {
             <CardMedia>
               <CardActionArea>
                 <Image
-                    src={currentProject?.headerImg!}
-                    alt={''} layout={'responsive'}
+                  src={currentProject?.headerImg!}
+                  alt={''} layout={'responsive'}
                 ></Image>
               </CardActionArea>
             </CardMedia>
-             <CardContent>
-               <Typography fontSize={fontSizes.subtitle}>{currentProject?.name}</Typography>
-               <Typography sx={{whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis'}} fontSize={fontSizes.content}>{currentProject?.description}</Typography>
-             </CardContent>
+            <CardContent>
+              <Typography fontSize={fontSizes.subtitle}>{currentProject?.name}</Typography>
+              <Typography
+                sx={{whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis'}}
+                fontSize={fontSizes.content}
+              >{currentProject?.description}</Typography>
+            </CardContent>
           </Card>
         </Grid>
       </Grid>

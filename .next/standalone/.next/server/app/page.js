@@ -313,18 +313,6 @@ const routeModule = new AppPageRouteModule({
 
 /***/ }),
 
-/***/ 18849:
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
-
-Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 80507, 23));
-Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 61627, 23));
-Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 78202, 23));
-Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 3037, 23));
-Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 52979, 23));
-Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 38200, 23))
-
-/***/ }),
-
 /***/ 97152:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
@@ -339,7 +327,7 @@ Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_re
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   q: () => (/* binding */ projects)
 /* harmony export */ });
-/* harmony import */ var _core_libs_images__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(21202);
+/* harmony import */ var _core_libs_images__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(37210);
 
 const projects = [
     {
@@ -383,8 +371,8 @@ var hello_module_default = /*#__PURE__*/__webpack_require__.n(hello_module);
 // EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.19_@babel+core@7.22.5_react-dom@18.2.0_react@18.2.0_sass@1.63.3/node_modules/next/image.js
 var next_image = __webpack_require__(23097);
 var image_default = /*#__PURE__*/__webpack_require__.n(next_image);
-// EXTERNAL MODULE: ./core/libs/images.ts
-var libs_images = __webpack_require__(21202);
+// EXTERNAL MODULE: ./core/libs/images.ts + 1 modules
+var libs_images = __webpack_require__(37210);
 // EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.19_@babel+core@7.22.5_react-dom@18.2.0_react@18.2.0_sass@1.63.3/node_modules/next/navigation.js
 var navigation = __webpack_require__(79840);
 // EXTERNAL MODULE: ./node_modules/.pnpm/@mui+lab@5.0.0-alpha.140_@emotion+react@11.11.1_@emotion+styled@11.11.0_@mui+material@5.13.4__feobs3zgi5sojcdnh5pc5hsuyy/node_modules/@mui/lab/node/index.js
@@ -471,6 +459,10 @@ var projects = __webpack_require__(58319);
         {
             name: "vue",
             image: libs_images/* Images */.r.vueLogo
+        },
+        {
+            name: "uni-app",
+            image: libs_images/* uniAppLogo */.Y
         }
     ];
     const imageStyle = {
@@ -580,7 +572,10 @@ var projects = __webpack_require__(58319);
         content: "clamp(1rem, 0.96rem + 0.18vw, 1.125rem)"
     };
     const [current, setCurrent] = (0,react_.useState)(0);
-    const currentProject = (0,react_.useMemo)(()=>projects/* projects */.q.filter((it)=>it.sortTechnologies?.includes(technologies[current].name)).at(0), [
+    const [currentProject, setCurrentProject] = (0,react_.useState)();
+    (0,react_.useEffect)(()=>{
+        setTimeout(()=>setCurrentProject(projects/* projects */.q.filter((it)=>it.sortTechnologies?.includes(technologies[current].name)).at(0)), 500);
+    }, [
         current
     ]);
     /**
@@ -1175,7 +1170,7 @@ const __default__ = proxy.default;
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [906,383,88,34,960,868], () => (__webpack_exec__(49996)));
+var __webpack_exports__ = __webpack_require__.X(0, [906,383,88,34,960,868,897], () => (__webpack_exec__(49996)));
 module.exports = __webpack_exports__;
 
 })();

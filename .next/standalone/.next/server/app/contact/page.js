@@ -443,8 +443,8 @@ var jsx_runtime_ = __webpack_require__(56786);
 var react_ = __webpack_require__(18038);
 // EXTERNAL MODULE: ./node_modules/.pnpm/@mui+material@5.13.4_@emotion+react@11.11.1_@emotion+styled@11.11.0_@types+react@18.2.9_react-dom@18.2.0_react@18.2.0/node_modules/@mui/material/node/index.js
 var node = __webpack_require__(64155);
-// EXTERNAL MODULE: ./core/libs/images.ts
-var libs_images = __webpack_require__(21202);
+// EXTERNAL MODULE: ./core/libs/images.ts + 1 modules
+var libs_images = __webpack_require__(37210);
 // EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.19_@babel+core@7.22.5_react-dom@18.2.0_react@18.2.0_sass@1.63.3/node_modules/next/image.js
 var next_image = __webpack_require__(23097);
 var image_default = /*#__PURE__*/__webpack_require__.n(next_image);
@@ -1022,7 +1022,7 @@ const metadata = {
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [906,383,88,576,960,295], () => (__webpack_exec__(6798)));
+var __webpack_exports__ = __webpack_require__.X(0, [906,383,88,576,960,897], () => (__webpack_exec__(6798)));
 module.exports = __webpack_exports__;
 
 })();

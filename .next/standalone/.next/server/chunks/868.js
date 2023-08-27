@@ -21,8 +21,8 @@ var next_image = __webpack_require__(23097);
 var image_default = /*#__PURE__*/__webpack_require__.n(next_image);
 // EXTERNAL MODULE: external "next/dist/compiled/react"
 var react_ = __webpack_require__(18038);
-// EXTERNAL MODULE: ./core/libs/images.ts
-var libs_images = __webpack_require__(21202);
+// EXTERNAL MODULE: ./core/libs/images.ts + 1 modules
+var libs_images = __webpack_require__(37210);
 ;// CONCATENATED MODULE: ./core/libs/services.ts
 
 const services = [

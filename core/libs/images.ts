@@ -1,3 +1,4 @@
+import uni from '../../assets/images/uni.png';
 /**
  * Images
  */
@@ -39,3 +40,5 @@ export class Images {
 
   static topleRestaurant = require('../../assets/images/tople-restaurant.png');
 }
+
+export const uniAppLogo = uni;
