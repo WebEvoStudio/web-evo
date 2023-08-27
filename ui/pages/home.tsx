@@ -1,14 +1,11 @@
 'use client';
 import React, {useEffect, useState} from 'react';
-import styles from '../../styles/hello.module.scss';
 import Image from 'next/image';
 import {Images, uniAppLogo} from '../../core/libs/images';
 import {useRouter} from 'next/navigation';
 import {LoadingButton} from '@mui/lab';
 import {
-  Box,
   Container,
-  Divider,
   Grid,
   ListItem,
   Typography,
@@ -45,11 +42,6 @@ export default function Home() {
     // {id: 5, name: 'Nuxt.js', image: Images.nuxtJsLogo},
     // {id: 6, name: 'Next.js', image: Images.nextJsLogo},
   ];
-  const imageStyle = {
-    width: '100%',
-    height: 'auto',
-    // filter: 'drop-shadow(#f00 80px 0)',
-  };
   useEffect(() => {
     router.prefetch('/blogs');
   }, []);
@@ -68,39 +60,6 @@ export default function Home() {
   };
   const toAbout = async () => {
     router.push('/about');
-  };
-  const HomeDivider = ({order}: {order: number}) => {
-    return (
-      <Grid item xs={12} sx={{order}}>
-        <Divider/>
-      </Grid>
-    );
-  };
-  const HomePiece = (props: {
-    orders: number[],
-    align: 'start' | 'end',
-    poster: {src: string, alt: string},
-    title: string | JSX.Element,
-    children: JSX.Element | JSX.Element[],
-    first?: boolean,
-  }) => {
-    const {orders, align, poster, title, children, first = false} = props;
-    return (
-      <>
-        <Grid item xs={12} md={6} sx={{order: {xs: orders[0], md: align === 'start' ? orders[0] : orders[1]}}}>
-          <Typography variant={first ? 'h1' : 'h2'} fontSize={24} sx={{my: 2.5}}>{title}</Typography>
-          <Box className={styles['image']} sx={{display: {xs: 'block', md: 'none'}}}>
-            <Image src={poster.src} alt={poster.alt} style={imageStyle}/>
-          </Box>
-          {children}
-        </Grid>
-        <Grid item xs={12} md={6} sx={{order: {xs: orders[1], md: align === 'start' ? orders[1] : orders[0]}}}>
-          <Box className={styles['image']} sx={{display: {xs: 'none', md: 'block'}}}>
-            <Image src={poster.src} alt={poster.alt} style={imageStyle}/>
-          </Box>
-        </Grid>
-      </>
-    );
   };
   const fontSizes = {
     title: 'clamp(1.5rem, 1.29rem + 1.07vw, 2.25rem)',
@@ -125,7 +84,7 @@ export default function Home() {
    */
   return (
     <Container maxWidth={'lg'}>
-      <Grid container spacing={3}>
+      <Grid container spacing={2}>
         <Grid item xs={12} md={7}>
           <Card elevation={0} variant={'outlined'} sx={{mt: 2}}>
             <CardHeader subheader={'About Web Evo'}></CardHeader>
@@ -153,7 +112,7 @@ export default function Home() {
           </Card>
         </Grid>
         <Grid item xs={12} md={5}>
-          <Card variant={'outlined'} sx={{mt: 2, pb: 0}}>
+          <Card variant={'outlined'} sx={{pb: 0}}>
             <CardHeader subheader={'技术堆栈'}></CardHeader>
             <CardActions sx={{p: 0}}>
               <Tabs value={current} sx={{pa: 0, p: 0, padding: 0}}>
@@ -185,177 +144,180 @@ export default function Home() {
             </CardContent>
           </Card>
         </Grid>
-      </Grid>
-
-      <Grid container spacing={2}>
-        <Grid item xs={12} md={6} sx={{order: {xs: 4, md: 5}}}>
-          <div className={styles['h1']}>优先事项一：培养专业技术成长</div>
-          <Box className={styles['image']} sx={{display: {xs: 'block', md: 'none'}}}>
-            <Image
-              src={Images.undrawTeamCollaboration}
-              alt={'骄傲的编码员'}
-              style={imageStyle}
-            />
-          </Box>
-          <List>
-            <ListItem>
-              <ListItemIcon>
-                <CodeIcon/>
-              </ListItemIcon>
-              <ListItemText>自我发展的文化</ListItemText>
-            </ListItem>
-            <ListItem>
-              <ListItemIcon>
-                <SchoolIcon/>
-              </ListItemIcon>
-              <ListItemText>技能提升时间作为计划的一部分</ListItemText>
-            </ListItem>
-            <ListItem>
-              <ListItemIcon>
-                <Diversity1Icon/>
-              </ListItemIcon>
-              <ListItemText>内部和外部知识共享</ListItemText>
-            </ListItem>
-            <ListItem>
-              <ListItemIcon>
-                <GitHubIcon/>
-              </ListItemIcon>
-              <ListItemText>对开源贡献</ListItemText>
-            </ListItem>
-          </List>
-          <Box>
-            <div onClick={toBlog}>
+        <Grid item xs={12} md={4}>
+          <Card variant={'outlined'}>
+            <CardHeader subheader={'优先事项一'}></CardHeader>
+            <CardMedia>
+              <Image
+                src={Images.undrawTeamCollaboration}
+                alt={'团队协作'}
+                layout={'responsive'}
+              />
+            </CardMedia>
+            <CardContent>
+              <Typography fontSize={fontSizes.subtitle}>
+                培养专业技术成长
+              </Typography>
+              <List sx={{mx: -2}}>
+                <ListItem>
+                  <ListItemIcon>
+                    <CodeIcon/>
+                  </ListItemIcon>
+                  <ListItemText>自我发展的文化</ListItemText>
+                </ListItem>
+                <ListItem>
+                  <ListItemIcon>
+                    <SchoolIcon/>
+                  </ListItemIcon>
+                  <ListItemText>技能提升时间作为计划的一部分</ListItemText>
+                </ListItem>
+                <ListItem>
+                  <ListItemIcon>
+                    <Diversity1Icon/>
+                  </ListItemIcon>
+                  <ListItemText>内部和外部知识共享</ListItemText>
+                </ListItem>
+                <ListItem>
+                  <ListItemIcon>
+                    <GitHubIcon/>
+                  </ListItemIcon>
+                  <ListItemText>对开源贡献</ListItemText>
+                </ListItem>
+              </List>
+              <Typography fontSize={fontSizes.content}>
+              </Typography>
+            </CardContent>
+            <CardActions>
               <LoadingButton
-                sx={{color: '#fff', width: '100%', borderRadius: '2rem'}}
+                sx={{color: '#fff', width: '100%'}}
+                size={'large'}
                 loading={loading}
-                loadingIndicator={'Loading...'} color={'primary'} variant="contained">
+                loadingIndicator={'Loading...'} color={'primary'} variant="contained"
+                onClick={toBlog}
+              >
                 <span>访问博客</span>
                 <EastIcon sx={{ml: 1}}/>
               </LoadingButton>
-            </div>
-          </Box>
+            </CardActions>
+          </Card>
         </Grid>
-        <Grid item xs={12} md={6} sx={{order: {xs: 5, md: 4}}}>
-          <Box className={styles['image']} sx={{display: {xs: 'none', md: 'block'}}}>
-            <Image
-              src={Images.undrawTeamCollaboration}
-              alt={'团队协作'}
-              style={imageStyle}
-            />
-          </Box>
+        <Grid item xs={12} md={4}>
+          <Card variant={'outlined'}>
+            <CardHeader subheader={'优先事项二'}></CardHeader>
+            <CardMedia>
+              <Image
+                src={Images.undrawEngineeringTeam}
+                alt={'工程团队'}
+                layout={'responsive'}
+              />
+            </CardMedia>
+            <CardContent>
+              <Typography fontSize={fontSizes.subtitle}>
+                让外包更人性化
+              </Typography>
+              <List sx={{mx: -2}}>
+                <ListItem>
+                  <ListItemIcon>
+                    <Icons.Comment/>
+                  </ListItemIcon>
+                  <ListItemText>加强沟通</ListItemText>
+                </ListItem>
+                <ListItem>
+                  <ListItemIcon>
+                    <Icons.PersonOff/>
+                  </ListItemIcon>
+                  <ListItemText>减少官僚主义</ListItemText>
+                </ListItem>
+                <ListItem>
+                  <ListItemIcon>
+                    <Icons.SafetyDivider/>
+                  </ListItemIcon>
+                  <ListItemText>扁平化公司结构</ListItemText>
+                </ListItem>
+                <ListItem>
+                  <ListItemIcon>
+                    <Icons.Group/>
+                  </ListItemIcon>
+                  <ListItemText>我们都是公司内部和客户的合作伙伴</ListItemText>
+                </ListItem>
+              </List>
+              <Typography fontSize={fontSizes.content}>
+              </Typography>
+            </CardContent>
+          </Card>
         </Grid>
-        <HomeDivider order={6}/>
-        <Grid item xs={12} md={6} sx={{order: {xs: 8, md: 7}}}>
-          <div className={styles['h1']}>优先事项二：让外包更人性化</div>
-          <Box className={styles['image']} sx={{display: {xs: 'block', md: 'none'}}}>
-            <Image src={Images.undrawEngineeringTeam} alt={'工程团队'} style={imageStyle}/>
-          </Box>
-          <List>
-            <ListItem>
-              <ListItemIcon>
-                <Icons.Comment/>
-              </ListItemIcon>
-              <ListItemText>加强沟通</ListItemText>
-            </ListItem>
-            <ListItem>
-              <ListItemIcon>
-                <Icons.PersonOff/>
-              </ListItemIcon>
-              <ListItemText>减少官僚主义</ListItemText>
-            </ListItem>
-            <ListItem>
-              <ListItemIcon>
-                <Icons.SafetyDivider/>
-              </ListItemIcon>
-              <ListItemText>扁平化公司结构</ListItemText>
-            </ListItem>
-            <ListItem>
-              <ListItemIcon>
-                <Icons.Group/>
-              </ListItemIcon>
-              <ListItemText>我们都是公司内部和客户的合作伙伴</ListItemText>
-            </ListItem>
-          </List>
-        </Grid>
-        <Grid item xs={12} md={6} sx={{order: {xs: 7, md: 8}}}>
-          <Box className={styles['image']} sx={{display: {xs: 'none', md: 'block'}}}>
-            <Image
-              src={Images.undrawEngineeringTeam}
-              alt={'工程团队'}
-              style={imageStyle}
-            />
-          </Box>
-        </Grid>
-        <HomeDivider order={9}/>
-        <Grid item xs={12} md={6} sx={{order: {xs: 10, md: 11}}}>
-          <div className={styles['h1']}>优先事项三：让最复杂的想法栩栩如生</div>
-          <Box className={styles['image']} sx={{display: {xs: 'block', md: 'none'}}}>
-            <Image src={Images.undrawSolutionMindset} alt={'解决方案思维'} style={imageStyle}/>
-          </Box>
-          <List>
-            <ListItem>
-              <ListItemIcon>
-                <Icons.TrendingUp/>
-              </ListItemIcon>
-              <ListItemText>将技术推向极限</ListItemText>
-            </ListItem>
-            <ListItem>
-              <ListItemIcon>
-                <Icons.Biotech/>
-              </ListItemIcon>
-              <ListItemText>在公司内部建立独特的专业知识</ListItemText>
-            </ListItem>
-            <ListItem>
-              <ListItemIcon>
-                <Icons.DesktopMac/>
-              </ListItemIcon>
-              <ListItemText>掌握尖端技术</ListItemText>
-            </ListItem>
-            <ListItem>
-              <ListItemIcon>
-                <Icons.PsychologyAlt/>
-              </ListItemIcon>
-              <ListItemText>始终找到满足客户业务需求的方法</ListItemText>
-            </ListItem>
-          </List>
-          <Box sx={{mt: 4}}>
-            <div onClick={toTechnologies}>
+        <Grid item xs={12} md={4}>
+          <Card variant={'outlined'}>
+            <CardHeader subheader={'优先事项三'}></CardHeader>
+            <CardMedia>
+              <Image
+                src={Images.undrawSolutionMindset}
+                alt={'解决方案思维'}
+                layout={'responsive'}
+              />
+            </CardMedia>
+            <CardContent>
+              <Typography fontSize={fontSizes.subtitle}>
+                让最复杂的想法栩栩如生
+              </Typography>
+              <List sx={{mx: -2}}>
+                <ListItem>
+                  <ListItemIcon>
+                    <Icons.TrendingUp/>
+                  </ListItemIcon>
+                  <ListItemText>将技术推向极限</ListItemText>
+                </ListItem>
+                <ListItem>
+                  <ListItemIcon>
+                    <Icons.Biotech/>
+                  </ListItemIcon>
+                  <ListItemText>在公司内部建立独特的专业知识</ListItemText>
+                </ListItem>
+                <ListItem>
+                  <ListItemIcon>
+                    <Icons.DesktopMac/>
+                  </ListItemIcon>
+                  <ListItemText>掌握尖端技术</ListItemText>
+                </ListItem>
+                <ListItem>
+                  <ListItemIcon>
+                    <Icons.PsychologyAlt/>
+                  </ListItemIcon>
+                  <ListItemText>始终找到满足客户业务需求的方法</ListItemText>
+                </ListItem>
+              </List>
+              <Typography fontSize={fontSizes.content}>
+              </Typography>
+            </CardContent>
+            <CardActions>
               <Button
-                sx={{color: '#fff', width: '100%', borderRadius: '2rem'}}
-                color={'primary'} variant="contained">
+                sx={{color: '#fff', width: '100%'}}
+                size={'large'}
+                color={'primary'} variant="contained"
+                onClick={toTechnologies}
+              >
                 <span>查看我们的技术堆栈</span>
                 <SouthIcon sx={{ml: 1}}/>
               </Button>
-            </div>
-          </Box>
+            </CardActions>
+          </Card>
         </Grid>
-        <Grid item xs={12} md={6} sx={{order: {xs: 11, md: 10}}}>
-          <Box className={styles['image']} sx={{display: {xs: 'none', md: 'block'}}}>
-            <Image
-              src={Images.undrawSolutionMindset}
-              alt={'解决方案思维'}
-              style={imageStyle}
-            />
-          </Box>
+        <Grid item xs={12}>
+          <Card variant={'outlined'}>
+            <CardHeader subheader={'服务'}></CardHeader>
+            <CardMedia>
+              <Image
+                src={Images.undrawServices}
+                alt={'服务'}
+                layout={'responsive'}
+              />
+            </CardMedia>
+            <CardActions>
+              <HomeServices isDesc={false} />
+            </CardActions>
+          </Card>
         </Grid>
-        <HomeDivider order={15}/>
-        <HomePiece
-          align={'end'}
-          orders={[16, 17]}
-          poster={{src: Images.undrawServices, alt: '服务'}}
-          title={'服务'}
-        >
-          <HomeServices isDesc={false} />
-        </HomePiece>
-        {/* <HomeDivider order={18}/>*/}
-        {/* <HomePiece*/}
-        {/*  align={'start'}*/}
-        {/*  orders={[19, 20]}*/}
-        {/*  items={[*/}
-        {/*    <div>title</div>,*/}
-        {/*    <div>content</div>,*/}
-        {/*  ]}*/}
-        {/* />*/}
+        <Grid item></Grid>
       </Grid>
     </Container>
   );

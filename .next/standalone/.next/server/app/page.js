@@ -365,9 +365,6 @@ __webpack_require__.d(__webpack_exports__, {
 var jsx_runtime_ = __webpack_require__(56786);
 // EXTERNAL MODULE: external "next/dist/compiled/react"
 var react_ = __webpack_require__(18038);
-// EXTERNAL MODULE: ./styles/hello.module.scss
-var hello_module = __webpack_require__(80440);
-var hello_module_default = /*#__PURE__*/__webpack_require__.n(hello_module);
 // EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.19_@babel+core@7.22.5_react-dom@18.2.0_react@18.2.0_sass@1.63.3/node_modules/next/image.js
 var next_image = __webpack_require__(23097);
 var image_default = /*#__PURE__*/__webpack_require__.n(next_image);
@@ -448,7 +445,6 @@ var projects = __webpack_require__(58319);
 
 
 
-
 /**
  * @class Home
  * @extends React.Component
@@ -465,10 +461,6 @@ var projects = __webpack_require__(58319);
             image: libs_images/* uniAppLogo */.Y
         }
     ];
-    const imageStyle = {
-        width: "100%",
-        height: "auto"
-    };
     (0,react_.useEffect)(()=>{
         router.prefetch("/blogs");
     }, []);
@@ -488,84 +480,6 @@ var projects = __webpack_require__(58319);
     const toAbout = async ()=>{
         router.push("/about");
     };
-    const HomeDivider = ({ order })=>{
-        return /*#__PURE__*/ jsx_runtime_.jsx(material_node.Grid, {
-            item: true,
-            xs: 12,
-            sx: {
-                order
-            },
-            children: /*#__PURE__*/ jsx_runtime_.jsx(material_node.Divider, {})
-        });
-    };
-    const HomePiece = (props)=>{
-        const { orders, align, poster, title, children, first = false } = props;
-        return /*#__PURE__*/ (0,jsx_runtime_.jsxs)(jsx_runtime_.Fragment, {
-            children: [
-                /*#__PURE__*/ (0,jsx_runtime_.jsxs)(material_node.Grid, {
-                    item: true,
-                    xs: 12,
-                    md: 6,
-                    sx: {
-                        order: {
-                            xs: orders[0],
-                            md: align === "start" ? orders[0] : orders[1]
-                        }
-                    },
-                    children: [
-                        /*#__PURE__*/ jsx_runtime_.jsx(material_node.Typography, {
-                            variant: first ? "h1" : "h2",
-                            fontSize: 24,
-                            sx: {
-                                my: 2.5
-                            },
-                            children: title
-                        }),
-                        /*#__PURE__*/ jsx_runtime_.jsx(material_node.Box, {
-                            className: (hello_module_default()).image,
-                            sx: {
-                                display: {
-                                    xs: "block",
-                                    md: "none"
-                                }
-                            },
-                            children: /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
-                                src: poster.src,
-                                alt: poster.alt,
-                                style: imageStyle
-                            })
-                        }),
-                        children
-                    ]
-                }),
-                /*#__PURE__*/ jsx_runtime_.jsx(material_node.Grid, {
-                    item: true,
-                    xs: 12,
-                    md: 6,
-                    sx: {
-                        order: {
-                            xs: orders[1],
-                            md: align === "start" ? orders[1] : orders[0]
-                        }
-                    },
-                    children: /*#__PURE__*/ jsx_runtime_.jsx(material_node.Box, {
-                        className: (hello_module_default()).image,
-                        sx: {
-                            display: {
-                                xs: "none",
-                                md: "block"
-                            }
-                        },
-                        children: /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
-                            src: poster.src,
-                            alt: poster.alt,
-                            style: imageStyle
-                        })
-                    })
-                })
-            ]
-        });
-    };
     const fontSizes = {
         title: "clamp(1.5rem, 1.29rem + 1.07vw, 2.25rem)",
         subtitle: "clamp(1.3rem, 1.09rem + 1.07vw, 2.05rem)",
@@ -581,539 +495,447 @@ var projects = __webpack_require__(58319);
     /**
    * render the component
    * @return {JSX.Element}
-   */ return /*#__PURE__*/ (0,jsx_runtime_.jsxs)(material_node.Container, {
+   */ return /*#__PURE__*/ jsx_runtime_.jsx(material_node.Container, {
         maxWidth: "lg",
-        children: [
-            /*#__PURE__*/ (0,jsx_runtime_.jsxs)(material_node.Grid, {
-                container: true,
-                spacing: 3,
-                children: [
-                    /*#__PURE__*/ jsx_runtime_.jsx(material_node.Grid, {
-                        item: true,
-                        xs: 12,
-                        md: 7,
-                        children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)(material_node.Card, {
-                            elevation: 0,
-                            variant: "outlined",
-                            sx: {
-                                mt: 2
-                            },
-                            children: [
-                                /*#__PURE__*/ jsx_runtime_.jsx(material_node.CardHeader, {
-                                    subheader: "About Web Evo"
-                                }),
-                                /*#__PURE__*/ jsx_runtime_.jsx(material_node.CardMedia, {
-                                    sx: {
-                                        display: "flex",
-                                        justifyContent: "center"
-                                    },
-                                    children: /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
-                                        style: {
-                                            maxWidth: 380
-                                        },
-                                        layout: "responsive",
-                                        src: libs_images/* Images */.r.undrawProudCoder,
-                                        alt: "骄傲的编码员"
-                                    })
-                                }),
-                                /*#__PURE__*/ (0,jsx_runtime_.jsxs)(material_node.CardContent, {
-                                    children: [
-                                        /*#__PURE__*/ jsx_runtime_.jsx(material_node.Typography, {
-                                            component: "h1",
-                                            fontSize: fontSizes.title,
-                                            children: "Web Evo - 可信赖的技术合作伙伴"
-                                        }),
-                                        /*#__PURE__*/ jsx_runtime_.jsx(material_node.Typography, {
-                                            fontSize: fontSizes.content,
-                                            children: "我们通过加速开发流程，填补您软件项目中的技术空白，帮助您实现更好的结果，并在减少部署时间的同时提供高质量的解决方案。"
-                                        })
-                                    ]
-                                }),
-                                /*#__PURE__*/ jsx_runtime_.jsx(material_node.CardActions, {
-                                    children: /*#__PURE__*/ jsx_runtime_.jsx(material_node.Button, {
-                                        size: "large",
-                                        sx: {
-                                            width: "100%"
-                                        },
-                                        color: "primary",
-                                        variant: "contained",
-                                        onClick: toAbout,
-                                        children: /*#__PURE__*/ jsx_runtime_.jsx("span", {
-                                            children: "了解更多信息"
-                                        })
-                                    })
-                                })
-                            ]
-                        })
-                    }),
-                    /*#__PURE__*/ jsx_runtime_.jsx(material_node.Grid, {
-                        item: true,
-                        xs: 12,
-                        md: 5,
-                        children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)(material_node.Card, {
-                            variant: "outlined",
-                            sx: {
-                                mt: 2,
-                                pb: 0
-                            },
-                            children: [
-                                /*#__PURE__*/ jsx_runtime_.jsx(material_node.CardHeader, {
-                                    subheader: "技术堆栈"
-                                }),
-                                /*#__PURE__*/ jsx_runtime_.jsx(material_node.CardActions, {
-                                    sx: {
-                                        p: 0
-                                    },
-                                    children: /*#__PURE__*/ jsx_runtime_.jsx(material_node.Tabs, {
-                                        value: current,
-                                        sx: {
-                                            pa: 0,
-                                            p: 0,
-                                            padding: 0
-                                        },
-                                        children: technologies.map((it, key)=>/*#__PURE__*/ jsx_runtime_.jsx(material_node.Tab, {
-                                                label: it.name,
-                                                value: key,
-                                                icon: /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
-                                                    width: 36.5,
-                                                    height: 36.5,
-                                                    src: it.image,
-                                                    alt: ""
-                                                }),
-                                                onClick: ()=>setCurrent(key)
-                                            }, key))
-                                    })
-                                }),
-                                /*#__PURE__*/ jsx_runtime_.jsx(material_node.CardMedia, {
-                                    children: /*#__PURE__*/ jsx_runtime_.jsx(material_node.CardActionArea, {
-                                        children: /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
-                                            src: currentProject?.headerImg,
-                                            alt: "",
-                                            layout: "responsive"
-                                        })
-                                    })
-                                }),
-                                /*#__PURE__*/ (0,jsx_runtime_.jsxs)(material_node.CardContent, {
-                                    children: [
-                                        /*#__PURE__*/ jsx_runtime_.jsx(material_node.Typography, {
-                                            fontSize: fontSizes.subtitle,
-                                            children: currentProject?.name
-                                        }),
-                                        /*#__PURE__*/ jsx_runtime_.jsx(material_node.Typography, {
-                                            sx: {
-                                                whiteSpace: "nowrap",
-                                                overflow: "hidden",
-                                                textOverflow: "ellipsis"
-                                            },
-                                            fontSize: fontSizes.content,
-                                            children: currentProject?.description
-                                        })
-                                    ]
-                                })
-                            ]
-                        })
-                    })
-                ]
-            }),
-            /*#__PURE__*/ (0,jsx_runtime_.jsxs)(material_node.Grid, {
-                container: true,
-                spacing: 2,
-                children: [
-                    /*#__PURE__*/ (0,jsx_runtime_.jsxs)(material_node.Grid, {
-                        item: true,
-                        xs: 12,
-                        md: 6,
+        children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)(material_node.Grid, {
+            container: true,
+            spacing: 2,
+            children: [
+                /*#__PURE__*/ jsx_runtime_.jsx(material_node.Grid, {
+                    item: true,
+                    xs: 12,
+                    md: 7,
+                    children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)(material_node.Card, {
+                        elevation: 0,
+                        variant: "outlined",
                         sx: {
-                            order: {
-                                xs: 4,
-                                md: 5
-                            }
+                            mt: 2
                         },
                         children: [
-                            /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                                className: (hello_module_default()).h1,
-                                children: "优先事项一：培养专业技术成长"
+                            /*#__PURE__*/ jsx_runtime_.jsx(material_node.CardHeader, {
+                                subheader: "About Web Evo"
                             }),
-                            /*#__PURE__*/ jsx_runtime_.jsx(material_node.Box, {
-                                className: (hello_module_default()).image,
+                            /*#__PURE__*/ jsx_runtime_.jsx(material_node.CardMedia, {
                                 sx: {
-                                    display: {
-                                        xs: "block",
-                                        md: "none"
-                                    }
+                                    display: "flex",
+                                    justifyContent: "center"
                                 },
                                 children: /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
-                                    src: libs_images/* Images */.r.undrawTeamCollaboration,
-                                    alt: "骄傲的编码员",
-                                    style: imageStyle
+                                    style: {
+                                        maxWidth: 380
+                                    },
+                                    layout: "responsive",
+                                    src: libs_images/* Images */.r.undrawProudCoder,
+                                    alt: "骄傲的编码员"
                                 })
                             }),
-                            /*#__PURE__*/ (0,jsx_runtime_.jsxs)(material_node.List, {
+                            /*#__PURE__*/ (0,jsx_runtime_.jsxs)(material_node.CardContent, {
                                 children: [
-                                    /*#__PURE__*/ (0,jsx_runtime_.jsxs)(material_node.ListItem, {
-                                        children: [
-                                            /*#__PURE__*/ jsx_runtime_.jsx(material_node.ListItemIcon, {
-                                                children: /*#__PURE__*/ jsx_runtime_.jsx(Code/* default */.Z, {})
-                                            }),
-                                            /*#__PURE__*/ jsx_runtime_.jsx(material_node.ListItemText, {
-                                                children: "自我发展的文化"
-                                            })
-                                        ]
+                                    /*#__PURE__*/ jsx_runtime_.jsx(material_node.Typography, {
+                                        component: "h1",
+                                        fontSize: fontSizes.title,
+                                        children: "Web Evo - 可信赖的技术合作伙伴"
                                     }),
-                                    /*#__PURE__*/ (0,jsx_runtime_.jsxs)(material_node.ListItem, {
-                                        children: [
-                                            /*#__PURE__*/ jsx_runtime_.jsx(material_node.ListItemIcon, {
-                                                children: /*#__PURE__*/ jsx_runtime_.jsx(School/* default */.Z, {})
-                                            }),
-                                            /*#__PURE__*/ jsx_runtime_.jsx(material_node.ListItemText, {
-                                                children: "技能提升时间作为计划的一部分"
-                                            })
-                                        ]
-                                    }),
-                                    /*#__PURE__*/ (0,jsx_runtime_.jsxs)(material_node.ListItem, {
-                                        children: [
-                                            /*#__PURE__*/ jsx_runtime_.jsx(material_node.ListItemIcon, {
-                                                children: /*#__PURE__*/ jsx_runtime_.jsx(Diversity1/* default */.Z, {})
-                                            }),
-                                            /*#__PURE__*/ jsx_runtime_.jsx(material_node.ListItemText, {
-                                                children: "内部和外部知识共享"
-                                            })
-                                        ]
-                                    }),
-                                    /*#__PURE__*/ (0,jsx_runtime_.jsxs)(material_node.ListItem, {
-                                        children: [
-                                            /*#__PURE__*/ jsx_runtime_.jsx(material_node.ListItemIcon, {
-                                                children: /*#__PURE__*/ jsx_runtime_.jsx(GitHub/* default */.Z, {})
-                                            }),
-                                            /*#__PURE__*/ jsx_runtime_.jsx(material_node.ListItemText, {
-                                                children: "对开源贡献"
-                                            })
-                                        ]
+                                    /*#__PURE__*/ jsx_runtime_.jsx(material_node.Typography, {
+                                        fontSize: fontSizes.content,
+                                        children: "我们通过加速开发流程，填补您软件项目中的技术空白，帮助您实现更好的结果，并在减少部署时间的同时提供高质量的解决方案。"
                                     })
                                 ]
                             }),
-                            /*#__PURE__*/ jsx_runtime_.jsx(material_node.Box, {
-                                children: /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                                    onClick: toBlog,
-                                    children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)(node.LoadingButton, {
-                                        sx: {
-                                            color: "#fff",
-                                            width: "100%",
-                                            borderRadius: "2rem"
-                                        },
-                                        loading: loading,
-                                        loadingIndicator: "Loading...",
-                                        color: "primary",
-                                        variant: "contained",
-                                        children: [
-                                            /*#__PURE__*/ jsx_runtime_.jsx("span", {
-                                                children: "访问博客"
-                                            }),
-                                            /*#__PURE__*/ jsx_runtime_.jsx(East/* default */.Z, {
-                                                sx: {
-                                                    ml: 1
-                                                }
-                                            })
-                                        ]
+                            /*#__PURE__*/ jsx_runtime_.jsx(material_node.CardActions, {
+                                children: /*#__PURE__*/ jsx_runtime_.jsx(material_node.Button, {
+                                    size: "large",
+                                    sx: {
+                                        width: "100%"
+                                    },
+                                    color: "primary",
+                                    variant: "contained",
+                                    onClick: toAbout,
+                                    children: /*#__PURE__*/ jsx_runtime_.jsx("span", {
+                                        children: "了解更多信息"
                                     })
                                 })
                             })
                         ]
-                    }),
-                    /*#__PURE__*/ jsx_runtime_.jsx(material_node.Grid, {
-                        item: true,
-                        xs: 12,
-                        md: 6,
+                    })
+                }),
+                /*#__PURE__*/ jsx_runtime_.jsx(material_node.Grid, {
+                    item: true,
+                    xs: 12,
+                    md: 5,
+                    children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)(material_node.Card, {
+                        variant: "outlined",
                         sx: {
-                            order: {
-                                xs: 5,
-                                md: 4
-                            }
-                        },
-                        children: /*#__PURE__*/ jsx_runtime_.jsx(material_node.Box, {
-                            className: (hello_module_default()).image,
-                            sx: {
-                                display: {
-                                    xs: "none",
-                                    md: "block"
-                                }
-                            },
-                            children: /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
-                                src: libs_images/* Images */.r.undrawTeamCollaboration,
-                                alt: "团队协作",
-                                style: imageStyle
-                            })
-                        })
-                    }),
-                    /*#__PURE__*/ jsx_runtime_.jsx(HomeDivider, {
-                        order: 6
-                    }),
-                    /*#__PURE__*/ (0,jsx_runtime_.jsxs)(material_node.Grid, {
-                        item: true,
-                        xs: 12,
-                        md: 6,
-                        sx: {
-                            order: {
-                                xs: 8,
-                                md: 7
-                            }
+                            pb: 0
                         },
                         children: [
-                            /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                                className: (hello_module_default()).h1,
-                                children: "优先事项二：让外包更人性化"
+                            /*#__PURE__*/ jsx_runtime_.jsx(material_node.CardHeader, {
+                                subheader: "技术堆栈"
                             }),
-                            /*#__PURE__*/ jsx_runtime_.jsx(material_node.Box, {
-                                className: (hello_module_default()).image,
+                            /*#__PURE__*/ jsx_runtime_.jsx(material_node.CardActions, {
                                 sx: {
-                                    display: {
-                                        xs: "block",
-                                        md: "none"
-                                    }
+                                    p: 0
                                 },
+                                children: /*#__PURE__*/ jsx_runtime_.jsx(material_node.Tabs, {
+                                    value: current,
+                                    sx: {
+                                        pa: 0,
+                                        p: 0,
+                                        padding: 0
+                                    },
+                                    children: technologies.map((it, key)=>/*#__PURE__*/ jsx_runtime_.jsx(material_node.Tab, {
+                                            label: it.name,
+                                            value: key,
+                                            icon: /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
+                                                width: 36.5,
+                                                height: 36.5,
+                                                src: it.image,
+                                                alt: ""
+                                            }),
+                                            onClick: ()=>setCurrent(key)
+                                        }, key))
+                                })
+                            }),
+                            /*#__PURE__*/ jsx_runtime_.jsx(material_node.CardMedia, {
+                                children: /*#__PURE__*/ jsx_runtime_.jsx(material_node.CardActionArea, {
+                                    children: /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
+                                        src: currentProject?.headerImg,
+                                        alt: "",
+                                        layout: "responsive"
+                                    })
+                                })
+                            }),
+                            /*#__PURE__*/ (0,jsx_runtime_.jsxs)(material_node.CardContent, {
+                                children: [
+                                    /*#__PURE__*/ jsx_runtime_.jsx(material_node.Typography, {
+                                        fontSize: fontSizes.subtitle,
+                                        children: currentProject?.name
+                                    }),
+                                    /*#__PURE__*/ jsx_runtime_.jsx(material_node.Typography, {
+                                        sx: {
+                                            whiteSpace: "nowrap",
+                                            overflow: "hidden",
+                                            textOverflow: "ellipsis"
+                                        },
+                                        fontSize: fontSizes.content,
+                                        children: currentProject?.description
+                                    })
+                                ]
+                            })
+                        ]
+                    })
+                }),
+                /*#__PURE__*/ jsx_runtime_.jsx(material_node.Grid, {
+                    item: true,
+                    xs: 12,
+                    md: 4,
+                    children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)(material_node.Card, {
+                        variant: "outlined",
+                        children: [
+                            /*#__PURE__*/ jsx_runtime_.jsx(material_node.CardHeader, {
+                                subheader: "优先事项一"
+                            }),
+                            /*#__PURE__*/ jsx_runtime_.jsx(material_node.CardMedia, {
+                                children: /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
+                                    src: libs_images/* Images */.r.undrawTeamCollaboration,
+                                    alt: "团队协作",
+                                    layout: "responsive"
+                                })
+                            }),
+                            /*#__PURE__*/ (0,jsx_runtime_.jsxs)(material_node.CardContent, {
+                                children: [
+                                    /*#__PURE__*/ jsx_runtime_.jsx(material_node.Typography, {
+                                        fontSize: fontSizes.subtitle,
+                                        children: "培养专业技术成长"
+                                    }),
+                                    /*#__PURE__*/ (0,jsx_runtime_.jsxs)(material_node.List, {
+                                        sx: {
+                                            mx: -2
+                                        },
+                                        children: [
+                                            /*#__PURE__*/ (0,jsx_runtime_.jsxs)(material_node.ListItem, {
+                                                children: [
+                                                    /*#__PURE__*/ jsx_runtime_.jsx(material_node.ListItemIcon, {
+                                                        children: /*#__PURE__*/ jsx_runtime_.jsx(Code/* default */.Z, {})
+                                                    }),
+                                                    /*#__PURE__*/ jsx_runtime_.jsx(material_node.ListItemText, {
+                                                        children: "自我发展的文化"
+                                                    })
+                                                ]
+                                            }),
+                                            /*#__PURE__*/ (0,jsx_runtime_.jsxs)(material_node.ListItem, {
+                                                children: [
+                                                    /*#__PURE__*/ jsx_runtime_.jsx(material_node.ListItemIcon, {
+                                                        children: /*#__PURE__*/ jsx_runtime_.jsx(School/* default */.Z, {})
+                                                    }),
+                                                    /*#__PURE__*/ jsx_runtime_.jsx(material_node.ListItemText, {
+                                                        children: "技能提升时间作为计划的一部分"
+                                                    })
+                                                ]
+                                            }),
+                                            /*#__PURE__*/ (0,jsx_runtime_.jsxs)(material_node.ListItem, {
+                                                children: [
+                                                    /*#__PURE__*/ jsx_runtime_.jsx(material_node.ListItemIcon, {
+                                                        children: /*#__PURE__*/ jsx_runtime_.jsx(Diversity1/* default */.Z, {})
+                                                    }),
+                                                    /*#__PURE__*/ jsx_runtime_.jsx(material_node.ListItemText, {
+                                                        children: "内部和外部知识共享"
+                                                    })
+                                                ]
+                                            }),
+                                            /*#__PURE__*/ (0,jsx_runtime_.jsxs)(material_node.ListItem, {
+                                                children: [
+                                                    /*#__PURE__*/ jsx_runtime_.jsx(material_node.ListItemIcon, {
+                                                        children: /*#__PURE__*/ jsx_runtime_.jsx(GitHub/* default */.Z, {})
+                                                    }),
+                                                    /*#__PURE__*/ jsx_runtime_.jsx(material_node.ListItemText, {
+                                                        children: "对开源贡献"
+                                                    })
+                                                ]
+                                            })
+                                        ]
+                                    }),
+                                    /*#__PURE__*/ jsx_runtime_.jsx(material_node.Typography, {
+                                        fontSize: fontSizes.content
+                                    })
+                                ]
+                            }),
+                            /*#__PURE__*/ jsx_runtime_.jsx(material_node.CardActions, {
+                                children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)(node.LoadingButton, {
+                                    sx: {
+                                        color: "#fff",
+                                        width: "100%"
+                                    },
+                                    size: "large",
+                                    loading: loading,
+                                    loadingIndicator: "Loading...",
+                                    color: "primary",
+                                    variant: "contained",
+                                    onClick: toBlog,
+                                    children: [
+                                        /*#__PURE__*/ jsx_runtime_.jsx("span", {
+                                            children: "访问博客"
+                                        }),
+                                        /*#__PURE__*/ jsx_runtime_.jsx(East/* default */.Z, {
+                                            sx: {
+                                                ml: 1
+                                            }
+                                        })
+                                    ]
+                                })
+                            })
+                        ]
+                    })
+                }),
+                /*#__PURE__*/ jsx_runtime_.jsx(material_node.Grid, {
+                    item: true,
+                    xs: 12,
+                    md: 4,
+                    children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)(material_node.Card, {
+                        variant: "outlined",
+                        children: [
+                            /*#__PURE__*/ jsx_runtime_.jsx(material_node.CardHeader, {
+                                subheader: "优先事项二"
+                            }),
+                            /*#__PURE__*/ jsx_runtime_.jsx(material_node.CardMedia, {
                                 children: /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
                                     src: libs_images/* Images */.r.undrawEngineeringTeam,
                                     alt: "工程团队",
-                                    style: imageStyle
+                                    layout: "responsive"
                                 })
                             }),
-                            /*#__PURE__*/ (0,jsx_runtime_.jsxs)(material_node.List, {
+                            /*#__PURE__*/ (0,jsx_runtime_.jsxs)(material_node.CardContent, {
                                 children: [
-                                    /*#__PURE__*/ (0,jsx_runtime_.jsxs)(material_node.ListItem, {
+                                    /*#__PURE__*/ jsx_runtime_.jsx(material_node.Typography, {
+                                        fontSize: fontSizes.subtitle,
+                                        children: "让外包更人性化"
+                                    }),
+                                    /*#__PURE__*/ (0,jsx_runtime_.jsxs)(material_node.List, {
+                                        sx: {
+                                            mx: -2
+                                        },
                                         children: [
-                                            /*#__PURE__*/ jsx_runtime_.jsx(material_node.ListItemIcon, {
-                                                children: /*#__PURE__*/ jsx_runtime_.jsx(icons.Comment, {})
+                                            /*#__PURE__*/ (0,jsx_runtime_.jsxs)(material_node.ListItem, {
+                                                children: [
+                                                    /*#__PURE__*/ jsx_runtime_.jsx(material_node.ListItemIcon, {
+                                                        children: /*#__PURE__*/ jsx_runtime_.jsx(icons.Comment, {})
+                                                    }),
+                                                    /*#__PURE__*/ jsx_runtime_.jsx(material_node.ListItemText, {
+                                                        children: "加强沟通"
+                                                    })
+                                                ]
                                             }),
-                                            /*#__PURE__*/ jsx_runtime_.jsx(material_node.ListItemText, {
-                                                children: "加强沟通"
+                                            /*#__PURE__*/ (0,jsx_runtime_.jsxs)(material_node.ListItem, {
+                                                children: [
+                                                    /*#__PURE__*/ jsx_runtime_.jsx(material_node.ListItemIcon, {
+                                                        children: /*#__PURE__*/ jsx_runtime_.jsx(icons.PersonOff, {})
+                                                    }),
+                                                    /*#__PURE__*/ jsx_runtime_.jsx(material_node.ListItemText, {
+                                                        children: "减少官僚主义"
+                                                    })
+                                                ]
+                                            }),
+                                            /*#__PURE__*/ (0,jsx_runtime_.jsxs)(material_node.ListItem, {
+                                                children: [
+                                                    /*#__PURE__*/ jsx_runtime_.jsx(material_node.ListItemIcon, {
+                                                        children: /*#__PURE__*/ jsx_runtime_.jsx(icons.SafetyDivider, {})
+                                                    }),
+                                                    /*#__PURE__*/ jsx_runtime_.jsx(material_node.ListItemText, {
+                                                        children: "扁平化公司结构"
+                                                    })
+                                                ]
+                                            }),
+                                            /*#__PURE__*/ (0,jsx_runtime_.jsxs)(material_node.ListItem, {
+                                                children: [
+                                                    /*#__PURE__*/ jsx_runtime_.jsx(material_node.ListItemIcon, {
+                                                        children: /*#__PURE__*/ jsx_runtime_.jsx(icons.Group, {})
+                                                    }),
+                                                    /*#__PURE__*/ jsx_runtime_.jsx(material_node.ListItemText, {
+                                                        children: "我们都是公司内部和客户的合作伙伴"
+                                                    })
+                                                ]
                                             })
                                         ]
                                     }),
-                                    /*#__PURE__*/ (0,jsx_runtime_.jsxs)(material_node.ListItem, {
-                                        children: [
-                                            /*#__PURE__*/ jsx_runtime_.jsx(material_node.ListItemIcon, {
-                                                children: /*#__PURE__*/ jsx_runtime_.jsx(icons.PersonOff, {})
-                                            }),
-                                            /*#__PURE__*/ jsx_runtime_.jsx(material_node.ListItemText, {
-                                                children: "减少官僚主义"
-                                            })
-                                        ]
-                                    }),
-                                    /*#__PURE__*/ (0,jsx_runtime_.jsxs)(material_node.ListItem, {
-                                        children: [
-                                            /*#__PURE__*/ jsx_runtime_.jsx(material_node.ListItemIcon, {
-                                                children: /*#__PURE__*/ jsx_runtime_.jsx(icons.SafetyDivider, {})
-                                            }),
-                                            /*#__PURE__*/ jsx_runtime_.jsx(material_node.ListItemText, {
-                                                children: "扁平化公司结构"
-                                            })
-                                        ]
-                                    }),
-                                    /*#__PURE__*/ (0,jsx_runtime_.jsxs)(material_node.ListItem, {
-                                        children: [
-                                            /*#__PURE__*/ jsx_runtime_.jsx(material_node.ListItemIcon, {
-                                                children: /*#__PURE__*/ jsx_runtime_.jsx(icons.Group, {})
-                                            }),
-                                            /*#__PURE__*/ jsx_runtime_.jsx(material_node.ListItemText, {
-                                                children: "我们都是公司内部和客户的合作伙伴"
-                                            })
-                                        ]
+                                    /*#__PURE__*/ jsx_runtime_.jsx(material_node.Typography, {
+                                        fontSize: fontSizes.content
                                     })
                                 ]
                             })
                         ]
-                    }),
-                    /*#__PURE__*/ jsx_runtime_.jsx(material_node.Grid, {
-                        item: true,
-                        xs: 12,
-                        md: 6,
-                        sx: {
-                            order: {
-                                xs: 7,
-                                md: 8
-                            }
-                        },
-                        children: /*#__PURE__*/ jsx_runtime_.jsx(material_node.Box, {
-                            className: (hello_module_default()).image,
-                            sx: {
-                                display: {
-                                    xs: "none",
-                                    md: "block"
-                                }
-                            },
-                            children: /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
-                                src: libs_images/* Images */.r.undrawEngineeringTeam,
-                                alt: "工程团队",
-                                style: imageStyle
-                            })
-                        })
-                    }),
-                    /*#__PURE__*/ jsx_runtime_.jsx(HomeDivider, {
-                        order: 9
-                    }),
-                    /*#__PURE__*/ (0,jsx_runtime_.jsxs)(material_node.Grid, {
-                        item: true,
-                        xs: 12,
-                        md: 6,
-                        sx: {
-                            order: {
-                                xs: 10,
-                                md: 11
-                            }
-                        },
+                    })
+                }),
+                /*#__PURE__*/ jsx_runtime_.jsx(material_node.Grid, {
+                    item: true,
+                    xs: 12,
+                    md: 4,
+                    children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)(material_node.Card, {
+                        variant: "outlined",
                         children: [
-                            /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                                className: (hello_module_default()).h1,
-                                children: "优先事项三：让最复杂的想法栩栩如生"
+                            /*#__PURE__*/ jsx_runtime_.jsx(material_node.CardHeader, {
+                                subheader: "优先事项三"
                             }),
-                            /*#__PURE__*/ jsx_runtime_.jsx(material_node.Box, {
-                                className: (hello_module_default()).image,
-                                sx: {
-                                    display: {
-                                        xs: "block",
-                                        md: "none"
-                                    }
-                                },
+                            /*#__PURE__*/ jsx_runtime_.jsx(material_node.CardMedia, {
                                 children: /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
                                     src: libs_images/* Images */.r.undrawSolutionMindset,
                                     alt: "解决方案思维",
-                                    style: imageStyle
+                                    layout: "responsive"
                                 })
                             }),
-                            /*#__PURE__*/ (0,jsx_runtime_.jsxs)(material_node.List, {
+                            /*#__PURE__*/ (0,jsx_runtime_.jsxs)(material_node.CardContent, {
                                 children: [
-                                    /*#__PURE__*/ (0,jsx_runtime_.jsxs)(material_node.ListItem, {
+                                    /*#__PURE__*/ jsx_runtime_.jsx(material_node.Typography, {
+                                        fontSize: fontSizes.subtitle,
+                                        children: "让最复杂的想法栩栩如生"
+                                    }),
+                                    /*#__PURE__*/ (0,jsx_runtime_.jsxs)(material_node.List, {
+                                        sx: {
+                                            mx: -2
+                                        },
                                         children: [
-                                            /*#__PURE__*/ jsx_runtime_.jsx(material_node.ListItemIcon, {
-                                                children: /*#__PURE__*/ jsx_runtime_.jsx(icons.TrendingUp, {})
+                                            /*#__PURE__*/ (0,jsx_runtime_.jsxs)(material_node.ListItem, {
+                                                children: [
+                                                    /*#__PURE__*/ jsx_runtime_.jsx(material_node.ListItemIcon, {
+                                                        children: /*#__PURE__*/ jsx_runtime_.jsx(icons.TrendingUp, {})
+                                                    }),
+                                                    /*#__PURE__*/ jsx_runtime_.jsx(material_node.ListItemText, {
+                                                        children: "将技术推向极限"
+                                                    })
+                                                ]
                                             }),
-                                            /*#__PURE__*/ jsx_runtime_.jsx(material_node.ListItemText, {
-                                                children: "将技术推向极限"
+                                            /*#__PURE__*/ (0,jsx_runtime_.jsxs)(material_node.ListItem, {
+                                                children: [
+                                                    /*#__PURE__*/ jsx_runtime_.jsx(material_node.ListItemIcon, {
+                                                        children: /*#__PURE__*/ jsx_runtime_.jsx(icons.Biotech, {})
+                                                    }),
+                                                    /*#__PURE__*/ jsx_runtime_.jsx(material_node.ListItemText, {
+                                                        children: "在公司内部建立独特的专业知识"
+                                                    })
+                                                ]
+                                            }),
+                                            /*#__PURE__*/ (0,jsx_runtime_.jsxs)(material_node.ListItem, {
+                                                children: [
+                                                    /*#__PURE__*/ jsx_runtime_.jsx(material_node.ListItemIcon, {
+                                                        children: /*#__PURE__*/ jsx_runtime_.jsx(icons.DesktopMac, {})
+                                                    }),
+                                                    /*#__PURE__*/ jsx_runtime_.jsx(material_node.ListItemText, {
+                                                        children: "掌握尖端技术"
+                                                    })
+                                                ]
+                                            }),
+                                            /*#__PURE__*/ (0,jsx_runtime_.jsxs)(material_node.ListItem, {
+                                                children: [
+                                                    /*#__PURE__*/ jsx_runtime_.jsx(material_node.ListItemIcon, {
+                                                        children: /*#__PURE__*/ jsx_runtime_.jsx(icons.PsychologyAlt, {})
+                                                    }),
+                                                    /*#__PURE__*/ jsx_runtime_.jsx(material_node.ListItemText, {
+                                                        children: "始终找到满足客户业务需求的方法"
+                                                    })
+                                                ]
                                             })
                                         ]
                                     }),
-                                    /*#__PURE__*/ (0,jsx_runtime_.jsxs)(material_node.ListItem, {
-                                        children: [
-                                            /*#__PURE__*/ jsx_runtime_.jsx(material_node.ListItemIcon, {
-                                                children: /*#__PURE__*/ jsx_runtime_.jsx(icons.Biotech, {})
-                                            }),
-                                            /*#__PURE__*/ jsx_runtime_.jsx(material_node.ListItemText, {
-                                                children: "在公司内部建立独特的专业知识"
-                                            })
-                                        ]
-                                    }),
-                                    /*#__PURE__*/ (0,jsx_runtime_.jsxs)(material_node.ListItem, {
-                                        children: [
-                                            /*#__PURE__*/ jsx_runtime_.jsx(material_node.ListItemIcon, {
-                                                children: /*#__PURE__*/ jsx_runtime_.jsx(icons.DesktopMac, {})
-                                            }),
-                                            /*#__PURE__*/ jsx_runtime_.jsx(material_node.ListItemText, {
-                                                children: "掌握尖端技术"
-                                            })
-                                        ]
-                                    }),
-                                    /*#__PURE__*/ (0,jsx_runtime_.jsxs)(material_node.ListItem, {
-                                        children: [
-                                            /*#__PURE__*/ jsx_runtime_.jsx(material_node.ListItemIcon, {
-                                                children: /*#__PURE__*/ jsx_runtime_.jsx(icons.PsychologyAlt, {})
-                                            }),
-                                            /*#__PURE__*/ jsx_runtime_.jsx(material_node.ListItemText, {
-                                                children: "始终找到满足客户业务需求的方法"
-                                            })
-                                        ]
+                                    /*#__PURE__*/ jsx_runtime_.jsx(material_node.Typography, {
+                                        fontSize: fontSizes.content
                                     })
                                 ]
                             }),
-                            /*#__PURE__*/ jsx_runtime_.jsx(material_node.Box, {
-                                sx: {
-                                    mt: 4
-                                },
-                                children: /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                            /*#__PURE__*/ jsx_runtime_.jsx(material_node.CardActions, {
+                                children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)(material_node.Button, {
+                                    sx: {
+                                        color: "#fff",
+                                        width: "100%"
+                                    },
+                                    size: "large",
+                                    color: "primary",
+                                    variant: "contained",
                                     onClick: toTechnologies,
-                                    children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)(material_node.Button, {
-                                        sx: {
-                                            color: "#fff",
-                                            width: "100%",
-                                            borderRadius: "2rem"
-                                        },
-                                        color: "primary",
-                                        variant: "contained",
-                                        children: [
-                                            /*#__PURE__*/ jsx_runtime_.jsx("span", {
-                                                children: "查看我们的技术堆栈"
-                                            }),
-                                            /*#__PURE__*/ jsx_runtime_.jsx(South/* default */.Z, {
-                                                sx: {
-                                                    ml: 1
-                                                }
-                                            })
-                                        ]
-                                    })
+                                    children: [
+                                        /*#__PURE__*/ jsx_runtime_.jsx("span", {
+                                            children: "查看我们的技术堆栈"
+                                        }),
+                                        /*#__PURE__*/ jsx_runtime_.jsx(South/* default */.Z, {
+                                            sx: {
+                                                ml: 1
+                                            }
+                                        })
+                                    ]
                                 })
                             })
                         ]
-                    }),
-                    /*#__PURE__*/ jsx_runtime_.jsx(material_node.Grid, {
-                        item: true,
-                        xs: 12,
-                        md: 6,
-                        sx: {
-                            order: {
-                                xs: 11,
-                                md: 10
-                            }
-                        },
-                        children: /*#__PURE__*/ jsx_runtime_.jsx(material_node.Box, {
-                            className: (hello_module_default()).image,
-                            sx: {
-                                display: {
-                                    xs: "none",
-                                    md: "block"
-                                }
-                            },
-                            children: /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
-                                src: libs_images/* Images */.r.undrawSolutionMindset,
-                                alt: "解决方案思维",
-                                style: imageStyle
-                            })
-                        })
-                    }),
-                    /*#__PURE__*/ jsx_runtime_.jsx(HomeDivider, {
-                        order: 15
-                    }),
-                    /*#__PURE__*/ jsx_runtime_.jsx(HomePiece, {
-                        align: "end",
-                        orders: [
-                            16,
-                            17
-                        ],
-                        poster: {
-                            src: libs_images/* Images */.r.undrawServices,
-                            alt: "服务"
-                        },
-                        title: "服务",
-                        children: /*#__PURE__*/ jsx_runtime_.jsx(home_services/* default */.Z, {
-                            isDesc: false
-                        })
                     })
-                ]
-            })
-        ]
+                }),
+                /*#__PURE__*/ jsx_runtime_.jsx(material_node.Grid, {
+                    item: true,
+                    xs: 12,
+                    children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)(material_node.Card, {
+                        variant: "outlined",
+                        children: [
+                            /*#__PURE__*/ jsx_runtime_.jsx(material_node.CardHeader, {
+                                subheader: "服务"
+                            }),
+                            /*#__PURE__*/ jsx_runtime_.jsx(material_node.CardMedia, {
+                                children: /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
+                                    src: libs_images/* Images */.r.undrawServices,
+                                    alt: "服务",
+                                    layout: "responsive"
+                                })
+                            }),
+                            /*#__PURE__*/ jsx_runtime_.jsx(material_node.CardActions, {
+                                children: /*#__PURE__*/ jsx_runtime_.jsx(home_services/* default */.Z, {
+                                    isDesc: false
+                                })
+                            })
+                        ]
+                    })
+                }),
+                /*#__PURE__*/ jsx_runtime_.jsx(material_node.Grid, {
+                    item: true
+                })
+            ]
+        })
     });
 }
-
-
-/***/ }),
-
-/***/ 80440:
-/***/ ((module) => {
-
-// Exports
-module.exports = {
-	"hello": "hello_hello__JvjxH",
-	"image": "hello_image__SHe3E",
-	"h1": "hello_h1__enKFC"
-};
 
 
 /***/ }),
@@ -1170,7 +992,7 @@ const __default__ = proxy.default;
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [906,383,88,34,960,868,897], () => (__webpack_exec__(49996)));
+var __webpack_exports__ = __webpack_require__.X(0, [906,383,88,34,960,868,849], () => (__webpack_exec__(49996)));
 module.exports = __webpack_exports__;
 
 })();
