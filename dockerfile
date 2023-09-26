@@ -16,7 +16,6 @@ WORKDIR /usr/src/app
 ENV NODE_ENV production
 RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nextjs
-RUN chown -R nextjs /usr/src/app
 #COPY --from=builder /usr/src/app/next.config.js ./
 #COPY --from=builder /usr/src/app/public ./public
 #COPY --from=builder /usr/src/app/package.json ./
@@ -27,6 +26,9 @@ COPY public ./public
 COPY package.json ./
 COPY .next/standalone ./
 COPY .next/static ./.next/static
+#Image优化问题
+RUN mkdir /usr/src/app/.next/cache
+RUN chown -R nextjs /usr/src/app/.next/cache
 USER nextjs
 EXPOSE 3000
 ENV PORT 3000
