@@ -13,10 +13,10 @@
 
 FROM node:18-alpine AS runner
 WORKDIR /usr/src/app
-RUN sudo chown $(whoami) /usr/src/app/.next/cache
 ENV NODE_ENV production
 RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nextjs
+RUN sudo chown $(whoami) /usr/src/app
 #COPY --from=builder /usr/src/app/next.config.js ./
 #COPY --from=builder /usr/src/app/public ./public
 #COPY --from=builder /usr/src/app/package.json ./
