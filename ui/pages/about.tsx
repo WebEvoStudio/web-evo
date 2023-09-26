@@ -1,9 +1,28 @@
 'use client';
 import React from 'react';
-import {Box, Container, Step, StepContent, StepLabel, Stepper} from '@mui/material';
+import {
+  Box, Button,
+  Card, CardActions,
+  CardContent,
+  CardHeader,
+  CardMedia,
+  Container, IconButton,
+  Step,
+  StepContent,
+  StepLabel,
+  Stepper, Typography,
+} from '@mui/material';
 import Section from '../components/section';
 import Image from 'next/image';
-import {Images} from '../../core/libs/images';
+import {aliRedEnvelope, Images} from '../../core/libs/images';
+import copy from 'copy-to-clipboard';
+import {HelpOutline} from "@mui/icons-material";
+
+const openAli = () => {
+  const text = '复制 836990272 📸扌丁開📸吱怤 b`ao.去搜索，纟工.b.ao`惠券，惠及你我';
+  copy(text);
+  window.location.href = 'alipays://';
+};
 const About = () => {
   const sections = [
     {
@@ -47,6 +66,40 @@ const About = () => {
       title: '团队文化',
       desc: '我们相信，使开发世界变得更加美好，在哪里可以与您的团队交付最佳成绩，并使他们拥有最佳实践，或者使所有人更加了解教育。',
       children: (<></>),
+    },
+    {
+      title: '支持我们',
+      desc: [
+        '您可以通过几种方式为我们提供支持。',
+        '你的支持将有助于支付项目开销，并为我们的团队提供一些支持。',
+        '我们努力在从开源获取的价值和回馈的价值之间保持平衡。因此，我们自豪地赞助有前途的技术，贡献我们的知识使工具变得更方便，并构建开放代码解决方案以简化工程师的日常工作。',
+        '非常感谢你的支持。',
+      ],
+      children: (
+        <Card sx={{}}>
+          <CardHeader title={'每日'}>
+          </CardHeader>
+          <CardContent>
+            <Box sx={{display: 'flex'}}>
+              <Box sx={{flex: 1}}>
+                <Typography sx={{mb: 2}}>支付包红包 / 每 24 小时</Typography>
+                <Typography sx={{mb: 1}} variant={'body2'}>长按保存右侧红包图片打开支付包扫一扫。</Typography>
+                <Typography sx={{mb: 1}} variant={'body2'}>或者点击下方按钮复制打开支付宝搜索。</Typography>
+                <Typography>您获得红包的同时将支持我们，此选项可以无限使用。</Typography>
+              </Box>
+              <CardMedia sx={{width: 120}}>
+                <Image src={aliRedEnvelope} alt={''} layout="responsive"/>
+              </CardMedia>
+            </Box>
+          </CardContent>
+          <CardActions>
+            <Button variant={'contained'} fullWidth onClick={openAli}>复制口令并打开支付宝</Button>
+            {/*<IconButton>*/}
+            {/*  <HelpOutline></HelpOutline>*/}
+            {/*</IconButton>*/}
+          </CardActions>
+        </Card>
+      ),
     },
   ];
   return (
