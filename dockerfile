@@ -16,7 +16,7 @@ WORKDIR /usr/src/app
 ENV NODE_ENV production
 RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nextjs
-RUN sudo chown -R nextjs /usr/src/app
+RUN chown -R nextjs /usr/src/app
 #COPY --from=builder /usr/src/app/next.config.js ./
 #COPY --from=builder /usr/src/app/public ./public
 #COPY --from=builder /usr/src/app/package.json ./
