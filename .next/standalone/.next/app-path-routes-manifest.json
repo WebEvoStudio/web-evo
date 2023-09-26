@@ -2,12 +2,12 @@
   "/_not-found": "/_not-found",
   "/page": "/",
   "/blogs-sitemap.xml/route": "/blogs-sitemap.xml",
-  "/services/page": "/services",
-  "/blogs/page": "/blogs",
   "/about/page": "/about",
   "/privacy-policy/page": "/privacy-policy",
-  "/projects/page": "/projects",
+  "/services/page": "/services",
   "/contact/page": "/contact",
+  "/blogs/page": "/blogs",
+  "/projects/page": "/projects",
   "/tools/markdown-to-pdf/page": "/tools/markdown-to-pdf",
   "/dashboard/page": "/dashboard"
 }
