@@ -6,8 +6,7 @@ import {
   CardContent,
   CardHeader,
   CardMedia,
-  Container, IconButton,
-  Step,
+  Container, Step,
   StepContent,
   StepLabel,
   Stepper, Typography,
@@ -16,7 +15,6 @@ import Section from '../components/section';
 import Image from 'next/image';
 import {aliRedEnvelope, Images} from '../../core/libs/images';
 import copy from 'copy-to-clipboard';
-import {HelpOutline} from "@mui/icons-material";
 
 const openAli = () => {
   const text = '复制 836990272 📸扌丁開📸吱怤 b`ao.去搜索，纟工.b.ao`惠券，惠及你我';
@@ -87,16 +85,16 @@ const About = () => {
                 <Typography sx={{mb: 1}} variant={'body2'}>或者点击下方按钮复制打开支付宝搜索。</Typography>
                 <Typography>您获得红包的同时将支持我们，此选项可以无限使用。</Typography>
               </Box>
-              <CardMedia sx={{width: 120}}>
-                <Image src={aliRedEnvelope} alt={''} layout="responsive"/>
+              <CardMedia>
+                <Image src={aliRedEnvelope} alt={''} width={120}/>
               </CardMedia>
             </Box>
           </CardContent>
           <CardActions>
             <Button variant={'contained'} fullWidth onClick={openAli}>复制口令并打开支付宝</Button>
-            {/*<IconButton>*/}
+            {/* <IconButton>*/}
             {/*  <HelpOutline></HelpOutline>*/}
-            {/*</IconButton>*/}
+            {/* </IconButton>*/}
           </CardActions>
         </Card>
       ),
