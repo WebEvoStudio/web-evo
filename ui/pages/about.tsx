@@ -85,8 +85,8 @@ const About = () => {
                 <Typography sx={{mb: 1}} variant={'body2'}>或者点击下方按钮复制打开支付宝搜索。</Typography>
                 <Typography>您获得红包的同时将支持我们，此选项可以无限使用。</Typography>
               </Box>
-              <CardMedia>
-                <Image src={aliRedEnvelope} alt={''} width={120}/>
+              <CardMedia sx={{width: 120}}>
+                <Image src={aliRedEnvelope} alt={''} style={{width: '100%', height: 'auto'}}/>
               </CardMedia>
             </Box>
           </CardContent>
