@@ -1,1 +1,1028 @@
-(()=>{var e={};e.id=327,e.ids=[327],e.modules={72934:e=>{"use strict";e.exports=require("next/dist/client/components/action-async-storage.external.js")},55403:e=>{"use strict";e.exports=require("next/dist/client/components/request-async-storage.external")},54580:e=>{"use strict";e.exports=require("next/dist/client/components/request-async-storage.external.js")},94749:e=>{"use strict";e.exports=require("next/dist/client/components/static-generation-async-storage.external")},45869:e=>{"use strict";e.exports=require("next/dist/client/components/static-generation-async-storage.external.js")},20399:e=>{"use strict";e.exports=require("next/dist/compiled/next-server/app-page.runtime.prod.js")},39491:e=>{"use strict";e.exports=require("assert")},82361:e=>{"use strict";e.exports=require("events")},57147:e=>{"use strict";e.exports=require("fs")},13685:e=>{"use strict";e.exports=require("http")},95687:e=>{"use strict";e.exports=require("https")},22037:e=>{"use strict";e.exports=require("os")},71017:e=>{"use strict";e.exports=require("path")},12781:e=>{"use strict";e.exports=require("stream")},76224:e=>{"use strict";e.exports=require("tty")},57310:e=>{"use strict";e.exports=require("url")},73837:e=>{"use strict";e.exports=require("util")},59796:e=>{"use strict";e.exports=require("zlib")},54481:(e,t,r)=>{"use strict";r.r(t),r.d(t,{GlobalError:()=>a.a,__next_app__:()=>d,originalPathname:()=>m,pages:()=>x,routeModule:()=>p,tree:()=>u});var s=r(49326),n=r(10568),i=r(55412),a=r.n(i),o=r(55777),c={};for(let e in o)0>["default","tree","pages","GlobalError","originalPathname","__next_app__","routeModule"].indexOf(e)&&(c[e]=()=>o[e]);r.d(t,c);let l=s.AppPageRouteModule,u=["",{children:["contact",{children:["__PAGE__",{},{page:[()=>Promise.resolve().then(r.bind(r,45146)),"/Users/cityhunter/Documents/WorkSpace/personal-site/app/contact/page.tsx"]}]},{}]},{layout:[()=>Promise.resolve().then(r.bind(r,17814)),"/Users/cityhunter/Documents/WorkSpace/personal-site/app/layout.tsx"],"not-found":[()=>Promise.resolve().then(r.t.bind(r,25495,23)),"next/dist/client/components/not-found-error"]}],x=["/Users/cityhunter/Documents/WorkSpace/personal-site/app/contact/page.tsx"],m="/contact/page",d={require:r,loadChunk:()=>Promise.resolve()},p=new l({definition:{kind:n.x.APP_PAGE,page:"/contact/page",pathname:"/contact",bundlePath:"",filename:"",appPaths:[]},userland:{loaderTree:u}})},6162:(e,t,r)=>{Promise.resolve().then(r.bind(r,40450))},40450:(e,t,r)=>{"use strict";r.r(t),r.d(t,{default:()=>A});var s=r(88419),n=r(92087),i=r(84159),a=r.n(i),o=r(60635),c=r(30874),l=r.n(c),u=r(67924),x=r.n(u),m=r(5568),d=r.n(m),p=r(80838),h=r.n(p),g=r(79303),j=r(46079),v=r.n(j),f=r(85110),b=r(60087),y=r.n(b),q=r(40086),P=r(41857);class w{static toParams(e){let t="";for(let r in e)e.hasOwnProperty(r)&&(t+=`${r}=${e[r]}&`);return t.substring(0,t.length-1)}static toFormData(e){let t=new FormData;for(let r in e)e.hasOwnProperty(r)&&t.append(r,e[r]);return t}}class _{constructor(e){this.config={},this.config.baseURL="https://web-evo-server.bulv.life/",e&&(this.config.baseURL=e)}request(e,t,r,s){let n={...this.config,url:e,method:t,data:r,headers:s},i=P.Z.create();return i.interceptors.response.use(this.responseInterceptor,this.errorInterceptor),i.request(n)}get(e,t){return this.request(`${e}?${w.toParams(t)}`,"get")}post(e,t,r){return this.request(e,"post",t,r)}responseInterceptor(e){switch(e.status){case 200:case 201:return e.data;default:return console.log(e),Promise.reject(e)}}errorInterceptor(e){let t={message:"服务器错误",...e.response.data};return Promise.reject(t)}}var S=r(15155),D=r.n(S);function k(e){let t="WebEvolution";return(0,s.jsxs)(D(),{children:[s.jsx("title",{children:e.title||t}),s.jsx("meta",{name:"description",content:e.description||t+" 是一个帮助web开发者成长的社区。我们以技术文章为核心的产品形态，为开发者提供纯粹、高质的技术文章。"}),s.jsx("meta",{name:"viewport",content:"initial-scale=1, width=device-width, maximum-scale=1.0, user-scalable=0, viewport-fit=cover"}),s.jsx("meta",{name:"baidu-site-verification",content:"code-yx2HQhygQo"}),s.jsx("meta",{name:"msvalidate.01",content:"AB78A0C987D3AEA34B969889512FF33E"}),s.jsx("meta",{name:"google-site-verification",content:"4rS5gjy4-tFOdJO4HvDg0_E4QNcB1D1YeZo29iS4hIY"}),s.jsx("meta",{name:"baidu_union_verify",content:"50312ad0c63983b3fe6c2e2a6e10c386"})]})}function A(){let{enqueueSnackbar:e}=(0,f.useSnackbar)(),[t,r]=(0,n.useState)({name:"",contact:"",email:"",mobilePhone:"",message:""}),[i,c]=(0,n.useState)({name:!1,contact:!1,message:!1}),u=(0,n.useMemo)(()=>{let e=i.name||i.contact||i.message,r=Object.values(t).some(e=>""!==e);return e||!r},[t,i]);return(0,s.jsxs)(a(),{maxWidth:"lg",children:[s.jsx(k,{title:"联系 - WebEvolution"}),(0,s.jsxs)(o.Z,{sx:{display:"flex",flexDirection:"column",alignItems:"center",textAlign:"center"},children:[s.jsx(o.Z,{sx:{margin:"20px 0"},children:s.jsx(v(),{alt:"contact us",src:g.rU.undrawContactUs,style:{width:"100%",height:"auto"}})}),s.jsx(l(),{variant:"h1",sx:{margin:"20px 0"},fontSize:{xs:"38px",sm:"68px"},color:"#00B0FF",children:"我们能帮你什么吗？"}),s.jsx(l(),{variant:"body1",sx:{marginBottom:"50px"},children:"联系我们，了解 WebEvolution 如何帮助您实现雄心勃勃的软件需求！如对我们的任何计划或服务有任何疑问，请随时与我们联系。 我们将在 24 小时内回复您！"}),s.jsx(o.Z,{sx:{margin:"20px 0"},children:(0,s.jsxs)(x(),{container:!0,spacing:6,children:[s.jsx(x(),{item:!0,xs:12,sm:4,children:(0,s.jsxs)(o.Z,{sx:{display:"flex",flexDirection:"column",alignItems:"center"},children:[s.jsx(l(),{variant:"h3",fontSize:{sm:"42px"},color:"#00B0FF",children:"让我们谈谈"}),(0,s.jsxs)(o.Z,{sx:{padding:"16px",textAlign:"center",mb:"48px"},children:[s.jsx(l(),{variant:"h6",children:"联系电子邮件:"}),s.jsx("a",{href:"mailto:dongjun1997@outllook.com?subject=你好!",children:s.jsx(l(),{variant:"body1",children:"dongjun1997@outlook.com"})})]}),(0,s.jsxs)(o.Z,{sx:{padding:"16px",textAlign:"center"},children:[s.jsx(l(),{variant:"h6",children:"联系电话:"}),s.jsx("a",{href:"tel:+86 18691791512",children:s.jsx(l(),{variant:"body1",children:"+86 186 9179 1512"})})]})]})}),s.jsx(x(),{item:!0,sx:{display:{xs:"none",sm:"block"}},sm:2}),s.jsx(x(),{item:!0,xs:12,sm:6,children:(0,s.jsxs)(o.Z,{sx:{display:"flex",flexDirection:"column",alignItems:"center"},children:[s.jsx(l(),{variant:"h3",fontSize:{sm:"42px"},color:"#00B0FF",sx:{marginBottom:"10px",textAlign:"center"},children:"我们很乐意听取您的想法！"}),s.jsx(l(),{variant:"body1",sx:{marginBottom:"40px"},children:"不确定您需要什么？ 让我们集思广益，我们可以如何提供帮助！"}),s.jsx(o.Z,{component:"form",onSubmit:s=>{s.preventDefault(),console.log(t);let n={...t};Object.keys(n).forEach(e=>""===n[e]&&delete n[e]),new _("https://web-evo-server.bulv.life/").post("/customer",n).then(()=>{e("提交成功",{variant:"success"}),r({name:"",contact:"",email:"",mobilePhone:"",message:""})}).catch(t=>e(t.message,{variant:"error"}))},children:(0,s.jsxs)(x(),{container:!0,gap:2,children:[s.jsx(x(),{item:!0,xs:12,children:s.jsx(d(),{label:"您的名字",fullWidth:!0,required:!0,error:i.name,helperText:i.name?"名字是必须的":"",onBlur:()=>c({...i,name:""===t.name}),onChange:({target:{value:e}})=>r({...t,name:e})})}),s.jsx(x(),{item:!0,xs:12,children:s.jsx(d(),{label:"您的邮件或手机号",fullWidth:!0,required:!0,error:i.contact,helperText:i.contact?"邮箱或手机号码格式不正确":"",onBlur:()=>{if(""===t.email&&""===t.mobilePhone)return c({...i,contact:!0});if(""!==t.contact){c({...i,contact:!0}),r({...t,email:"",mobilePhone:""});return}c({...i,contact:!1})},onChange:({target:{value:e}})=>y()(e)?r({...t,email:e,contact:""}):(0,q.ZP)(e,"zh-CN")?r({...t,mobilePhone:e,contact:""}):void r({...t,contact:e})})}),s.jsx(x(),{item:!0,xs:12,children:s.jsx(d(),{label:"您的需求信息",fullWidth:!0,required:!0,multiline:!0,rows:4,error:i.message,helperText:i.message?"需求信息是必须的":"",onBlur:()=>c({...i,message:""===t.message}),onChange:({target:{value:e}})=>r({...t,message:e})})}),s.jsx(x(),{item:!0,xs:12,children:s.jsx(o.Z,{sx:{display:"flex",justifyContent:"center"},children:s.jsx(h(),{variant:"contained",sx:{width:"150px"},type:"submit",disabled:u,children:s.jsx(l(),{variant:"h6",color:"white",children:"提交"})})})})]})})]})})]})})]})]})}},45146:(e,t,r)=>{"use strict";r.r(t),r.d(t,{default:()=>u,metadata:()=>l});var s=r(91489);r(28601);var n=r(18902);let i=(0,n.createProxy)(String.raw`/Users/cityhunter/Documents/WorkSpace/personal-site/ui/pages/contact.tsx`),{__esModule:a,$$typeof:o}=i,c=i.default,l={title:"Web Evo - 联系我们"};function u(){return s.jsx(c,{})}}};var t=require("../../webpack-runtime.js");t.C(e);var r=e=>t(t.s=e),s=t.X(0,[941,874,861],()=>r(54481));module.exports=s})();
+(() => {
+var exports = {};
+exports.id = 327;
+exports.ids = [327];
+exports.modules = {
+
+/***/ 18038:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/compiled/react");
+
+/***/ }),
+
+/***/ 98704:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/compiled/react-dom/server-rendering-stub");
+
+/***/ }),
+
+/***/ 97897:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/compiled/react-server-dom-webpack/client");
+
+/***/ }),
+
+/***/ 56786:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/compiled/react/jsx-runtime");
+
+/***/ }),
+
+/***/ 5868:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/server/app-render/app-render");
+
+/***/ }),
+
+/***/ 41844:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/server/app-render/get-segment-param");
+
+/***/ }),
+
+/***/ 96624:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/server/future/helpers/interception-routes");
+
+/***/ }),
+
+/***/ 75281:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/server/future/route-modules/route-module");
+
+/***/ }),
+
+/***/ 57085:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/app-router-context");
+
+/***/ }),
+
+/***/ 1830:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/get-img-props");
+
+/***/ }),
+
+/***/ 20199:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/hash");
+
+/***/ }),
+
+/***/ 66864:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/head");
+
+/***/ }),
+
+/***/ 86819:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/head-manager-context");
+
+/***/ }),
+
+/***/ 39569:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/hooks-client-context");
+
+/***/ }),
+
+/***/ 52210:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/image-config");
+
+/***/ }),
+
+/***/ 35359:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/image-config-context");
+
+/***/ }),
+
+/***/ 17160:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/router-context");
+
+/***/ }),
+
+/***/ 30893:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/router/utils/add-path-prefix");
+
+/***/ }),
+
+/***/ 12336:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/router/utils/format-url");
+
+/***/ }),
+
+/***/ 17887:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/router/utils/handle-smooth-scroll");
+
+/***/ }),
+
+/***/ 98735:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/router/utils/is-bot");
+
+/***/ }),
+
+/***/ 60120:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/router/utils/is-local-url");
+
+/***/ }),
+
+/***/ 68231:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/router/utils/parse-path");
+
+/***/ }),
+
+/***/ 54614:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/router/utils/path-has-prefix");
+
+/***/ }),
+
+/***/ 53750:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/router/utils/remove-trailing-slash");
+
+/***/ }),
+
+/***/ 70982:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/router/utils/resolve-href");
+
+/***/ }),
+
+/***/ 79618:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/server-inserted-html");
+
+/***/ }),
+
+/***/ 78423:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/utils");
+
+/***/ }),
+
+/***/ 80268:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/utils/warn-once");
+
+/***/ }),
+
+/***/ 39491:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("assert");
+
+/***/ }),
+
+/***/ 82361:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("events");
+
+/***/ }),
+
+/***/ 57147:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("fs");
+
+/***/ }),
+
+/***/ 13685:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("http");
+
+/***/ }),
+
+/***/ 95687:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("https");
+
+/***/ }),
+
+/***/ 22037:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("os");
+
+/***/ }),
+
+/***/ 71017:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("path");
+
+/***/ }),
+
+/***/ 12781:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("stream");
+
+/***/ }),
+
+/***/ 76224:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("tty");
+
+/***/ }),
+
+/***/ 57310:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("url");
+
+/***/ }),
+
+/***/ 73837:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("util");
+
+/***/ }),
+
+/***/ 59796:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("zlib");
+
+/***/ }),
+
+/***/ 34089:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   GlobalError: () => (/* reexport default from dynamic */ next_dist_client_components_error_boundary__WEBPACK_IMPORTED_MODULE_2___default.a),
+/* harmony export */   __next_app__: () => (/* binding */ __next_app__),
+/* harmony export */   originalPathname: () => (/* binding */ originalPathname),
+/* harmony export */   pages: () => (/* binding */ pages),
+/* harmony export */   routeModule: () => (/* binding */ routeModule),
+/* harmony export */   tree: () => (/* binding */ tree)
+/* harmony export */ });
+/* harmony import */ var next_dist_server_future_route_modules_app_page_module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(51404);
+/* harmony import */ var next_dist_server_future_route_modules_app_page_module__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(next_dist_server_future_route_modules_app_page_module__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var next_dist_server_future_route_kind__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(87765);
+/* harmony import */ var next_dist_client_components_error_boundary__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(89694);
+/* harmony import */ var next_dist_client_components_error_boundary__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_dist_client_components_error_boundary__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var next_dist_server_app_render_entry_base__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(58377);
+/* harmony import */ var next_dist_server_app_render_entry_base__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_dist_server_app_render_entry_base__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony reexport (unknown) */ var __WEBPACK_REEXPORT_OBJECT__ = {};
+/* harmony reexport (unknown) */ for(const __WEBPACK_IMPORT_KEY__ in next_dist_server_app_render_entry_base__WEBPACK_IMPORTED_MODULE_3__) if(["default","tree","pages","GlobalError","originalPathname","__next_app__","routeModule"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) __WEBPACK_REEXPORT_OBJECT__[__WEBPACK_IMPORT_KEY__] = () => next_dist_server_app_render_entry_base__WEBPACK_IMPORTED_MODULE_3__[__WEBPACK_IMPORT_KEY__]
+/* harmony reexport (unknown) */ __webpack_require__.d(__webpack_exports__, __WEBPACK_REEXPORT_OBJECT__);
+// @ts-ignore this need to be imported from next/dist to be external
+
+
+const AppPageRouteModule = next_dist_server_future_route_modules_app_page_module__WEBPACK_IMPORTED_MODULE_0__.AppPageRouteModule;
+// We inject the tree and pages here so that we can use them in the route
+// module.
+const tree = {
+        children: [
+        '',
+        {
+        children: [
+        'contact',
+        {
+        children: ['__PAGE__', {}, {
+          page: [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 22084)), "/Users/cityhunter/Documents/WorkSpace/personal-site/app/contact/page.tsx"],
+          
+        }]
+      },
+        {
+        
+        
+      }
+      ]
+      },
+        {
+        'layout': [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 37596)), "/Users/cityhunter/Documents/WorkSpace/personal-site/app/layout.tsx"],
+'not-found': [() => Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 85779, 23)), "next/dist/client/components/not-found-error"],
+        
+      }
+      ]
+      }.children;
+const pages = ["/Users/cityhunter/Documents/WorkSpace/personal-site/app/contact/page.tsx"];
+
+// @ts-expect-error - replaced by webpack/turbopack loader
+
+const __next_app_require__ = __webpack_require__
+const __next_app_load_chunk__ = () => Promise.resolve()
+const originalPathname = "/contact/page";
+const __next_app__ = {
+    require: __next_app_require__,
+    loadChunk: __next_app_load_chunk__
+};
+
+// Create and export the route module that will be consumed.
+const routeModule = new AppPageRouteModule({
+    definition: {
+        kind: next_dist_server_future_route_kind__WEBPACK_IMPORTED_MODULE_1__.RouteKind.APP_PAGE,
+        page: "/contact/page",
+        pathname: "/contact",
+        // The following aren't used in production.
+        bundlePath: "",
+        filename: "",
+        appPaths: []
+    },
+    userland: {
+        loaderTree: tree
+    }
+});
+
+//# sourceMappingURL=app-page.js.map
+
+/***/ }),
+
+/***/ 67571:
+/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 26264))
+
+/***/ }),
+
+/***/ 26264:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "default": () => (/* binding */ Contact)
+});
+
+// EXTERNAL MODULE: external "next/dist/compiled/react/jsx-runtime"
+var jsx_runtime_ = __webpack_require__(56786);
+// EXTERNAL MODULE: external "next/dist/compiled/react"
+var react_ = __webpack_require__(18038);
+// EXTERNAL MODULE: ./node_modules/.pnpm/@mui+material@5.14.10_@emotion+react@11.11.1_@emotion+styled@11.11.0_@types+react@18.2.9_react-dom@18.2.0_react@18.2.0/node_modules/@mui/material/node/index.js
+var node = __webpack_require__(62253);
+// EXTERNAL MODULE: ./core/libs/images.ts + 2 modules
+var libs_images = __webpack_require__(34511);
+// EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.19_@babel+core@7.23.0_react-dom@18.2.0_react@18.2.0_sass@1.68.0/node_modules/next/image.js
+var next_image = __webpack_require__(1521);
+var image_default = /*#__PURE__*/__webpack_require__.n(next_image);
+// EXTERNAL MODULE: ./node_modules/.pnpm/notistack@3.0.1_csstype@3.1.2_react-dom@18.2.0_react@18.2.0/node_modules/notistack/index.js
+var notistack = __webpack_require__(85110);
+// EXTERNAL MODULE: ./node_modules/.pnpm/validator@13.11.0/node_modules/validator/lib/isEmail.js
+var isEmail = __webpack_require__(60087);
+var isEmail_default = /*#__PURE__*/__webpack_require__.n(isEmail);
+// EXTERNAL MODULE: ./node_modules/.pnpm/validator@13.11.0/node_modules/validator/lib/isMobilePhone.js
+var isMobilePhone = __webpack_require__(40086);
+// EXTERNAL MODULE: ./node_modules/.pnpm/axios@1.5.0/node_modules/axios/lib/axios.js + 46 modules
+var axios = __webpack_require__(41857);
+;// CONCATENATED MODULE: ./core/unit/object-unit.ts
+/**
+ * Object unit
+ */ class ObjectUnit {
+    /**
+   * object 转 params
+   * @param {Object} obj
+   * @return {string}
+   */ static toParams(obj) {
+        let params = "";
+        for(const key in obj){
+            if (obj.hasOwnProperty(key)) {
+                params += `${key}=${obj[key]}&`;
+            }
+        }
+        return params.substring(0, params.length - 1);
+    }
+    /**
+   * object 转 FormData
+   * @param {Object} obj
+   * @return {FormData}
+   */ static toFormData(obj) {
+        const formData = new FormData();
+        for(const key in obj){
+            if (obj.hasOwnProperty(key)) {
+                formData.append(key, obj[key]);
+            }
+        }
+        return formData;
+    }
+}
+
+;// CONCATENATED MODULE: ./core/unit/request.ts
+
+
+/**
+ * 请求
+ * @property {function} get GET请求
+ */ class Request {
+    /**
+   * 构造器
+   * @param {string} baseURL 请求地址
+   */ constructor(baseURL){
+        this.config = {};
+        this.config.baseURL = "https://web-evo-server.bulv.life/";
+        if (baseURL) this.config.baseURL = baseURL;
+    }
+    /**
+   * 请求配置
+   * @param {string} url
+   * @param {Method} method
+   * @param {any} data
+   * @param {any} headers
+   * @return {Promise<AxiosResponse<any>>}
+   */ request(url, method, data, headers) {
+        const config = {
+            ...this.config,
+            url,
+            method,
+            data,
+            headers
+        };
+        const instance = axios/* default */.Z.create();
+        instance.interceptors.response.use(this.responseInterceptor, this.errorInterceptor);
+        return instance.request(config);
+    }
+    /**
+   * GET请求
+   * @param {string} url
+   * @param {Object} requestParam
+   * @return {any}
+   */ get(url, requestParam) {
+        return this.request(`${url}?${ObjectUnit.toParams(requestParam)}`, "get");
+    }
+    /**
+   * POST请求
+   * @param {string} url
+   * @param {Object} data
+   * @param {Object} headers
+   * @return {any}
+   */ post(url, data, headers) {
+        return this.request(url, "post", data, headers);
+    }
+    /**
+   * 响应拦截器
+   * @param {any} response
+   * @return {any}
+   */ responseInterceptor(response) {
+        switch(response.status){
+            case 200:
+            case 201:
+                return response.data;
+            default:
+                console.log(response);
+                return Promise.reject(response);
+        }
+    }
+    /**
+   * 错误拦截器
+   * @param {any} err
+   * @return {any}
+   */ errorInterceptor(err) {
+        const error = {
+            message: "服务器错误",
+            ...err.response.data
+        };
+        return Promise.reject(error);
+    }
+}
+
+// EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.19_@babel+core@7.23.0_react-dom@18.2.0_react@18.2.0_sass@1.68.0/node_modules/next/dist/client/components/noop-head.js
+var noop_head = __webpack_require__(95867);
+var noop_head_default = /*#__PURE__*/__webpack_require__.n(noop_head);
+;// CONCATENATED MODULE: ./components/common-head.tsx
+
+
+
+/**
+ * CommonHead
+ * @param {any} props
+ * @constructor
+ */ function CommonHead(props) {
+    const title = "WebEvolution";
+    const description = title + " 是一个帮助web开发者成长的社区。我们以技术文章为核心的产品形态，为开发者提供纯粹、高质的技术文章。";
+    return /*#__PURE__*/ (0,jsx_runtime_.jsxs)((noop_head_default()), {
+        children: [
+            /*#__PURE__*/ jsx_runtime_.jsx("title", {
+                children: props.title || title
+            }),
+            /*#__PURE__*/ jsx_runtime_.jsx("meta", {
+                name: "description",
+                content: props.description || description
+            }),
+            /*#__PURE__*/ jsx_runtime_.jsx("meta", {
+                name: "viewport",
+                content: "initial-scale=1, width=device-width, maximum-scale=1.0, user-scalable=0, viewport-fit=cover"
+            }),
+            /*#__PURE__*/ jsx_runtime_.jsx("meta", {
+                name: "baidu-site-verification",
+                content: "code-yx2HQhygQo"
+            }),
+            /*#__PURE__*/ jsx_runtime_.jsx("meta", {
+                name: "msvalidate.01",
+                content: "AB78A0C987D3AEA34B969889512FF33E"
+            }),
+            /*#__PURE__*/ jsx_runtime_.jsx("meta", {
+                name: "google-site-verification",
+                content: "4rS5gjy4-tFOdJO4HvDg0_E4QNcB1D1YeZo29iS4hIY"
+            }),
+            /*#__PURE__*/ jsx_runtime_.jsx("meta", {
+                name: "baidu_union_verify",
+                content: "50312ad0c63983b3fe6c2e2a6e10c386"
+            })
+        ]
+    });
+}
+
+;// CONCATENATED MODULE: ./ui/pages/contact.tsx
+/* __next_internal_client_entry_do_not_use__ default auto */ 
+
+
+
+
+
+
+
+
+
+/**
+ * Contact page
+ * @return {React.ReactElement}
+ */ function Contact() {
+    const { enqueueSnackbar } = (0,notistack.useSnackbar)();
+    const [form, setForm] = (0,react_.useState)({
+        name: "",
+        contact: "",
+        email: "",
+        mobilePhone: "",
+        message: ""
+    });
+    const [formError, setFormError] = (0,react_.useState)({
+        name: false,
+        contact: false,
+        message: false
+    });
+    const submit = (e)=>{
+        e.preventDefault();
+        console.log(form);
+        const requestBody = {
+            ...form
+        };
+        Object.keys(requestBody).forEach((key)=>requestBody[key] === "" && delete requestBody[key]);
+        new Request("https://web-evo-server.bulv.life/").post("/customer", requestBody).then(()=>{
+            enqueueSnackbar("提交成功", {
+                variant: "success"
+            });
+            setForm({
+                name: "",
+                contact: "",
+                email: "",
+                mobilePhone: "",
+                message: ""
+            });
+        }).catch((err)=>enqueueSnackbar(err.message, {
+                variant: "error"
+            }));
+    };
+    const contactBlurHandler = ()=>{
+        if (form.email === "" && form.mobilePhone === "") return setFormError({
+            ...formError,
+            contact: true
+        });
+        if (form.contact !== "") {
+            setFormError({
+                ...formError,
+                contact: true
+            });
+            setForm({
+                ...form,
+                email: "",
+                mobilePhone: ""
+            });
+            return;
+        }
+        setFormError({
+            ...formError,
+            contact: false
+        });
+    };
+    const contactChangeHandler = ({ target: { value } })=>{
+        if (isEmail_default()(value)) return setForm({
+            ...form,
+            email: value,
+            contact: ""
+        });
+        if ((0,isMobilePhone/* default */.ZP)(value, "zh-CN")) return setForm({
+            ...form,
+            mobilePhone: value,
+            contact: ""
+        });
+        setForm({
+            ...form,
+            contact: value
+        });
+    };
+    const submitDisabled = (0,react_.useMemo)(()=>{
+        const isError = formError.name || formError.contact || formError.message;
+        const isInput = Object.values(form).some((v)=>v !== "");
+        return isError || !isInput;
+    }, [
+        form,
+        formError
+    ]);
+    return /*#__PURE__*/ (0,jsx_runtime_.jsxs)(node.Container, {
+        maxWidth: "lg",
+        children: [
+            /*#__PURE__*/ jsx_runtime_.jsx(CommonHead, {
+                title: "联系 - WebEvolution"
+            }),
+            /*#__PURE__*/ (0,jsx_runtime_.jsxs)(node.Box, {
+                sx: {
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    textAlign: "center"
+                },
+                children: [
+                    /*#__PURE__*/ jsx_runtime_.jsx(node.Box, {
+                        sx: {
+                            margin: "20px 0"
+                        },
+                        children: /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
+                            alt: "contact us",
+                            src: libs_images/* Images */.rU.undrawContactUs,
+                            style: {
+                                width: "100%",
+                                height: "auto"
+                            }
+                        })
+                    }),
+                    /*#__PURE__*/ jsx_runtime_.jsx(node.Typography, {
+                        variant: "h1",
+                        sx: {
+                            margin: "20px 0"
+                        },
+                        fontSize: {
+                            xs: "38px",
+                            sm: "68px"
+                        },
+                        color: "#00B0FF",
+                        children: "我们能帮你什么吗？"
+                    }),
+                    /*#__PURE__*/ jsx_runtime_.jsx(node.Typography, {
+                        variant: "body1",
+                        sx: {
+                            marginBottom: "50px"
+                        },
+                        children: "联系我们，了解 WebEvolution 如何帮助您实现雄心勃勃的软件需求！如对我们的任何计划或服务有任何疑问，请随时与我们联系。 我们将在 24 小时内回复您！"
+                    }),
+                    /*#__PURE__*/ jsx_runtime_.jsx(node.Box, {
+                        sx: {
+                            margin: "20px 0"
+                        },
+                        children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)(node.Grid, {
+                            container: true,
+                            spacing: 6,
+                            children: [
+                                /*#__PURE__*/ jsx_runtime_.jsx(node.Grid, {
+                                    item: true,
+                                    xs: 12,
+                                    sm: 4,
+                                    children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)(node.Box, {
+                                        sx: {
+                                            display: "flex",
+                                            flexDirection: "column",
+                                            alignItems: "center"
+                                        },
+                                        children: [
+                                            /*#__PURE__*/ jsx_runtime_.jsx(node.Typography, {
+                                                variant: "h3",
+                                                fontSize: {
+                                                    sm: "42px"
+                                                },
+                                                color: "#00B0FF",
+                                                children: "让我们谈谈"
+                                            }),
+                                            /*#__PURE__*/ (0,jsx_runtime_.jsxs)(node.Box, {
+                                                sx: {
+                                                    padding: "16px",
+                                                    textAlign: "center",
+                                                    mb: "48px"
+                                                },
+                                                children: [
+                                                    /*#__PURE__*/ jsx_runtime_.jsx(node.Typography, {
+                                                        variant: "h6",
+                                                        children: "联系电子邮件:"
+                                                    }),
+                                                    /*#__PURE__*/ jsx_runtime_.jsx("a", {
+                                                        href: "mailto:dongjun1997@outllook.com?subject=你好!",
+                                                        children: /*#__PURE__*/ jsx_runtime_.jsx(node.Typography, {
+                                                            variant: "body1",
+                                                            children: "dongjun1997@outlook.com"
+                                                        })
+                                                    })
+                                                ]
+                                            }),
+                                            /*#__PURE__*/ (0,jsx_runtime_.jsxs)(node.Box, {
+                                                sx: {
+                                                    padding: "16px",
+                                                    textAlign: "center"
+                                                },
+                                                children: [
+                                                    /*#__PURE__*/ jsx_runtime_.jsx(node.Typography, {
+                                                        variant: "h6",
+                                                        children: "联系电话:"
+                                                    }),
+                                                    /*#__PURE__*/ jsx_runtime_.jsx("a", {
+                                                        href: "tel:+86 18691791512",
+                                                        children: /*#__PURE__*/ jsx_runtime_.jsx(node.Typography, {
+                                                            variant: "body1",
+                                                            children: "+86 186 9179 1512"
+                                                        })
+                                                    })
+                                                ]
+                                            })
+                                        ]
+                                    })
+                                }),
+                                /*#__PURE__*/ jsx_runtime_.jsx(node.Grid, {
+                                    item: true,
+                                    sx: {
+                                        display: {
+                                            xs: "none",
+                                            sm: "block"
+                                        }
+                                    },
+                                    sm: 2
+                                }),
+                                /*#__PURE__*/ jsx_runtime_.jsx(node.Grid, {
+                                    item: true,
+                                    xs: 12,
+                                    sm: 6,
+                                    children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)(node.Box, {
+                                        sx: {
+                                            display: "flex",
+                                            flexDirection: "column",
+                                            alignItems: "center"
+                                        },
+                                        children: [
+                                            /*#__PURE__*/ jsx_runtime_.jsx(node.Typography, {
+                                                variant: "h3",
+                                                fontSize: {
+                                                    sm: "42px"
+                                                },
+                                                color: "#00B0FF",
+                                                sx: {
+                                                    marginBottom: "10px",
+                                                    textAlign: "center"
+                                                },
+                                                children: "我们很乐意听取您的想法！"
+                                            }),
+                                            /*#__PURE__*/ jsx_runtime_.jsx(node.Typography, {
+                                                variant: "body1",
+                                                sx: {
+                                                    marginBottom: "40px"
+                                                },
+                                                children: "不确定您需要什么？ 让我们集思广益，我们可以如何提供帮助！"
+                                            }),
+                                            /*#__PURE__*/ jsx_runtime_.jsx(node.Box, {
+                                                component: "form",
+                                                onSubmit: submit,
+                                                children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)(node.Grid, {
+                                                    container: true,
+                                                    gap: 2,
+                                                    children: [
+                                                        /*#__PURE__*/ jsx_runtime_.jsx(node.Grid, {
+                                                            item: true,
+                                                            xs: 12,
+                                                            children: /*#__PURE__*/ jsx_runtime_.jsx(node.TextField, {
+                                                                label: "您的名字",
+                                                                fullWidth: true,
+                                                                required: true,
+                                                                error: formError.name,
+                                                                helperText: formError.name ? "名字是必须的" : "",
+                                                                onBlur: ()=>setFormError({
+                                                                        ...formError,
+                                                                        name: form.name === ""
+                                                                    }),
+                                                                onChange: ({ target: { value } })=>setForm({
+                                                                        ...form,
+                                                                        name: value
+                                                                    })
+                                                            })
+                                                        }),
+                                                        /*#__PURE__*/ jsx_runtime_.jsx(node.Grid, {
+                                                            item: true,
+                                                            xs: 12,
+                                                            children: /*#__PURE__*/ jsx_runtime_.jsx(node.TextField, {
+                                                                label: "您的邮件或手机号",
+                                                                fullWidth: true,
+                                                                required: true,
+                                                                error: formError.contact,
+                                                                helperText: formError.contact ? "邮箱或手机号码格式不正确" : "",
+                                                                onBlur: contactBlurHandler,
+                                                                onChange: contactChangeHandler
+                                                            })
+                                                        }),
+                                                        /*#__PURE__*/ jsx_runtime_.jsx(node.Grid, {
+                                                            item: true,
+                                                            xs: 12,
+                                                            children: /*#__PURE__*/ jsx_runtime_.jsx(node.TextField, {
+                                                                label: "您的需求信息",
+                                                                fullWidth: true,
+                                                                required: true,
+                                                                multiline: true,
+                                                                rows: 4,
+                                                                error: formError.message,
+                                                                helperText: formError.message ? "需求信息是必须的" : "",
+                                                                onBlur: ()=>setFormError({
+                                                                        ...formError,
+                                                                        message: form.message === ""
+                                                                    }),
+                                                                onChange: ({ target: { value } })=>setForm({
+                                                                        ...form,
+                                                                        message: value
+                                                                    })
+                                                            })
+                                                        }),
+                                                        /*#__PURE__*/ jsx_runtime_.jsx(node.Grid, {
+                                                            item: true,
+                                                            xs: 12,
+                                                            children: /*#__PURE__*/ jsx_runtime_.jsx(node.Box, {
+                                                                sx: {
+                                                                    display: "flex",
+                                                                    justifyContent: "center"
+                                                                },
+                                                                children: /*#__PURE__*/ jsx_runtime_.jsx(node.Button, {
+                                                                    variant: "contained",
+                                                                    sx: {
+                                                                        width: "150px"
+                                                                    },
+                                                                    type: "submit",
+                                                                    disabled: submitDisabled,
+                                                                    children: /*#__PURE__*/ jsx_runtime_.jsx(node.Typography, {
+                                                                        variant: "h6",
+                                                                        color: "white",
+                                                                        children: "提交"
+                                                                    })
+                                                                })
+                                                            })
+                                                        })
+                                                    ]
+                                                })
+                                            })
+                                        ]
+                                    })
+                                })
+                            ]
+                        })
+                    })
+                ]
+            })
+        ]
+    });
+}
+
+
+/***/ }),
+
+/***/ 22084:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "default": () => (/* binding */ Page),
+  metadata: () => (/* binding */ metadata)
+});
+
+// EXTERNAL MODULE: external "next/dist/compiled/react/jsx-runtime"
+var jsx_runtime_ = __webpack_require__(56786);
+// EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.19_@babel+core@7.23.0_react-dom@18.2.0_react@18.2.0_sass@1.68.0/node_modules/next/dist/compiled/react/react.shared-subset.js
+var react_shared_subset = __webpack_require__(44923);
+// EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.19_@babel+core@7.23.0_react-dom@18.2.0_react@18.2.0_sass@1.68.0/node_modules/next/dist/build/webpack/loaders/next-flight-loader/module-proxy.js
+var module_proxy = __webpack_require__(98629);
+;// CONCATENATED MODULE: ./ui/pages/contact.tsx
+
+const proxy = (0,module_proxy.createProxy)(String.raw`/Users/cityhunter/Documents/WorkSpace/personal-site/ui/pages/contact.tsx`)
+
+// Accessing the __esModule property and exporting $$typeof are required here.
+// The __esModule getter forces the proxy target to create the default export
+// and the $$typeof value is for rendering logic to determine if the module
+// is a client boundary.
+const { __esModule, $$typeof } = proxy;
+const __default__ = proxy.default;
+
+
+/* harmony default export */ const contact = (__default__);
+;// CONCATENATED MODULE: ./app/contact/page.tsx
+
+
+
+const metadata = {
+    title: "Web Evo - 联系我们"
+};
+/**
+ * app/contact
+ * @constructor
+ */ function Page() {
+    return /*#__PURE__*/ jsx_runtime_.jsx(contact, {});
+}
+
+
+/***/ })
+
+};
+;
+
+// load runtime
+var __webpack_require__ = require("../../webpack-runtime.js");
+__webpack_require__.C(exports);
+var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
+var __webpack_exports__ = __webpack_require__.X(0, [587,999,538,264,361,190], () => (__webpack_exec__(34089)));
+module.exports = __webpack_exports__;
+
+})();

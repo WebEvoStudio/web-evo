@@ -1,1 +1,628 @@
-(()=>{var e={};e.id=268,e.ids=[268,888,660],e.modules={38511:e=>{e.exports={"blog-title":"blog_blog-title__uqujP","blog-wrapper":"blog_blog-wrapper__lmDY0","blog-item":"blog_blog-item__Q5xOi","blog-description":"blog_blog-description__NvM_l","blog-detail":"blog_blog-detail___sjBy","blog-content":"blog_blog-content__QaA1t","blog-info":"blog_blog-info__1XCRH"}},5905:(e,t,r)=>{"use strict";r.r(t),r.d(t,{config:()=>M,default:()=>R,getServerSideProps:()=>C,getStaticPaths:()=>A,getStaticProps:()=>k,reportWebVitals:()=>N,routeModule:()=>E,unstable_getServerProps:()=>V,unstable_getServerSideProps:()=>D,unstable_getStaticParams:()=>H,unstable_getStaticPaths:()=>Z,unstable_getStaticProps:()=>W});var s={};r.r(s),r.d(s,{default:()=>y});var i=r(85499),o=r(54022),a=r(9486),l=r(593),u=r(56663),n=r(20997);r(16689);var c=r(38511),p=r.n(c),d=r(63300),g=r(52167),m=r.n(g),b=r(17239),x=r(47848),_=r(7542),q=r.n(_);r(80388),r(31791);var v=r(66511),S=r(54943),h=r.n(S),P=r(20149),j=r.n(P);function f({blog:e}){let t=b.Z.keywordToLink(e.markContent,"https://web-evo.bulv.life"),r=[h()(),j()()];return n.jsx(x.Z,{children:n.jsx(q(),{maxWidth:"md",children:n.jsx("article",{"data-clarity-region":"article",children:(0,n.jsxs)("div",{className:p().blog,children:[n.jsx(d.Z,{title:e.title+" - Web Evolution",description:b.Z.intercept(e.markContent,100)}),(0,n.jsxs)("div",{className:p()["blog-detail"],children:[n.jsx("div",{className:p()["blog-title"],children:n.jsx("h1",{children:e.title})}),n.jsx("div",{className:p()["blog-content"],children:n.jsx(v.Viewer,{value:t,plugins:r})})]})]})})})})}f.getInitialProps=async e=>{let{id:t}=e.query,r=`https://web-evo-server.bulv.life/blogs/${t}`,s=await m().get(r);return{blog:s.data}};let y=f,w=i.PagesRouteModule,R=(0,a.l)(s,"default"),k=(0,a.l)(s,"getStaticProps"),A=(0,a.l)(s,"getStaticPaths"),C=(0,a.l)(s,"getServerSideProps"),M=(0,a.l)(s,"config"),N=(0,a.l)(s,"reportWebVitals"),W=(0,a.l)(s,"unstable_getStaticProps"),Z=(0,a.l)(s,"unstable_getStaticPaths"),H=(0,a.l)(s,"unstable_getStaticParams"),V=(0,a.l)(s,"unstable_getServerProps"),D=(0,a.l)(s,"unstable_getServerSideProps"),E=new w({definition:{kind:o.x.PAGES,page:"/blogs/[id]",pathname:"/blogs/[id]",bundlePath:"",filename:""},components:{App:u.default,Document:l.default},userland:s})},31791:()=>{},80388:()=>{},50100:e=>{"use strict";e.exports=require("@bradgarropy/next-google-analytics")},54943:e=>{"use strict";e.exports=require("@bytemd/plugin-frontmatter")},20149:e=>{"use strict";e.exports=require("@bytemd/plugin-gfm")},66511:e=>{"use strict";e.exports=require("@bytemd/react")},71913:e=>{"use strict";e.exports=require("@emotion/cache")},72805:e=>{"use strict";e.exports=require("@emotion/react")},9552:e=>{"use strict";e.exports=require("@emotion/server/create-instance")},81480:e=>{"use strict";e.exports=require("@emotion/styled")},97339:e=>{"use strict";e.exports=require("@mui/icons-material/ArticleRounded")},70652:e=>{"use strict";e.exports=require("@mui/icons-material/ContactMailRounded")},64912:e=>{"use strict";e.exports=require("@mui/icons-material/HomeRepairServiceRounded")},35776:e=>{"use strict";e.exports=require("@mui/icons-material/HomeRounded")},99881:e=>{"use strict";e.exports=require("@mui/icons-material/KeyboardArrowUp")},82602:e=>{"use strict";e.exports=require("@mui/icons-material/Menu")},38017:e=>{"use strict";e.exports=require("@mui/icons-material/Search")},18787:e=>{"use strict";e.exports=require("@mui/icons-material/SourceRounded")},75574:e=>{"use strict";e.exports=require("@mui/material/colors")},52167:e=>{"use strict";e.exports=require("axios")},54580:e=>{"use strict";e.exports=require("next/dist/client/components/request-async-storage.external.js")},45869:e=>{"use strict";e.exports=require("next/dist/client/components/static-generation-async-storage.external.js")},62785:e=>{"use strict";e.exports=require("next/dist/compiled/next-server/pages.runtime.prod.js")},40968:e=>{"use strict";e.exports=require("next/head")},73142:e=>{"use strict";e.exports=require("notistack")},16689:e=>{"use strict";e.exports=require("react")},66405:e=>{"use strict";e.exports=require("react-dom")},20997:e=>{"use strict";e.exports=require("react/jsx-runtime")},71017:e=>{"use strict";e.exports=require("path")}};var t=require("../../webpack-runtime.js");t.C(e);var r=e=>t(t.s=e),s=t.X(0,[691,96,374,773,135,663,593,300,239],()=>r(5905));module.exports=s})();
+(() => {
+var exports = {};
+exports.id = 268;
+exports.ids = [268];
+exports.modules = {
+
+/***/ 32182:
+/***/ ((module) => {
+
+// Exports
+module.exports = {
+	"blog-title": "blog_blog-title__uqujP",
+	"blog-wrapper": "blog_blog-wrapper__lmDY0",
+	"blog-item": "blog_blog-item__Q5xOi",
+	"blog-description": "blog_blog-description__NvM_l",
+	"blog-detail": "blog_blog-detail___sjBy",
+	"blog-content": "blog_blog-content__QaA1t",
+	"blog-info": "blog_blog-info__1XCRH"
+};
+
+
+/***/ }),
+
+/***/ 48384:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  config: () => (/* binding */ config),
+  "default": () => (/* binding */ next_route_loaderkind_PAGES_page_2Fblogs_2F_5Bid_5D_preferredRegion_absolutePagePath_private_next_pages_2Fblogs_2F_5Bid_5D_tsx_absoluteAppPath_private_next_pages_2F_app_tsx_absoluteDocumentPath_private_next_pages_2F_document_tsx_middlewareConfigBase64_e30_3D_),
+  getServerSideProps: () => (/* binding */ getServerSideProps),
+  getStaticPaths: () => (/* binding */ getStaticPaths),
+  getStaticProps: () => (/* binding */ getStaticProps),
+  reportWebVitals: () => (/* binding */ reportWebVitals),
+  routeModule: () => (/* binding */ routeModule),
+  unstable_getServerProps: () => (/* binding */ unstable_getServerProps),
+  unstable_getServerSideProps: () => (/* binding */ unstable_getServerSideProps),
+  unstable_getStaticParams: () => (/* binding */ unstable_getStaticParams),
+  unstable_getStaticPaths: () => (/* binding */ unstable_getStaticPaths),
+  unstable_getStaticProps: () => (/* binding */ unstable_getStaticProps)
+});
+
+// NAMESPACE OBJECT: ./pages/blogs/[id].tsx
+var _id_namespaceObject = {};
+__webpack_require__.r(_id_namespaceObject);
+__webpack_require__.d(_id_namespaceObject, {
+  "default": () => (_id_)
+});
+
+// EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.19_@babel+core@7.23.0_react-dom@18.2.0_react@18.2.0_sass@1.68.0/node_modules/next/dist/server/future/route-modules/pages/module.js
+var pages_module = __webpack_require__(67179);
+// EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.19_@babel+core@7.23.0_react-dom@18.2.0_react@18.2.0_sass@1.68.0/node_modules/next/dist/server/future/route-kind.js
+var route_kind = __webpack_require__(57713);
+// EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.19_@babel+core@7.23.0_react-dom@18.2.0_react@18.2.0_sass@1.68.0/node_modules/next/dist/build/webpack/loaders/next-route-loader/helpers.js
+var helpers = __webpack_require__(70932);
+// EXTERNAL MODULE: ./pages/_document.tsx
+var _document = __webpack_require__(17228);
+// EXTERNAL MODULE: ./pages/_app.tsx + 1 modules
+var _app = __webpack_require__(54575);
+// EXTERNAL MODULE: ./node_modules/.pnpm/react@18.2.0/node_modules/react/jsx-runtime.js
+var jsx_runtime = __webpack_require__(11527);
+// EXTERNAL MODULE: external "react"
+var external_react_ = __webpack_require__(16689);
+// EXTERNAL MODULE: ./styles/blog.module.scss
+var blog_module = __webpack_require__(32182);
+var blog_module_default = /*#__PURE__*/__webpack_require__.n(blog_module);
+// EXTERNAL MODULE: ./components/common-head.tsx
+var common_head = __webpack_require__(91160);
+// EXTERNAL MODULE: external "axios"
+var external_axios_ = __webpack_require__(52167);
+var external_axios_default = /*#__PURE__*/__webpack_require__.n(external_axios_);
+// EXTERNAL MODULE: ./core/unit/markdown.ts
+var markdown = __webpack_require__(75632);
+// EXTERNAL MODULE: external "@mui/material"
+var material_ = __webpack_require__(65692);
+// EXTERNAL MODULE: ./node_modules/.pnpm/highlight.js@11.8.0/node_modules/highlight.js/styles/github.css
+var github = __webpack_require__(3870);
+// EXTERNAL MODULE: ./node_modules/.pnpm/bytemd@1.21.0/node_modules/bytemd/dist/index.min.css
+var index_min = __webpack_require__(57769);
+// EXTERNAL MODULE: external "@bytemd/react"
+var react_ = __webpack_require__(66511);
+// EXTERNAL MODULE: external "@bytemd/plugin-frontmatter"
+var plugin_frontmatter_ = __webpack_require__(54943);
+var plugin_frontmatter_default = /*#__PURE__*/__webpack_require__.n(plugin_frontmatter_);
+// EXTERNAL MODULE: external "@bytemd/plugin-gfm"
+var plugin_gfm_ = __webpack_require__(20149);
+var plugin_gfm_default = /*#__PURE__*/__webpack_require__.n(plugin_gfm_);
+;// CONCATENATED MODULE: ./pages/blogs/[id].tsx
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * blog detail page
+ * @return {React.ReactElement}
+ */ function BlogDetail({ blog }) {
+    const host = "https://web-evo.bulv.life";
+    const content = markdown/* default */.Z.keywordToLink(blog.markContent, host);
+    const plugins = [
+        plugin_frontmatter_default()(),
+        plugin_gfm_default()()
+    ];
+    return /*#__PURE__*/ jsx_runtime.jsx(material_.Box, {
+        children: /*#__PURE__*/ jsx_runtime.jsx(material_.Container, {
+            maxWidth: "md",
+            children: /*#__PURE__*/ jsx_runtime.jsx("article", {
+                "data-clarity-region": "article",
+                children: /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
+                    className: (blog_module_default()).blog,
+                    children: [
+                        /*#__PURE__*/ jsx_runtime.jsx(common_head/* default */.Z, {
+                            title: blog.title + " - Web Evolution",
+                            description: markdown/* default */.Z.intercept(blog.markContent, 100)
+                        }),
+                        /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
+                            className: (blog_module_default())["blog-detail"],
+                            children: [
+                                /*#__PURE__*/ jsx_runtime.jsx("div", {
+                                    className: (blog_module_default())["blog-title"],
+                                    children: /*#__PURE__*/ jsx_runtime.jsx("h1", {
+                                        children: blog.title
+                                    })
+                                }),
+                                /*#__PURE__*/ jsx_runtime.jsx("div", {
+                                    className: (blog_module_default())["blog-content"],
+                                    children: /*#__PURE__*/ jsx_runtime.jsx(react_.Viewer, {
+                                        value: content,
+                                        plugins: plugins
+                                    })
+                                })
+                            ]
+                        })
+                    ]
+                })
+            })
+        })
+    });
+}
+BlogDetail.getInitialProps = async (ctx)=>{
+    const { id } = ctx.query;
+    const host = "https://web-evo-server.bulv.life/";
+    const path = "blogs";
+    const url = `${host}${path}/${id}`;
+    const res = await external_axios_default().get(url);
+    return {
+        blog: res.data
+    };
+};
+/* harmony default export */ const _id_ = (BlogDetail);
+
+;// CONCATENATED MODULE: ./node_modules/.pnpm/next@13.4.19_@babel+core@7.23.0_react-dom@18.2.0_react@18.2.0_sass@1.68.0/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js?kind=PAGES&page=%2Fblogs%2F%5Bid%5D&preferredRegion=&absolutePagePath=private-next-pages%2Fblogs%2F%5Bid%5D.tsx&absoluteAppPath=private-next-pages%2F_app.tsx&absoluteDocumentPath=private-next-pages%2F_document.tsx&middlewareConfigBase64=e30%3D!
+// @ts-ignore this need to be imported from next/dist to be external
+
+
+
+// Import the app and document modules.
+// @ts-expect-error - replaced by webpack/turbopack loader
+
+// @ts-expect-error - replaced by webpack/turbopack loader
+
+// Import the userland code.
+// @ts-expect-error - replaced by webpack/turbopack loader
+
+const PagesRouteModule = pages_module.PagesRouteModule;
+// Re-export the component (should be the default export).
+/* harmony default export */ const next_route_loaderkind_PAGES_page_2Fblogs_2F_5Bid_5D_preferredRegion_absolutePagePath_private_next_pages_2Fblogs_2F_5Bid_5D_tsx_absoluteAppPath_private_next_pages_2F_app_tsx_absoluteDocumentPath_private_next_pages_2F_document_tsx_middlewareConfigBase64_e30_3D_ = ((0,helpers/* hoist */.l)(_id_namespaceObject, "default"));
+// Re-export methods.
+const getStaticProps = (0,helpers/* hoist */.l)(_id_namespaceObject, "getStaticProps");
+const getStaticPaths = (0,helpers/* hoist */.l)(_id_namespaceObject, "getStaticPaths");
+const getServerSideProps = (0,helpers/* hoist */.l)(_id_namespaceObject, "getServerSideProps");
+const config = (0,helpers/* hoist */.l)(_id_namespaceObject, "config");
+const reportWebVitals = (0,helpers/* hoist */.l)(_id_namespaceObject, "reportWebVitals");
+// Re-export legacy methods.
+const unstable_getStaticProps = (0,helpers/* hoist */.l)(_id_namespaceObject, "unstable_getStaticProps");
+const unstable_getStaticPaths = (0,helpers/* hoist */.l)(_id_namespaceObject, "unstable_getStaticPaths");
+const unstable_getStaticParams = (0,helpers/* hoist */.l)(_id_namespaceObject, "unstable_getStaticParams");
+const unstable_getServerProps = (0,helpers/* hoist */.l)(_id_namespaceObject, "unstable_getServerProps");
+const unstable_getServerSideProps = (0,helpers/* hoist */.l)(_id_namespaceObject, "unstable_getServerSideProps");
+// Create and export the route module that will be consumed.
+const routeModule = new PagesRouteModule({
+    definition: {
+        kind: route_kind/* RouteKind */.x.PAGES,
+        page: "/blogs/[id]",
+        pathname: "/blogs/[id]",
+        // The following aren't used in production.
+        bundlePath: "",
+        filename: ""
+    },
+    components: {
+        App: _app["default"],
+        Document: _document["default"]
+    },
+    userland: _id_namespaceObject
+});
+
+//# sourceMappingURL=pages.js.map
+
+/***/ }),
+
+/***/ 57769:
+/***/ (() => {
+
+
+
+/***/ }),
+
+/***/ 3870:
+/***/ (() => {
+
+
+
+/***/ }),
+
+/***/ 65530:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("@bradgarropy/next-google-analytics");
+
+/***/ }),
+
+/***/ 54943:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("@bytemd/plugin-frontmatter");
+
+/***/ }),
+
+/***/ 20149:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("@bytemd/plugin-gfm");
+
+/***/ }),
+
+/***/ 66511:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("@bytemd/react");
+
+/***/ }),
+
+/***/ 71913:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("@emotion/cache");
+
+/***/ }),
+
+/***/ 72805:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("@emotion/react");
+
+/***/ }),
+
+/***/ 9552:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("@emotion/server/create-instance");
+
+/***/ }),
+
+/***/ 97339:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("@mui/icons-material/ArticleRounded");
+
+/***/ }),
+
+/***/ 70652:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("@mui/icons-material/ContactMailRounded");
+
+/***/ }),
+
+/***/ 64912:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("@mui/icons-material/HomeRepairServiceRounded");
+
+/***/ }),
+
+/***/ 35776:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("@mui/icons-material/HomeRounded");
+
+/***/ }),
+
+/***/ 99881:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("@mui/icons-material/KeyboardArrowUp");
+
+/***/ }),
+
+/***/ 63365:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("@mui/icons-material/Menu");
+
+/***/ }),
+
+/***/ 38017:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("@mui/icons-material/Search");
+
+/***/ }),
+
+/***/ 18787:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("@mui/icons-material/SourceRounded");
+
+/***/ }),
+
+/***/ 65692:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("@mui/material");
+
+/***/ }),
+
+/***/ 75574:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("@mui/material/colors");
+
+/***/ }),
+
+/***/ 52167:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("axios");
+
+/***/ }),
+
+/***/ 43076:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/server/future/route-modules/route-module.js");
+
+/***/ }),
+
+/***/ 94140:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/server/get-page-files.js");
+
+/***/ }),
+
+/***/ 89716:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/server/htmlescape.js");
+
+/***/ }),
+
+/***/ 33100:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/server/render.js");
+
+/***/ }),
+
+/***/ 76368:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/server/utils.js");
+
+/***/ }),
+
+/***/ 53918:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/amp-context.js");
+
+/***/ }),
+
+/***/ 45732:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/amp-mode.js");
+
+/***/ }),
+
+/***/ 3280:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/app-router-context.js");
+
+/***/ }),
+
+/***/ 56724:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/constants.js");
+
+/***/ }),
+
+/***/ 35132:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/get-img-props.js");
+
+/***/ }),
+
+/***/ 92796:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/head-manager-context.js");
+
+/***/ }),
+
+/***/ 69274:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/hooks-client-context.js");
+
+/***/ }),
+
+/***/ 18743:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/html-context.js");
+
+/***/ }),
+
+/***/ 50744:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/image-config-context.js");
+
+/***/ }),
+
+/***/ 35843:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/image-config.js");
+
+/***/ }),
+
+/***/ 78524:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/is-plain-object.js");
+
+/***/ }),
+
+/***/ 24964:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/router-context.js");
+
+/***/ }),
+
+/***/ 11751:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/router/utils/add-path-prefix.js");
+
+/***/ }),
+
+/***/ 23938:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/router/utils/format-url.js");
+
+/***/ }),
+
+/***/ 71109:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/router/utils/is-local-url.js");
+
+/***/ }),
+
+/***/ 28854:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/router/utils/parse-path.js");
+
+/***/ }),
+
+/***/ 93297:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/router/utils/remove-trailing-slash.js");
+
+/***/ }),
+
+/***/ 87782:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/router/utils/resolve-href.js");
+
+/***/ }),
+
+/***/ 3349:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/server-inserted-html.js");
+
+/***/ }),
+
+/***/ 82470:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/side-effect.js");
+
+/***/ }),
+
+/***/ 59232:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/utils.js");
+
+/***/ }),
+
+/***/ 40618:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/utils/warn-once.js");
+
+/***/ }),
+
+/***/ 40968:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/head");
+
+/***/ }),
+
+/***/ 73142:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("notistack");
+
+/***/ }),
+
+/***/ 16689:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("react");
+
+/***/ }),
+
+/***/ 66405:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("react-dom");
+
+/***/ })
+
+};
+;
+
+// load runtime
+var __webpack_require__ = require("../../webpack-runtime.js");
+__webpack_require__.C(exports);
+var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
+var __webpack_exports__ = __webpack_require__.X(0, [587,793,717,160,632], () => (__webpack_exec__(48384)));
+module.exports = __webpack_exports__;
+
+})();
