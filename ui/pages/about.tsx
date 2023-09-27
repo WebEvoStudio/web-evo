@@ -1,12 +1,12 @@
 'use client';
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {
   Box, Button,
   Card, CardActions,
   CardContent,
   CardHeader,
   CardMedia,
-  Container, Step,
+  Container, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, IconButton, Step,
   StepContent,
   StepLabel,
   Stepper, Typography,
@@ -15,13 +15,25 @@ import Section from '../components/section';
 import Image from 'next/image';
 import {aliRedEnvelope, Images} from '../../core/libs/images';
 import copy from 'copy-to-clipboard';
+import {analytics} from '../../core/unit/firebase';
+import {logEvent} from 'firebase/analytics';
+import {useSnackbar} from 'notistack';
+import {HelpOutline} from '@mui/icons-material';
 
-const openAli = () => {
-  const text = '复制 836990272 📸扌丁開📸吱怤 b`ao.去搜索，纟工.b.ao`惠券，惠及你我';
-  copy(text);
-  window.location.href = 'alipays://';
-};
 const About = () => {
+  const {enqueueSnackbar} = useSnackbar();
+  useEffect(() => {}, []);
+  const [helpShow, setHelpShow] = useState(false);
+  const copyPasswordRedEnvelope = () => {
+    const password = 836990272;
+    const text = '复制 836990272 📸扌丁開📸吱怤 b`ao.去搜索，纟工.b.ao`惠券，惠及你我';
+    copy(String(password));
+    enqueueSnackbar(`您的红包口令已复制，打开支付宝搜索口令${password}，领取红包🧧同时支持我们。`, {variant: 'success'});
+    analytics.then((res) => res && logEvent(res, 'support_by_ali'));
+  };
+  const open = () => {
+    window.location.href = 'alipays://';
+  };
   const sections = [
     {
       title: '关于 Web Evo',
@@ -91,11 +103,33 @@ const About = () => {
             </Box>
           </CardContent>
           <CardActions>
-            <Button variant={'contained'} fullWidth onClick={openAli}>复制口令并打开支付宝</Button>
-            {/* <IconButton>*/}
-            {/*  <HelpOutline></HelpOutline>*/}
-            {/* </IconButton>*/}
+            <Button variant={'contained'} fullWidth onClick={copyPasswordRedEnvelope}>复制口令</Button>
+            <Button variant={'contained'} fullWidth onClick={open}>打开支付宝</Button>
+            <IconButton onClick={() => setHelpShow(true)}>
+              <HelpOutline></HelpOutline>
+            </IconButton>
           </CardActions>
+          <Dialog
+            open={helpShow}
+            onClose={() => setHelpShow(false)}
+            aria-labelledby="alert-dialog-title"
+            aria-describedby="alert-dialog-description"
+          >
+            <DialogTitle id="alert-dialog-title">
+              {'无法直接打开支付宝？'}
+            </DialogTitle>
+            <DialogContent>
+              <DialogContentText id="alert-dialog-description">
+                Web Scheme（网络协议）是一种用于在Web浏览器中通过URL来启动移动应用程序的机制。
+                某些设备或浏览器及 App 可能会阻止或限制某些URL Scheme的使用，以防止恶意行为和滥用。
+              </DialogContentText>
+            </DialogContent>
+            <DialogActions>
+              <Button onClick={() => setHelpShow(false)} autoFocus>
+                我知道了
+              </Button>
+            </DialogActions>
+          </Dialog>
         </Card>
       ),
     },

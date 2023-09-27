@@ -5,6 +5,7 @@ import GoogleAnalytics from '@bradgarropy/next-google-analytics';
 import Script from 'next/script';
 import '../styles/globals.css';
 import '../styles/rainbow.css';
+import ThemeRegistry from '../ui/components/theme-registry';
 // import 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap';
 
 export const metadata: Metadata = {
@@ -49,25 +50,27 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <BasicLayout>
-          {children}
-        </BasicLayout>
-        {/* Google Analytics*/}
-        <GoogleAnalytics measurementId={'G-R8ZM6SVZ0K'}/>
-        {/* microsoft clarity */}
-        <Script id={'microsoft-clarity'} dangerouslySetInnerHTML={{
-          __html: `
+        <ThemeRegistry>
+          <BasicLayout>
+            {children}
+          </BasicLayout>
+          {/* Google Analytics*/}
+          <GoogleAnalytics measurementId={'G-R8ZM6SVZ0K'}/>
+          {/* microsoft clarity */}
+          <Script id={'microsoft-clarity'} dangerouslySetInnerHTML={{
+            __html: `
             (function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
         t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "b91ge7rn7p");
             `,
-        }}/>
-        <Script
-          src={'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1031326139722537'}
-          crossOrigin={'anonymous'} async strategy={'afterInteractive'}
-        />
+          }}/>
+          <Script
+            src={'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1031326139722537'}
+            crossOrigin={'anonymous'} async strategy={'afterInteractive'}
+          />
+        </ThemeRegistry>
       </body>
     </html>
   );

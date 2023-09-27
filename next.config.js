@@ -13,6 +13,12 @@ const unoCSS = require('@unocss/webpack').default;
 const nextConfig = {
   experimental: {},
   reactStrictMode: true,
+  swcMinify: true,
+  modularizeImports: {
+    '@mui/icons-material': {
+      transform: '@mui/icons-material/{{member}}',
+    },
+  },
   output: 'standalone',
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],

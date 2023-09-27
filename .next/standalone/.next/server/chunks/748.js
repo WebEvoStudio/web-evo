@@ -21,12 +21,13 @@ exports.modules = {
 const Section = (props)=>{
     const { children, title = "Title", desc = "Description", backgroundColor = "transparent", first = false } = props;
     const getDesc = (desc)=>{
+        const descSx = {
+            mb: 2
+        };
         if (Array.isArray(desc)) {
             return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Typography, {
                 variant: "body1",
-                sx: {
-                    mb: "56px"
-                },
+                sx: descSx,
                 children: desc.map((it, index)=>/*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("span", {
                         children: [
                             it,
@@ -37,16 +38,14 @@ const Section = (props)=>{
         }
         return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Typography, {
             variant: "body1",
-            sx: {
-                mb: "56px"
-            },
+            sx: descSx,
             children: desc
         });
     };
     return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("section", {
         children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Box, {
             sx: {
-                paddingTop: "64px",
+                pt: 2,
                 paddingBottom: "20px",
                 backgroundColor
             },
@@ -55,7 +54,7 @@ const Section = (props)=>{
                     variant: first ? "h1" : "h2",
                     fontSize: 32,
                     sx: {
-                        marginBottom: "48px"
+                        mb: 2
                     },
                     children: title
                 }),

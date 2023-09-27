@@ -1,11 +1,12 @@
-exports.id = 361;
-exports.ids = [361];
+exports.id = 640;
+exports.ids = [640];
 exports.modules = {
 
-/***/ 41199:
+/***/ 59227:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 33590));
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 42566));
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 93614));
 Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 97216, 23))
 
 /***/ }),
@@ -142,7 +143,209 @@ const aliRedEnvelope = ali_red_envelope;
 
 /***/ }),
 
-/***/ 33590:
+/***/ 66145:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   Z: () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _mui_material_colors__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(38153);
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(62253);
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_mui_material__WEBPACK_IMPORTED_MODULE_0__);
+
+
+const theme = (0,_mui_material__WEBPACK_IMPORTED_MODULE_0__.createTheme)({
+    palette: {
+        mode: "dark",
+        primary: {
+            main: "#00B0FF",
+            contrastText: "white"
+        },
+        secondary: {
+            main: "#19857b"
+        },
+        error: {
+            main: _mui_material_colors__WEBPACK_IMPORTED_MODULE_1__.red.A400
+        }
+    },
+    typography: {
+        h1: {
+            fontSize: "68px",
+            fontWeight: 600
+        },
+        h2: {
+            fontSize: "42px",
+            fontWeight: 600
+        },
+        h3: {
+            fontSize: "32px",
+            fontWeight: 600
+        },
+        h4: {
+            fontSize: "28px",
+            fontWeight: 600
+        },
+        h5: {
+            fontSize: "24px",
+            fontWeight: 600
+        },
+        h6: {
+            fontSize: "20px",
+            fontWeight: 600
+        }
+    }
+});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (theme);
+
+
+/***/ }),
+
+/***/ 93614:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "default": () => (/* binding */ theme_registry)
+});
+
+// EXTERNAL MODULE: external "next/dist/compiled/react/jsx-runtime"
+var jsx_runtime_ = __webpack_require__(56786);
+// EXTERNAL MODULE: external "next/dist/compiled/react"
+var react_ = __webpack_require__(18038);
+// EXTERNAL MODULE: ./node_modules/.pnpm/@mui+material@5.14.10_@emotion+react@11.11.1_@emotion+styled@11.11.0_@types+react@18.2.9_react-dom@18.2.0_react@18.2.0/node_modules/@mui/material/node/index.js
+var node = __webpack_require__(62253);
+// EXTERNAL MODULE: ./core/themes/theme.ts
+var theme = __webpack_require__(66145);
+// EXTERNAL MODULE: ./node_modules/.pnpm/@emotion+cache@11.11.0/node_modules/@emotion/cache/dist/emotion-cache.esm.js + 7 modules
+var emotion_cache_esm = __webpack_require__(70573);
+// EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.19_@babel+core@7.23.0_react-dom@18.2.0_react@18.2.0_sass@1.68.0/node_modules/next/navigation.js
+var navigation = __webpack_require__(84114);
+// EXTERNAL MODULE: ./node_modules/.pnpm/@emotion+react@11.11.1_@types+react@18.2.9_react@18.2.0/node_modules/@emotion/react/dist/emotion-element-6bdfffb2.esm.js + 1 modules
+var emotion_element_6bdfffb2_esm = __webpack_require__(14421);
+;// CONCATENATED MODULE: ./ui/components/emotion-cache.tsx
+/* __next_internal_client_entry_do_not_use__ default auto */ 
+
+
+
+
+// Adapted from https://github.com/garronej/tss-react/blob/main/src/next/appDir.tsx
+function NextAppDirEmotionCacheProvider(props) {
+    const { options, CacheProvider = emotion_element_6bdfffb2_esm.C, children } = props;
+    const [registry] = react_.useState(()=>{
+        const cache = (0,emotion_cache_esm["default"])(options);
+        cache.compat = true;
+        const prevInsert = cache.insert;
+        let inserted = [];
+        cache.insert = (...args)=>{
+            const [selector, serialized] = args;
+            if (cache.inserted[serialized.name] === undefined) {
+                inserted.push({
+                    name: serialized.name,
+                    isGlobal: !selector
+                });
+            }
+            return prevInsert(...args);
+        };
+        const flush = ()=>{
+            const prevInserted = inserted;
+            inserted = [];
+            return prevInserted;
+        };
+        return {
+            cache,
+            flush
+        };
+    });
+    (0,navigation.useServerInsertedHTML)(()=>{
+        const inserted = registry.flush();
+        if (inserted.length === 0) {
+            return null;
+        }
+        let styles = "";
+        let dataEmotionAttribute = registry.cache.key;
+        const globals = [];
+        inserted.forEach(({ name, isGlobal })=>{
+            const style = registry.cache.inserted[name];
+            if (typeof style !== "boolean") {
+                if (isGlobal) {
+                    globals.push({
+                        name,
+                        style
+                    });
+                } else {
+                    styles += style;
+                    dataEmotionAttribute += ` ${name}`;
+                }
+            }
+        });
+        return /*#__PURE__*/ (0,jsx_runtime_.jsxs)(react_.Fragment, {
+            children: [
+                globals.map(({ name, style })=>/*#__PURE__*/ jsx_runtime_.jsx("style", {
+                        "data-emotion": `${registry.cache.key}-global ${name}`,
+                        // eslint-disable-next-line react/no-danger
+                        dangerouslySetInnerHTML: {
+                            __html: style
+                        }
+                    }, name)),
+                styles && /*#__PURE__*/ jsx_runtime_.jsx("style", {
+                    "data-emotion": dataEmotionAttribute,
+                    // eslint-disable-next-line react/no-danger
+                    dangerouslySetInnerHTML: {
+                        __html: styles
+                    }
+                })
+            ]
+        });
+    });
+    return /*#__PURE__*/ jsx_runtime_.jsx(CacheProvider, {
+        value: registry.cache,
+        children: children
+    });
+}
+
+// EXTERNAL MODULE: ./node_modules/.pnpm/notistack@3.0.1_csstype@3.1.2_react-dom@18.2.0_react@18.2.0/node_modules/notistack/index.js
+var notistack = __webpack_require__(85110);
+;// CONCATENATED MODULE: ./ui/components/theme-registry.tsx
+/* __next_internal_client_entry_do_not_use__ default auto */ 
+
+
+
+
+
+const ThemeRegistry = ({ children })=>{
+    return /*#__PURE__*/ jsx_runtime_.jsx(NextAppDirEmotionCacheProvider, {
+        options: {
+            key: "mui"
+        },
+        children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)(node.ThemeProvider, {
+            theme: theme/* default */.Z,
+            children: [
+                /*#__PURE__*/ jsx_runtime_.jsx(node.CssBaseline, {}),
+                /*#__PURE__*/ jsx_runtime_.jsx(notistack.SnackbarProvider, {
+                    dense: true,
+                    maxSnack: 1,
+                    autoHideDuration: 3000,
+                    anchorOrigin: {
+                        vertical: "bottom",
+                        horizontal: "center"
+                    },
+                    children: children
+                })
+            ]
+        })
+    });
+};
+/* harmony default export */ const theme_registry = (ThemeRegistry);
+
+
+/***/ }),
+
+/***/ 42566:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -175,54 +378,8 @@ var navigation = __webpack_require__(84114);
 // EXTERNAL MODULE: ./ui/layouts/basic-layout.module.css
 var basic_layout_module = __webpack_require__(44329);
 var basic_layout_module_default = /*#__PURE__*/__webpack_require__.n(basic_layout_module);
-// EXTERNAL MODULE: ./node_modules/.pnpm/@mui+material@5.14.10_@emotion+react@11.11.1_@emotion+styled@11.11.0_@types+react@18.2.9_react-dom@18.2.0_react@18.2.0/node_modules/@mui/material/node/colors/index.js
-var colors = __webpack_require__(38153);
-;// CONCATENATED MODULE: ./core/themes/theme.ts
-
-
-const theme = (0,node.createTheme)({
-    palette: {
-        mode: "dark",
-        primary: {
-            main: "#00B0FF",
-            contrastText: "white"
-        },
-        secondary: {
-            main: "#19857b"
-        },
-        error: {
-            main: colors.red.A400
-        }
-    },
-    typography: {
-        h1: {
-            fontSize: "68px",
-            fontWeight: 600
-        },
-        h2: {
-            fontSize: "42px",
-            fontWeight: 600
-        },
-        h3: {
-            fontSize: "32px",
-            fontWeight: 600
-        },
-        h4: {
-            fontSize: "28px",
-            fontWeight: 600
-        },
-        h5: {
-            fontSize: "24px",
-            fontWeight: 600
-        },
-        h6: {
-            fontSize: "20px",
-            fontWeight: 600
-        }
-    }
-});
-/* harmony default export */ const themes_theme = (theme);
-
+// EXTERNAL MODULE: ./core/themes/theme.ts
+var theme = __webpack_require__(66145);
 // EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.19_@babel+core@7.23.0_react-dom@18.2.0_react@18.2.0_sass@1.68.0/node_modules/next/link.js
 var next_link = __webpack_require__(71233);
 var link_default = /*#__PURE__*/__webpack_require__.n(next_link);
@@ -804,7 +961,7 @@ var rainbow = __webpack_require__(65990);
     };
     return /*#__PURE__*/ jsx_runtime_.jsx(jsx_runtime_.Fragment, {
         children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)(node.ThemeProvider, {
-            theme: themes_theme,
+            theme: theme/* default */.Z,
             children: [
                 /*#__PURE__*/ jsx_runtime_.jsx(node.CssBaseline, {}),
                 !isPwa ? /*#__PURE__*/ jsx_runtime_.jsx(header, {}) : null,
@@ -854,7 +1011,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 37596:
+/***/ 48853:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -896,7 +1053,21 @@ var script_default = /*#__PURE__*/__webpack_require__.n(script);
 var globals = __webpack_require__(87198);
 // EXTERNAL MODULE: ./styles/rainbow.css
 var rainbow = __webpack_require__(17941);
+;// CONCATENATED MODULE: ./ui/components/theme-registry.tsx
+
+const theme_registry_proxy = (0,module_proxy.createProxy)(String.raw`/Users/cityhunter/Documents/WorkSpace/personal-site/ui/components/theme-registry.tsx`)
+
+// Accessing the __esModule property and exporting $$typeof are required here.
+// The __esModule getter forces the proxy target to create the default export
+// and the $$typeof value is for rendering logic to determine if the module
+// is a client boundary.
+const { __esModule: theme_registry_esModule, $$typeof: theme_registry_$$typeof } = theme_registry_proxy;
+const theme_registry_default_ = theme_registry_proxy.default;
+
+
+/* harmony default export */ const theme_registry = (theme_registry_default_);
 ;// CONCATENATED MODULE: ./app/layout.tsx
+
 
 
 
@@ -940,33 +1111,35 @@ const metadata = {
  */ function RootLayout({ children }) {
     return /*#__PURE__*/ jsx_runtime_.jsx("html", {
         lang: "en",
-        children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)("body", {
-            children: [
-                /*#__PURE__*/ jsx_runtime_.jsx(basic_layout, {
-                    children: children
-                }),
-                /*#__PURE__*/ jsx_runtime_.jsx((dist_default()), {
-                    measurementId: "G-R8ZM6SVZ0K"
-                }),
-                /*#__PURE__*/ jsx_runtime_.jsx((script_default()), {
-                    id: "microsoft-clarity",
-                    dangerouslySetInnerHTML: {
-                        __html: `
+        children: /*#__PURE__*/ jsx_runtime_.jsx("body", {
+            children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)(theme_registry, {
+                children: [
+                    /*#__PURE__*/ jsx_runtime_.jsx(basic_layout, {
+                        children: children
+                    }),
+                    /*#__PURE__*/ jsx_runtime_.jsx((dist_default()), {
+                        measurementId: "G-R8ZM6SVZ0K"
+                    }),
+                    /*#__PURE__*/ jsx_runtime_.jsx((script_default()), {
+                        id: "microsoft-clarity",
+                        dangerouslySetInnerHTML: {
+                            __html: `
             (function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
         t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "b91ge7rn7p");
             `
-                    }
-                }),
-                /*#__PURE__*/ jsx_runtime_.jsx((script_default()), {
-                    src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1031326139722537",
-                    crossOrigin: "anonymous",
-                    async: true,
-                    strategy: "afterInteractive"
-                })
-            ]
+                        }
+                    }),
+                    /*#__PURE__*/ jsx_runtime_.jsx((script_default()), {
+                        src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1031326139722537",
+                        crossOrigin: "anonymous",
+                        async: true,
+                        strategy: "afterInteractive"
+                    })
+                ]
+            })
         })
     });
 }
