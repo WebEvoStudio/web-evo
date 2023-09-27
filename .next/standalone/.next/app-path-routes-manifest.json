@@ -1,11 +1,11 @@
 {
   "/page": "/",
-  "/blogs-sitemap.xml/route": "/blogs-sitemap.xml",
-  "/blogs/page": "/blogs",
   "/services/page": "/services",
-  "/contact/page": "/contact",
-  "/privacy-policy/page": "/privacy-policy",
   "/about/page": "/about",
+  "/blogs/page": "/blogs",
+  "/privacy-policy/page": "/privacy-policy",
+  "/blogs-sitemap.xml/route": "/blogs-sitemap.xml",
+  "/contact/page": "/contact",
   "/projects/page": "/projects",
   "/tools/markdown-to-pdf/page": "/tools/markdown-to-pdf",
   "/dashboard/page": "/dashboard"

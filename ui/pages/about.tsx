@@ -32,6 +32,7 @@ const About = () => {
     analytics.then((res) => res && logEvent(res, 'support_by_ali'));
   };
   const open = () => {
+    const url = `https://runion.meituan.com/url?key=cd23768d09c339d1641b2738df39aa67&url=https%3A%2F%2Fi.meituan.com%2Fawp%2Fhfe%2Fblock%2Fa945391288b790d558b7%2F78716%2Findex.html%3Fappkey%3Dcd23768d09c339d1641b2738df39aa67%3Ajuhe&sid=juhe`
     window.location.href = 'alipays://';
   };
   const sections = [

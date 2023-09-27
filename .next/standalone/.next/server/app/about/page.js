@@ -325,43 +325,19 @@ const routeModule = new AppPageRouteModule({
 /***/ 87448:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 39782))
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 71566))
 
 /***/ }),
 
-/***/ 39782:
+/***/ 54626:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-// ESM COMPAT FLAG
-__webpack_require__.r(__webpack_exports__);
-
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, {
-  "default": () => (/* binding */ about)
-});
-
-// EXTERNAL MODULE: external "next/dist/compiled/react/jsx-runtime"
-var jsx_runtime_ = __webpack_require__(56786);
-// EXTERNAL MODULE: external "next/dist/compiled/react"
-var react_ = __webpack_require__(18038);
-// EXTERNAL MODULE: ./node_modules/.pnpm/@mui+material@5.14.10_@emotion+react@11.11.1_@emotion+styled@11.11.0_@types+react@18.2.9_react-dom@18.2.0_react@18.2.0/node_modules/@mui/material/node/index.js
-var node = __webpack_require__(62253);
-// EXTERNAL MODULE: ./ui/components/section.tsx
-var section = __webpack_require__(82748);
-// EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.19_@babel+core@7.23.0_react-dom@18.2.0_react@18.2.0_sass@1.68.0/node_modules/next/image.js
-var next_image = __webpack_require__(1521);
-var image_default = /*#__PURE__*/__webpack_require__.n(next_image);
-// EXTERNAL MODULE: ./core/libs/images.ts + 3 modules
-var libs_images = __webpack_require__(20583);
-// EXTERNAL MODULE: ./node_modules/.pnpm/copy-to-clipboard@3.3.3/node_modules/copy-to-clipboard/index.js
-var copy_to_clipboard = __webpack_require__(87158);
-var copy_to_clipboard_default = /*#__PURE__*/__webpack_require__.n(copy_to_clipboard);
-// EXTERNAL MODULE: ./node_modules/.pnpm/firebase@10.4.0/node_modules/firebase/app/dist/index.mjs
-var dist = __webpack_require__(72579);
-// EXTERNAL MODULE: ./node_modules/.pnpm/firebase@10.4.0/node_modules/firebase/analytics/dist/index.mjs + 4 modules
-var analytics_dist = __webpack_require__(97110);
-;// CONCATENATED MODULE: ./core/unit/firebase.ts
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   c: () => (/* binding */ analytics)
+/* harmony export */ });
+/* harmony import */ var firebase_app__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(72579);
+/* harmony import */ var firebase_analytics__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(97110);
 /* __next_internal_client_entry_do_not_use__ analytics auto */ 
 
 const firebaseConfig = {
@@ -373,16 +349,38 @@ const firebaseConfig = {
     appId: "1:17743451838:web:739365d4eda1b859be30ef",
     measurementId: "G-QJB07C22CV"
 };
-const app = (0,dist/* initializeApp */.ZF)(firebaseConfig);
+const app = (0,firebase_app__WEBPACK_IMPORTED_MODULE_0__/* .initializeApp */ .ZF)(firebaseConfig);
 // const analytics = typeof window !== undefined ? await isSupported() ? getAnalytics(app): null : null;
-const analytics = (0,analytics_dist/* isSupported */.Gb)().then((yes)=>yes ? (0,analytics_dist/* getAnalytics */.IH)(app) : null);
+const analytics = (0,firebase_analytics__WEBPACK_IMPORTED_MODULE_1__/* .isSupported */ .Gb)().then((yes)=>yes ? (0,firebase_analytics__WEBPACK_IMPORTED_MODULE_1__/* .getAnalytics */ .IH)(app) : null);
 
 
-// EXTERNAL MODULE: ./node_modules/.pnpm/notistack@3.0.1_csstype@3.1.2_react-dom@18.2.0_react@18.2.0/node_modules/notistack/index.js
-var notistack = __webpack_require__(85110);
-// EXTERNAL MODULE: ./node_modules/.pnpm/@mui+icons-material@5.14.9_@mui+material@5.14.10_@types+react@18.2.9_react@18.2.0/node_modules/@mui/icons-material/HelpOutline.js
-var HelpOutline = __webpack_require__(65728);
-;// CONCATENATED MODULE: ./ui/pages/about.tsx
+
+/***/ }),
+
+/***/ 71566:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(56786);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(18038);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(62253);
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_mui_material__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _components_section__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(82748);
+/* harmony import */ var next_image__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(1521);
+/* harmony import */ var next_image__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_image__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _core_libs_images__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(20583);
+/* harmony import */ var copy_to_clipboard__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(87158);
+/* harmony import */ var copy_to_clipboard__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(copy_to_clipboard__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _core_unit_firebase__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(54626);
+/* harmony import */ var firebase_analytics__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(97110);
+/* harmony import */ var notistack__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(85110);
+/* harmony import */ var _mui_icons_material_HelpOutline__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(65728);
 /* __next_internal_client_entry_do_not_use__ default auto */ 
 
 
@@ -395,19 +393,20 @@ var HelpOutline = __webpack_require__(65728);
 
 
 const About = ()=>{
-    const { enqueueSnackbar } = (0,notistack.useSnackbar)();
-    (0,react_.useEffect)(()=>{}, []);
-    const [helpShow, setHelpShow] = (0,react_.useState)(false);
+    const { enqueueSnackbar } = (0,notistack__WEBPACK_IMPORTED_MODULE_8__.useSnackbar)();
+    (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(()=>{}, []);
+    const [helpShow, setHelpShow] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false);
     const copyPasswordRedEnvelope = ()=>{
         const password = 836990272;
         const text = "复制 836990272 \uD83D\uDCF8扌丁開\uD83D\uDCF8吱怤 b`ao.去搜索，纟工.b.ao`惠券，惠及你我";
-        copy_to_clipboard_default()(String(password));
+        copy_to_clipboard__WEBPACK_IMPORTED_MODULE_5___default()(String(password));
         enqueueSnackbar(`您的红包口令已复制，打开支付宝搜索口令${password}，领取红包🧧同时支持我们。`, {
             variant: "success"
         });
-        analytics.then((res)=>res && (0,analytics_dist/* logEvent */.Kz)(res, "support_by_ali"));
+        _core_unit_firebase__WEBPACK_IMPORTED_MODULE_6__/* .analytics */ .c.then((res)=>res && (0,firebase_analytics__WEBPACK_IMPORTED_MODULE_7__/* .logEvent */ .Kz)(res, "support_by_ali"));
     };
     const open = ()=>{
+        const url = `https://runion.meituan.com/url?key=cd23768d09c339d1641b2738df39aa67&url=https%3A%2F%2Fi.meituan.com%2Fawp%2Fhfe%2Fblock%2Fa945391288b790d558b7%2F78716%2Findex.html%3Fappkey%3Dcd23768d09c339d1641b2738df39aa67%3Ajuhe&sid=juhe`;
         window.location.href = "alipays://";
     };
     const sections = [
@@ -415,16 +414,16 @@ const About = ()=>{
             title: "关于 Web Evo",
             // eslint-disable-next-line max-len
             desc: "Web Evo全称Web Evolution (网络进化) 是一个现代网络咨询工作室，致力于帮助公司企业和个人实现数字化转型。我们提供设计、架构、开发、运营、产品指导等服务。我们注重成员之间的相互尊重和相互理解，以及与客户之间的良好沟通。我们致力于为客户提供最好的服务，同时也关注员工的福利和工作环境。",
-            children: /*#__PURE__*/ jsx_runtime_.jsx(node.Box, {
+            children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_9__.Box, {
                 sx: {
                     width: "100%"
                 },
-                children: /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
+                children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_image__WEBPACK_IMPORTED_MODULE_3___default()), {
                     style: {
                         width: "100%",
                         height: "auto"
                     },
-                    src: libs_images/* Images */.rU.undrawTeamwork,
+                    src: _core_libs_images__WEBPACK_IMPORTED_MODULE_4__/* .Images */ .rU.undrawTeamwork,
                     alt: "团队工作"
                 })
             })
@@ -463,17 +462,17 @@ const About = ()=>{
                         content: "我们在 Web Evo 及其他领域营造支持和友好的氛围。"
                     }
                 ];
-                return /*#__PURE__*/ jsx_runtime_.jsx(node.Box, {
-                    children: /*#__PURE__*/ jsx_runtime_.jsx(node.Stepper, {
+                return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_9__.Box, {
+                    children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_9__.Stepper, {
                         orientation: "vertical",
-                        children: steps.map((it, index)=>/*#__PURE__*/ (0,jsx_runtime_.jsxs)(node.Step, {
+                        children: steps.map((it, index)=>/*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_9__.Step, {
                                 expanded: true,
                                 completed: true,
                                 children: [
-                                    /*#__PURE__*/ jsx_runtime_.jsx(node.StepLabel, {
+                                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_9__.StepLabel, {
                                         children: it.label
                                     }),
-                                    /*#__PURE__*/ jsx_runtime_.jsx(node.StepContent, {
+                                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_9__.StepContent, {
                                         children: it.content
                                     })
                                 ]
@@ -485,7 +484,7 @@ const About = ()=>{
         {
             title: "团队文化",
             desc: "我们相信，使开发世界变得更加美好，在哪里可以与您的团队交付最佳成绩，并使他们拥有最佳实践，或者使所有人更加了解教育。",
-            children: /*#__PURE__*/ jsx_runtime_.jsx(jsx_runtime_.Fragment, {})
+            children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {})
         },
         {
             title: "支持我们",
@@ -495,54 +494,54 @@ const About = ()=>{
                 "我们努力在从开源获取的价值和回馈的价值之间保持平衡。因此，我们自豪地赞助有前途的技术，贡献我们的知识使工具变得更方便，并构建开放代码解决方案以简化工程师的日常工作。",
                 "非常感谢你的支持。"
             ],
-            children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)(node.Card, {
+            children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_9__.Card, {
                 sx: {},
                 children: [
-                    /*#__PURE__*/ jsx_runtime_.jsx(node.CardHeader, {
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_9__.CardHeader, {
                         title: "每日"
                     }),
-                    /*#__PURE__*/ jsx_runtime_.jsx(node.CardContent, {
-                        children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)(node.Box, {
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_9__.CardContent, {
+                        children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_9__.Box, {
                             sx: {
                                 display: "flex"
                             },
                             children: [
-                                /*#__PURE__*/ (0,jsx_runtime_.jsxs)(node.Box, {
+                                /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_9__.Box, {
                                     sx: {
                                         flex: 1
                                     },
                                     children: [
-                                        /*#__PURE__*/ jsx_runtime_.jsx(node.Typography, {
+                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_9__.Typography, {
                                             sx: {
                                                 mb: 2
                                             },
                                             children: "支付包红包 / 每 24 小时"
                                         }),
-                                        /*#__PURE__*/ jsx_runtime_.jsx(node.Typography, {
+                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_9__.Typography, {
                                             sx: {
                                                 mb: 1
                                             },
                                             variant: "body2",
                                             children: "长按保存右侧红包图片打开支付包扫一扫。"
                                         }),
-                                        /*#__PURE__*/ jsx_runtime_.jsx(node.Typography, {
+                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_9__.Typography, {
                                             sx: {
                                                 mb: 1
                                             },
                                             variant: "body2",
                                             children: "或者点击下方按钮复制打开支付宝搜索。"
                                         }),
-                                        /*#__PURE__*/ jsx_runtime_.jsx(node.Typography, {
+                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_9__.Typography, {
                                             children: "您获得红包的同时将支持我们，此选项可以无限使用。"
                                         })
                                     ]
                                 }),
-                                /*#__PURE__*/ jsx_runtime_.jsx(node.CardMedia, {
+                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_9__.CardMedia, {
                                     sx: {
                                         width: 120
                                     },
-                                    children: /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
-                                        src: libs_images/* aliRedEnvelope */.rJ,
+                                    children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_image__WEBPACK_IMPORTED_MODULE_3___default()), {
+                                        src: _core_libs_images__WEBPACK_IMPORTED_MODULE_4__/* .aliRedEnvelope */ .rJ,
                                         alt: "",
                                         style: {
                                             width: "100%",
@@ -553,44 +552,44 @@ const About = ()=>{
                             ]
                         })
                     }),
-                    /*#__PURE__*/ (0,jsx_runtime_.jsxs)(node.CardActions, {
+                    /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_9__.CardActions, {
                         children: [
-                            /*#__PURE__*/ jsx_runtime_.jsx(node.Button, {
+                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_9__.Button, {
                                 variant: "contained",
                                 fullWidth: true,
                                 onClick: copyPasswordRedEnvelope,
                                 children: "复制口令"
                             }),
-                            /*#__PURE__*/ jsx_runtime_.jsx(node.Button, {
+                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_9__.Button, {
                                 variant: "contained",
                                 fullWidth: true,
                                 onClick: open,
                                 children: "打开支付宝"
                             }),
-                            /*#__PURE__*/ jsx_runtime_.jsx(node.IconButton, {
+                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_9__.IconButton, {
                                 onClick: ()=>setHelpShow(true),
-                                children: /*#__PURE__*/ jsx_runtime_.jsx(HelpOutline/* default */.Z, {})
+                                children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_icons_material_HelpOutline__WEBPACK_IMPORTED_MODULE_10__/* ["default"] */ .Z, {})
                             })
                         ]
                     }),
-                    /*#__PURE__*/ (0,jsx_runtime_.jsxs)(node.Dialog, {
+                    /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_9__.Dialog, {
                         open: helpShow,
                         onClose: ()=>setHelpShow(false),
                         "aria-labelledby": "alert-dialog-title",
                         "aria-describedby": "alert-dialog-description",
                         children: [
-                            /*#__PURE__*/ jsx_runtime_.jsx(node.DialogTitle, {
+                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_9__.DialogTitle, {
                                 id: "alert-dialog-title",
                                 children: "无法直接打开支付宝？"
                             }),
-                            /*#__PURE__*/ jsx_runtime_.jsx(node.DialogContent, {
-                                children: /*#__PURE__*/ jsx_runtime_.jsx(node.DialogContentText, {
+                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_9__.DialogContent, {
+                                children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_9__.DialogContentText, {
                                     id: "alert-dialog-description",
                                     children: "Web Scheme（网络协议）是一种用于在Web浏览器中通过URL来启动移动应用程序的机制。 某些设备或浏览器及 App 可能会阻止或限制某些URL Scheme的使用，以防止恶意行为和滥用。"
                                 })
                             }),
-                            /*#__PURE__*/ jsx_runtime_.jsx(node.DialogActions, {
-                                children: /*#__PURE__*/ jsx_runtime_.jsx(node.Button, {
+                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_9__.DialogActions, {
+                                children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_9__.Button, {
                                     onClick: ()=>setHelpShow(false),
                                     autoFocus: true,
                                     children: "我知道了"
@@ -602,9 +601,9 @@ const About = ()=>{
             })
         }
     ];
-    return /*#__PURE__*/ jsx_runtime_.jsx(node.Container, {
+    return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_9__.Container, {
         "max-width": "lg",
-        children: sections.map((it, index)=>/*#__PURE__*/ jsx_runtime_.jsx(section/* default */.Z, {
+        children: sections.map((it, index)=>/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_section__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .Z, {
                 first: index === 0,
                 title: it.title,
                 desc: it.desc,
@@ -612,7 +611,7 @@ const About = ()=>{
             }, index))
     });
 };
-/* harmony default export */ const about = (About);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (About);
 
 
 /***/ }),
@@ -690,7 +689,7 @@ const AboutPage = ()=>{
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [587,999,751,315,640,794,748], () => (__webpack_exec__(79246)));
+var __webpack_exports__ = __webpack_require__.X(0, [587,999,751,278,625,640,183,748], () => (__webpack_exec__(79246)));
 module.exports = __webpack_exports__;
 
 })();

@@ -1,6 +1,6 @@
 'use client';
 import React, {useMemo, useState} from 'react';
-import {Box, Button, Container, Grid, TextField, Typography} from '@mui/material';
+import {Box, Button, Container, FormControlLabel, Grid, TextField, Typography} from '@mui/material';
 import {Images} from '../../core/libs/images';
 import Image from 'next/image';
 import {useSnackbar} from 'notistack';
@@ -8,6 +8,9 @@ import isEmail from 'validator/lib/isEmail';
 import isMobilePhone from 'validator/lib/isMobilePhone';
 import Request from '../../core/unit/request';
 import CommonHead from '../../components/common-head';
+import {analytics} from '../../core/unit/firebase';
+import {logEvent} from 'firebase/analytics';
+import {CheckBox} from '@mui/icons-material';
 
 
 /**
@@ -26,6 +29,7 @@ export default function Contact() {
     new Request(process.env['NEXT_PUBLIC_MIDDLEWARE_URL']).post('/customer', requestBody)
         .then(() => {
           enqueueSnackbar('提交成功', {variant: 'success'});
+          analytics.then((res) => res && logEvent(res, 'submit_contact_info'));
           setForm({name: '', contact: '', email: '', mobilePhone: '', message: ''});
         })
         .catch((err) => enqueueSnackbar(err.message, {variant: 'error'}));
@@ -68,24 +72,6 @@ export default function Contact() {
         </Typography>
         <Box sx={{margin: '20px 0'}}>
           <Grid container spacing={6}>
-            <Grid item xs={12} sm={4}>
-              <Box sx={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-                <Typography variant={'h3'} fontSize={{sm: '42px'}} color={'#00B0FF'}>让我们谈谈</Typography>
-                <Box sx={{padding: '16px', textAlign: 'center', mb: '48px'}}>
-                  <Typography variant={'h6'}>联系电子邮件:</Typography>
-                  <a href={'mailto:dongjun1997@outllook.com?subject=你好!'}>
-                    <Typography variant={'body1'}>dongjun1997@outlook.com</Typography>
-                  </a>
-                </Box>
-                <Box sx={{padding: '16px', textAlign: 'center'}}>
-                  <Typography variant={'h6'}>联系电话:</Typography>
-                  <a href={'tel:+86 18691791512'}>
-                    <Typography variant={'body1'}>+86 186 9179 1512</Typography>
-                  </a>
-                </Box>
-              </Box>
-            </Grid>
-            <Grid item sx={{display: {xs: 'none', sm: 'block'}}} sm={2}/>
             <Grid item xs={12} sm={6}>
               <Box sx={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                 <Typography
@@ -122,6 +108,10 @@ export default function Contact() {
                         onChange={({target: {value}}) => setForm({...form, message: value})}/>
                     </Grid>
                     <Grid item xs={12}>
+                      {/* <FormControlLabel control={<CheckBox color={'primary'}/>} label={'我接受您的隐私政策'}/>*/}
+                      <FormControlLabel control={<CheckBox color={'primary'}/>} label={'我同意通过提供的联系方式与我联系'}/>
+                    </Grid>
+                    <Grid item xs={12}>
                       <Box sx={{display: 'flex', justifyContent: 'center'}}>
                         <Button variant={'contained'} sx={{width: '150px'}} type={'submit'} disabled={submitDisabled}>
                           <Typography variant={'h6'} color={'white'}>提交</Typography>
@@ -129,6 +119,24 @@ export default function Contact() {
                       </Box>
                     </Grid>
                   </Grid>
+                </Box>
+              </Box>
+            </Grid>
+            <Grid item sx={{display: {xs: 'none', sm: 'block'}}} sm={2}/>
+            <Grid item xs={12} sm={4}>
+              <Box sx={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+                <Typography variant={'h3'} fontSize={{sm: '42px'}} color={'#00B0FF'}>让我们谈谈</Typography>
+                <Box sx={{padding: '16px', textAlign: 'center', mb: '48px'}}>
+                  <Typography variant={'h6'}>联系电子邮件:</Typography>
+                  <a href={'mailto:dongjun1997@outllook.com?subject=你好!'}>
+                    <Typography variant={'body1'}>dongjun1997@outlook.com</Typography>
+                  </a>
+                </Box>
+                <Box sx={{padding: '16px', textAlign: 'center'}}>
+                  <Typography variant={'h6'}>联系电话:</Typography>
+                  <a href={'tel:+86 18691791512'}>
+                    <Typography variant={'body1'}>+86 186 9179 1512</Typography>
+                  </a>
                 </Box>
               </Box>
             </Grid>

@@ -336,7 +336,7 @@ const ThemeRegistry = ({ children })=>{
                     maxSnack: 1,
                     autoHideDuration: 3000,
                     anchorOrigin: {
-                        vertical: "bottom",
+                        vertical: "top",
                         horizontal: "center"
                     },
                     children: children

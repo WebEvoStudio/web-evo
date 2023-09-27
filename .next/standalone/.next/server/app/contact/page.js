@@ -425,6 +425,34 @@ Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_re
 
 /***/ }),
 
+/***/ 54626:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   c: () => (/* binding */ analytics)
+/* harmony export */ });
+/* harmony import */ var firebase_app__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(72579);
+/* harmony import */ var firebase_analytics__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(97110);
+/* __next_internal_client_entry_do_not_use__ analytics auto */ 
+
+const firebaseConfig = {
+    apiKey: "AIzaSyDT4YUNQB3ftPldj6tekTJZO4NVzGtqf04",
+    authDomain: "web-evo-38d50.firebaseapp.com",
+    projectId: "web-evo-38d50",
+    storageBucket: "web-evo-38d50.appspot.com",
+    messagingSenderId: "17743451838",
+    appId: "1:17743451838:web:739365d4eda1b859be30ef",
+    measurementId: "G-QJB07C22CV"
+};
+const app = (0,firebase_app__WEBPACK_IMPORTED_MODULE_0__/* .initializeApp */ .ZF)(firebaseConfig);
+// const analytics = typeof window !== undefined ? await isSupported() ? getAnalytics(app): null : null;
+const analytics = (0,firebase_analytics__WEBPACK_IMPORTED_MODULE_1__/* .isSupported */ .Gb)().then((yes)=>yes ? (0,firebase_analytics__WEBPACK_IMPORTED_MODULE_1__/* .getAnalytics */ .IH)(app) : null);
+
+
+
+/***/ }),
+
 /***/ 26264:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -614,8 +642,17 @@ var noop_head_default = /*#__PURE__*/__webpack_require__.n(noop_head);
     });
 }
 
+// EXTERNAL MODULE: ./core/unit/firebase.ts
+var firebase = __webpack_require__(54626);
+// EXTERNAL MODULE: ./node_modules/.pnpm/firebase@10.4.0/node_modules/firebase/analytics/dist/index.mjs + 4 modules
+var dist = __webpack_require__(97110);
+// EXTERNAL MODULE: ./node_modules/.pnpm/@mui+icons-material@5.14.9_@mui+material@5.14.10_@types+react@18.2.9_react@18.2.0/node_modules/@mui/icons-material/CheckBox.js
+var CheckBox = __webpack_require__(36657);
 ;// CONCATENATED MODULE: ./ui/pages/contact.tsx
 /* __next_internal_client_entry_do_not_use__ default auto */ 
+
+
+
 
 
 
@@ -653,6 +690,7 @@ var noop_head_default = /*#__PURE__*/__webpack_require__.n(noop_head);
             enqueueSnackbar("提交成功", {
                 variant: "success"
             });
+            firebase/* analytics */.c.then((res)=>res && (0,dist/* logEvent */.Kz)(res, "submit_contact_info"));
             setForm({
                 name: "",
                 contact: "",
@@ -767,77 +805,6 @@ var noop_head_default = /*#__PURE__*/__webpack_require__.n(noop_head);
                                 /*#__PURE__*/ jsx_runtime_.jsx(node.Grid, {
                                     item: true,
                                     xs: 12,
-                                    sm: 4,
-                                    children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)(node.Box, {
-                                        sx: {
-                                            display: "flex",
-                                            flexDirection: "column",
-                                            alignItems: "center"
-                                        },
-                                        children: [
-                                            /*#__PURE__*/ jsx_runtime_.jsx(node.Typography, {
-                                                variant: "h3",
-                                                fontSize: {
-                                                    sm: "42px"
-                                                },
-                                                color: "#00B0FF",
-                                                children: "让我们谈谈"
-                                            }),
-                                            /*#__PURE__*/ (0,jsx_runtime_.jsxs)(node.Box, {
-                                                sx: {
-                                                    padding: "16px",
-                                                    textAlign: "center",
-                                                    mb: "48px"
-                                                },
-                                                children: [
-                                                    /*#__PURE__*/ jsx_runtime_.jsx(node.Typography, {
-                                                        variant: "h6",
-                                                        children: "联系电子邮件:"
-                                                    }),
-                                                    /*#__PURE__*/ jsx_runtime_.jsx("a", {
-                                                        href: "mailto:dongjun1997@outllook.com?subject=你好!",
-                                                        children: /*#__PURE__*/ jsx_runtime_.jsx(node.Typography, {
-                                                            variant: "body1",
-                                                            children: "dongjun1997@outlook.com"
-                                                        })
-                                                    })
-                                                ]
-                                            }),
-                                            /*#__PURE__*/ (0,jsx_runtime_.jsxs)(node.Box, {
-                                                sx: {
-                                                    padding: "16px",
-                                                    textAlign: "center"
-                                                },
-                                                children: [
-                                                    /*#__PURE__*/ jsx_runtime_.jsx(node.Typography, {
-                                                        variant: "h6",
-                                                        children: "联系电话:"
-                                                    }),
-                                                    /*#__PURE__*/ jsx_runtime_.jsx("a", {
-                                                        href: "tel:+86 18691791512",
-                                                        children: /*#__PURE__*/ jsx_runtime_.jsx(node.Typography, {
-                                                            variant: "body1",
-                                                            children: "+86 186 9179 1512"
-                                                        })
-                                                    })
-                                                ]
-                                            })
-                                        ]
-                                    })
-                                }),
-                                /*#__PURE__*/ jsx_runtime_.jsx(node.Grid, {
-                                    item: true,
-                                    sx: {
-                                        display: {
-                                            xs: "none",
-                                            sm: "block"
-                                        }
-                                    },
-                                    sm: 2
-                                }),
-                                /*#__PURE__*/ jsx_runtime_.jsx(node.Grid, {
-                                    item: true,
-                                    xs: 12,
                                     sm: 6,
                                     children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)(node.Box, {
                                         sx: {
@@ -928,6 +895,16 @@ var noop_head_default = /*#__PURE__*/__webpack_require__.n(noop_head);
                                                         /*#__PURE__*/ jsx_runtime_.jsx(node.Grid, {
                                                             item: true,
                                                             xs: 12,
+                                                            children: /*#__PURE__*/ jsx_runtime_.jsx(node.FormControlLabel, {
+                                                                control: /*#__PURE__*/ jsx_runtime_.jsx(CheckBox/* default */.Z, {
+                                                                    color: "primary"
+                                                                }),
+                                                                label: "我同意通过提供的联系方式与我联系"
+                                                            })
+                                                        }),
+                                                        /*#__PURE__*/ jsx_runtime_.jsx(node.Grid, {
+                                                            item: true,
+                                                            xs: 12,
                                                             children: /*#__PURE__*/ jsx_runtime_.jsx(node.Box, {
                                                                 sx: {
                                                                     display: "flex",
@@ -950,6 +927,77 @@ var noop_head_default = /*#__PURE__*/__webpack_require__.n(noop_head);
                                                         })
                                                     ]
                                                 })
+                                            })
+                                        ]
+                                    })
+                                }),
+                                /*#__PURE__*/ jsx_runtime_.jsx(node.Grid, {
+                                    item: true,
+                                    sx: {
+                                        display: {
+                                            xs: "none",
+                                            sm: "block"
+                                        }
+                                    },
+                                    sm: 2
+                                }),
+                                /*#__PURE__*/ jsx_runtime_.jsx(node.Grid, {
+                                    item: true,
+                                    xs: 12,
+                                    sm: 4,
+                                    children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)(node.Box, {
+                                        sx: {
+                                            display: "flex",
+                                            flexDirection: "column",
+                                            alignItems: "center"
+                                        },
+                                        children: [
+                                            /*#__PURE__*/ jsx_runtime_.jsx(node.Typography, {
+                                                variant: "h3",
+                                                fontSize: {
+                                                    sm: "42px"
+                                                },
+                                                color: "#00B0FF",
+                                                children: "让我们谈谈"
+                                            }),
+                                            /*#__PURE__*/ (0,jsx_runtime_.jsxs)(node.Box, {
+                                                sx: {
+                                                    padding: "16px",
+                                                    textAlign: "center",
+                                                    mb: "48px"
+                                                },
+                                                children: [
+                                                    /*#__PURE__*/ jsx_runtime_.jsx(node.Typography, {
+                                                        variant: "h6",
+                                                        children: "联系电子邮件:"
+                                                    }),
+                                                    /*#__PURE__*/ jsx_runtime_.jsx("a", {
+                                                        href: "mailto:dongjun1997@outllook.com?subject=你好!",
+                                                        children: /*#__PURE__*/ jsx_runtime_.jsx(node.Typography, {
+                                                            variant: "body1",
+                                                            children: "dongjun1997@outlook.com"
+                                                        })
+                                                    })
+                                                ]
+                                            }),
+                                            /*#__PURE__*/ (0,jsx_runtime_.jsxs)(node.Box, {
+                                                sx: {
+                                                    padding: "16px",
+                                                    textAlign: "center"
+                                                },
+                                                children: [
+                                                    /*#__PURE__*/ jsx_runtime_.jsx(node.Typography, {
+                                                        variant: "h6",
+                                                        children: "联系电话:"
+                                                    }),
+                                                    /*#__PURE__*/ jsx_runtime_.jsx("a", {
+                                                        href: "tel:+86 18691791512",
+                                                        children: /*#__PURE__*/ jsx_runtime_.jsx(node.Typography, {
+                                                            variant: "body1",
+                                                            children: "+86 186 9179 1512"
+                                                        })
+                                                    })
+                                                ]
                                             })
                                         ]
                                     })
@@ -1022,7 +1070,7 @@ const metadata = {
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [587,999,751,574,640,2], () => (__webpack_exec__(34089)));
+var __webpack_exports__ = __webpack_require__.X(0, [587,999,751,278,715,640,183], () => (__webpack_exec__(34089)));
 module.exports = __webpack_exports__;
 
 })();
