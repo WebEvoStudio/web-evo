@@ -10,7 +10,7 @@ exports.modules = {
 /* harmony export */   E: () => (/* binding */ frameworks),
 /* harmony export */   K: () => (/* binding */ designs)
 /* harmony export */ });
-/* harmony import */ var _images__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(8061);
+/* harmony import */ var _images__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(72535);
 
 const frameworks = [
     {

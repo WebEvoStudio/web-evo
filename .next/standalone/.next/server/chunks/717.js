@@ -433,7 +433,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 8061:
+/***/ 72535:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -443,13 +443,16 @@ __webpack_require__.d(__webpack_exports__, {
   rU: () => (/* binding */ Images)
 });
 
-// UNUSED EXPORTS: aliRedEnvelope, uniAppLogo
+// UNUSED EXPORTS: aliRedEnvelope, uniAppLogo, webEvoPoster
 
 ;// CONCATENATED MODULE: ./assets/images/uni.png
 /* harmony default export */ const images_uni = ({"src":"/_next/static/media/uni.4a7f1e85.png","height":50,"width":50,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAMAAADz0U65AAAAJFBMVEUqmTgrmzkrlzgqlzwsmzsqmDgqmDcqmDgqmTcqmDgsmDoupDyGWl6+AAAAC3RSTlNg/jIRM91xNZf0OZx6JhoAAAAJcEhZcwAACxMAAAsTAQCanBgAAAAvSURBVHicVcY5DgAgDASxWQLk+v9/kdLhyhjDoMcGhU5M0Lm9vsCklanemHuVL3sk2QEayHHvbQAAAABJRU5ErkJggg==","blurWidth":8,"blurHeight":8});
 ;// CONCATENATED MODULE: ./assets/images/ali-red-envelope.jpg
 /* harmony default export */ const ali_red_envelope = ({"src":"/_next/static/media/ali-red-envelope.a19dcfa6.jpg","height":1152,"width":794,"blurDataURL":"data:image/jpeg;base64,/9j/2wBDAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIfIiEmKzcvJik0KSEiMEExNDk7Pj4+JS5ESUM8SDc9Pjv/2wBDAQoLCw4NDhwQEBw7KCIoOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozv/wAARCAAIAAYDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAT/xAAfEAAABgEFAAAAAAAAAAAAAAAAAQIDESESBAUVMXH/xAAVAQEBAAAAAAAAAAAAAAAAAAAFBv/EABoRAAICAwAAAAAAAAAAAAAAAAABAhEhIjH/2gAMAwEAAhEDEQA/AJNwcRxenJp41OlGScjqj7mvIAAB7yyyhoq6f//Z","blurWidth":6,"blurHeight":8});
+;// CONCATENATED MODULE: ./assets/images/web-evo.png
+/* harmony default export */ const web_evo = ({"src":"/_next/static/media/web-evo.65f0ba8d.png","height":628,"width":1200,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAECAMAAACEE47CAAAAP1BMVEV9g3VlcnptgInlvX7p8dZVWVPi5crhzMDe6NGNjn3RrnfW3YLpzZTM1cGFoJXR1r2ew7bXv4zw2M7Dx3RobGTeobOJAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAKklEQVR4nAXBhQEAIAwDsG7McP3/VhLUS+SOh+jMfiwg1jYwBTmnojrWBxILAQTsTbmcAAAAAElFTkSuQmCC","blurWidth":8,"blurHeight":4});
 ;// CONCATENATED MODULE: ./core/libs/images.ts
+
 
 
 /**
@@ -561,6 +564,7 @@ __webpack_require__.d(__webpack_exports__, {
 }
 const uniAppLogo = (/* unused pure expression or super */ null && (uni));
 const aliRedEnvelope = (/* unused pure expression or super */ null && (aliRedEnvelopeJpg));
+const webEvoPoster = (/* unused pure expression or super */ null && (webEvoPng));
 
 
 /***/ }),
@@ -696,8 +700,8 @@ var header = __webpack_require__(53261);
 // EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.19_@babel+core@7.23.0_react-dom@18.2.0_react@18.2.0_sass@1.68.0/node_modules/next/image.js
 var next_image = __webpack_require__(64142);
 var image_default = /*#__PURE__*/__webpack_require__.n(next_image);
-// EXTERNAL MODULE: ./core/libs/images.ts + 2 modules
-var libs_images = __webpack_require__(8061);
+// EXTERNAL MODULE: ./core/libs/images.ts + 3 modules
+var libs_images = __webpack_require__(72535);
 // EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.19_@babel+core@7.23.0_react-dom@18.2.0_react@18.2.0_sass@1.68.0/node_modules/next/link.js
 var next_link = __webpack_require__(20114);
 var link_default = /*#__PURE__*/__webpack_require__.n(next_link);
@@ -1167,8 +1171,8 @@ var Menu_default = /*#__PURE__*/__webpack_require__.n(Menu_);
 // EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.19_@babel+core@7.23.0_react-dom@18.2.0_react@18.2.0_sass@1.68.0/node_modules/next/image.js
 var next_image = __webpack_require__(64142);
 var image_default = /*#__PURE__*/__webpack_require__.n(next_image);
-// EXTERNAL MODULE: ./core/libs/images.ts + 2 modules
-var libs_images = __webpack_require__(8061);
+// EXTERNAL MODULE: ./core/libs/images.ts + 3 modules
+var libs_images = __webpack_require__(72535);
 // EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.19_@babel+core@7.23.0_react-dom@18.2.0_react@18.2.0_sass@1.68.0/node_modules/next/navigation.js
 var navigation = __webpack_require__(3301);
 // EXTERNAL MODULE: external "@mui/icons-material/Search"

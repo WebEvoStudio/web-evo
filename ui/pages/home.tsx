@@ -35,7 +35,9 @@ export default function Home() {
   const [loading, setLoading] = useState(false);
   const technologies: any[] = [
     {name: 'vue', image: Images.vueLogo},
+    {name: 'react', image: Images.reactLogo},
     {name: 'uni-app', image: uniAppLogo},
+    {name: 'next.js', image: Images.nextJsLogo},
     // {id: 1, name: 'Angular', image: Images.angularLogo},
     // {id: 2, name: 'React.js', image: Images.reactLogo},
     // {id: 4, name: 'Nest.js', image: Images.nestjsLogo},

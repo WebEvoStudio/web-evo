@@ -1,5 +1,6 @@
 import uni from '../../assets/images/uni.png';
 import aliRedEnvelopeJpg from '../../assets/images/ali-red-envelope.jpg';
+import webEvoPng from '../../assets/images/web-evo.png';
 /**
  * Images
  */
@@ -44,3 +45,4 @@ export class Images {
 
 export const uniAppLogo = uni;
 export const aliRedEnvelope = aliRedEnvelopeJpg;
+export const webEvoPoster = webEvoPng;

@@ -320,35 +320,6 @@ Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_re
 
 /***/ }),
 
-/***/ 37324:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   q: () => (/* binding */ projects)
-/* harmony export */ });
-/* harmony import */ var _core_libs_images__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(34511);
-
-const projects = [
-    {
-        name: "特浦乐餐厅小程序",
-        description: "特浦乐快餐主打“出餐快，吃的香”，坚持用新鲜的食材认真做好每一道菜，让顾客在享受美食的同时也能享受便捷的服务。",
-        headerImg: _core_libs_images__WEBPACK_IMPORTED_MODULE_0__/* .Images */ .rU.topleRestaurant,
-        sortServices: [
-            "微信小程序",
-            "前端"
-        ],
-        sortTechnologies: [
-            "uni-app",
-            "vue",
-            "UnoCss"
-        ]
-    }
-];
-
-
-/***/ }),
-
 /***/ 76216:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -368,8 +339,8 @@ var react_ = __webpack_require__(18038);
 // EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.19_@babel+core@7.23.0_react-dom@18.2.0_react@18.2.0_sass@1.68.0/node_modules/next/image.js
 var next_image = __webpack_require__(1521);
 var image_default = /*#__PURE__*/__webpack_require__.n(next_image);
-// EXTERNAL MODULE: ./core/libs/images.ts + 2 modules
-var libs_images = __webpack_require__(34511);
+// EXTERNAL MODULE: ./core/libs/images.ts + 3 modules
+var libs_images = __webpack_require__(20583);
 // EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.19_@babel+core@7.23.0_react-dom@18.2.0_react@18.2.0_sass@1.68.0/node_modules/next/navigation.js
 var navigation = __webpack_require__(84114);
 // EXTERNAL MODULE: ./node_modules/.pnpm/@mui+lab@5.0.0-alpha.140_@emotion+react@11.11.1_@emotion+styled@11.11.0_@mui+material@5.14.10_frjsrwmnygqks2qvkrdttmgi4e/node_modules/@mui/lab/node/index.js
@@ -457,8 +428,16 @@ var projects = __webpack_require__(37324);
             image: libs_images/* Images */.rU.vueLogo
         },
         {
+            name: "react",
+            image: libs_images/* Images */.rU.reactLogo
+        },
+        {
             name: "uni-app",
             image: libs_images/* uniAppLogo */.YV
+        },
+        {
+            name: "next.js",
+            image: libs_images/* Images */.rU.nextJsLogo
         }
     ];
     (0,react_.useEffect)(()=>{
@@ -992,7 +971,7 @@ const __default__ = proxy.default;
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [587,999,751,853,640,718], () => (__webpack_exec__(46114)));
+var __webpack_exports__ = __webpack_require__.X(0, [587,999,751,853,640,313,2,324], () => (__webpack_exec__(46114)));
 module.exports = __webpack_exports__;
 
 })();

@@ -352,8 +352,8 @@ var section = __webpack_require__(82748);
 // EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.19_@babel+core@7.23.0_react-dom@18.2.0_react@18.2.0_sass@1.68.0/node_modules/next/image.js
 var next_image = __webpack_require__(1521);
 var image_default = /*#__PURE__*/__webpack_require__.n(next_image);
-// EXTERNAL MODULE: ./core/libs/images.ts + 2 modules
-var libs_images = __webpack_require__(34511);
+// EXTERNAL MODULE: ./core/libs/images.ts + 3 modules
+var libs_images = __webpack_require__(20583);
 // EXTERNAL MODULE: ./node_modules/.pnpm/copy-to-clipboard@3.3.3/node_modules/copy-to-clipboard/index.js
 var copy_to_clipboard = __webpack_require__(87158);
 var copy_to_clipboard_default = /*#__PURE__*/__webpack_require__.n(copy_to_clipboard);
@@ -690,7 +690,7 @@ const AboutPage = ()=>{
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [587,999,751,315,640,183,748], () => (__webpack_exec__(79246)));
+var __webpack_exports__ = __webpack_require__.X(0, [587,999,751,315,640,794,748], () => (__webpack_exec__(79246)));
 module.exports = __webpack_exports__;
 
 })();

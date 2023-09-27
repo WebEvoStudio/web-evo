@@ -1,23 +1,11 @@
-exports.id = 718;
-exports.ids = [718];
+"use strict";
+exports.id = 313;
+exports.ids = [313];
 exports.modules = {
-
-/***/ 19924:
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
-
-Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 8907, 23));
-Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 89681, 23));
-Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 33063, 23));
-Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 51500, 23));
-Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 4321, 23));
-Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 33194, 23))
-
-/***/ }),
 
 /***/ 12313:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
@@ -33,8 +21,8 @@ var next_image = __webpack_require__(1521);
 var image_default = /*#__PURE__*/__webpack_require__.n(next_image);
 // EXTERNAL MODULE: external "next/dist/compiled/react"
 var react_ = __webpack_require__(18038);
-// EXTERNAL MODULE: ./core/libs/images.ts + 2 modules
-var libs_images = __webpack_require__(34511);
+// EXTERNAL MODULE: ./core/libs/images.ts + 3 modules
+var libs_images = __webpack_require__(20583);
 ;// CONCATENATED MODULE: ./core/libs/services.ts
 
 const services = [
