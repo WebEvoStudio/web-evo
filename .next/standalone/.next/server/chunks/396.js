@@ -1,12 +1,12 @@
-exports.id = 640;
-exports.ids = [640];
+exports.id = 396;
+exports.ids = [396];
 exports.modules = {
 
-/***/ 59227:
+/***/ 61218:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 42566));
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 93614));
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 42566));
 Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 97216, 23))
 
 /***/ }),
@@ -490,12 +490,16 @@ const MainSearch = ()=>{
     const pathname = (0,navigation.usePathname)();
     const links = [
         {
+            path: "/blogs",
+            name: "博客"
+        },
+        {
             path: "/about",
             name: "关于"
         },
         {
-            path: "/blogs",
-            name: "博客"
+            path: "/support-us",
+            name: "支持"
         },
         {
             path: "/contact",

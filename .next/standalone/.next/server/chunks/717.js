@@ -1263,12 +1263,16 @@ const MainSearch = ()=>{
     const pathname = (0,navigation.usePathname)();
     const links = [
         {
+            path: "/blogs",
+            name: "博客"
+        },
+        {
             path: "/about",
             name: "关于"
         },
         {
-            path: "/blogs",
-            name: "博客"
+            path: "/support-us",
+            name: "支持"
         },
         {
             path: "/contact",

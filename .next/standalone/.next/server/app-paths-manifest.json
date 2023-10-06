@@ -1,12 +1,13 @@
 {
   "/page": "app/page.js",
-  "/services/page": "app/services/page.js",
-  "/about/page": "app/about/page.js",
-  "/blogs/page": "app/blogs/page.js",
-  "/privacy-policy/page": "app/privacy-policy/page.js",
   "/blogs-sitemap.xml/route": "app/blogs-sitemap.xml/route.js",
+  "/blogs/page": "app/blogs/page.js",
   "/contact/page": "app/contact/page.js",
+  "/about/page": "app/about/page.js",
+  "/services/page": "app/services/page.js",
+  "/privacy-policy/page": "app/privacy-policy/page.js",
   "/projects/page": "app/projects/page.js",
+  "/support-us/page": "app/support-us/page.js",
   "/tools/markdown-to-pdf/page": "app/tools/markdown-to-pdf/page.js",
   "/dashboard/page": "app/dashboard/page.js"
 }
