@@ -478,9 +478,6 @@ var next_image = __webpack_require__(1521);
 var image_default = /*#__PURE__*/__webpack_require__.n(next_image);
 // EXTERNAL MODULE: ./node_modules/.pnpm/notistack@3.0.1_csstype@3.1.2_react-dom@18.2.0_react@18.2.0/node_modules/notistack/index.js
 var notistack = __webpack_require__(85110);
-// EXTERNAL MODULE: ./node_modules/.pnpm/validator@13.11.0/node_modules/validator/lib/isEmail.js
-var isEmail = __webpack_require__(60087);
-var isEmail_default = /*#__PURE__*/__webpack_require__.n(isEmail);
 // EXTERNAL MODULE: ./node_modules/.pnpm/validator@13.11.0/node_modules/validator/lib/isMobilePhone.js
 var isMobilePhone = __webpack_require__(40086);
 // EXTERNAL MODULE: ./node_modules/.pnpm/axios@1.5.0/node_modules/axios/lib/axios.js + 46 modules
@@ -655,7 +652,7 @@ var CheckBox = __webpack_require__(36657);
 
 
 
-
+// import isEmail from 'validator/lib/isEmail';
 
 
 
@@ -672,12 +669,18 @@ var CheckBox = __webpack_require__(36657);
         contact: "",
         email: "",
         mobilePhone: "",
-        message: ""
+        message: "",
+        companyName: "",
+        jobRole: "",
+        sizeOfTheCompany: "",
+        isContactAllowed: true,
+        help: ""
     });
     const [formError, setFormError] = (0,react_.useState)({
         name: false,
-        contact: false,
-        message: false
+        // contact: false,
+        message: false,
+        mobilePhone: false
     });
     const submit = (e)=>{
         e.preventDefault();
@@ -692,56 +695,38 @@ var CheckBox = __webpack_require__(36657);
             });
             firebase/* analytics */.c.then((res)=>res && (0,dist/* logEvent */.Kz)(res, "submit_contact_info"));
             setForm({
+                isContactAllowed: true,
+                companyName: "",
+                jobRole: "",
+                sizeOfTheCompany: "",
                 name: "",
                 contact: "",
                 email: "",
                 mobilePhone: "",
-                message: ""
+                message: "",
+                help: "services"
             });
         }).catch((err)=>enqueueSnackbar(err.message, {
                 variant: "error"
             }));
     };
-    const contactBlurHandler = ()=>{
-        if (form.email === "" && form.mobilePhone === "") return setFormError({
-            ...formError,
-            contact: true
-        });
-        if (form.contact !== "") {
-            setFormError({
-                ...formError,
-                contact: true
-            });
-            setForm({
-                ...form,
-                email: "",
-                mobilePhone: ""
-            });
-            return;
-        }
-        setFormError({
-            ...formError,
-            contact: false
-        });
-    };
-    const contactChangeHandler = ({ target: { value } })=>{
-        if (isEmail_default()(value)) return setForm({
-            ...form,
-            email: value,
-            contact: ""
-        });
-        if ((0,isMobilePhone/* default */.ZP)(value, "zh-CN")) return setForm({
-            ...form,
-            mobilePhone: value,
-            contact: ""
-        });
-        setForm({
-            ...form,
-            contact: value
-        });
-    };
+    // const contactBlurHandler = () => {
+    //   if (form.email === '' && form.mobilePhone === '') return setFormError({...formError, contact: true});
+    //   if (form.contact !== '') {
+    //     setFormError({...formError, contact: true});
+    //     setForm({...form, email: '', mobilePhone: ''});
+    //     return;
+    //   }
+    //   setFormError({...formError, contact: false});
+    // };
+    // const contactChangeHandler = ({target: {value}}: any) => {
+    //   if (isEmail(value)) return setForm({...form, email: value, contact: ''});
+    //   if (isMobilePhone(value, 'zh-CN')) return setForm({...form, mobilePhone: value, contact: ''});
+    //   setForm({...form, contact: value});
+    // };
     const submitDisabled = (0,react_.useMemo)(()=>{
-        const isError = formError.name || formError.contact || formError.message;
+        // const isError = formError.name || formError.contact || formError.message;
+        const isError = formError.name || formError.message;
         const isInput = Object.values(form).some((v)=>v !== "");
         return isError || !isInput;
     }, [
@@ -843,11 +828,11 @@ var CheckBox = __webpack_require__(36657);
                                                             item: true,
                                                             xs: 12,
                                                             children: /*#__PURE__*/ jsx_runtime_.jsx(node.TextField, {
-                                                                label: "您的名字",
+                                                                label: "姓名",
                                                                 fullWidth: true,
                                                                 required: true,
                                                                 error: formError.name,
-                                                                helperText: formError.name ? "名字是必须的" : "",
+                                                                helperText: formError.name ? "姓名是必须的" : "",
                                                                 onBlur: ()=>setFormError({
                                                                         ...formError,
                                                                         name: form.name === ""
@@ -862,13 +847,55 @@ var CheckBox = __webpack_require__(36657);
                                                             item: true,
                                                             xs: 12,
                                                             children: /*#__PURE__*/ jsx_runtime_.jsx(node.TextField, {
-                                                                label: "您的邮件或手机号",
+                                                                label: "手机号",
                                                                 fullWidth: true,
                                                                 required: true,
-                                                                error: formError.contact,
-                                                                helperText: formError.contact ? "邮箱或手机号码格式不正确" : "",
-                                                                onBlur: contactBlurHandler,
-                                                                onChange: contactChangeHandler
+                                                                error: formError.mobilePhone,
+                                                                helperText: formError.mobilePhone ? "手机号格式不正确" : "",
+                                                                onBlur: ()=>setFormError({
+                                                                        ...formError,
+                                                                        mobilePhone: form.mobilePhone === "" || !(0,isMobilePhone/* default */.ZP)(form.mobilePhone, "zh-CN")
+                                                                    }),
+                                                                onChange: ({ target: { value } })=>setForm({
+                                                                        ...form,
+                                                                        mobilePhone: value
+                                                                    })
+                                                            })
+                                                        }),
+                                                        /*#__PURE__*/ jsx_runtime_.jsx(node.Grid, {
+                                                            item: true,
+                                                            xs: 12,
+                                                            children: /*#__PURE__*/ jsx_runtime_.jsx(node.TextField, {
+                                                                label: "公司名称",
+                                                                fullWidth: true,
+                                                                onChange: ({ target: { value } })=>setForm({
+                                                                        ...form,
+                                                                        companyName: value
+                                                                    })
+                                                            })
+                                                        }),
+                                                        /*#__PURE__*/ jsx_runtime_.jsx(node.Grid, {
+                                                            item: true,
+                                                            xs: 12,
+                                                            children: /*#__PURE__*/ jsx_runtime_.jsx(node.TextField, {
+                                                                label: "职业角色",
+                                                                fullWidth: true,
+                                                                onChange: ({ target: { value } })=>setForm({
+                                                                        ...form,
+                                                                        jobRole: value
+                                                                    })
+                                                            })
+                                                        }),
+                                                        /*#__PURE__*/ jsx_runtime_.jsx(node.Grid, {
+                                                            item: true,
+                                                            xs: 12,
+                                                            children: /*#__PURE__*/ jsx_runtime_.jsx(node.TextField, {
+                                                                label: "公司规模",
+                                                                fullWidth: true,
+                                                                onChange: ({ target: { value } })=>setForm({
+                                                                        ...form,
+                                                                        sizeOfTheCompany: value
+                                                                    })
                                                             })
                                                         }),
                                                         /*#__PURE__*/ jsx_runtime_.jsx(node.Grid, {
@@ -891,6 +918,47 @@ var CheckBox = __webpack_require__(36657);
                                                                         message: value
                                                                     })
                                                             })
+                                                        }),
+                                                        /*#__PURE__*/ (0,jsx_runtime_.jsxs)(node.Grid, {
+                                                            item: true,
+                                                            xs: 12,
+                                                            children: [
+                                                                /*#__PURE__*/ jsx_runtime_.jsx(node.FormLabel, {
+                                                                    id: "demo-radio-buttons-group-label",
+                                                                    children: "我们该怎样帮助你？"
+                                                                }),
+                                                                /*#__PURE__*/ (0,jsx_runtime_.jsxs)(node.RadioGroup, {
+                                                                    "aria-labelledby": "demo-radio-buttons-group-label",
+                                                                    defaultValue: "services",
+                                                                    name: "radio-buttons-group",
+                                                                    onChange: ({ target: { value } })=>setForm({
+                                                                            ...form,
+                                                                            help: value
+                                                                        }),
+                                                                    children: [
+                                                                        /*#__PURE__*/ jsx_runtime_.jsx(node.FormControlLabel, {
+                                                                            value: "services",
+                                                                            control: /*#__PURE__*/ jsx_runtime_.jsx(node.Radio, {}),
+                                                                            label: "服务"
+                                                                        }),
+                                                                        /*#__PURE__*/ jsx_runtime_.jsx(node.FormControlLabel, {
+                                                                            value: "careers",
+                                                                            control: /*#__PURE__*/ jsx_runtime_.jsx(node.Radio, {}),
+                                                                            label: "职业生涯"
+                                                                        }),
+                                                                        /*#__PURE__*/ jsx_runtime_.jsx(node.FormControlLabel, {
+                                                                            value: "partnerships&sales",
+                                                                            control: /*#__PURE__*/ jsx_runtime_.jsx(node.Radio, {}),
+                                                                            label: "合作伙伴关系和销售"
+                                                                        }),
+                                                                        /*#__PURE__*/ jsx_runtime_.jsx(node.FormControlLabel, {
+                                                                            value: "other",
+                                                                            control: /*#__PURE__*/ jsx_runtime_.jsx(node.Radio, {}),
+                                                                            label: "其他"
+                                                                        })
+                                                                    ]
+                                                                })
+                                                            ]
                                                         }),
                                                         /*#__PURE__*/ jsx_runtime_.jsx(node.Grid, {
                                                             item: true,
@@ -1070,7 +1138,7 @@ const metadata = {
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [587,999,751,278,715,396,190], () => (__webpack_exec__(34089)));
+var __webpack_exports__ = __webpack_require__.X(0, [587,999,751,278,648,640,183], () => (__webpack_exec__(34089)));
 module.exports = __webpack_exports__;
 
 })();

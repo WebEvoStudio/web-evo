@@ -1,10 +1,19 @@
 'use client';
 import React, {useMemo, useState} from 'react';
-import {Box, Button, Container, FormControlLabel, Grid, TextField, Typography} from '@mui/material';
+import {
+  Box,
+  Button,
+  Container,
+  FormControlLabel,
+  FormLabel,
+  Grid, Radio, RadioGroup,
+  TextField,
+  Typography,
+} from '@mui/material';
 import {Images} from '../../core/libs/images';
 import Image from 'next/image';
 import {useSnackbar} from 'notistack';
-import isEmail from 'validator/lib/isEmail';
+// import isEmail from 'validator/lib/isEmail';
 import isMobilePhone from 'validator/lib/isMobilePhone';
 import Request from '../../core/unit/request';
 import CommonHead from '../../components/common-head';
@@ -19,8 +28,24 @@ import {CheckBox} from '@mui/icons-material';
  */
 export default function Contact() {
   const {enqueueSnackbar} = useSnackbar();
-  const [form, setForm] = useState({name: '', contact: '', email: '', mobilePhone: '', message: ''});
-  const [formError, setFormError] = useState({name: false, contact: false, message: false});
+  const [form, setForm] = useState({
+    name: '',
+    contact: '',
+    email: '',
+    mobilePhone: '',
+    message: '',
+    companyName: '',
+    jobRole: '',
+    sizeOfTheCompany: '',
+    isContactAllowed: true,
+    help: '',
+  });
+  const [formError, setFormError] = useState({
+    name: false,
+    // contact: false,
+    message: false,
+    mobilePhone: false,
+  });
   const submit = (e: any) => {
     e.preventDefault();
     console.log(form);
@@ -30,26 +55,38 @@ export default function Contact() {
         .then(() => {
           enqueueSnackbar('提交成功', {variant: 'success'});
           analytics.then((res) => res && logEvent(res, 'submit_contact_info'));
-          setForm({name: '', contact: '', email: '', mobilePhone: '', message: ''});
+          setForm({
+            isContactAllowed: true,
+            companyName: '',
+            jobRole: '',
+            sizeOfTheCompany: '',
+            name: '',
+            contact: '',
+            email: '',
+            mobilePhone: '',
+            message: '',
+            help: 'services',
+          });
         })
         .catch((err) => enqueueSnackbar(err.message, {variant: 'error'}));
   };
-  const contactBlurHandler = () => {
-    if (form.email === '' && form.mobilePhone === '') return setFormError({...formError, contact: true});
-    if (form.contact !== '') {
-      setFormError({...formError, contact: true});
-      setForm({...form, email: '', mobilePhone: ''});
-      return;
-    }
-    setFormError({...formError, contact: false});
-  };
-  const contactChangeHandler = ({target: {value}}: any) => {
-    if (isEmail(value)) return setForm({...form, email: value, contact: ''});
-    if (isMobilePhone(value, 'zh-CN')) return setForm({...form, mobilePhone: value, contact: ''});
-    setForm({...form, contact: value});
-  };
+  // const contactBlurHandler = () => {
+  //   if (form.email === '' && form.mobilePhone === '') return setFormError({...formError, contact: true});
+  //   if (form.contact !== '') {
+  //     setFormError({...formError, contact: true});
+  //     setForm({...form, email: '', mobilePhone: ''});
+  //     return;
+  //   }
+  //   setFormError({...formError, contact: false});
+  // };
+  // const contactChangeHandler = ({target: {value}}: any) => {
+  //   if (isEmail(value)) return setForm({...form, email: value, contact: ''});
+  //   if (isMobilePhone(value, 'zh-CN')) return setForm({...form, mobilePhone: value, contact: ''});
+  //   setForm({...form, contact: value});
+  // };
   const submitDisabled = useMemo(() => {
-    const isError = formError.name || formError.contact || formError.message;
+    // const isError = formError.name || formError.contact || formError.message;
+    const isError = formError.name || formError.message;
     const isInput = Object.values(form).some((v) => v !== '');
     return isError || !isInput;
   }, [form, formError]);
@@ -84,19 +121,55 @@ export default function Contact() {
                   <Grid container gap={2}>
                     <Grid item xs={12}>
                       <TextField
-                        label={'您的名字'}
+                        label={'姓名'}
                         fullWidth
                         required error={formError.name}
-                        helperText={formError.name ? '名字是必须的' : ''}
+                        helperText={formError.name ? '姓名是必须的' : ''}
                         onBlur={() => setFormError({...formError, name: form.name === ''})}
                         onChange={({target: {value}}) => setForm({...form, name: value})}/>
                     </Grid>
                     <Grid item xs={12}>
-                      <TextField label={'您的邮件或手机号'} fullWidth required
-                        error={formError.contact}
-                        helperText={formError.contact ? '邮箱或手机号码格式不正确' : ''}
-                        onBlur={contactBlurHandler}
-                        onChange={contactChangeHandler}/>
+                      <TextField label={'手机号'} fullWidth required
+                        error={formError.mobilePhone}
+                        helperText={formError.mobilePhone ? '手机号格式不正确' : ''}
+                        onBlur={() => setFormError({
+                          ...formError,
+                          mobilePhone: form.mobilePhone === '' || !isMobilePhone(form.mobilePhone, 'zh-CN'),
+                        })}
+                        onChange={
+                          ({target: {value}}: any) => setForm({
+                            ...form,
+                            mobilePhone: value,
+                          })
+                        }/>
+                    </Grid>
+                    {/* <Grid item xs={12}>*/}
+                    {/*  <TextField label={'邮件'} fullWidth*/}
+                    {/*    error={formError.contact}*/}
+                    {/*    helperText={formError.contact ? '邮箱格式不正确' : ''}*/}
+                    {/*    onBlur={contactBlurHandler}*/}
+                    {/*    onChange={contactChangeHandler}/>*/}
+                    {/* </Grid>*/}
+                    <Grid item xs={12}>
+                      <TextField
+                        label={'公司名称'}
+                        fullWidth
+                        onChange={({target: {value}}) => setForm({...form, companyName: value})}
+                      />
+                    </Grid>
+                    <Grid item xs={12}>
+                      <TextField
+                        label={'职业角色'}
+                        fullWidth
+                        onChange={({target: {value}}) => setForm({...form, jobRole: value})}
+                      />
+                    </Grid>
+                    <Grid item xs={12}>
+                      <TextField
+                        label={'公司规模'}
+                        fullWidth
+                        onChange={({target: {value}}) => setForm({...form, sizeOfTheCompany: value})}
+                      />
                     </Grid>
                     <Grid item xs={12}>
                       <TextField
@@ -106,6 +179,20 @@ export default function Contact() {
                         helperText={formError.message ? '需求信息是必须的' : ''}
                         onBlur={() => setFormError({...formError, message: form.message === ''})}
                         onChange={({target: {value}}) => setForm({...form, message: value})}/>
+                    </Grid>
+                    <Grid item xs={12}>
+                      <FormLabel id="demo-radio-buttons-group-label">我们该怎样帮助你？</FormLabel>
+                      <RadioGroup
+                        aria-labelledby="demo-radio-buttons-group-label"
+                        defaultValue="services"
+                        name="radio-buttons-group"
+                        onChange={({target: {value}}) => setForm({...form, help: value})}
+                      >
+                        <FormControlLabel value="services" control={<Radio />} label="服务" />
+                        <FormControlLabel value="careers" control={<Radio />} label="职业生涯" />
+                        <FormControlLabel value="partnerships&sales" control={<Radio />} label="合作伙伴关系和销售" />
+                        <FormControlLabel value="other" control={<Radio />} label="其他" />
+                      </RadioGroup>
                     </Grid>
                     <Grid item xs={12}>
                       {/* <FormControlLabel control={<CheckBox color={'primary'}/>} label={'我接受您的隐私政策'}/>*/}
