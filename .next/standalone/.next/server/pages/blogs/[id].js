@@ -1,10 +1,10 @@
 (() => {
 var exports = {};
-exports.id = 268;
-exports.ids = [268];
+exports.id = 3268;
+exports.ids = [3268];
 exports.modules = {
 
-/***/ 32182:
+/***/ 87367:
 /***/ ((module) => {
 
 // Exports
@@ -21,7 +21,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 48384:
+/***/ 39312:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -51,36 +51,36 @@ __webpack_require__.d(_id_namespaceObject, {
   "default": () => (_id_)
 });
 
-// EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.19_@babel+core@7.23.0_react-dom@18.2.0_react@18.2.0_sass@1.68.0/node_modules/next/dist/server/future/route-modules/pages/module.js
-var pages_module = __webpack_require__(67179);
-// EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.19_@babel+core@7.23.0_react-dom@18.2.0_react@18.2.0_sass@1.68.0/node_modules/next/dist/server/future/route-kind.js
-var route_kind = __webpack_require__(57713);
-// EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.19_@babel+core@7.23.0_react-dom@18.2.0_react@18.2.0_sass@1.68.0/node_modules/next/dist/build/webpack/loaders/next-route-loader/helpers.js
-var helpers = __webpack_require__(70932);
+// EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.19_@babel+core@7.23.3_react-dom@18.2.0_react@18.2.0_sass@1.69.5/node_modules/next/dist/server/future/route-modules/pages/module.js
+var pages_module = __webpack_require__(32573);
+// EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.19_@babel+core@7.23.3_react-dom@18.2.0_react@18.2.0_sass@1.69.5/node_modules/next/dist/server/future/route-kind.js
+var route_kind = __webpack_require__(59390);
+// EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.19_@babel+core@7.23.3_react-dom@18.2.0_react@18.2.0_sass@1.69.5/node_modules/next/dist/build/webpack/loaders/next-route-loader/helpers.js
+var helpers = __webpack_require__(78739);
 // EXTERNAL MODULE: ./pages/_document.tsx
-var _document = __webpack_require__(17228);
+var _document = __webpack_require__(70845);
 // EXTERNAL MODULE: ./pages/_app.tsx + 1 modules
-var _app = __webpack_require__(54575);
+var _app = __webpack_require__(18957);
 // EXTERNAL MODULE: ./node_modules/.pnpm/react@18.2.0/node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(11527);
 // EXTERNAL MODULE: external "react"
 var external_react_ = __webpack_require__(16689);
 // EXTERNAL MODULE: ./styles/blog.module.scss
-var blog_module = __webpack_require__(32182);
+var blog_module = __webpack_require__(87367);
 var blog_module_default = /*#__PURE__*/__webpack_require__.n(blog_module);
 // EXTERNAL MODULE: ./components/common-head.tsx
-var common_head = __webpack_require__(91160);
+var common_head = __webpack_require__(11647);
 // EXTERNAL MODULE: external "axios"
 var external_axios_ = __webpack_require__(52167);
 var external_axios_default = /*#__PURE__*/__webpack_require__.n(external_axios_);
 // EXTERNAL MODULE: ./core/unit/markdown.ts
-var markdown = __webpack_require__(75632);
+var markdown = __webpack_require__(42585);
 // EXTERNAL MODULE: external "@mui/material"
 var material_ = __webpack_require__(65692);
-// EXTERNAL MODULE: ./node_modules/.pnpm/highlight.js@11.8.0/node_modules/highlight.js/styles/github.css
-var github = __webpack_require__(3870);
+// EXTERNAL MODULE: ./node_modules/.pnpm/highlight.js@11.9.0/node_modules/highlight.js/styles/github.css
+var github = __webpack_require__(19311);
 // EXTERNAL MODULE: ./node_modules/.pnpm/bytemd@1.21.0/node_modules/bytemd/dist/index.min.css
-var index_min = __webpack_require__(57769);
+var index_min = __webpack_require__(59587);
 // EXTERNAL MODULE: external "@bytemd/react"
 var react_ = __webpack_require__(66511);
 // EXTERNAL MODULE: external "@bytemd/plugin-frontmatter"
@@ -160,7 +160,7 @@ BlogDetail.getInitialProps = async (ctx)=>{
 };
 /* harmony default export */ const _id_ = (BlogDetail);
 
-;// CONCATENATED MODULE: ./node_modules/.pnpm/next@13.4.19_@babel+core@7.23.0_react-dom@18.2.0_react@18.2.0_sass@1.68.0/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js?kind=PAGES&page=%2Fblogs%2F%5Bid%5D&preferredRegion=&absolutePagePath=private-next-pages%2Fblogs%2F%5Bid%5D.tsx&absoluteAppPath=private-next-pages%2F_app.tsx&absoluteDocumentPath=private-next-pages%2F_document.tsx&middlewareConfigBase64=e30%3D!
+;// CONCATENATED MODULE: ./node_modules/.pnpm/next@13.4.19_@babel+core@7.23.3_react-dom@18.2.0_react@18.2.0_sass@1.69.5/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js?kind=PAGES&page=%2Fblogs%2F%5Bid%5D&preferredRegion=&absolutePagePath=private-next-pages%2Fblogs%2F%5Bid%5D.tsx&absoluteAppPath=private-next-pages%2F_app.tsx&absoluteDocumentPath=private-next-pages%2F_document.tsx&middlewareConfigBase64=e30%3D!
 // @ts-ignore this need to be imported from next/dist to be external
 
 
@@ -209,14 +209,14 @@ const routeModule = new PagesRouteModule({
 
 /***/ }),
 
-/***/ 57769:
+/***/ 59587:
 /***/ (() => {
 
 
 
 /***/ }),
 
-/***/ 3870:
+/***/ 19311:
 /***/ (() => {
 
 
@@ -622,7 +622,7 @@ module.exports = require("react-dom");
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [587,793,717,160,632], () => (__webpack_exec__(48384)));
+var __webpack_exports__ = __webpack_require__.X(0, [9900,4803,2995,1647,2585], () => (__webpack_exec__(39312)));
 module.exports = __webpack_exports__;
 
 })();

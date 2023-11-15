@@ -3,7 +3,6 @@ import {useState} from 'react';
 import {Editor} from '@bytemd/react';
 import 'bytemd/dist/index.min.css';
 import zhHans from 'bytemd/locales/zh_Hans.json';
-import styles from '../styles/editor.module.scss';
 import frontmatter from '@bytemd/plugin-frontmatter';
 import gfm from '@bytemd/plugin-gfm';
 import clipboard from 'clipboardy';
@@ -13,7 +12,7 @@ import Request from '../core/unit/request';
 import ObjectUnit from '../core/unit/object-unit';
 import {useSnackbar} from 'notistack';
 import {BytemdEditorContext, BytemdPlugin} from 'bytemd';
-import {Box, Button, TextField} from '@mui/material';
+import {Box, Button, Card, CardContent, CardHeader, TextField} from '@mui/material';
 
 const pastePlugin = (): BytemdPlugin => {
   return {
@@ -90,20 +89,32 @@ const EditorPage = (props: {title?: string, value?: string, id?: string}) => {
   };
   return (
     <div>
-      <div className={styles['actions']}>
-        <Box sx={{flex: 1}} mr={2}>
-          <TextField label={'标题'} size={'small'} fullWidth value={title}
-            onChange={({target: {value}}) => setTitle(value)}/>
-        </Box>
-        <Button variant={'outlined'} sx={{mr: 2}} onClick={copy}>复制到剪贴板</Button>
-        <Button variant={'outlined'} onClick={isModify ? modify : save}>{isModify ? '保存修改' : '发布'}</Button>
+      <div className={''}>
+        <Card>
+          <CardHeader
+            title={
+              <Box sx={{flex: 1}} mr={2}>
+                <TextField label={'标题'} size={'small'} fullWidth value={title}
+                  onChange={({target: {value}}) => setTitle(value)}/>
+              </Box>
+            }
+            action={
+              <Box sx={{display: 'flex', alignItems: 'center', mt: '6px', mb: '4px'}}>
+                <Button variant={'outlined'} sx={{mr: 2}} onClick={copy}>复制到剪贴板</Button>
+                <Button variant={'outlined'} onClick={isModify ? modify : save}>{isModify ? '保存修改' : '发布'}</Button>
+              </Box>
+            }
+          />
+          <CardContent>
+            <Editor
+              value={value}
+              plugins={plugins}
+              locale={zhHans}
+              onChange={(v: string) => setValue(v)}
+              uploadImages={uploadImages}/>
+          </CardContent>
+        </Card>
       </div>
-      <Editor
-        value={value}
-        plugins={plugins}
-        locale={zhHans}
-        onChange={(v: string) => setValue(v)}
-        uploadImages={uploadImages}/>
     </div>
   );
 };

@@ -1,7 +1,7 @@
 (() => {
 var exports = {};
-exports.id = 132;
-exports.ids = [132];
+exports.id = 5132;
+exports.ids = [5132];
 exports.modules = {
 
 /***/ 18038:
@@ -92,7 +92,7 @@ module.exports = require("next/dist/shared/lib/hash");
 
 /***/ }),
 
-/***/ 66864:
+/***/ 87605:
 /***/ ((module) => {
 
 "use strict";
@@ -228,7 +228,7 @@ module.exports = require("next/dist/shared/lib/utils");
 
 /***/ }),
 
-/***/ 80268:
+/***/ 98658:
 /***/ ((module) => {
 
 "use strict";
@@ -236,7 +236,7 @@ module.exports = require("next/dist/shared/lib/utils/warn-once");
 
 /***/ }),
 
-/***/ 84066:
+/***/ 44463:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -249,12 +249,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   routeModule: () => (/* binding */ routeModule),
 /* harmony export */   tree: () => (/* binding */ tree)
 /* harmony export */ });
-/* harmony import */ var next_dist_server_future_route_modules_app_page_module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(51404);
+/* harmony import */ var next_dist_server_future_route_modules_app_page_module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(33782);
 /* harmony import */ var next_dist_server_future_route_modules_app_page_module__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(next_dist_server_future_route_modules_app_page_module__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var next_dist_server_future_route_kind__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(87765);
-/* harmony import */ var next_dist_client_components_error_boundary__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(89694);
+/* harmony import */ var next_dist_server_future_route_kind__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(24178);
+/* harmony import */ var next_dist_client_components_error_boundary__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(52116);
 /* harmony import */ var next_dist_client_components_error_boundary__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_dist_client_components_error_boundary__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var next_dist_server_app_render_entry_base__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(58377);
+/* harmony import */ var next_dist_server_app_render_entry_base__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(83495);
 /* harmony import */ var next_dist_server_app_render_entry_base__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_dist_server_app_render_entry_base__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony reexport (unknown) */ var __WEBPACK_REEXPORT_OBJECT__ = {};
 /* harmony reexport (unknown) */ for(const __WEBPACK_IMPORT_KEY__ in next_dist_server_app_render_entry_base__WEBPACK_IMPORTED_MODULE_3__) if(["default","tree","pages","GlobalError","originalPathname","__next_app__","routeModule"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) __WEBPACK_REEXPORT_OBJECT__[__WEBPACK_IMPORT_KEY__] = () => next_dist_server_app_render_entry_base__WEBPACK_IMPORTED_MODULE_3__[__WEBPACK_IMPORT_KEY__]
@@ -273,7 +273,7 @@ const tree = {
         'support-us',
         {
         children: ['__PAGE__', {}, {
-          page: [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 99265)), "/Users/cityhunter/Documents/WorkSpace/personal-site/app/support-us/page.tsx"],
+          page: [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 83004)), "/Users/cityhunter/Documents/WorkSpace/web-evo/app/support-us/page.tsx"],
           
         }]
       },
@@ -284,13 +284,13 @@ const tree = {
       ]
       },
         {
-        'layout': [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 48853)), "/Users/cityhunter/Documents/WorkSpace/personal-site/app/layout.tsx"],
-'not-found': [() => Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 85779, 23)), "next/dist/client/components/not-found-error"],
+        'layout': [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 78188)), "/Users/cityhunter/Documents/WorkSpace/web-evo/app/layout.tsx"],
+'not-found': [() => Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 33945, 23)), "next/dist/client/components/not-found-error"],
         
       }
       ]
       }.children;
-const pages = ["/Users/cityhunter/Documents/WorkSpace/personal-site/app/support-us/page.tsx"];
+const pages = ["/Users/cityhunter/Documents/WorkSpace/web-evo/app/support-us/page.tsx"];
 
 // @ts-expect-error - replaced by webpack/turbopack loader
 
@@ -322,22 +322,22 @@ const routeModule = new AppPageRouteModule({
 
 /***/ }),
 
-/***/ 13136:
+/***/ 34215:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 87621))
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 38063))
 
 /***/ }),
 
-/***/ 54626:
+/***/ 2309:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   c: () => (/* binding */ analytics)
 /* harmony export */ });
-/* harmony import */ var firebase_app__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(72579);
-/* harmony import */ var firebase_analytics__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(97110);
+/* harmony import */ var firebase_app__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(19692);
+/* harmony import */ var firebase_analytics__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(10865);
 /* __next_internal_client_entry_do_not_use__ analytics auto */ 
 
 const firebaseConfig = {
@@ -357,7 +357,7 @@ const analytics = (0,firebase_analytics__WEBPACK_IMPORTED_MODULE_1__/* .isSuppor
 
 /***/ }),
 
-/***/ 87621:
+/***/ 38063:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -369,17 +369,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(18038);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(62253);
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(59140);
 /* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_mui_material__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _components_section__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(82748);
-/* harmony import */ var next_image__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(1521);
+/* harmony import */ var _components_section__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(84049);
+/* harmony import */ var next_image__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(84923);
 /* harmony import */ var next_image__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_image__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _core_libs_images__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(20583);
-/* harmony import */ var _mui_icons_material_HelpOutline__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(65728);
+/* harmony import */ var _core_libs_images__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(90195);
+/* harmony import */ var _mui_icons_material_HelpOutline__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(1307);
 /* harmony import */ var copy_to_clipboard__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(87158);
 /* harmony import */ var copy_to_clipboard__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(copy_to_clipboard__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _core_unit_firebase__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(54626);
-/* harmony import */ var firebase_analytics__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(97110);
+/* harmony import */ var _core_unit_firebase__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(2309);
+/* harmony import */ var firebase_analytics__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(10865);
 /* harmony import */ var notistack__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(85110);
 /* __next_internal_client_entry_do_not_use__ default auto */ 
 
@@ -539,7 +539,7 @@ const SupportUs = ()=>{
 
 /***/ }),
 
-/***/ 16098:
+/***/ 75455:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -554,7 +554,7 @@ const commonMetadata = {
 
 /***/ }),
 
-/***/ 99265:
+/***/ 83004:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -569,15 +569,15 @@ __webpack_require__.d(__webpack_exports__, {
 
 // EXTERNAL MODULE: external "next/dist/compiled/react/jsx-runtime"
 var jsx_runtime_ = __webpack_require__(56786);
-// EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.19_@babel+core@7.23.0_react-dom@18.2.0_react@18.2.0_sass@1.68.0/node_modules/next/dist/compiled/react/react.shared-subset.js
-var react_shared_subset = __webpack_require__(44923);
+// EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.19_@babel+core@7.23.3_react-dom@18.2.0_react@18.2.0_sass@1.69.5/node_modules/next/dist/compiled/react/react.shared-subset.js
+var react_shared_subset = __webpack_require__(6888);
 // EXTERNAL MODULE: ./core/config/main.config.ts
-var main_config = __webpack_require__(16098);
-// EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.19_@babel+core@7.23.0_react-dom@18.2.0_react@18.2.0_sass@1.68.0/node_modules/next/dist/build/webpack/loaders/next-flight-loader/module-proxy.js
-var module_proxy = __webpack_require__(98629);
+var main_config = __webpack_require__(75455);
+// EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.19_@babel+core@7.23.3_react-dom@18.2.0_react@18.2.0_sass@1.69.5/node_modules/next/dist/build/webpack/loaders/next-flight-loader/module-proxy.js
+var module_proxy = __webpack_require__(18096);
 ;// CONCATENATED MODULE: ./ui/pages/support-us.tsx
 
-const proxy = (0,module_proxy.createProxy)(String.raw`/Users/cityhunter/Documents/WorkSpace/personal-site/ui/pages/support-us.tsx`)
+const proxy = (0,module_proxy.createProxy)(String.raw`/Users/cityhunter/Documents/WorkSpace/web-evo/ui/pages/support-us.tsx`)
 
 // Accessing the __esModule property and exporting $$typeof are required here.
 // The __esModule getter forces the proxy target to create the default export
@@ -612,7 +612,7 @@ const SupportUsPage = ()=>{
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [587,999,751,278,625,640,183,748], () => (__webpack_exec__(84066)));
+var __webpack_exports__ = __webpack_require__.X(0, [9900,4659,6162,7218,5260,5520,7573,4049], () => (__webpack_exec__(44463)));
 module.exports = __webpack_exports__;
 
 })();

@@ -1,11 +1,11 @@
 "use strict";
 (() => {
 var exports = {};
-exports.id = 823;
-exports.ids = [823];
+exports.id = 1823;
+exports.ids = [1823];
 exports.modules = {
 
-/***/ 48207:
+/***/ 32023:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 // ESM COMPAT FLAG
@@ -34,16 +34,16 @@ __webpack_require__.d(_id_namespaceObject, {
   "default": () => (_id_)
 });
 
-// EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.19_@babel+core@7.23.0_react-dom@18.2.0_react@18.2.0_sass@1.68.0/node_modules/next/dist/server/future/route-modules/pages/module.js
-var pages_module = __webpack_require__(67179);
-// EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.19_@babel+core@7.23.0_react-dom@18.2.0_react@18.2.0_sass@1.68.0/node_modules/next/dist/server/future/route-kind.js
-var route_kind = __webpack_require__(57713);
-// EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.19_@babel+core@7.23.0_react-dom@18.2.0_react@18.2.0_sass@1.68.0/node_modules/next/dist/build/webpack/loaders/next-route-loader/helpers.js
-var helpers = __webpack_require__(70932);
+// EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.19_@babel+core@7.23.3_react-dom@18.2.0_react@18.2.0_sass@1.69.5/node_modules/next/dist/server/future/route-modules/pages/module.js
+var pages_module = __webpack_require__(32573);
+// EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.19_@babel+core@7.23.3_react-dom@18.2.0_react@18.2.0_sass@1.69.5/node_modules/next/dist/server/future/route-kind.js
+var route_kind = __webpack_require__(59390);
+// EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.19_@babel+core@7.23.3_react-dom@18.2.0_react@18.2.0_sass@1.69.5/node_modules/next/dist/build/webpack/loaders/next-route-loader/helpers.js
+var helpers = __webpack_require__(78739);
 // EXTERNAL MODULE: ./pages/_document.tsx
-var _document = __webpack_require__(17228);
+var _document = __webpack_require__(70845);
 // EXTERNAL MODULE: ./pages/_app.tsx + 1 modules
-var _app = __webpack_require__(54575);
+var _app = __webpack_require__(18957);
 // EXTERNAL MODULE: ./node_modules/.pnpm/react@18.2.0/node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(11527);
 // EXTERNAL MODULE: external "react"
@@ -51,7 +51,7 @@ var external_react_ = __webpack_require__(16689);
 // EXTERNAL MODULE: external "@mui/material"
 var material_ = __webpack_require__(65692);
 // EXTERNAL MODULE: ./core/libs/docs.ts
-var docs = __webpack_require__(57457);
+var docs = __webpack_require__(83065);
 ;// CONCATENATED MODULE: ./pages/docs/[id].tsx
 
 
@@ -82,7 +82,7 @@ DocsDetail.getInitialProps = async (ctx)=>{
 };
 /* harmony default export */ const _id_ = (DocsDetail);
 
-;// CONCATENATED MODULE: ./node_modules/.pnpm/next@13.4.19_@babel+core@7.23.0_react-dom@18.2.0_react@18.2.0_sass@1.68.0/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js?kind=PAGES&page=%2Fdocs%2F%5Bid%5D&preferredRegion=&absolutePagePath=private-next-pages%2Fdocs%2F%5Bid%5D.tsx&absoluteAppPath=private-next-pages%2F_app.tsx&absoluteDocumentPath=private-next-pages%2F_document.tsx&middlewareConfigBase64=e30%3D!
+;// CONCATENATED MODULE: ./node_modules/.pnpm/next@13.4.19_@babel+core@7.23.3_react-dom@18.2.0_react@18.2.0_sass@1.69.5/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js?kind=PAGES&page=%2Fdocs%2F%5Bid%5D&preferredRegion=&absolutePagePath=private-next-pages%2Fdocs%2F%5Bid%5D.tsx&absoluteAppPath=private-next-pages%2F_app.tsx&absoluteDocumentPath=private-next-pages%2F_document.tsx&middlewareConfigBase64=e30%3D!
 // @ts-ignore this need to be imported from next/dist to be external
 
 
@@ -446,7 +446,7 @@ module.exports = require("react-dom");
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [587,793,717,457], () => (__webpack_exec__(48207)));
+var __webpack_exports__ = __webpack_require__.X(0, [9900,4803,2995,3065], () => (__webpack_exec__(32023)));
 module.exports = __webpack_exports__;
 
 })();
