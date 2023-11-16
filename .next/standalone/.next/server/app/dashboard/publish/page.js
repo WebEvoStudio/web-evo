@@ -478,7 +478,7 @@ const routeModule = new AppPageRouteModule({
 /***/ 6232:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 18476))
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 70793))
 
 /***/ }),
 
@@ -489,7 +489,7 @@ Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_re
 
 /***/ }),
 
-/***/ 18476:
+/***/ 70793:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -509,8 +509,8 @@ var react_ = __webpack_require__(18038);
 var node = __webpack_require__(59140);
 // EXTERNAL MODULE: ./node_modules/.pnpm/@bytemd+react@1.21.0_react@18.2.0/node_modules/@bytemd/react/dist/index.mjs + 166 modules
 var dist = __webpack_require__(89034);
-// EXTERNAL MODULE: ./node_modules/.pnpm/bytemd@1.21.0/node_modules/bytemd/dist/index.min.css
-var index_min = __webpack_require__(30220);
+// EXTERNAL MODULE: ./styles/my-bytemd.css
+var my_bytemd = __webpack_require__(82828);
 // EXTERNAL MODULE: ./node_modules/.pnpm/bytemd@1.21.0/node_modules/bytemd/locales/zh_Hans.json
 var zh_Hans = __webpack_require__(53616);
 // EXTERNAL MODULE: ./node_modules/.pnpm/@bytemd+plugin-frontmatter@1.21.0_bytemd@1.21.0/node_modules/@bytemd/plugin-frontmatter/dist/index.mjs + 6 modules
@@ -527,7 +527,7 @@ var unit_request = __webpack_require__(81878);
 var object_unit = __webpack_require__(35164);
 // EXTERNAL MODULE: ./node_modules/.pnpm/notistack@3.0.1_csstype@3.1.2_react-dom@18.2.0_react@18.2.0/node_modules/notistack/index.js
 var notistack = __webpack_require__(85110);
-;// CONCATENATED MODULE: ./components/editor.tsx
+;// CONCATENATED MODULE: ./ui/components/editor.tsx
 
 
 
@@ -575,7 +575,7 @@ const pastePlugin = ()=>{
             }));
     };
     const save = ()=>{
-        const host = "https://web-evo-server.bulv.life/";
+        const host = "https://web-evo.bulv.life/service/";
         const path = "blogs";
         const url = `${host}${path}`;
         const requestData = {
@@ -589,7 +589,7 @@ const pastePlugin = ()=>{
             }));
     };
     const modify = ()=>{
-        const host = "https://web-evo-server.bulv.life/";
+        const host = "https://web-evo.bulv.life/service/";
         const path = "blogs";
         const url = `${host}${path}`;
         // message.warn('暂不支持修改').then();
@@ -610,7 +610,7 @@ const pastePlugin = ()=>{
             if (files.length > 1) throw new Error("一次只能上传一张图片");
             const fileName = files[0].name;
             if (fileName.indexOf(" ") !== -1) throw new Error("文件名不允许包含空格");
-            const host = "https://web-evo-server.bulv.life/";
+            const host = "https://web-evo.bulv.life/service/";
             const request = new unit_request/* default */.Z(host);
             const ossData = await request.get("/ali/oss/policy", {});
             const headers = {
@@ -702,6 +702,9 @@ const pastePlugin = ()=>{
 
 const Publish = ()=>{
     return /*#__PURE__*/ jsx_runtime_.jsx(node.Container, {
+        sx: {
+            mb: 2
+        },
         children: /*#__PURE__*/ jsx_runtime_.jsx(editor, {})
     });
 };
@@ -773,6 +776,13 @@ function PublishPage() {
 }
 
 
+/***/ }),
+
+/***/ 82828:
+/***/ (() => {
+
+
+
 /***/ })
 
 };
@@ -782,7 +792,7 @@ function PublishPage() {
 var __webpack_require__ = require("../../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [9900,4659,6162,2463,6822,5520,7573,1878], () => (__webpack_exec__(22822)));
+var __webpack_exports__ = __webpack_require__.X(0, [9900,4659,6162,2463,2266,5520,3798,1878], () => (__webpack_exec__(22822)));
 module.exports = __webpack_exports__;
 
 })();

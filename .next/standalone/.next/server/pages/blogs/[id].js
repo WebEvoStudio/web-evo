@@ -150,7 +150,7 @@ var plugin_gfm_default = /*#__PURE__*/__webpack_require__.n(plugin_gfm_);
 }
 BlogDetail.getInitialProps = async (ctx)=>{
     const { id } = ctx.query;
-    const host = "https://web-evo-server.bulv.life/";
+    const host = "https://web-evo.bulv.life/service/";
     const path = "blogs";
     const url = `${host}${path}/${id}`;
     const res = await external_axios_default().get(url);

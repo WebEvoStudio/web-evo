@@ -1,5 +1,5 @@
-exports.id = 6822;
-exports.ids = [6822];
+exports.id = 2266;
+exports.ids = [2266];
 exports.modules = {
 
 /***/ 87320:
@@ -2369,13 +2369,6 @@ const mimicFn = (to, from) => {
 module.exports = mimicFn;
 // TODO: Remove this for the next major release
 module.exports["default"] = mimicFn;
-
-
-/***/ }),
-
-/***/ 30220:
-/***/ (() => {
-
 
 
 /***/ }),

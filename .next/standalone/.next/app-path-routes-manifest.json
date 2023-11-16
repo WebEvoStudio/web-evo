@@ -1,13 +1,13 @@
 {
   "/page": "/",
   "/blogs-sitemap.xml/route": "/blogs-sitemap.xml",
-  "/blogs/page": "/blogs",
-  "/projects/page": "/projects",
   "/services/page": "/services",
-  "/support-us/page": "/support-us",
-  "/contact/page": "/contact",
   "/privacy-policy/page": "/privacy-policy",
+  "/contact/page": "/contact",
+  "/blogs/page": "/blogs",
   "/about/page": "/about",
+  "/support-us/page": "/support-us",
+  "/projects/page": "/projects",
   "/tools/markdown-to-pdf/page": "/tools/markdown-to-pdf",
   "/dashboard/page": "/dashboard",
   "/dashboard/publish/page": "/dashboard/publish"

@@ -1,18 +1,47 @@
 'use client';
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {Avatar, Box, Button, Card, CardContent, CardHeader, Container, IconButton} from '@mui/material';
-import {DataGrid, GridColDef} from '@mui/x-data-grid';
+import {DataGrid, GridActionsCellItem, GridColDef} from '@mui/x-data-grid';
 import {red} from '@mui/material/colors';
-import {Add, MoreVert} from '@mui/icons-material';
+import {Add, Delete, Edit, MoreVert} from '@mui/icons-material';
 import Link from 'next/link';
+import axios from 'axios';
+import {useRouter} from 'next/navigation';
 
-const columns: GridColDef[] = [
-  {field: 'id', headerName: 'ID', width: 90},
-];
-const rows = [
-  {id: 1, lastName: 'Snow', firstName: 'Jon', age: 35},
-];
+const host = process.env['NEXT_PUBLIC_MIDDLEWARE_URL'];
 export const Dashboard = () => {
+  const router = useRouter();
+  const onEdit = (id: string) => {
+    router.push(`/blogs/modify/${id}`);
+  };
+  const columns: GridColDef[] = [
+    {field: '_id', headerName: 'ID', width: 220},
+    {field: 'title', headerName: 'Title', width: 300},
+    {field: 'viewCount', headerName: 'View Count'},
+    {field: 'createTime', headerName: 'Create Time'},
+    {field: 'updateTime', headerName: 'Update Time'},
+    {field: 'createdAt', headerName: 'Created At'},
+    {field: 'updatedAt', headerName: 'Updated At'},
+    {
+      field: 'actions',
+      type: 'actions',
+      width: 100,
+      getActions: (params) => {
+        // console.log(params);
+        return [
+          <GridActionsCellItem key={'edit'} icon={<Edit />} label="Edit" onClick={() => onEdit(String(params.id))}/>,
+          // <GridActionsCellItem key={'delete'} icon={<Delete />} label="Delete" />,
+        ];
+      },
+    },
+  ];
+  const [rows, setRows] = useState([]);
+  useEffect( () => {
+    axios.get(`${host}dashboard/blogs`).then((res) => {
+      console.log(res);
+      setRows(res.data.data);
+    });
+  }, []);
   return (
     <Container sx={{mb: 2}}>
       <Card>
@@ -40,10 +69,14 @@ export const Dashboard = () => {
             initialState={{
               pagination: {
                 paginationModel: {
-                  pageSize: 5,
+                  pageSize: 10,
                 },
               },
+              // pinnedColumns: {
+              //   right: ['actions']
+              // },
             }}
+            getRowId={({_id}) => _id}
             pageSizeOptions={[5]}
             checkboxSelection
             disableRowSelectionOnClick

@@ -646,7 +646,7 @@ const metadata = {
     title: "Web Evo - 博客"
 };
 const getBlogs = async ()=>{
-    const host = "https://web-evo-server.bulv.life/";
+    const host = "https://web-evo.bulv.life/service/";
     const path = "blogs";
     const url = `${host}${path}`;
     const res = await fetch(url);
@@ -670,7 +670,7 @@ const BlogsPage = async ()=>{
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [9900,4659,6162,4447,5520,7573,4049], () => (__webpack_exec__(51436)));
+var __webpack_exports__ = __webpack_require__.X(0, [9900,4659,6162,4447,5520,3798,4049], () => (__webpack_exec__(51436)));
 module.exports = __webpack_exports__;
 
 })();

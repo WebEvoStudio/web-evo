@@ -2,7 +2,7 @@ import React, {useEffect, useMemo, useState} from 'react';
 import {NextPage} from 'next';
 import {useRouter} from 'next/router';
 import axios from 'axios';
-import EditorPage from '../../../components/editor';
+import EditorPage from '../../../ui/components/editor';
 import CommonHead from '../../../components/common-head';
 
 const BlogsModify: NextPage = () => {

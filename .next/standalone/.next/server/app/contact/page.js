@@ -579,7 +579,7 @@ var CheckBox = __webpack_require__(67103);
             ...form
         };
         Object.keys(requestBody).forEach((key)=>requestBody[key] === "" && delete requestBody[key]);
-        new request/* default */.Z("https://web-evo-server.bulv.life/").post("/customer", requestBody).then(()=>{
+        new request/* default */.Z("https://web-evo.bulv.life/service/").post("/customer", requestBody).then(()=>{
             enqueueSnackbar("提交成功", {
                 variant: "success"
             });
@@ -1028,7 +1028,7 @@ const metadata = {
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [9900,4659,6162,2463,7218,6835,5520,7573,1878], () => (__webpack_exec__(87569)));
+var __webpack_exports__ = __webpack_require__.X(0, [9900,4659,6162,2463,7218,6835,5520,3798,1878], () => (__webpack_exec__(87569)));
 module.exports = __webpack_exports__;
 
 })();

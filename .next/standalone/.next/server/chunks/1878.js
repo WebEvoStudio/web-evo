@@ -62,7 +62,7 @@ exports.modules = {
    * @param {string} baseURL 请求地址
    */ constructor(baseURL){
         this.config = {};
-        this.config.baseURL = "https://web-evo-server.bulv.life/";
+        this.config.baseURL = "https://web-evo.bulv.life/service/";
         if (baseURL) this.config.baseURL = baseURL;
     }
     /**

@@ -1,5 +1,5 @@
-exports.id = 9097;
-exports.ids = [9097];
+exports.id = 6363;
+exports.ids = [6363];
 exports.modules = {
 
 /***/ 27418:
@@ -20,6 +20,28 @@ var _jsxRuntime = __webpack_require__(56786);
 var _default = (0, _createSvgIcon.default)( /*#__PURE__*/(0, _jsxRuntime.jsx)("path", {
   d: "M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
 }), 'Add');
+exports.Z = _default;
+
+/***/ }),
+
+/***/ 17480:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+var __webpack_unused_export__;
+
+"use client";
+
+var _interopRequireDefault = __webpack_require__(2701);
+__webpack_unused_export__ = ({
+  value: true
+});
+exports.Z = void 0;
+var _createSvgIcon = _interopRequireDefault(__webpack_require__(23064));
+var _jsxRuntime = __webpack_require__(56786);
+var _default = (0, _createSvgIcon.default)( /*#__PURE__*/(0, _jsxRuntime.jsx)("path", {
+  d: "M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+}), 'Edit');
 exports.Z = _default;
 
 /***/ }),

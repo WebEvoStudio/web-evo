@@ -1,15 +1,15 @@
 import React from 'react';
 import {useState} from 'react';
 import {Editor} from '@bytemd/react';
-import 'bytemd/dist/index.min.css';
+import '../../styles/my-bytemd.css';
 import zhHans from 'bytemd/locales/zh_Hans.json';
 import frontmatter from '@bytemd/plugin-frontmatter';
 import gfm from '@bytemd/plugin-gfm';
 import clipboard from 'clipboardy';
 import axios from 'axios';
 // import 'github-markdown-css/github-markdown-light.css';
-import Request from '../core/unit/request';
-import ObjectUnit from '../core/unit/object-unit';
+import Request from '../../core/unit/request';
+import ObjectUnit from '../../core/unit/object-unit';
 import {useSnackbar} from 'notistack';
 import {BytemdEditorContext, BytemdPlugin} from 'bytemd';
 import {Box, Button, Card, CardContent, CardHeader, TextField} from '@mui/material';

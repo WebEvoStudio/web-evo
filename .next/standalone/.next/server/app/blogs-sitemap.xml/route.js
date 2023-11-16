@@ -52,7 +52,7 @@ var sitemap = __webpack_require__(13426);
  */ async function GET() {
     const fields = [];
     const host = "https://web-evo.bulv.life";
-    const url = `${"https://web-evo-server.bulv.life/"}blogs`;
+    const url = `${"https://web-evo.bulv.life/service/"}blogs`;
     const response = await (await fetch(url)).json();
     fields.push(...response.map((it)=>({
             loc: `${host}/blogs/${it["_id"]}`
