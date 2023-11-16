@@ -4,8 +4,9 @@ import CommonHead from '../../components/common-head';
 import axios from 'axios';
 import Markdown from '../../core/unit/markdown';
 import {Box, Container} from '@mui/material';
+// import 'bytemd/dist/index.min.css';
+import '../../styles/my-bytemd.css';
 import 'highlight.js/styles/github.css';
-import 'bytemd/dist/index.min.css';
 import {Viewer} from '@bytemd/react';
 import {BytemdPlugin} from 'bytemd';
 import frontmatter from '@bytemd/plugin-frontmatter';
@@ -23,7 +24,7 @@ function BlogDetail({blog}: {blog: {title: string, markContent: string}}) {
   ];
   return (
     <Box >
-      <Container maxWidth={'md'}>
+      <Container maxWidth={'md'} sx={{px: 2}}>
         <article data-clarity-region="article">
           <div className={style['blog']}>
             <CommonHead
@@ -31,10 +32,10 @@ function BlogDetail({blog}: {blog: {title: string, markContent: string}}) {
               description={Markdown.intercept(blog.markContent, 100)}
             />
             <div className={style['blog-detail']}>
-              <div className={style['blog-title']}>
-                <h1>{blog.title}</h1>
-              </div>
-              <div className={style['blog-content']}>
+              <h1 className={style['page-title']}>
+                {blog.title}
+              </h1>
+              <div className={style['article-body']}>
                 <Viewer value={content} plugins={plugins}/>
               </div>
             </div>

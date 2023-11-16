@@ -489,14 +489,8 @@ const Dashboard = ()=>{
             field: "viewCount",
             headerName: "View Count"
         },
-        {
-            field: "createTime",
-            headerName: "Create Time"
-        },
-        {
-            field: "updateTime",
-            headerName: "Update Time"
-        },
+        // {field: 'createTime', headerName: 'Create Time'},
+        // {field: 'updateTime', headerName: 'Update Time'},
         {
             field: "createdAt",
             headerName: "Created At"
@@ -661,7 +655,7 @@ const DashboardPage = (props)=>{
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [9900,4659,6162,2463,6363,5520,3798], () => (__webpack_exec__(53943)));
+var __webpack_exports__ = __webpack_require__.X(0, [9900,4659,6162,2463,6363,8070,5843], () => (__webpack_exec__(53943)));
 module.exports = __webpack_exports__;
 
 })();

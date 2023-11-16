@@ -29,3 +29,17 @@
 .bytemd-split .bytemd-preview {
     border-color: #2B2D30;
 }
+.markdown-body pre {
+    /*border: 1px solid #d2d3d7;*/
+    padding: clamp(1rem, 0.96rem + 0.18vw, 1.125rem);
+    background-color: #303236;
+    border-radius: 4px;
+    font-size: 14px;
+    overflow-x: auto;
+}
+.markdown-body figure {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-inline-start: 1rem;
+    margin-inline-end: 1rem;
+}

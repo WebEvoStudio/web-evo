@@ -69,6 +69,20 @@
       }
     }
   }
+  .page {
+    &-title {
+      font-size: 34px;
+      font-weight: 300;
+      font-stretch: 100%;
+      margin: 0;
+      line-height: 40px;
+    }
+  }
+  .article {
+    &-body {
+      margin-top: 1rem;
+    }
+  }
 }
 @media (max-width: 575px) {
   .blog {
@@ -90,7 +104,7 @@
     }
     &-detail {
       padding: 16px 0;
-      margin: 0 -16px;
+      //margin: 0 -16px;
     }
   }
 }

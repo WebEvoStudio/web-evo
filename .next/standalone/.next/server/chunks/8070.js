@@ -1,12 +1,12 @@
-exports.id = 5520;
-exports.ids = [5520];
+exports.id = 8070;
+exports.ids = [8070];
 exports.modules = {
 
-/***/ 96871:
+/***/ 25214:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 18133));
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 97210));
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 18133));
 Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 69216, 23))
 
 /***/ }),
@@ -774,7 +774,8 @@ var rainbow = __webpack_require__(64560);
  */ function BasicLayout({ children }) {
     const router = (0,navigation.useRouter)();
     const pathname = (0,navigation.usePathname)();
-    const [isPwa, setIsPwa] = (0,react_.useState)(false);
+    const [isPwa] = (0,react_.useState)(false);
+    const [isDashboard, setIsDashboard] = (0,react_.useState)(true);
     const [current, setCurrent] = (0,react_.useState)(0);
     (0,react_.useEffect)(()=>{
         console.log(router);
@@ -793,6 +794,7 @@ var rainbow = __webpack_require__(64560);
             "/tools",
             "/contact"
         ].indexOf(path);
+        setIsDashboard(path === "/dashboard");
         setCurrent(index);
     }, [
         router
@@ -973,10 +975,10 @@ var rainbow = __webpack_require__(64560);
             theme: theme/* default */.Z,
             children: [
                 /*#__PURE__*/ jsx_runtime_.jsx(node.CssBaseline, {}),
-                !isPwa ? /*#__PURE__*/ jsx_runtime_.jsx(header, {}) : null,
+                !isDashboard ? /*#__PURE__*/ jsx_runtime_.jsx(header, {}) : null,
                 children,
                 /*#__PURE__*/ jsx_runtime_.jsx(TabBar, {}),
-                /*#__PURE__*/ jsx_runtime_.jsx(Footer, {})
+                !isDashboard ? /*#__PURE__*/ jsx_runtime_.jsx(Footer, {}) : null
             ]
         })
     });

@@ -18,8 +18,8 @@ export const Dashboard = () => {
     {field: '_id', headerName: 'ID', width: 220},
     {field: 'title', headerName: 'Title', width: 300},
     {field: 'viewCount', headerName: 'View Count'},
-    {field: 'createTime', headerName: 'Create Time'},
-    {field: 'updateTime', headerName: 'Update Time'},
+    // {field: 'createTime', headerName: 'Create Time'},
+    // {field: 'updateTime', headerName: 'Update Time'},
     {field: 'createdAt', headerName: 'Created At'},
     {field: 'updatedAt', headerName: 'Updated At'},
     {

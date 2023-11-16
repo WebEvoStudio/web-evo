@@ -30,7 +30,8 @@ import '../../styles/rainbow.css';
 export default function BasicLayout({children}: any) {
   const router = useRouter();
   const pathname = usePathname();
-  const [isPwa, setIsPwa] = useState(false);
+  const [isPwa] = useState(false);
+  const [isDashboard, setIsDashboard] = useState(true);
   const [current, setCurrent] = useState(0);
   useEffect(() => {
     console.log(router);
@@ -43,6 +44,7 @@ export default function BasicLayout({children}: any) {
   useEffect(() => {
     const path = `/${pathname?.split('/')[1]}`;
     const index = ['/', '/blogs', '/docs', '/tools', '/contact'].indexOf(path);
+    setIsDashboard(path === '/dashboard');
     setCurrent(index);
   }, [router]);
   const TabBar = () => {
@@ -139,10 +141,10 @@ export default function BasicLayout({children}: any) {
     <>
       <ThemeProvider theme={theme}>
         <CssBaseline/>
-        {!isPwa ? <Header /> : null}
+        {!isDashboard ? <Header /> : null}
         {children}
         <TabBar/>
-        <Footer />
+        {!isDashboard ? <Footer /> : null}
       </ThemeProvider>
     </>
   );

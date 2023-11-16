@@ -732,7 +732,8 @@ var rainbow = __webpack_require__(16163);
  */ function BasicLayout({ children }) {
     const router = (0,navigation.useRouter)();
     const pathname = (0,navigation.usePathname)();
-    const [isPwa, setIsPwa] = (0,external_react_.useState)(false);
+    const [isPwa] = (0,external_react_.useState)(false);
+    const [isDashboard, setIsDashboard] = (0,external_react_.useState)(true);
     const [current, setCurrent] = (0,external_react_.useState)(0);
     (0,external_react_.useEffect)(()=>{
         console.log(router);
@@ -751,6 +752,7 @@ var rainbow = __webpack_require__(16163);
             "/tools",
             "/contact"
         ].indexOf(path);
+        setIsDashboard(path === "/dashboard");
         setCurrent(index);
     }, [
         router
@@ -931,10 +933,10 @@ var rainbow = __webpack_require__(16163);
             theme: theme/* default */.Z,
             children: [
                 /*#__PURE__*/ jsx_runtime.jsx(material_.CssBaseline, {}),
-                !isPwa ? /*#__PURE__*/ jsx_runtime.jsx(header/* default */.Z, {}) : null,
+                !isDashboard ? /*#__PURE__*/ jsx_runtime.jsx(header/* default */.Z, {}) : null,
                 children,
                 /*#__PURE__*/ jsx_runtime.jsx(TabBar, {}),
-                /*#__PURE__*/ jsx_runtime.jsx(Footer, {})
+                !isDashboard ? /*#__PURE__*/ jsx_runtime.jsx(Footer, {}) : null
             ]
         })
     });

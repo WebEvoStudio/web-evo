@@ -15,7 +15,9 @@ module.exports = {
 	"blog-description": "blog_blog-description__NvM_l",
 	"blog-detail": "blog_blog-detail___sjBy",
 	"blog-content": "blog_blog-content__QaA1t",
-	"blog-info": "blog_blog-info__1XCRH"
+	"blog-info": "blog_blog-info__1XCRH",
+	"page-title": "blog_page-title__0CnWJ",
+	"article-body": "blog_article-body__c4H27"
 };
 
 
@@ -77,10 +79,10 @@ var external_axios_default = /*#__PURE__*/__webpack_require__.n(external_axios_)
 var markdown = __webpack_require__(42585);
 // EXTERNAL MODULE: external "@mui/material"
 var material_ = __webpack_require__(65692);
+// EXTERNAL MODULE: ./styles/my-bytemd.css
+var my_bytemd = __webpack_require__(1816);
 // EXTERNAL MODULE: ./node_modules/.pnpm/highlight.js@11.9.0/node_modules/highlight.js/styles/github.css
 var github = __webpack_require__(19311);
-// EXTERNAL MODULE: ./node_modules/.pnpm/bytemd@1.21.0/node_modules/bytemd/dist/index.min.css
-var index_min = __webpack_require__(59587);
 // EXTERNAL MODULE: external "@bytemd/react"
 var react_ = __webpack_require__(66511);
 // EXTERNAL MODULE: external "@bytemd/plugin-frontmatter"
@@ -97,6 +99,7 @@ var plugin_gfm_default = /*#__PURE__*/__webpack_require__.n(plugin_gfm_);
 
 
 
+// import 'bytemd/dist/index.min.css';
 
 
 
@@ -115,6 +118,9 @@ var plugin_gfm_default = /*#__PURE__*/__webpack_require__.n(plugin_gfm_);
     return /*#__PURE__*/ jsx_runtime.jsx(material_.Box, {
         children: /*#__PURE__*/ jsx_runtime.jsx(material_.Container, {
             maxWidth: "md",
+            sx: {
+                px: 2
+            },
             children: /*#__PURE__*/ jsx_runtime.jsx("article", {
                 "data-clarity-region": "article",
                 children: /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
@@ -127,14 +133,12 @@ var plugin_gfm_default = /*#__PURE__*/__webpack_require__.n(plugin_gfm_);
                         /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
                             className: (blog_module_default())["blog-detail"],
                             children: [
-                                /*#__PURE__*/ jsx_runtime.jsx("div", {
-                                    className: (blog_module_default())["blog-title"],
-                                    children: /*#__PURE__*/ jsx_runtime.jsx("h1", {
-                                        children: blog.title
-                                    })
+                                /*#__PURE__*/ jsx_runtime.jsx("h1", {
+                                    className: (blog_module_default())["page-title"],
+                                    children: blog.title
                                 }),
                                 /*#__PURE__*/ jsx_runtime.jsx("div", {
-                                    className: (blog_module_default())["blog-content"],
+                                    className: (blog_module_default())["article-body"],
                                     children: /*#__PURE__*/ jsx_runtime.jsx(react_.Viewer, {
                                         value: content,
                                         plugins: plugins
@@ -209,14 +213,14 @@ const routeModule = new PagesRouteModule({
 
 /***/ }),
 
-/***/ 59587:
+/***/ 19311:
 /***/ (() => {
 
 
 
 /***/ }),
 
-/***/ 19311:
+/***/ 1816:
 /***/ (() => {
 
 
