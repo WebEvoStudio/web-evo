@@ -1,16 +1,16 @@
 {
   "/40444": "pages/40444.html",
   "/blogs/[id]": "pages/blogs/[id].js",
-  "/_error": "pages/_error.js",
   "/blogs/modify/[id]": "pages/blogs/modify/[id].html",
-  "/_app": "pages/_app.js",
   "/courses/[id]": "pages/courses/[id].html",
-  "/_document": "pages/_document.js",
   "/courses": "pages/courses.html",
+  "/_app": "pages/_app.js",
   "/docs/[id]": "pages/docs/[id].js",
+  "/_document": "pages/_document.js",
   "/docs": "pages/docs.html",
-  "/portfolio": "pages/portfolio.html",
-  "/tools": "pages/tools.html",
   "/search": "pages/search.html",
+  "/portfolio": "pages/portfolio.html",
+  "/_error": "pages/_error.js",
+  "/tools": "pages/tools.html",
   "/404": "pages/404.html"
 }

@@ -13,6 +13,7 @@ const getBlogs = async () => {
 };
 const BlogsPage = async () => {
   const blogs = await getBlogs();
+  console.log(`blogs数量:`, blogs.length);
   return (<BlogsIndex blogs={blogs}/>);
 };
 export default BlogsPage;
