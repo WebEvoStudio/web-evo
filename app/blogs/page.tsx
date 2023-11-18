@@ -8,12 +8,11 @@ const getBlogs = async () => {
   const host = process.env['NEXT_PUBLIC_MIDDLEWARE_URL'];
   const path = 'blogs';
   const url = `${host}${path}`;
-  const res = await fetch(url);
+  const res = await fetch(url, {next: {revalidate: 3600}});
   return res.json();
 };
 const BlogsPage = async () => {
   const blogs = await getBlogs();
-  console.log(`blogs数量:`, blogs.length);
   return (<BlogsIndex blogs={blogs}/>);
 };
 export default BlogsPage;
