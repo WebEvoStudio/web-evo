@@ -478,260 +478,37 @@ const routeModule = new AppPageRouteModule({
 /***/ 6232:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 70793))
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 49012))
 
 /***/ }),
 
-/***/ 51085:
-/***/ (() => {
-
-
-
-/***/ }),
-
-/***/ 70793:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-// ESM COMPAT FLAG
-__webpack_require__.r(__webpack_exports__);
-
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, {
-  Publish: () => (/* binding */ Publish)
-});
-
-// EXTERNAL MODULE: external "next/dist/compiled/react/jsx-runtime"
-var jsx_runtime_ = __webpack_require__(56786);
-// EXTERNAL MODULE: external "next/dist/compiled/react"
-var react_ = __webpack_require__(18038);
-// EXTERNAL MODULE: ./node_modules/.pnpm/@mui+material@5.14.18_@emotion+react@11.11.1_@emotion+styled@11.11.0_@types+react@18.2.9_react-dom@18.2.0_react@18.2.0/node_modules/@mui/material/node/index.js
-var node = __webpack_require__(59140);
-// EXTERNAL MODULE: ./node_modules/.pnpm/@bytemd+react@1.21.0_react@18.2.0/node_modules/@bytemd/react/dist/index.mjs + 166 modules
-var dist = __webpack_require__(89034);
-// EXTERNAL MODULE: ./styles/my-bytemd.css
-var my_bytemd = __webpack_require__(82828);
-// EXTERNAL MODULE: ./node_modules/.pnpm/bytemd@1.21.0/node_modules/bytemd/locales/zh_Hans.json
-var zh_Hans = __webpack_require__(53616);
-// EXTERNAL MODULE: ./node_modules/.pnpm/@bytemd+plugin-frontmatter@1.21.0_bytemd@1.21.0/node_modules/@bytemd/plugin-frontmatter/dist/index.mjs + 6 modules
-var plugin_frontmatter_dist = __webpack_require__(30079);
-// EXTERNAL MODULE: ./node_modules/.pnpm/@bytemd+plugin-gfm@1.21.0_bytemd@1.21.0/node_modules/@bytemd/plugin-gfm/dist/index.mjs + 30 modules
-var plugin_gfm_dist = __webpack_require__(17051);
-// EXTERNAL MODULE: ./node_modules/.pnpm/clipboardy@3.0.0/node_modules/clipboardy/index.js + 4 modules
-var clipboardy = __webpack_require__(43648);
-// EXTERNAL MODULE: ./node_modules/.pnpm/axios@1.6.2/node_modules/axios/lib/axios.js + 48 modules
-var axios = __webpack_require__(2463);
-// EXTERNAL MODULE: ./core/unit/request.ts
-var unit_request = __webpack_require__(81878);
-// EXTERNAL MODULE: ./core/unit/object-unit.ts
-var object_unit = __webpack_require__(35164);
-// EXTERNAL MODULE: ./node_modules/.pnpm/notistack@3.0.1_csstype@3.1.2_react-dom@18.2.0_react@18.2.0/node_modules/notistack/index.js
-var notistack = __webpack_require__(85110);
-;// CONCATENATED MODULE: ./ui/components/editor.tsx
-
-
-
-
-
-
-
-
-
-
-// import 'github-markdown-css/github-markdown-light.css';
-
-
-
-
-const pastePlugin = ()=>{
-    return {
-        editorEffect (ctx) {
-            ctx.editor.getInputField().addEventListener("onpaste", (e)=>{
-                e.preventDefault();
-            });
-        }
-    };
-};
-/**
- * editor.tsx
- * @param {any} props
- * @return {React.ReactElement}
- */ const EditorPage = (props)=>{
-    const [value, setValue] = (0,react_.useState)(props.value || "");
-    const [title, setTitle] = (0,react_.useState)(props.title || "");
-    const plugins = [
-        (0,plugin_frontmatter_dist/* default */.Z)(),
-        (0,plugin_gfm_dist/* default */.Z)(),
-        pastePlugin()
-    ];
-    const isModify = !!props.id;
-    const { enqueueSnackbar } = (0,notistack.useSnackbar)();
-    const copy = ()=>{
-        clipboardy/* default */.Z.write(JSON.stringify({
-            title,
-            mark_content: value
-        })).then(()=>enqueueSnackbar("内容已复制到剪贴板", {
-                variant: "success"
-            }));
-    };
-    const save = ()=>{
-        const host = "https://web-evo.bulv.life/service/";
-        const path = "blogs";
-        const url = `${host}${path}`;
-        const requestData = {
-            title,
-            markContent: value
-        };
-        axios/* default */.Z.post(url, requestData).then(()=>enqueueSnackbar("文章发布成功", {
-                variant: "success"
-            })).catch((err)=>enqueueSnackbar(err.message, {
-                variant: "error"
-            }));
-    };
-    const modify = ()=>{
-        const host = "https://web-evo.bulv.life/service/";
-        const path = "blogs";
-        const url = `${host}${path}`;
-        // message.warn('暂不支持修改').then();
-        const requestData = {
-            _id: props.id,
-            title,
-            markContent: value
-        };
-        axios/* default */.Z.put(url, requestData).then(()=>enqueueSnackbar("文章修改成功", {
-                variant: "success"
-            })).catch((err)=>enqueueSnackbar(err.message, {
-                variant: "error"
-            }));
-    };
-    const uploadImages = async (files)=>{
-        const response = [];
-        try {
-            if (files.length > 1) throw new Error("一次只能上传一张图片");
-            const fileName = files[0].name;
-            if (fileName.indexOf(" ") !== -1) throw new Error("文件名不允许包含空格");
-            const host = "https://web-evo.bulv.life/service/";
-            const request = new unit_request/* default */.Z(host);
-            const ossData = await request.get("/ali/oss/policy", {});
-            const headers = {
-                "Content-Type": "multipart/form-data"
-            };
-            const { dir } = ossData;
-            const requestBody = object_unit/* default */.Z.toFormData({
-                key: dir.length ? `${dir}/${files[0].name}` : files[0].name,
-                ...ossData,
-                file: files[0]
-            });
-            const { filepath } = await request.post(ossData.host, requestBody, headers);
-            response.push({
-                url: filepath,
-                alt: "",
-                title: ""
-            });
-            return response;
-        } catch (e) {
-            enqueueSnackbar(e.message, {
-                variant: "error"
-            });
-            throw new DOMException(e.message);
-        }
-    };
-    return /*#__PURE__*/ jsx_runtime_.jsx("div", {
-        children: /*#__PURE__*/ jsx_runtime_.jsx("div", {
-            className: "",
-            children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)(node.Card, {
-                children: [
-                    /*#__PURE__*/ jsx_runtime_.jsx(node.CardHeader, {
-                        title: /*#__PURE__*/ jsx_runtime_.jsx(node.Box, {
-                            sx: {
-                                flex: 1
-                            },
-                            mr: 2,
-                            children: /*#__PURE__*/ jsx_runtime_.jsx(node.TextField, {
-                                label: "标题",
-                                size: "small",
-                                fullWidth: true,
-                                value: title,
-                                onChange: ({ target: { value } })=>setTitle(value)
-                            })
-                        }),
-                        action: /*#__PURE__*/ (0,jsx_runtime_.jsxs)(node.Box, {
-                            sx: {
-                                display: "flex",
-                                alignItems: "center",
-                                mt: "6px",
-                                mb: "4px"
-                            },
-                            children: [
-                                /*#__PURE__*/ jsx_runtime_.jsx(node.Button, {
-                                    variant: "outlined",
-                                    sx: {
-                                        mr: 2
-                                    },
-                                    onClick: copy,
-                                    children: "复制到剪贴板"
-                                }),
-                                /*#__PURE__*/ jsx_runtime_.jsx(node.Button, {
-                                    variant: "outlined",
-                                    onClick: isModify ? modify : save,
-                                    children: isModify ? "保存修改" : "发布"
-                                })
-                            ]
-                        })
-                    }),
-                    /*#__PURE__*/ jsx_runtime_.jsx(node.CardContent, {
-                        children: /*#__PURE__*/ jsx_runtime_.jsx(dist/* Editor */.M, {
-                            value: value,
-                            plugins: plugins,
-                            locale: zh_Hans,
-                            onChange: (v)=>setValue(v),
-                            uploadImages: uploadImages
-                        })
-                    })
-                ]
-            })
-        })
-    });
-};
-/* harmony default export */ const editor = (EditorPage);
-
-;// CONCATENATED MODULE: ./ui/pages/publish.tsx
-/* __next_internal_client_entry_do_not_use__ Publish auto */ 
-
-
-
-const Publish = ()=>{
-    return /*#__PURE__*/ jsx_runtime_.jsx(node.Container, {
-        sx: {
-            mb: 2
-        },
-        children: /*#__PURE__*/ jsx_runtime_.jsx(editor, {})
-    });
-};
-
-
-/***/ }),
-
-/***/ 95135:
+/***/ 49012:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   Publish: () => (/* binding */ Publish)
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(56786);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6888);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(18038);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(59140);
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_mui_material__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _components_editor__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(93828);
+/* __next_internal_client_entry_do_not_use__ Publish auto */ 
 
 
-const DashboardLayout = (props)=>{
-    const { children } = props;
-    return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
-        children: children
+
+const Publish = ()=>{
+    return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_3__.Container, {
+        sx: {
+            mb: 2
+        },
+        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_editor__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .Z, {})
     });
 };
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (DashboardLayout);
 
 
 /***/ }),
@@ -776,13 +553,6 @@ function PublishPage() {
 }
 
 
-/***/ }),
-
-/***/ 82828:
-/***/ (() => {
-
-
-
 /***/ })
 
 };
@@ -792,7 +562,7 @@ function PublishPage() {
 var __webpack_require__ = require("../../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [9900,4659,6162,2463,2266,5520,2337,1878], () => (__webpack_exec__(22822)));
+var __webpack_exports__ = __webpack_require__.X(0, [9900,4659,6162,2463,3440,2406,2337,1878,3110], () => (__webpack_exec__(22822)));
 module.exports = __webpack_exports__;
 
 })();

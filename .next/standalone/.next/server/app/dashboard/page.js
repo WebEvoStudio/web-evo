@@ -472,7 +472,7 @@ const host = "https://web-evo.bulv.life/service/";
 const Dashboard = ()=>{
     const router = (0,next_navigation__WEBPACK_IMPORTED_MODULE_3__.useRouter)();
     const onEdit = (id)=>{
-        router.push(`/blogs/modify/${id}`);
+        router.push(`/dashboard/blogs/${id}/modify`);
     };
     const columns = [
         {
@@ -493,11 +493,13 @@ const Dashboard = ()=>{
         // {field: 'updateTime', headerName: 'Update Time'},
         {
             field: "createdAt",
-            headerName: "Created At"
+            headerName: "Created At",
+            width: 110
         },
         {
             field: "updatedAt",
-            headerName: "Updated At"
+            headerName: "Updated At",
+            width: 110
         },
         {
             field: "actions",
@@ -655,7 +657,7 @@ const DashboardPage = (props)=>{
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [9900,4659,6162,2463,6363,5520,2337], () => (__webpack_exec__(53943)));
+var __webpack_exports__ = __webpack_require__.X(0, [9900,4659,6162,2463,6363,2406,2337], () => (__webpack_exec__(53943)));
 module.exports = __webpack_exports__;
 
 })();

@@ -55,7 +55,10 @@ var sitemap = __webpack_require__(13426);
     const url = `${"https://web-evo.bulv.life/service/"}blogs`;
     const response = await (await fetch(url)).json();
     fields.push(...response.map((it)=>({
-            loc: `${host}/blogs/${it["_id"]}`
+            loc: `${host}/blogs/${it["_id"]}`,
+            lastmod: it["updatedAt"],
+            changefreq: "daily",
+            priority: 0.7
         })));
     return (0,sitemap/* getServerSideSitemap */.M)(fields);
 }

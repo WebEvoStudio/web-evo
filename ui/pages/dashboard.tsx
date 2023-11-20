@@ -12,7 +12,7 @@ const host = process.env['NEXT_PUBLIC_MIDDLEWARE_URL'];
 export const Dashboard = () => {
   const router = useRouter();
   const onEdit = (id: string) => {
-    router.push(`/blogs/modify/${id}`);
+    router.push(`/dashboard/blogs/${id}/modify`);
   };
   const columns: GridColDef[] = [
     {field: '_id', headerName: 'ID', width: 220},
@@ -20,8 +20,8 @@ export const Dashboard = () => {
     {field: 'viewCount', headerName: 'View Count'},
     // {field: 'createTime', headerName: 'Create Time'},
     // {field: 'updateTime', headerName: 'Update Time'},
-    {field: 'createdAt', headerName: 'Created At'},
-    {field: 'updatedAt', headerName: 'Updated At'},
+    {field: 'createdAt', headerName: 'Created At', width: 110},
+    {field: 'updatedAt', headerName: 'Updated At', width: 110},
     {
       field: 'actions',
       type: 'actions',

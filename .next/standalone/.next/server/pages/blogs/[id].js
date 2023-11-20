@@ -23,7 +23,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 39312:
+/***/ 52197:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -83,14 +83,14 @@ var material_ = __webpack_require__(65692);
 var my_bytemd = __webpack_require__(1816);
 // EXTERNAL MODULE: ./node_modules/.pnpm/highlight.js@11.9.0/node_modules/highlight.js/styles/github.css
 var github = __webpack_require__(19311);
-// EXTERNAL MODULE: external "@bytemd/react"
-var react_ = __webpack_require__(66511);
-// EXTERNAL MODULE: external "@bytemd/plugin-frontmatter"
-var plugin_frontmatter_ = __webpack_require__(54943);
-var plugin_frontmatter_default = /*#__PURE__*/__webpack_require__.n(plugin_frontmatter_);
-// EXTERNAL MODULE: external "@bytemd/plugin-gfm"
-var plugin_gfm_ = __webpack_require__(20149);
-var plugin_gfm_default = /*#__PURE__*/__webpack_require__.n(plugin_gfm_);
+;// CONCATENATED MODULE: external "@bytemd/react"
+const react_namespaceObject = require("@bytemd/react");
+;// CONCATENATED MODULE: external "@bytemd/plugin-frontmatter"
+const plugin_frontmatter_namespaceObject = require("@bytemd/plugin-frontmatter");
+var plugin_frontmatter_default = /*#__PURE__*/__webpack_require__.n(plugin_frontmatter_namespaceObject);
+;// CONCATENATED MODULE: external "@bytemd/plugin-gfm"
+const plugin_gfm_namespaceObject = require("@bytemd/plugin-gfm");
+var plugin_gfm_default = /*#__PURE__*/__webpack_require__.n(plugin_gfm_namespaceObject);
 ;// CONCATENATED MODULE: ./pages/blogs/[id].tsx
 
 
@@ -139,7 +139,7 @@ var plugin_gfm_default = /*#__PURE__*/__webpack_require__.n(plugin_gfm_);
                                 }),
                                 /*#__PURE__*/ jsx_runtime.jsx("div", {
                                     className: (blog_module_default())["article-body"],
-                                    children: /*#__PURE__*/ jsx_runtime.jsx(react_.Viewer, {
+                                    children: /*#__PURE__*/ jsx_runtime.jsx(react_namespaceObject.Viewer, {
                                         value: content,
                                         plugins: plugins
                                     })
@@ -232,30 +232,6 @@ const routeModule = new PagesRouteModule({
 
 "use strict";
 module.exports = require("@bradgarropy/next-google-analytics");
-
-/***/ }),
-
-/***/ 54943:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("@bytemd/plugin-frontmatter");
-
-/***/ }),
-
-/***/ 20149:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("@bytemd/plugin-gfm");
-
-/***/ }),
-
-/***/ 66511:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("@bytemd/react");
 
 /***/ }),
 
@@ -626,7 +602,7 @@ module.exports = require("react-dom");
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [9900,4803,2995,1647,2585], () => (__webpack_exec__(39312)));
+var __webpack_exports__ = __webpack_require__.X(0, [9900,4803,2995,1647,2585], () => (__webpack_exec__(52197)));
 module.exports = __webpack_exports__;
 
 })();

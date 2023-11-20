@@ -12,6 +12,9 @@ export async function GET() {
   const response = await (await fetch(url)).json();
   fields.push(...response.map((it: any) => ({
     loc: `${host}/blogs/${it['_id']}`,
+    lastmod: it['updatedAt'],
+    changefreq: 'daily',
+    priority: 0.7,
   })));
   return getServerSideSitemap(fields);
 }

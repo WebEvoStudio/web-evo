@@ -1,18 +1,24 @@
 import React from 'react';
 import {useState} from 'react';
 import {Editor} from '@bytemd/react';
-import '../../styles/my-bytemd.css';
+// import 'github-markdown-css/github-markdown-dark.css';
 import zhHans from 'bytemd/locales/zh_Hans.json';
 import frontmatter from '@bytemd/plugin-frontmatter';
 import gfm from '@bytemd/plugin-gfm';
 import clipboard from 'clipboardy';
 import axios from 'axios';
-// import 'github-markdown-css/github-markdown-light.css';
 import Request from '../../core/unit/request';
 import ObjectUnit from '../../core/unit/object-unit';
 import {useSnackbar} from 'notistack';
 import {BytemdEditorContext, BytemdPlugin} from 'bytemd';
 import {Box, Button, Card, CardContent, CardHeader, TextField} from '@mui/material';
+import {imagePlugin} from '../../core/libs/bytemd-plugins';
+import highlight from '@bytemd/plugin-highlight';
+import highlightSsr from '@bytemd/plugin-highlight-ssr';
+import 'bytemd/dist/index.css';
+import 'highlight.js/styles/base16/google-dark.css';
+import '../../styles/my-bytemd.css';
+
 
 const pastePlugin = (): BytemdPlugin => {
   return {
@@ -36,6 +42,9 @@ const EditorPage = (props: {title?: string, value?: string, id?: string}) => {
     frontmatter(),
     gfm(),
     pastePlugin(),
+    imagePlugin(),
+    highlight(),
+    highlightSsr(),
   ];
   const isModify = !!props.id;
   const {enqueueSnackbar} = useSnackbar();
