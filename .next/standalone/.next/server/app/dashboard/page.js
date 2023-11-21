@@ -369,18 +369,18 @@ const tree = {
         'dashboard',
         {
         children: ['__PAGE__', {}, {
-          page: [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 95502)), "/Users/cityhunter/Documents/WorkSpace/web-evo/app/dashboard/page.tsx"],
+          page: [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 48455)), "/Users/cityhunter/Documents/WorkSpace/web-evo/app/dashboard/page.tsx"],
           
         }]
       },
         {
-        'layout': [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 95135)), "/Users/cityhunter/Documents/WorkSpace/web-evo/app/dashboard/layout.tsx"],
+        'layout': [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 56039)), "/Users/cityhunter/Documents/WorkSpace/web-evo/app/dashboard/layout.tsx"],
         
       }
       ]
       },
         {
-        'layout': [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 78188)), "/Users/cityhunter/Documents/WorkSpace/web-evo/app/layout.tsx"],
+        'layout': [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 35502)), "/Users/cityhunter/Documents/WorkSpace/web-evo/app/layout.tsx"],
 'not-found': [() => Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 33945, 23)), "next/dist/client/components/not-found-error"],
         
       }
@@ -418,21 +418,21 @@ const routeModule = new AppPageRouteModule({
 
 /***/ }),
 
+/***/ 76535:
+/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+
+Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 59140, 23))
+
+/***/ }),
+
 /***/ 19080:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 86940))
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 30767))
 
 /***/ }),
 
-/***/ 51085:
-/***/ (() => {
-
-
-
-/***/ }),
-
-/***/ 86940:
+/***/ 30767:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -444,20 +444,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(18038);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(59140);
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_mui_material__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(59140);
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_mui_material__WEBPACK_IMPORTED_MODULE_8__);
 /* harmony import */ var _mui_x_data_grid__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(68899);
 /* harmony import */ var _mui_x_data_grid__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_mui_x_data_grid__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _mui_material_colors__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(5278);
-/* harmony import */ var _mui_icons_material_Add__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(27418);
-/* harmony import */ var _mui_icons_material_Edit__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(17480);
-/* harmony import */ var _mui_icons_material_MoreVert__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(25630);
+/* harmony import */ var _mui_material_colors__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(5278);
+/* harmony import */ var _mui_icons_material_Add__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(27418);
+/* harmony import */ var _mui_icons_material_Edit__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(17480);
+/* harmony import */ var _mui_icons_material_MoreVert__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(25630);
+/* harmony import */ var _mui_icons_material_Preview__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(57900);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(94848);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(2463);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(2463);
 /* harmony import */ var next_navigation__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(80074);
 /* harmony import */ var next_navigation__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_navigation__WEBPACK_IMPORTED_MODULE_3__);
 /* __next_internal_client_entry_do_not_use__ Dashboard auto */ 
+
 
 
 
@@ -509,7 +511,12 @@ const Dashboard = ()=>{
                 // console.log(params);
                 return [
                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_x_data_grid__WEBPACK_IMPORTED_MODULE_4__.GridActionsCellItem, {
-                        icon: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_icons_material_Edit__WEBPACK_IMPORTED_MODULE_5__/* ["default"] */ .Z, {}),
+                        icon: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_icons_material_Preview__WEBPACK_IMPORTED_MODULE_5__/* ["default"] */ .Z, {}),
+                        label: "Preview",
+                        onClick: ()=>router.push(`/blogs/${params.id}`)
+                    }, "preview"),
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_x_data_grid__WEBPACK_IMPORTED_MODULE_4__.GridActionsCellItem, {
+                        icon: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_icons_material_Edit__WEBPACK_IMPORTED_MODULE_6__/* ["default"] */ .Z, {}),
                         label: "Edit",
                         onClick: ()=>onEdit(String(params.id))
                     }, "edit")
@@ -519,71 +526,75 @@ const Dashboard = ()=>{
     ];
     const [rows, setRows] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)([]);
     (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(()=>{
-        axios__WEBPACK_IMPORTED_MODULE_6__/* ["default"] */ .Z.get(`${host}dashboard/blogs`).then((res)=>{
+        axios__WEBPACK_IMPORTED_MODULE_7__/* ["default"] */ .Z.get(`${host}dashboard/blogs`).then((res)=>{
             console.log(res);
             setRows(res.data.data);
         });
     }, []);
-    return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_7__.Container, {
+    return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_8__.Card, {
         sx: {
-            mb: 2
+            height: "100%",
+            display: "flex",
+            flexDirection: "column"
         },
-        children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_7__.Card, {
-            children: [
-                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_7__.CardHeader, {
-                    action: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_7__.Box, {
-                        children: [
-                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_7__.IconButton, {
-                                "aria-label": "settings",
-                                children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_icons_material_MoreVert__WEBPACK_IMPORTED_MODULE_8__/* ["default"] */ .Z, {})
-                            }),
-                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_2___default()), {
-                                href: "/dashboard/publish",
-                                children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_7__.Button, {
-                                    startIcon: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_icons_material_Add__WEBPACK_IMPORTED_MODULE_9__/* ["default"] */ .Z, {}),
-                                    variant: "contained",
-                                    children: "create a new blog"
-                                })
+        children: [
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_8__.CardHeader, {
+                action: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_8__.Box, {
+                    children: [
+                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_8__.IconButton, {
+                            "aria-label": "settings",
+                            children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_icons_material_MoreVert__WEBPACK_IMPORTED_MODULE_9__/* ["default"] */ .Z, {})
+                        }),
+                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_2___default()), {
+                            href: "/dashboard/publish",
+                            children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_8__.Button, {
+                                startIcon: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_icons_material_Add__WEBPACK_IMPORTED_MODULE_10__/* ["default"] */ .Z, {}),
+                                variant: "contained",
+                                children: "create a new blog"
                             })
-                        ]
-                    }),
-                    avatar: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_7__.Avatar, {
-                        sx: {
-                            bgcolor: _mui_material_colors__WEBPACK_IMPORTED_MODULE_10__.red[500]
-                        },
-                        "aria-label": "recipe",
-                        children: "D"
-                    }),
-                    title: "Dashboard"
+                        })
+                    ]
                 }),
-                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_7__.CardContent, {
-                    children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_x_data_grid__WEBPACK_IMPORTED_MODULE_4__.DataGrid, {
-                        rows: rows,
-                        columns: columns,
-                        initialState: {
-                            pagination: {
-                                paginationModel: {
-                                    pageSize: 10
-                                }
+                avatar: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_8__.Avatar, {
+                    sx: {
+                        bgcolor: _mui_material_colors__WEBPACK_IMPORTED_MODULE_11__.red[500]
+                    },
+                    "aria-label": "recipe",
+                    children: "D"
+                }),
+                title: "Dashboard"
+            }),
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_8__.CardContent, {
+                sx: {
+                    flex: 1,
+                    overflow: "hidden"
+                },
+                children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_x_data_grid__WEBPACK_IMPORTED_MODULE_4__.DataGrid, {
+                    rows: rows,
+                    columns: columns,
+                    initialState: {
+                        pagination: {
+                            paginationModel: {
+                                pageSize: 10
                             }
-                        },
-                        getRowId: ({ _id })=>_id,
-                        pageSizeOptions: [
-                            5
-                        ],
-                        checkboxSelection: true,
-                        disableRowSelectionOnClick: true
-                    })
+                        }
+                    },
+                    getRowId: ({ _id })=>_id,
+                    pageSizeOptions: [
+                        5
+                    ],
+                    checkboxSelection: true,
+                    disableRowSelectionOnClick: true
                 })
-            ]
-        })
+            })
+        ]
     });
 };
 
 
 /***/ }),
 
-/***/ 95135:
+/***/ 56039:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -594,11 +605,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(56786);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6888);
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(72613);
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_mui_material__WEBPACK_IMPORTED_MODULE_2__);
+
 
 
 const DashboardLayout = (props)=>{
     const { children } = props;
-    return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+    return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Box, {
+        sx: {
+            height: "calc(100vh)",
+            boxSizing: "border-box",
+            p: 2
+        },
         children: children
     });
 };
@@ -607,7 +626,7 @@ const DashboardLayout = (props)=>{
 
 /***/ }),
 
-/***/ 95502:
+/***/ 48455:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -657,7 +676,7 @@ const DashboardPage = (props)=>{
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [9900,4659,6162,2463,6363,9354,5843], () => (__webpack_exec__(53943)));
+var __webpack_exports__ = __webpack_require__.X(0, [9900,4659,6162,2463,7482,5474,2337], () => (__webpack_exec__(53943)));
 module.exports = __webpack_exports__;
 
 })();

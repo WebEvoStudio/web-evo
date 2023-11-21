@@ -426,7 +426,7 @@ const tree = {
         'modify',
         {
         children: ['__PAGE__', {}, {
-          page: [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 45526)), "/Users/cityhunter/Documents/WorkSpace/web-evo/app/dashboard/blogs/[id]/modify/page.tsx"],
+          page: [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 71481)), "/Users/cityhunter/Documents/WorkSpace/web-evo/app/dashboard/blogs/[id]/modify/page.tsx"],
           
         }]
       },
@@ -449,13 +449,13 @@ const tree = {
       ]
       },
         {
-        'layout': [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 95135)), "/Users/cityhunter/Documents/WorkSpace/web-evo/app/dashboard/layout.tsx"],
+        'layout': [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 56039)), "/Users/cityhunter/Documents/WorkSpace/web-evo/app/dashboard/layout.tsx"],
         
       }
       ]
       },
         {
-        'layout': [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 78188)), "/Users/cityhunter/Documents/WorkSpace/web-evo/app/layout.tsx"],
+        'layout': [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 35502)), "/Users/cityhunter/Documents/WorkSpace/web-evo/app/layout.tsx"],
 'not-found': [() => Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 33945, 23)), "next/dist/client/components/not-found-error"],
         
       }
@@ -496,11 +496,11 @@ const routeModule = new AppPageRouteModule({
 /***/ 89373:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 2130))
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 1170))
 
 /***/ }),
 
-/***/ 2130:
+/***/ 1170:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -517,7 +517,7 @@ var jsx_runtime_ = __webpack_require__(56786);
 // EXTERNAL MODULE: external "next/dist/compiled/react"
 var react_ = __webpack_require__(18038);
 // EXTERNAL MODULE: ./ui/components/editor.tsx + 1 modules
-var editor = __webpack_require__(93828);
+var editor = __webpack_require__(14659);
 // EXTERNAL MODULE: ./node_modules/.pnpm/axios@1.6.2/node_modules/axios/lib/axios.js + 48 modules
 var axios = __webpack_require__(2463);
 ;// CONCATENATED MODULE: ./ui/pages/modify-blog.tsx
@@ -573,7 +573,7 @@ const ModifyBlogPage = (props)=>{
 
 /***/ }),
 
-/***/ 45526:
+/***/ 71481:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -606,7 +606,7 @@ const __default__ = proxy.default;
 var __webpack_require__ = require("../../../../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [9900,4659,6162,2463,3440,9354,5843,1878,3110], () => (__webpack_exec__(83867)));
+var __webpack_exports__ = __webpack_require__.X(0, [9900,4659,6162,2463,430,5474,2337,1878,3251], () => (__webpack_exec__(83867)));
 module.exports = __webpack_exports__;
 
 })();

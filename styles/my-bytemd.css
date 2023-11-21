@@ -1,7 +1,7 @@
 @import 'bytemd/dist/index.min.css';
 
 .bytemd {
-    height: calc(100dvh - 112px) !important;
+    height: calc(100dvh - 146px) !important;
     background-color: #2B2D30;
     border-color: #2B2D30;
 }

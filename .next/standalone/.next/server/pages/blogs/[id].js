@@ -23,7 +23,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 52197:
+/***/ 84904:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -60,9 +60,9 @@ var route_kind = __webpack_require__(59390);
 // EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.19_@babel+core@7.23.3_react-dom@18.2.0_react@18.2.0_sass@1.69.5/node_modules/next/dist/build/webpack/loaders/next-route-loader/helpers.js
 var helpers = __webpack_require__(78739);
 // EXTERNAL MODULE: ./pages/_document.tsx
-var _document = __webpack_require__(70845);
+var _document = __webpack_require__(79427);
 // EXTERNAL MODULE: ./pages/_app.tsx + 1 modules
-var _app = __webpack_require__(18957);
+var _app = __webpack_require__(95733);
 // EXTERNAL MODULE: ./node_modules/.pnpm/react@18.2.0/node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(11527);
 // EXTERNAL MODULE: external "react"
@@ -71,7 +71,7 @@ var external_react_ = __webpack_require__(16689);
 var blog_module = __webpack_require__(87367);
 var blog_module_default = /*#__PURE__*/__webpack_require__.n(blog_module);
 // EXTERNAL MODULE: ./components/common-head.tsx
-var common_head = __webpack_require__(11647);
+var common_head = __webpack_require__(91008);
 // EXTERNAL MODULE: external "axios"
 var external_axios_ = __webpack_require__(52167);
 var external_axios_default = /*#__PURE__*/__webpack_require__.n(external_axios_);
@@ -79,10 +79,6 @@ var external_axios_default = /*#__PURE__*/__webpack_require__.n(external_axios_)
 var markdown = __webpack_require__(42585);
 // EXTERNAL MODULE: external "@mui/material"
 var material_ = __webpack_require__(65692);
-// EXTERNAL MODULE: ./styles/my-bytemd.css
-var my_bytemd = __webpack_require__(1816);
-// EXTERNAL MODULE: ./node_modules/.pnpm/highlight.js@11.9.0/node_modules/highlight.js/styles/github.css
-var github = __webpack_require__(19311);
 ;// CONCATENATED MODULE: external "@bytemd/react"
 const react_namespaceObject = require("@bytemd/react");
 ;// CONCATENATED MODULE: external "@bytemd/plugin-frontmatter"
@@ -91,6 +87,18 @@ var plugin_frontmatter_default = /*#__PURE__*/__webpack_require__.n(plugin_front
 ;// CONCATENATED MODULE: external "@bytemd/plugin-gfm"
 const plugin_gfm_namespaceObject = require("@bytemd/plugin-gfm");
 var plugin_gfm_default = /*#__PURE__*/__webpack_require__.n(plugin_gfm_namespaceObject);
+;// CONCATENATED MODULE: external "@bytemd/plugin-highlight"
+const plugin_highlight_namespaceObject = require("@bytemd/plugin-highlight");
+var plugin_highlight_default = /*#__PURE__*/__webpack_require__.n(plugin_highlight_namespaceObject);
+;// CONCATENATED MODULE: external "@bytemd/plugin-highlight-ssr"
+const plugin_highlight_ssr_namespaceObject = require("@bytemd/plugin-highlight-ssr");
+var plugin_highlight_ssr_default = /*#__PURE__*/__webpack_require__.n(plugin_highlight_ssr_namespaceObject);
+// EXTERNAL MODULE: ./node_modules/.pnpm/bytemd@1.21.0/node_modules/bytemd/dist/index.css
+var dist = __webpack_require__(68973);
+// EXTERNAL MODULE: ./node_modules/.pnpm/highlight.js@11.9.0/node_modules/highlight.js/styles/base16/google-dark.css
+var google_dark = __webpack_require__(97127);
+// EXTERNAL MODULE: ./styles/my-bytemd.css
+var my_bytemd = __webpack_require__(1816);
 ;// CONCATENATED MODULE: ./pages/blogs/[id].tsx
 
 
@@ -99,7 +107,9 @@ var plugin_gfm_default = /*#__PURE__*/__webpack_require__.n(plugin_gfm_namespace
 
 
 
-// import 'bytemd/dist/index.min.css';
+
+
+
 
 
 
@@ -113,7 +123,9 @@ var plugin_gfm_default = /*#__PURE__*/__webpack_require__.n(plugin_gfm_namespace
     const content = markdown/* default */.Z.keywordToLink(blog.markContent, host);
     const plugins = [
         plugin_frontmatter_default()(),
-        plugin_gfm_default()()
+        plugin_gfm_default()(),
+        plugin_highlight_default()(),
+        plugin_highlight_ssr_default()()
     ];
     return /*#__PURE__*/ jsx_runtime.jsx(material_.Box, {
         children: /*#__PURE__*/ jsx_runtime.jsx(material_.Container, {
@@ -213,7 +225,14 @@ const routeModule = new PagesRouteModule({
 
 /***/ }),
 
-/***/ 19311:
+/***/ 68973:
+/***/ (() => {
+
+
+
+/***/ }),
+
+/***/ 97127:
 /***/ (() => {
 
 
@@ -602,7 +621,7 @@ module.exports = require("react-dom");
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [9900,4803,2995,1647,2585], () => (__webpack_exec__(52197)));
+var __webpack_exports__ = __webpack_require__.X(0, [9900,4803,2760,1008,2585], () => (__webpack_exec__(84904)));
 module.exports = __webpack_exports__;
 
 })();

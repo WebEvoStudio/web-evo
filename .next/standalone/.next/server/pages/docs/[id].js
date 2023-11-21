@@ -5,7 +5,7 @@ exports.id = 1823;
 exports.ids = [1823];
 exports.modules = {
 
-/***/ 32023:
+/***/ 35480:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 // ESM COMPAT FLAG
@@ -41,9 +41,9 @@ var route_kind = __webpack_require__(59390);
 // EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.19_@babel+core@7.23.3_react-dom@18.2.0_react@18.2.0_sass@1.69.5/node_modules/next/dist/build/webpack/loaders/next-route-loader/helpers.js
 var helpers = __webpack_require__(78739);
 // EXTERNAL MODULE: ./pages/_document.tsx
-var _document = __webpack_require__(70845);
+var _document = __webpack_require__(79427);
 // EXTERNAL MODULE: ./pages/_app.tsx + 1 modules
-var _app = __webpack_require__(18957);
+var _app = __webpack_require__(95733);
 // EXTERNAL MODULE: ./node_modules/.pnpm/react@18.2.0/node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(11527);
 // EXTERNAL MODULE: external "react"
@@ -446,7 +446,7 @@ module.exports = require("react-dom");
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [9900,4803,2995,3065], () => (__webpack_exec__(32023)));
+var __webpack_exports__ = __webpack_require__.X(0, [9900,4803,2760,3065], () => (__webpack_exec__(35480)));
 module.exports = __webpack_exports__;
 
 })();

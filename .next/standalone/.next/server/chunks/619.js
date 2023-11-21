@@ -2682,7 +2682,7 @@ hljs.registerLanguage('gherkin', __webpack_require__(54011));
 hljs.registerLanguage('glsl', __webpack_require__(24966));
 hljs.registerLanguage('gml', __webpack_require__(34816));
 hljs.registerLanguage('go', __webpack_require__(16984));
-hljs.registerLanguage('golo', __webpack_require__(71625));
+hljs.registerLanguage('golo', __webpack_require__(49110));
 hljs.registerLanguage('gradle', __webpack_require__(39537));
 hljs.registerLanguage('graphql', __webpack_require__(36648));
 hljs.registerLanguage('groovy', __webpack_require__(90801));
@@ -20038,7 +20038,7 @@ module.exports = go;
 
 /***/ }),
 
-/***/ 71625:
+/***/ 49110:
 /***/ ((module) => {
 
 /*

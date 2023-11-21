@@ -420,7 +420,7 @@ const tree = {
         'publish',
         {
         children: ['__PAGE__', {}, {
-          page: [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 35545)), "/Users/cityhunter/Documents/WorkSpace/web-evo/app/dashboard/publish/page.tsx"],
+          page: [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 67738)), "/Users/cityhunter/Documents/WorkSpace/web-evo/app/dashboard/publish/page.tsx"],
           
         }]
       },
@@ -431,13 +431,13 @@ const tree = {
       ]
       },
         {
-        'layout': [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 95135)), "/Users/cityhunter/Documents/WorkSpace/web-evo/app/dashboard/layout.tsx"],
+        'layout': [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 56039)), "/Users/cityhunter/Documents/WorkSpace/web-evo/app/dashboard/layout.tsx"],
         
       }
       ]
       },
         {
-        'layout': [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 78188)), "/Users/cityhunter/Documents/WorkSpace/web-evo/app/layout.tsx"],
+        'layout': [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 35502)), "/Users/cityhunter/Documents/WorkSpace/web-evo/app/layout.tsx"],
 'not-found': [() => Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 33945, 23)), "next/dist/client/components/not-found-error"],
         
       }
@@ -478,11 +478,11 @@ const routeModule = new AppPageRouteModule({
 /***/ 6232:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 49012))
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 20001))
 
 /***/ }),
 
-/***/ 49012:
+/***/ 20001:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -496,7 +496,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(59140);
 /* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_mui_material__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _components_editor__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(93828);
+/* harmony import */ var _components_editor__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(14659);
 /* __next_internal_client_entry_do_not_use__ Publish auto */ 
 
 
@@ -513,7 +513,7 @@ const Publish = ()=>{
 
 /***/ }),
 
-/***/ 35545:
+/***/ 67738:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -562,7 +562,7 @@ function PublishPage() {
 var __webpack_require__ = require("../../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [9900,4659,6162,2463,3440,9354,5843,1878,3110], () => (__webpack_exec__(22822)));
+var __webpack_exports__ = __webpack_require__.X(0, [9900,4659,6162,2463,430,5474,2337,1878,3251], () => (__webpack_exec__(22822)));
 module.exports = __webpack_exports__;
 
 })();

@@ -1,7 +1,6 @@
 import React from 'react';
 import {useState} from 'react';
 import {Editor} from '@bytemd/react';
-// import 'github-markdown-css/github-markdown-dark.css';
 import zhHans from 'bytemd/locales/zh_Hans.json';
 import frontmatter from '@bytemd/plugin-frontmatter';
 import gfm from '@bytemd/plugin-gfm';

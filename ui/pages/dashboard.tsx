@@ -1,9 +1,9 @@
 'use client';
 import React, {useEffect, useState} from 'react';
-import {Avatar, Box, Button, Card, CardContent, CardHeader, Container, IconButton} from '@mui/material';
+import {Avatar, Box, Button, Card, CardContent, CardHeader, IconButton} from '@mui/material';
 import {DataGrid, GridActionsCellItem, GridColDef} from '@mui/x-data-grid';
 import {red} from '@mui/material/colors';
-import {Add, Delete, Edit, MoreVert} from '@mui/icons-material';
+import {Add, Edit, MoreVert, Preview} from '@mui/icons-material';
 import Link from 'next/link';
 import axios from 'axios';
 import {useRouter} from 'next/navigation';
@@ -29,6 +29,12 @@ export const Dashboard = () => {
       getActions: (params) => {
         // console.log(params);
         return [
+          <GridActionsCellItem
+            key={'preview'}
+            icon={<Preview/>}
+            label={'Preview'}
+            onClick={() => router.push(`/blogs/${params.id}`)}
+          ></GridActionsCellItem>,
           <GridActionsCellItem key={'edit'} icon={<Edit />} label="Edit" onClick={() => onEdit(String(params.id))}/>,
           // <GridActionsCellItem key={'delete'} icon={<Delete />} label="Delete" />,
         ];
@@ -43,46 +49,44 @@ export const Dashboard = () => {
     });
   }, []);
   return (
-    <Container sx={{mb: 2}}>
-      <Card>
-        <CardHeader
-          action={
-            <Box>
-              <IconButton aria-label="settings">
-                <MoreVert />
-              </IconButton>
-              <Link href={'/dashboard/publish'}>
-                <Button startIcon={ <Add/> } variant={'contained'}>create a new blog</Button>
-              </Link>
-            </Box>
-          }
-          avatar={
-            <Avatar sx={{bgcolor: red[500]}} aria-label="recipe">D</Avatar>
-          }
-          title={'Dashboard'}
-        >
-        </CardHeader>
-        <CardContent>
-          <DataGrid
-            rows={rows}
-            columns={columns}
-            initialState={{
-              pagination: {
-                paginationModel: {
-                  pageSize: 10,
-                },
+    <Card sx={{height: '100%', display: 'flex', flexDirection: 'column'}}>
+      <CardHeader
+        action={
+          <Box>
+            <IconButton aria-label="settings">
+              <MoreVert />
+            </IconButton>
+            <Link href={'/dashboard/publish'}>
+              <Button startIcon={ <Add/> } variant={'contained'}>create a new blog</Button>
+            </Link>
+          </Box>
+        }
+        avatar={
+          <Avatar sx={{bgcolor: red[500]}} aria-label="recipe">D</Avatar>
+        }
+        title={'Dashboard'}
+      >
+      </CardHeader>
+      <CardContent sx={{flex: 1, overflow: 'hidden'}}>
+        <DataGrid
+          rows={rows}
+          columns={columns}
+          initialState={{
+            pagination: {
+              paginationModel: {
+                pageSize: 10,
               },
-              // pinnedColumns: {
-              //   right: ['actions']
-              // },
-            }}
-            getRowId={({_id}) => _id}
-            pageSizeOptions={[5]}
-            checkboxSelection
-            disableRowSelectionOnClick
-          />
-        </CardContent>
-      </Card>
-    </Container>
+            },
+            // pinnedColumns: {
+            //   right: ['actions']
+            // },
+          }}
+          getRowId={({_id}) => _id}
+          pageSizeOptions={[5]}
+          checkboxSelection
+          disableRowSelectionOnClick
+        />
+      </CardContent>
+    </Card>
   );
 };

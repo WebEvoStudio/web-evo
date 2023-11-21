@@ -270,12 +270,12 @@ const tree = {
         '',
         {
         children: ['__PAGE__', {}, {
-          page: [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 77846)), "/Users/cityhunter/Documents/WorkSpace/web-evo/app/page.tsx"],
+          page: [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 77441)), "/Users/cityhunter/Documents/WorkSpace/web-evo/app/page.tsx"],
           
         }]
       },
         {
-        'layout': [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 78188)), "/Users/cityhunter/Documents/WorkSpace/web-evo/app/layout.tsx"],
+        'layout': [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 35502)), "/Users/cityhunter/Documents/WorkSpace/web-evo/app/layout.tsx"],
 'not-found': [() => Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 33945, 23)), "next/dist/client/components/not-found-error"],
         
       }
@@ -316,11 +316,11 @@ const routeModule = new AppPageRouteModule({
 /***/ 58720:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 45714))
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 38873))
 
 /***/ }),
 
-/***/ 45714:
+/***/ 38873:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -396,7 +396,7 @@ var PsychologyAlt = __webpack_require__(69918);
 });
 
 // EXTERNAL MODULE: ./ui/home-services.tsx + 2 modules
-var home_services = __webpack_require__(46737);
+var home_services = __webpack_require__(32801);
 // EXTERNAL MODULE: ./data/projects.ts
 var projects = __webpack_require__(70513);
 ;// CONCATENATED MODULE: ./ui/pages/home.tsx
@@ -919,7 +919,7 @@ var projects = __webpack_require__(70513);
 
 /***/ }),
 
-/***/ 77846:
+/***/ 77441:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -971,7 +971,7 @@ const __default__ = proxy.default;
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [9900,4659,6162,270,9354,6737,5536], () => (__webpack_exec__(89941)));
+var __webpack_exports__ = __webpack_require__.X(0, [9900,4659,6162,270,5474,2801,1042,513], () => (__webpack_exec__(89941)));
 module.exports = __webpack_exports__;
 
 })();

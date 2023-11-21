@@ -4,13 +4,15 @@ import CommonHead from '../../components/common-head';
 import axios from 'axios';
 import Markdown from '../../core/unit/markdown';
 import {Box, Container} from '@mui/material';
-// import 'bytemd/dist/index.min.css';
-import '../../styles/my-bytemd.css';
-import 'highlight.js/styles/github.css';
 import {Viewer} from '@bytemd/react';
 import {BytemdPlugin} from 'bytemd';
 import frontmatter from '@bytemd/plugin-frontmatter';
 import gfm from '@bytemd/plugin-gfm';
+import highlight from '@bytemd/plugin-highlight';
+import highlightSsr from '@bytemd/plugin-highlight-ssr';
+import 'bytemd/dist/index.css';
+import 'highlight.js/styles/base16/google-dark.css';
+import '../../styles/my-bytemd.css';
 /**
  * blog detail page
  * @return {React.ReactElement}
@@ -21,6 +23,8 @@ function BlogDetail({blog}: {blog: {title: string, markContent: string}}) {
   const plugins: BytemdPlugin[] = [
     frontmatter(),
     gfm(),
+    highlight(),
+    highlightSsr(),
   ];
   return (
     <Box >

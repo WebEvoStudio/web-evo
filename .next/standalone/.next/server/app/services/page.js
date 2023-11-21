@@ -273,7 +273,7 @@ const tree = {
         'services',
         {
         children: ['__PAGE__', {}, {
-          page: [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 59063)), "/Users/cityhunter/Documents/WorkSpace/web-evo/app/services/page.tsx"],
+          page: [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 58404)), "/Users/cityhunter/Documents/WorkSpace/web-evo/app/services/page.tsx"],
           
         }]
       },
@@ -284,7 +284,7 @@ const tree = {
       ]
       },
         {
-        'layout': [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 78188)), "/Users/cityhunter/Documents/WorkSpace/web-evo/app/layout.tsx"],
+        'layout': [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 35502)), "/Users/cityhunter/Documents/WorkSpace/web-evo/app/layout.tsx"],
 'not-found': [() => Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 33945, 23)), "next/dist/client/components/not-found-error"],
         
       }
@@ -325,11 +325,11 @@ const routeModule = new AppPageRouteModule({
 /***/ 11499:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 58617))
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 58731))
 
 /***/ }),
 
-/***/ 58617:
+/***/ 58731:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -341,7 +341,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(18038);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _home_services__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(46737);
+/* harmony import */ var _home_services__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(32801);
 /* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(59140);
 /* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_mui_material__WEBPACK_IMPORTED_MODULE_3__);
 /* __next_internal_client_entry_do_not_use__ default auto */ 
@@ -361,7 +361,7 @@ const Services = ()=>{
 
 /***/ }),
 
-/***/ 59063:
+/***/ 58404:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -413,7 +413,7 @@ const ServicesPage = ()=>{
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [9900,4659,6162,9354,5843,6737], () => (__webpack_exec__(43629)));
+var __webpack_exports__ = __webpack_require__.X(0, [9900,4659,6162,5474,2337,2801], () => (__webpack_exec__(43629)));
 module.exports = __webpack_exports__;
 
 })();

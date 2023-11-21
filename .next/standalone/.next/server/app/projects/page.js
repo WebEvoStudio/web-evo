@@ -273,7 +273,7 @@ const tree = {
         'projects',
         {
         children: ['__PAGE__', {}, {
-          page: [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 29839)), "/Users/cityhunter/Documents/WorkSpace/web-evo/app/projects/page.tsx"],
+          page: [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 50159)), "/Users/cityhunter/Documents/WorkSpace/web-evo/app/projects/page.tsx"],
           
         }]
       },
@@ -284,7 +284,7 @@ const tree = {
       ]
       },
         {
-        'layout': [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 78188)), "/Users/cityhunter/Documents/WorkSpace/web-evo/app/layout.tsx"],
+        'layout': [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 35502)), "/Users/cityhunter/Documents/WorkSpace/web-evo/app/layout.tsx"],
 'not-found': [() => Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 33945, 23)), "next/dist/client/components/not-found-error"],
         
       }
@@ -325,11 +325,11 @@ const routeModule = new AppPageRouteModule({
 /***/ 55655:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 80143))
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 1338))
 
 /***/ }),
 
-/***/ 80143:
+/***/ 1338:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -348,7 +348,7 @@ var react_ = __webpack_require__(18038);
 // EXTERNAL MODULE: ./node_modules/.pnpm/@mui+material@5.14.18_@emotion+react@11.11.1_@emotion+styled@11.11.0_@types+react@18.2.9_react-dom@18.2.0_react@18.2.0/node_modules/@mui/material/node/index.js
 var node = __webpack_require__(59140);
 // EXTERNAL MODULE: ./ui/components/section.tsx
-var section = __webpack_require__(84049);
+var section = __webpack_require__(62241);
 // EXTERNAL MODULE: ./core/libs/images.ts + 3 modules
 var libs_images = __webpack_require__(90195);
 // EXTERNAL MODULE: ./node_modules/.pnpm/next@13.4.19_@babel+core@7.23.3_react-dom@18.2.0_react@18.2.0_sass@1.69.5/node_modules/next/image.js
@@ -466,7 +466,7 @@ const commonMetadata = {
 
 /***/ }),
 
-/***/ 29839:
+/***/ 50159:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -522,7 +522,7 @@ const ProjectsPage = ()=>/*#__PURE__*/ jsx_runtime_.jsx(e0, {});
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [9900,4659,6162,9354,4049,5536], () => (__webpack_exec__(64134)));
+var __webpack_exports__ = __webpack_require__.X(0, [9900,4659,6162,5474,2337,2241,513], () => (__webpack_exec__(64134)));
 module.exports = __webpack_exports__;
 
 })();
