@@ -674,7 +674,7 @@ const BlogsPage = async ()=>{
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [9900,4659,6162,4447,2406,2337,4049], () => (__webpack_exec__(51436)));
+var __webpack_exports__ = __webpack_require__.X(0, [9900,4659,6162,4447,9354,5843,4049], () => (__webpack_exec__(51436)));
 module.exports = __webpack_exports__;
 
 })();

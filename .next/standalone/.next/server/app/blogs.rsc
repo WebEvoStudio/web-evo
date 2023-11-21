@@ -1,15 +1,286 @@
 1:HL["/_next/static/css/3316adebd22c8ace.css",{"as":"style"}]
-0:["SmJMR8uI3BNf5XuBIYi5I",[[["",{"children":["blogs",{"children":["__PAGE__",{}]}]},"$undefined","$undefined",true],"$L2",[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/3316adebd22c8ace.css","precedence":"next"}]],"$L3"]]]]
-4:I{"id":37328,"chunks":["7831:static/chunks/7831-7d219df51c768964.js","2344:static/chunks/2344-0b45039db8d92264.js","2551:static/chunks/2551-27ec36750a18c820.js","1137:static/chunks/1137-ad4d09b1fad2803d.js","4300:static/chunks/4300-eed5fa655b5c802b.js","7879:static/chunks/7879-ddfae7b2a38e21f8.js","3722:static/chunks/3722-acff5ae523469154.js","8320:static/chunks/8320-0ae2b3260a525a2e.js","3210:static/chunks/3210-ef98482afb028424.js","4518:static/chunks/4518-8496fbce3a7c542a.js","9169:static/chunks/9169-0188139ba3fc4368.js","3185:static/chunks/app/layout-673cfe902542910b.js"],"name":"","async":false}
-5:I{"id":49157,"chunks":["7831:static/chunks/7831-7d219df51c768964.js","2344:static/chunks/2344-0b45039db8d92264.js","2551:static/chunks/2551-27ec36750a18c820.js","1137:static/chunks/1137-ad4d09b1fad2803d.js","4300:static/chunks/4300-eed5fa655b5c802b.js","7879:static/chunks/7879-ddfae7b2a38e21f8.js","3722:static/chunks/3722-acff5ae523469154.js","8320:static/chunks/8320-0ae2b3260a525a2e.js","3210:static/chunks/3210-ef98482afb028424.js","4518:static/chunks/4518-8496fbce3a7c542a.js","9169:static/chunks/9169-0188139ba3fc4368.js","3185:static/chunks/app/layout-673cfe902542910b.js"],"name":"","async":false}
+0:["NGrCkoxuIlSB8fzdBIO4r",[[["",{"children":["blogs",{"children":["__PAGE__",{}]}]},"$undefined","$undefined",true],"$L2",[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/3316adebd22c8ace.css","precedence":"next"}]],"$L3"]]]]
+4:I{"id":37328,"chunks":["7831:static/chunks/7831-cfcf47cf4503897d.js","2344:static/chunks/2344-0b45039db8d92264.js","2551:static/chunks/2551-27ec36750a18c820.js","1137:static/chunks/1137-ad4d09b1fad2803d.js","4300:static/chunks/4300-eed5fa655b5c802b.js","7879:static/chunks/7879-ddfae7b2a38e21f8.js","3722:static/chunks/3722-acff5ae523469154.js","8320:static/chunks/8320-0ae2b3260a525a2e.js","3210:static/chunks/3210-ef98482afb028424.js","4518:static/chunks/4518-8496fbce3a7c542a.js","9169:static/chunks/9169-0188139ba3fc4368.js","3185:static/chunks/app/layout-df47c60c487cc50b.js"],"name":"","async":false}
+5:I{"id":49157,"chunks":["7831:static/chunks/7831-cfcf47cf4503897d.js","2344:static/chunks/2344-0b45039db8d92264.js","2551:static/chunks/2551-27ec36750a18c820.js","1137:static/chunks/1137-ad4d09b1fad2803d.js","4300:static/chunks/4300-eed5fa655b5c802b.js","7879:static/chunks/7879-ddfae7b2a38e21f8.js","3722:static/chunks/3722-acff5ae523469154.js","8320:static/chunks/8320-0ae2b3260a525a2e.js","3210:static/chunks/3210-ef98482afb028424.js","4518:static/chunks/4518-8496fbce3a7c542a.js","9169:static/chunks/9169-0188139ba3fc4368.js","3185:static/chunks/app/layout-df47c60c487cc50b.js"],"name":"","async":false}
 6:I{"id":41062,"chunks":["2272:static/chunks/webpack-d8c6834844469ddc.js","9065:static/chunks/16714efa-1bbb78372a611cf4.js","8850:static/chunks/8850-64efc0634ce80b58.js"],"name":"default","async":false}
 7:I{"id":93042,"chunks":["2272:static/chunks/webpack-d8c6834844469ddc.js","9065:static/chunks/16714efa-1bbb78372a611cf4.js","8850:static/chunks/8850-64efc0634ce80b58.js"],"name":"default","async":false}
-a:I{"id":12495,"chunks":["7831:static/chunks/7831-7d219df51c768964.js","2344:static/chunks/2344-0b45039db8d92264.js","2551:static/chunks/2551-27ec36750a18c820.js","1137:static/chunks/1137-ad4d09b1fad2803d.js","4300:static/chunks/4300-eed5fa655b5c802b.js","7879:static/chunks/7879-ddfae7b2a38e21f8.js","3722:static/chunks/3722-acff5ae523469154.js","8320:static/chunks/8320-0ae2b3260a525a2e.js","3210:static/chunks/3210-ef98482afb028424.js","4518:static/chunks/4518-8496fbce3a7c542a.js","9169:static/chunks/9169-0188139ba3fc4368.js","3185:static/chunks/app/layout-673cfe902542910b.js"],"name":"","async":false}
+a:I{"id":12495,"chunks":["7831:static/chunks/7831-cfcf47cf4503897d.js","2344:static/chunks/2344-0b45039db8d92264.js","2551:static/chunks/2551-27ec36750a18c820.js","1137:static/chunks/1137-ad4d09b1fad2803d.js","4300:static/chunks/4300-eed5fa655b5c802b.js","7879:static/chunks/7879-ddfae7b2a38e21f8.js","3722:static/chunks/3722-acff5ae523469154.js","8320:static/chunks/8320-0ae2b3260a525a2e.js","3210:static/chunks/3210-ef98482afb028424.js","4518:static/chunks/4518-8496fbce3a7c542a.js","9169:static/chunks/9169-0188139ba3fc4368.js","3185:static/chunks/app/layout-df47c60c487cc50b.js"],"name":"","async":false}
 3:[["$","meta","0",{"charSet":"utf-8"}],["$","title","1",{"children":"Web Evo - 博客"}],["$","meta","2",{"name":"description","content":"Web Evo全称Web Evolution (网络进化) 是一个现代网络咨询工作室，致力于帮助公司企业和个人实现数字化转型。我们提供设计、架构、开发、运营、产品指导等服务。"}],["$","link","3",{"rel":"manifest","href":"/manifest.json"}],["$","meta","4",{"name":"keywords","content":"Web Evo, Web-Evo, Wev Evolution, WebEvo, web evo, webevo"}],["$","meta","5",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","6",{"name":"bytedance-verification-code","content":"wSvyXEgEi6nNu3eh/eDe"}],["$","meta","7",{"name":"theme-color","content":"#00B0FF"}],["$","meta","8",{"name":"baidu-site-verification","content":"codeva-owAlD1JaUc"}],["$","meta","9",{"name":"msvalidate.01","content":"AB78A0C987D3AEA34B969889512FF33E"}],["$","meta","10",{"name":"google-site-verification","content":"4rS5gjy4-tFOdJO4HvDg0_E4QNcB1D1YeZo29iS4hIY"}],["$","meta","11",{"name":"baidu_union_verify","content":"50312ad0c63983b3fe6c2e2a6e10c386"}],["$","meta","12",{"name":"yandex-verification","content":"00c7edad29c9e045"}],["$","meta","13",{"name":"sogou_site_verification","content":"NxKIJOaIjm"}],["$","meta","14",{"name":"360-site-verification","content":"026caef9c5d27d14371524ad882a339f"}],["$","meta","15",{"name":"shenma-site-verification","content":"ced0831a368866ea173608f4f067519f_1687339017"}],["$","link","16",{"rel":"icon","href":"/favicon.png"}],["$","link","17",{"rel":"apple-touch-icon","href":"/logo192.png"}]]
 2:[null,["$","html",null,{"lang":"en","children":["$","body",null,{"children":["$","$L4",null,{"children":[["$","$L5",null,{"children":["$","$L6",null,{"parallelRouterKey":"children","segmentPath":["children"],"loading":"$undefined","loadingStyles":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","template":["$","$L7",null,{}],"templateStyles":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[],"childProp":{"current":["$","$L6",null,{"parallelRouterKey":"children","segmentPath":["children","blogs","children"],"loading":"$undefined","loadingStyles":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","template":["$","$L7",null,{}],"templateStyles":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","childProp":{"current":["$L8","$L9",null],"segment":"__PAGE__"},"styles":[]}],"segment":"blogs"},"styles":[]}]}],[["$","$La",null,{"strategy":"afterInteractive","src":"https://www.googletagmanager.com/gtag/js?id=G-R8ZM6SVZ0K"}],["$","$La",null,{"id":"google-analytics","strategy":"afterInteractive","children":"\n                    window.dataLayer = window.dataLayer || [];\n                    function gtag(){dataLayer.push(arguments);}\n                    gtag('js', new Date());\n                    gtag('config', 'G-R8ZM6SVZ0K');\n                "}]],["$","$La",null,{"id":"microsoft-clarity","dangerouslySetInnerHTML":{"__html":"\n            (function(c,l,a,r,i,t,y){\n        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};\n        t=l.createElement(r);t.async=1;t.src=\"https://www.clarity.ms/tag/\"+i;\n        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);\n    })(window, document, \"clarity\", \"script\", \"b91ge7rn7p\");\n            "}}],["$","$La",null,{"src":"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1031326139722537","crossOrigin":"anonymous","async":true,"strategy":"afterInteractive"}]]}]}]}],null]
 8:null
-b:I{"id":97023,"chunks":["8418:static/chunks/7694e0e6-db365cbc6ba243c6.js","7831:static/chunks/7831-7d219df51c768964.js","3210:static/chunks/3210-ef98482afb028424.js","5862:static/chunks/5862-bd8ec52c6153cb65.js","6539:static/chunks/6539-518ace6e2e53f90a.js","5606:static/chunks/app/blogs/page-cdbc61d4a2cd4a65.js"],"name":"","async":false}
-c:T1179,# 1、背景
+b:I{"id":97023,"chunks":["8418:static/chunks/7694e0e6-db365cbc6ba243c6.js","7831:static/chunks/7831-cfcf47cf4503897d.js","3210:static/chunks/3210-ef98482afb028424.js","5862:static/chunks/5862-bd8ec52c6153cb65.js","6539:static/chunks/6539-518ace6e2e53f90a.js","5606:static/chunks/app/blogs/page-cdbc61d4a2cd4a65.js"],"name":"","async":false}
+c:T3280,随着大屏幕技术的发展，大屏数字滚动效果在各种应用场景中越来越常见，例如数字展示、统计数据展示等。Vue3 作为一种流行的前端开发框架，提供了强大的工具和便捷的开发方式，非常适合实现大屏数字滚动效果。
+
+本篇博文将介绍如何使用 Vue3 来实现大屏数字滚动效果。在实现过程中，我们可以使用调试工具进行测试和排错，并进行代码优化以提高性能和用户体验。最后，我们将总结本文的内容，并提示读者可以进一步扩展和优化大屏数字滚动效果。
+
+通过本篇博文的学习，读者将能够掌握使用 Vue3 实现大屏数字滚动效果的方法和技巧。无论是在数字展示、统计数据展示还是其他大屏幕应用场景中，都可以借助 Vue3 的强大功能，给用户带来更好的视觉体验。
+
+# 1 技术背景
+
+## 1.1 介绍 Vue3 的基本概念和特点
+
+Vue3 是一种用于构建用户界面的现代 JavaScript 框架。与其前身 Vue.js 相比，Vue3 引入了许多新的功能和改进，使开发者能够更高效地构建可扩展的应用程序。
+
+以下是 Vue3 的一些基本概念和特点：
+
+<mark>「Composition API 组合式 API」</mark>
+
+Vue3 引入了 Composition API，它提供了一种全新的组件组织方式。通过使用 Composition API，您可以将相关逻辑封装在一起，并且可以更好地重用、测试和理解代码。这个特性使得编写复杂组件变得更加简单和灵活。
+
+<mark>「更好的性能」</mark>
+
+Vue3 对底层的响应式系统进行了重写，使其在性能方面有所提升。Vue3 使用 Proxy 来实现响应式数据追踪，减少了不必要的触发和运行时开销，从而提高了整体性能。
+
+<mark>「TypeScript 支持」</mark>
+
+Vue3 原生支持 TypeScript，这意味着您可以在 Vue 项目中使用静态类型检查和自动补全，以提高代码的可靠性和可维护性。
+
+<mark>「更小的包大小」</mark>
+
+Vue3 采用了模块化的设计，可以根据需要按需加载各个功能模块，从而减小了最终打包的文件大小。
+
+## 1.2 解释为什么选择 Vue3 来实现大屏数字滚动效果
+
+在选择使用 Vue3 来实现大屏数字滚动效果时，有几个原因可以考虑：
+
+### 1. Vue3 的响应式系统：
+
+Vue3 的新响应式系统使得跟踪和更新数据变得更加高效。对于大屏数字滚动效果来说，您可以轻松地将数据绑定到组件中，并在数据发生变化时自动更新视图，从而实现数字滚动的效果。
+
+### 2. Composition API 的优势：
+
+Composition API 提供了一种更灵活、可组合的方式来组织代码逻辑。对于大屏数字滚动效果，您可以使用 Composition API 将相关逻辑封装在一起，使其易于管理和重用。
+
+### 3. 生态系统和社区支持：
+
+Vue 拥有庞大的生态系统和活跃的社区支持，这意味着您可以轻松找到各种插件、工具和示例来帮助您实现大屏数字滚动效果。无论是寻求解决方案还是遇到问题，都能够得到广泛的支持。
+
+总之，Vue3 具有强大的响应式系统、灵活的 Composition API 以及丰富的生态系统和社区支持，这些特点使其成为实现大屏数字滚动效果的理想选择。
+
+# 2 准备工作
+
+在开始项目开发之前，需要确定项目的开发环境。以下是一些常用的开发环境工具：
+
+1.  Node.js：Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境，可以用于开发服务器端和命令行工具。在 Vue 项目中，我们需要使用 Node.js 来运行一些构建工具和开发服务器。
+1.  Vue CLI：Vue CLI 是一个基于 Node.js 的命令行工具，用于快速搭建 Vue 项目的脚手架。它提供了一些常用的开发工具和配置，可以帮助我们快速启动和开发 Vue 项目。
+
+确定了使用 Node.js 和 Vue CLI 作为项目的开发环境后，我们需要进行以下准备工作：
+
+1.  安装 Node.js：首先需要在本地安装 Node.js。可以从 Node.js 官网（https://nodejs.org/）下载适合自己操作系统的安装包，然后按照安装向导进行安装。
+1.  安装 Vue CLI：安装完 Node.js 后，可以使用 npm（Node.js 的包管理工具）来安装 Vue CLI。打开命令行工具，运行以下命令进行安装：
+
+```sh
+npm install -g @vue/cli
+```
+
+这会全局安装 Vue CLI，使得我们可以在命令行中使用`vue`命令。
+
+3.  创建 Vue 项目：安装完 Vue CLI 后，可以使用`vue create`命令来创建一个新的 Vue 项目。在命令行中运行以下命令：
+
+```sh
+vue create my-project
+```
+
+这会创建一个名为`my-project`的新 Vue 项目。根据提示选择需要的配置选项，等待项目创建完成。
+
+4.  进入项目目录。在命令行中运行以下命令：
+
+```sh
+cd my-project
+```
+
+5.  安装 Vue3 及相关依赖。在命令行中运行以下命令：
+
+```sh
+npm install vue@next
+```
+
+这会安装最新版本的 Vue3。
+
+6.  安装其他常用的依赖。根据项目需求，可以安装一些常用的依赖，例如路由器（Vue Router）和状态管理器（Vuex）。在命令行中运行以下命令来安装这些依赖：
+
+```sh
+npm install vue-router@next vuex@next
+```
+
+至此，我们已经完成了 Vue3 及相关依赖的安装。接下来可以开始进行具体的项目开发了。
+
+# 3 实现步骤
+
+## 3.1 创建Vue组件
+
+在开始实现 Vue 项目之前，我们需要先创建 Vue 组件。以下是创建 Vue 组件的步骤：
+
+### 3.1.1 定义组件的基本结构和样式
+
+首先，我们需要定义组件的基本结构和样式。在 Vue 中，组件通常由一个模板（template）、样式（style）和逻辑（script）组成。
+
+在项目的 src 目录下，创建一个新的文件夹，用于存放组件相关的文件。例如，我们可以创建一个名为"components"的文件夹。
+
+在"components"文件夹中，创建一个新的 Vue 组件文件。例如，我们可以创建一个名为"HelloWorld.vue"的文件。
+
+在"HelloWorld.vue"文件中，定义组件的基本结构和样式。以下是一个示例：
+
+```
+<template>
+  <div class="hello-world">
+    <h1>{{ message }}</h1>
+    <button @click="changeMessage">Change Message</button>
+  </div>
+</template>
+
+<style>
+.hello-world {
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+
+h1 {
+  color: #333;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+</style>
+```
+
+在上面的示例中，我们定义了一个包含一个标题和一个按钮的组件。组件的样式使用了一些基本的 CSS 属性。
+
+### 3.1.2 说明组件所需的 props 和 data
+
+接下来，我们需要说明组件所需的 props 和 data。props 是组件的属性，可以从父组件传递数据给子组件。data 是组件的内部数据，用于存储组件的状态。
+
+在"HelloWorld.vue"文件中，我们可以在 script 标签中定义 props 和 data。以下是一个示例：
+
+```
+<script>
+export default {
+  props: {
+    message: {
+      type: String,
+      default: 'Hello, World!'
+    }
+  },
+  data() {
+    return {
+      // 组件的内部数据
+    }
+  },
+  methods: {
+    changeMessage() {
+      // 处理按钮点击事件的方法
+    }
+  }
+}
+</script>
+```
+
+在上面的示例中，我们定义了一个 props，名为"message"，类型为 String，默认值为"Hello, World!"。我们还定义了一个 data 方法，用于返回组件的内部数据。
+
+## 3.2 实现数字滚动效果
+
+在 Vue3 中，可以使用生命周期钩子函数或 Composition API 的 setup 函数来监听数据变化，并编写数字滚动的逻辑代码。
+
+### 3.2.1 使用生命周期钩子函数监听数据变化
+
+在 Vue3 中，可以使用`watch`函数来监听数据的变化。在`mounted`生命周期钩子函数中，可以使用`watch`函数来监听数据的变化，并在数据变化时执行相应的逻辑代码。
+
+```
+export default {
+  data() {
+    return {
+      number: 0
+    }
+  },
+  mounted() {
+    this.$watch('number', (newValue, oldValue) => {
+      // 执行数字滚动的逻辑代码
+    })
+  }
+}
+```
+
+### 3.2.2 使用 Composition API 的 setup 函数监听数据变化
+
+在 Vue3 中，可以使用 Composition API 的`watch`函数来监听数据的变化。在`setup`函数中，可以使用`watch`函数来监听数据的变化，并在数据变化时执行相应的逻辑代码。
+
+```
+import { ref, watch } from 'vue'
+
+export default {
+  setup() {
+    const number = ref(0)
+
+    watch(number, (newValue, oldValue) => {
+      // 执行数字滚动的逻辑代码
+    })
+
+    return {
+      number
+    }
+  }
+}
+```
+
+在上述代码中，我们使用了`ref`函数来创建一个响应式的数据`number`，并使用`watch`函数来监听`number`的变化。当`number`发生变化时，会执行回调函数中的逻辑代码。
+
+在逻辑代码中，可以根据新旧值之间的差值来实现数字滚动的效果。可以使用定时器或动画库来实现平滑的数字滚动效果。
+
+## 3.3 调试和优化
+
+### 3.3.1 使用调试工具进行测试和排错
+
+在 Vue3 中，可以使用浏览器的开发者工具进行调试和排错。开发者工具提供了一系列的功能，如查看组件的状态、调试代码、查看网络请求等。
+
+**「==Vue Devtools==」**
+
+Vue Devtools 是一个浏览器插件，可以用于调试 Vue 应用程序。它提供了一个界面，可以查看组件的层次结构、组件的状态、事件的触发等。可以通过在浏览器中安装 Vue Devtools 插件来使用它。
+
+**「==Chrome 开发者工具==」**
+
+Chrome 开发者工具是浏览器自带的调试工具，可以用于调试 JavaScript 代码、查看网络请求、查看 DOM 结构等。可以通过右键点击页面，选择“检查”来打开 Chrome 开发者工具。
+
+### 3.3.2 优化代码以提高性能和用户体验
+
+在 Vue3 中，可以通过以下方式来优化代码以提高性能和用户体验。
+
+<mark>「==使用虚拟滚动==」</mark>
+
+如果列表中的数据量很大，可以考虑使用虚拟滚动来提高性能。虚拟滚动只渲染可见区域的内容，而不是渲染整个列表。可以使用第三方库如`vue-virtual-scroller`来实现虚拟滚动。
+
+<mark>「==使用异步组件==」</mark>
+
+如果某个组件的加载时间较长，可以考虑将其设置为异步组件。异步组件会在需要时才进行加载，而不是在页面加载时就加载。可以使用`import`函数来定义异步组件。
+
+<mark>「==使用缓存==」</mark>
+
+如果某个组件的数据在短时间内不会发生变化，可以考虑使用缓存来提高性能。可以使用`computed`属性来缓存计算结果，或者使用`keep-alive`组件来缓存组件的状态。
+
+<mark>「==避免不必要的重新渲染==」</mark>
+
+在 Vue3 中，可以使用`memo`函数来避免不必要的重新渲染。`memo`函数会缓存组件的渲染结果，只有在依赖的数据发生变化时才会重新渲染。
+
+<mark>「==使用懒加载==」</mark>
+
+如果某个资源（如图片、视频）的加载时间较长，可以考虑使用懒加载来提高用户体验。可以使用`Intersection Observer API`来实现懒加载。
+
+以上是一些常见的优化方式，具体的优化策略可以根据具体的应用场景和需求来选择。在优化代码时，可以使用性能分析工具来评估优化效果。
+
+# 4 总结
+
+通过本篇博文的学习，我们了解到 Vue3 作为前端开发框架，在实现大屏数字滚动效果方面具有很大的优势。我们通过创建 Vue 组件、监听数据变化和编写滚动逻辑代码的步骤，成功实现了大屏数字滚动效果。
+
+使用 Vue3 的生命周期钩子函数或 Composition API，我们可以轻松地监听数据变化，并在数据更新时实现流畅的数字滚动效果。通过调试和优化，我们可以提高性能，确保用户获得最佳的视觉体验。
+
+尽管本文只是介绍了基本的实现方法，但读者可以进一步扩展和优化大屏数字滚动效果，根据项目需求添加更多的动画效果或交互功能。Vue3 提供了丰富的工具和功能，为实现更复杂、更个性化的大屏数字滚动效果提供了强大的支持。
+
+无论是数字展示、统计数据展示还是其他大屏幕应用场景，掌握 Vue3 的大屏数字滚动效果将带来更好的用户体验和视觉效果。希望本文对读者在实现大屏数字滚动效果方面提供了一些有价值的指导，并激发了你们的创造力和探索精神。祝愿你们在开发过程中取得出色的成果！
+d:T1179,# 1、背景
 
 与后端对接口时，看到有一个`get`请求的接口，它的参数是放在`body`中的
 
@@ -183,7 +454,7 @@ https://github.com/axios/axios/tree/v1.x:https://github.com/axios/axios/tree/v1.
 
 [3]
 
-https://fetch.spec.whatwg.org/#request-class:https://fetch.spec.whatwg.org/#request-classd:T9ae,很多朋友可能没有想过这个问题：
+https://fetch.spec.whatwg.org/#request-class:https://fetch.spec.whatwg.org/#request-classe:T9ae,很多朋友可能没有想过这个问题：
 
 - 你的网站每天都在正常运行吗？
   
@@ -247,7 +518,7 @@ https://www.210k.cc/go/uptime/
   <img width="100%" src="https://developers-center.oss-cn-beijing.aliyuncs.com/bzc1tkbu.png">
 </fagtur>
 
-至此，就设置完成了，任何时候网站出现了掉线，我们马上就会在微信上收到邮件通知了。e:T132c,## 背景
+至此，就设置完成了，任何时候网站出现了掉线，我们马上就会在微信上收到邮件通知了。f:T132c,## 背景
 
 在日常开发中，我们可能会经常遇到不同项目需要使用不同版本的 Node.js 的情况。虽然社区已经有了很多成熟的 Node.js 版本管理工具，比如 nvm。但是，这些工具基本都是基于 `shell` 的交互式命令的，用起来可能不太直观便捷：比如在 macOS 平台需要安装支持 arm64 架构的版本的 node，nvm 就没办法通过命令（`nvm ls -remote`）来查看；而在 Windows 平台则需要通过 nvm-windows[1] 来单独安装以获得支持。
 
@@ -376,7 +647,7 @@ nvm-desktop 还支持为每个项目设置不同的 Node.js 版本，只需从�
 
 [1]nvm-windows： *https://github.com/coreybutler/nvm-windows*
 
-[2]Release(释放) 页面： *https://github.com/1111mp/nvm-desktop/releases*f:Te3b,## 背景
+[2]Release(释放) 页面： *https://github.com/1111mp/nvm-desktop/releases*10:Te3b,## 背景
 
 最近我的朋友去面某大厂前端岗位，被问到这么一个问题：**vue 中怎么做到输入法输入拼音时不触发 @input 事件呢？**
 
@@ -486,7 +757,7 @@ input.oninput = (e) => {
 </figure>
 
 
-10:T7c2,![](http://developers-center.oss-cn-beijing.aliyuncs.com/undraw_javascript_frameworks_-8-qpc.svg)
+11:T7c2,![](http://developers-center.oss-cn-beijing.aliyuncs.com/undraw_javascript_frameworks_-8-qpc.svg)
 
 ## 问题描述
 
@@ -576,7 +847,7 @@ export class AppComponent {
   };
 </script>
 <input type="number" maxlength="3" on:input={checkLength} />
-```11:T6f6,
+```12:T6f6,
 
 ![](http://developers-center.oss-cn-beijing.aliyuncs.com/axios-http.com_1920-1080.png)
 
@@ -614,7 +885,7 @@ export function post (url, data = {}) {
         reject(err)
       })
   })
-```12:T1282,![](http://developers-center.oss-cn-beijing.aliyuncs.com/image.png)
+```13:T1282,![](http://developers-center.oss-cn-beijing.aliyuncs.com/image.png)
 
 记录一下js兼容各个浏览器的启动和退出全屏方法
 
@@ -724,7 +995,7 @@ const handler = () => {
 };
 
 document.addEventListener("fullscreenchange", handler);
-```13:T224e,## 背景
+```14:T224e,## 背景
 
 之前的demo加了图片预览，所以今天下午追番剧之后突然想到能不能做一个pdf的在线预览。动手吧。一开始我查了很多教程，发现很多人都在说pdf.js的库当然这个没问题。Pdf.js确实可以完美的实现Pdf在线预览的过程，但是我觉得这样直接走就不优雅了。于是我找现成的组件，找到了vue-pdf。虽然没有native那么强大，比如不支持pdf文本复制，打印会有乱码，但是我感觉已经足够满足我的需求了。这个笔记是一步一步的，从基础演示到能用的程度。文章最后列举了你在实际使用过程中可能遇到的问题和解决方法。
 
@@ -1000,7 +1271,7 @@ module.exports = {
 
 地址： [github.com/FranckFreib…](https://link.juejin.cn?target=https%3A%2F%2Fgithub.com%2FFranckFreiburger%2Fvue-pdf%2Fpull%2F130%2Fcommits%2F253f6186ff0676abf9277786087dda8d95dd8ea7 "https://github.com/FranckFreiburger/vue-pdf/pull/130/commits/253f6186ff0676abf9277786087dda8d95dd8ea7")
 
-根据我的实际测试，是可以解决打印乱码的问题的。14:Tcd5,![](http://developers-center.oss-cn-beijing.aliyuncs.com/undraw_javascript_frameworks_-8-qpc.svg)
+根据我的实际测试，是可以解决打印乱码的问题的。15:Tcd5,![](http://developers-center.oss-cn-beijing.aliyuncs.com/undraw_javascript_frameworks_-8-qpc.svg)
 
 ## 项目结构
 
@@ -1164,7 +1435,7 @@ const handleAddCustom = () => {
           // TODO: 这里处理需要刷新的状态
         });
         </script>
-        ```15:Tbef,![](https://developers-center.oss-cn-beijing.aliyuncs.com/undraw_static_assets_rpm6.svg)
+        ```16:Tbef,![](https://developers-center.oss-cn-beijing.aliyuncs.com/undraw_static_assets_rpm6.svg)
 
 ## 微信webview
 
@@ -1320,7 +1591,7 @@ export class RuntimeEnv {
     );
   }
 }
-```16:T1be0,iPhoneX 取消了物理按键，改成底部小黑条，这一改动导致网页出现了比较尴尬的屏幕适配问题。对于网页而言，顶部（刘海部位）的适配问题浏览器已经做了处理，所以我们只需要关注底部与小黑条的适配问题即可（即常见的吸底导航、返回顶部等各种相对底部 fixed 定位的元素）。
+```17:T1be0,iPhoneX 取消了物理按键，改成底部小黑条，这一改动导致网页出现了比较尴尬的屏幕适配问题。对于网页而言，顶部（刘海部位）的适配问题浏览器已经做了处理，所以我们只需要关注底部与小黑条的适配问题即可（即常见的吸底导航、返回顶部等各种相对底部 fixed 定位的元素）。
 
 笔者通过查阅了一些官方文档，以及结合实际项目中的一些处理经验，整理了一套简单的适配方案分享给大家，希望对大家有所帮助，以下是处理前后效果图：
 
@@ -1491,7 +1762,7 @@ body {
 
 以上几种方案仅供参考，笔者认为，现阶段适配处理起来是有点折腾，但是至少能解决，具体需要根据页面实际场景，在不影响用户体验与操作的大前提下不断尝试与探索，才能更完美的适配。
 
-来源: [京东零售官方设计体验平台](https://jelly.jd.com/article/6006b1055b6c6a01506c87fd)17:T605,![](http://developers-center.oss-cn-beijing.aliyuncs.com/undraw_javascript_frameworks_-8-qpc.svg)
+来源: [京东零售官方设计体验平台](https://jelly.jd.com/article/6006b1055b6c6a01506c87fd)18:T605,![](http://developers-center.oss-cn-beijing.aliyuncs.com/undraw_javascript_frameworks_-8-qpc.svg)
 
 ## 背景
 
@@ -1547,7 +1818,7 @@ export default class Home extends Mixins(TestMixin, Test2Mixin) {
 </script>
 
 ```
-18:T8b2,![](http://developers-center.oss-cn-beijing.aliyuncs.com/undraw_javascript_frameworks_-8-qpc.svg)
+19:T8b2,![](http://developers-center.oss-cn-beijing.aliyuncs.com/undraw_javascript_frameworks_-8-qpc.svg)
 
 ## 背景
 
@@ -1616,7 +1887,7 @@ module.exports = {
 }
 ```
 
-到此我们就可以放心使用绝对路径了。19:T679,![](http://developers-center.oss-cn-beijing.aliyuncs.com/undraw_javascript_frameworks_-8-qpc.svg)
+到此我们就可以放心使用绝对路径了。1a:T679,![](http://developers-center.oss-cn-beijing.aliyuncs.com/undraw_javascript_frameworks_-8-qpc.svg)
 ## 环境
 
 * ![](https://img.shields.io/badge/vue-2.6.10-green)
@@ -1669,7 +1940,7 @@ module.exports = {
 
 
 1.  [「 不懂就问 」esbuild 快在哪里 ?](https://link.juejin.cn?target=https%3A%2F%2Fsegmentfault.com%2Fa%2F1190000040076960 "https://segmentfault.com/a/1190000040076960")
-1.  [「 不懂就问 」webpack 打包的性能瓶颈在哪里 ？](https://link.juejin.cn?target=https%3A%2F%2Fsegmentfault.com%2Fa%2F1190000040083830 "https://segmentfault.com/a/1190000040083830")1a:T6e3,
+1.  [「 不懂就问 」webpack 打包的性能瓶颈在哪里 ？](https://link.juejin.cn?target=https%3A%2F%2Fsegmentfault.com%2Fa%2F1190000040083830 "https://segmentfault.com/a/1190000040083830")1b:T6e3,
 ![](http://developers-center.oss-cn-beijing.aliyuncs.com/undraw_javascript_frameworks_-8-qpc.svg)
 
 
@@ -1756,7 +2027,7 @@ module.exports = {
         }
     }
 }
-```1b:Tac5,![](http://developers-center.oss-cn-beijing.aliyuncs.com/undraw_static_assets_rpm6.svg)
+```1c:Tac5,![](http://developers-center.oss-cn-beijing.aliyuncs.com/undraw_static_assets_rpm6.svg)
 ## 1.在 color 中配置渐变色：
 
 [echarts 配置项](https://echarts.apache.org/zh/option.html)
@@ -1841,7 +2112,7 @@ chart.setOption({option})
 
 第5个参数则是一个数组, 用于配置颜色的渐变过程. 每一项为一个对象, 包含offset和color两个参数. offset的范围是0 ~ 1, 用于表示位置, color不用多说肯定是表示颜色了. 像示例代码的配置则表示:
 整个渐变过程是从正上方向正下方变化
-起始(offset: 0)颜色为#000, 变化到正中间(offset: 0.5)位置时颜色为#888, 变化到结束(offset: 1)位置时颜色为#ddd.1c:Td10,## 起源
+起始(offset: 0)颜色为#000, 变化到正中间(offset: 0.5)位置时颜色为#888, 变化到结束(offset: 1)位置时颜色为#ddd.1d:Td10,## 起源
 
 ### 介绍
 
@@ -1902,7 +2173,7 @@ npm run dev
 到此一个最简单的 Next.js 应用就创建成功了 在接下来的文章中我将会持续为大家分享我们的应用的构建过程
 
 
-1d:T10e4,![](https://pic3.zhimg.com/80/v2-18f4b340b48c89daaafe0116405a543e_720w.jpg)
+1e:T10e4,![](https://pic3.zhimg.com/80/v2-18f4b340b48c89daaafe0116405a543e_720w.jpg)
 
 对应用程序进行Docker化非常简单，有效，但是优化Docker Image的大小是棘手的部分。 Docker易于使用，但是一旦应用程序开始扩展，镜像大小就会呈指数增长。通常，大多数情况下，应用程序的Node.js docker镜像大小超过1 GB。
 
@@ -2019,7 +2290,7 @@ CMD http-server ./dist
 ### 结论
 通过应用这3个简单步骤，我们将docker镜像大小减小了10倍。
 
-PS: 本文属于翻译，[原文](https://link.zhihu.com/?target=https%3A//itsopensource.com/how-to-reduce-node-docker-image-size-by-ten-times/%3Futm_sq%3Dgi94nhjf7x)1e:T18cb,
+PS: 本文属于翻译，[原文](https://link.zhihu.com/?target=https%3A//itsopensource.com/how-to-reduce-node-docker-image-size-by-ten-times/%3Futm_sq%3Dgi94nhjf7x)1f:T18cb,
 如果你严肃对待编程，就必定会使用"[版本管理系统](https://www.ruanyifeng.com/blog/2008/12/a_visual_guide_to_version_control.html)"（Version Control System）。
 
 眼下最流行的"版本管理系统"，非[Git](https://git-scm.com/)莫属。
@@ -2178,7 +2449,7 @@ git branch -d fixbug-0.1
 
 作者： [阮一峰](https://www.ruanyifeng.com/)
 
-日期： [2012年7月 5日](https://www.ruanyifeng.com/blog/2012/07/)1f:T17d8,
+日期： [2012年7月 5日](https://www.ruanyifeng.com/blog/2012/07/)20:T17d8,
 ![](http://developers-center.oss-cn-beijing.aliyuncs.com/微信图片_20220428202250.png)
 
 最近接手了一个基于 uniapp 的开发项目，我个人对于它能够使用同一套代码就能够开发 h5\app\小程序 的强大功能表示非常钦佩。但是其配置文件 pages.json 也让我十分郁闷，原因无他，只因其是写死 JSON 文件，在管理的时候是十分不便的。
@@ -2359,7 +2630,7 @@ module.exports = {
 
 Copyright by FungLeo(web@fengcms.com)
 
-License: MIT20:T5df,
+License: MIT21:T5df,
 ![](http://developers-center.oss-cn-beijing.aliyuncs.com/js-logo.png)
 
 ## file对象转base64
@@ -2428,7 +2699,7 @@ const base64ConvertFile = function (urlData, filename) { // 64转file
 
 > Web Api 接口参考 [File](https://developer.mozilla.org/zh-CN/docs/Web/API/File)
 
-> 21:T600,![](http://developers-center.oss-cn-beijing.aliyuncs.com/image.png)
+> 22:T600,![](http://developers-center.oss-cn-beijing.aliyuncs.com/image.png)
  
  vue2 中使用 swiper 插件的一些记录
 
@@ -2504,7 +2775,7 @@ swiperOption: {
 ```js
 import SwiperCore, { Autoplay } from 'swiper';
 SwiperCore.use([Autoplay]);
-```22:T5ec,![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6eff5ab7f7c349cb945fd235ca909abc~tplv-k3u1fbpfcp-zoom-1.image)
+```23:T5ec,![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6eff5ab7f7c349cb945fd235ca909abc~tplv-k3u1fbpfcp-zoom-1.image)
 
 ###  查看所有配置
 ```
@@ -2562,7 +2833,7 @@ git config --list	// 查看当前项目的git配置信息（会先列出全局�
 git config --global user.name globalName	// 全局的用户名
 git config --global user.email globalEmail	// 全局的邮箱
 git config --list	// 查看配置信息
-```23:T52b,![](http://developers-center.oss-cn-beijing.aliyuncs.com/undraw_static_assets_rpm6.svg)
+```24:T52b,![](http://developers-center.oss-cn-beijing.aliyuncs.com/undraw_static_assets_rpm6.svg)
 
 ## 方案1：如果不是想设置为透明色 可直接使用 [box-shadow](https://developer.mozilla.org/zh-CN/docs/Web/CSS/box-shadow)
 
@@ -2609,7 +2880,7 @@ input:-webkit-autofill,
         -webkit-transition-delay: 99999s;
         -webkit-transition: color 99999s ease-out, background-color 99999s ease-out;
     }  
-```24:T16e6,![](http://developers-center.oss-cn-beijing.aliyuncs.com/undraw_next_js_-8-g5m.7d2e18ea.svg)
+```25:T16e6,![](http://developers-center.oss-cn-beijing.aliyuncs.com/undraw_next_js_-8-g5m.7d2e18ea.svg)
 
 ## 添加 Google AdSense
 
@@ -2817,7 +3088,7 @@ If you make this change, then your Lighthouse score won't be affected by any cra
   />
 </div>
 ```
-Hope this info helps you prosper. 💸25:T2f25,![](http://developers-center.oss-cn-beijing.aliyuncs.com/undraw_react_y-7-wq.1ac05cd7.svg)
+Hope this info helps you prosper. 💸26:T2f25,![](http://developers-center.oss-cn-beijing.aliyuncs.com/undraw_react_y-7-wq.1ac05cd7.svg)
 
 ## 前言
 
@@ -3180,7 +3451,7 @@ function Child({fetchData}){
 
 作者：Lion
 链接：https://juejin.cn/post/6871728918643081230
-来源：稀土掘金26:T165f,**前言**
+来源：稀土掘金27:T165f,**前言**
 
 在没有封装插件之前，如果不使用第三方插件，那么很多情况下我们会编写几个常用的组件来提供给页面使用，如Alert/Loading组件，而你可能需要在很多页面中引入并且通过components注册组件，但是像这样使用率很高的组件一般我们希望全局注册后直接就可以在相应页面使用，因此我们需要将他们封装成插件，这里我们编写一个toast全局提示插件来作个简单的介绍
 
@@ -3379,7 +3650,7 @@ export default {
 
 **结语**
 
-以上我们就实现了一个简单的toast插件，开发插件的方式和插件的类型有很多种，这里只是介绍了其中的一种方式，帮助大家了解在编写插件的过程中所用到的方法，大家也可以使用其它方法来去开发不同类型的插件。27:T1e17,![](http://developers-center.oss-cn-beijing.aliyuncs.com/undraw_static_assets_rpm6.svg)
+以上我们就实现了一个简单的toast插件，开发插件的方式和插件的类型有很多种，这里只是介绍了其中的一种方式，帮助大家了解在编写插件的过程中所用到的方法，大家也可以使用其它方法来去开发不同类型的插件。28:T1e17,![](http://developers-center.oss-cn-beijing.aliyuncs.com/undraw_static_assets_rpm6.svg)
 
 不是标题党，这是一位leader在一次代码评审会对小组成员发出的“怒吼”，原因是在代码评审中发现很多地方还是采用ES5的写法，也不是说用ES5写法不行，会有BUG，只是造成代码量增多，可读性变差而已。
 
@@ -3739,4 +4010,4 @@ const fn = () =>{
 
 作者：红尘炼心\
 链接：https://juejin.cn/post/7016520448204603423\
-来源：稀土掘金9:["$","$Lb",null,{"blogs":[{"_id":"655b7cdfd9abe650fa3b40f7","title":"get请求参数可以放在body中吗？ ","markContent":"$c","viewCount":58,"createTime":"2023-11-20T15:35:59.608Z","updateTime":"2023-11-20T21:50:26.178Z","createdAt":"2023-11-20T15:35:59.609Z","updatedAt":"2023-11-20T22:24:15.253Z","__v":0},{"_id":"6558c4aed9abe650fa3b3e50","title":"网站监控工具：免费监测网站是否正常运行","markContent":"$d","viewCount":6,"createTime":"2023-11-18T14:05:34.553Z","updateTime":"2023-11-18T14:05:34.553Z","createdAt":"2023-11-18T14:05:34.559Z","updatedAt":"2023-11-20T22:24:15.240Z","__v":0},{"_id":"6557439d7c2c3d24f343be13","title":"nvm-desktop：一款高效的 Node.js 版本可视化管理工具","markContent":"$e","viewCount":11,"createTime":"2023-11-17T10:42:37.549Z","updateTime":"2023-11-17T14:54:49.537Z","createdAt":"2023-11-17T10:42:37.554Z","updatedAt":"2023-11-20T22:24:15.233Z","__v":0},{"_id":"65551ceb3e780e3ef8d6b66f","title":"Vue的@input怎么做到不监听输入法拼音的？90%人不知道~","markContent":"$f","viewCount":114,"createTime":"2023-11-15T19:32:59.962Z","updateTime":"2023-11-16T18:43:02.777Z","__v":0,"createdAt":"2023-11-15T19:32:59.962Z","updatedAt":"2023-11-20T22:24:15.235Z"},{"_id":"64992c7b6aca61d0eb32c65f","title":"Docker常用命令行大全：快速掌握Docker常用操作","markContent":"## 在Linux上启动Docker\n\n```\nsudo systemctl start docker\n```\n\n## 在Linux上配置Docker开机自启动\n\n```\nsudo systemctl enable docker.service\n```","viewCount":560,"createTime":"2023-06-26T06:13:15.914Z","updateTime":"2023-06-26T06:22:52.972Z","__v":0,"createdAt":"2023-06-26T06:13:15.914Z","updatedAt":"2023-11-20T22:24:15.254Z"},{"_id":"63204271f4a469c3500cc11e","title":"Html input type number maxlength 属性失效解决方法","markContent":"$10","viewCount":1415,"createTime":"2022-09-13T08:42:25.392Z","updateTime":"2022-09-13T08:42:25.392Z","__v":0,"createdAt":"2022-09-13T08:42:25.392Z","updatedAt":"2023-11-20T22:24:15.523Z"},{"_id":"631c6745f4a469c3500cc037","title":"postcss 忽略文件夹及单个文件","markContent":"\n![](http://developers-center.oss-cn-beijing.aliyuncs.com/postcss.83d93145.svg)\n\n## 背景\n\n在使用 `vue` 开发项目的时候，我们使用 `postcss` 插件 `postcss-px-to-viewport` 对整个项目的 `px` 进行转换，但是在项目后期我们将原生老项目的 `html` 代码迁移到 `vue` 项目中，我们不需要对老项目的 `px` 进行转换，只需要对新项目的 `px` 进行转换，这时候我们就需要对 `postcss` 进行配置，让其忽略对老项目文件的转换。\n\n## 项目环境\n\n* ![](https://img.shields.io/badge/vite-^2.9.9-646cff)\n* ![](https://img.shields.io/badge/vue-^3.2.25-42b883)\n* ![](https://img.shields.io/badge/postcss--px--to--viewport-^1.1.1-dd3a0a)\n\n## Postcss 忽略属性 `exclude`\n\n只需要在 `postcss.config.js` 中配置 `exclude` 即可, `exclude` 是一个正则表达式数组( `exclude: [RegExp]` )，匹配的文件将不会被转换。\n\n## 忽略文件夹\n\n```\nexclude: [/node_modules/, /main/],\n```\n\n## 忽略单个文件\n\n```\nexclude: [/src\\/pages\\/index.vue/]\n```\n\n## 完整示例\n\n`postcss.config.js`\n\n```\nmodule.exports = {\n    plugins: {\n      'postcss-px-to-viewport': {\n        viewportWidth: 375,\n        unitPrecision: 6,\n        unitToConvert: 'px',\n        propList: ['*'],\n        exclude: [/node_modules/, /main/, /src\\/pages\\/index.vue/]\n      }\n    }\n}\n```","viewCount":1259,"createTime":"2022-09-10T10:30:29.048Z","updateTime":"2022-09-10T10:49:17.130Z","__v":0,"createdAt":"2022-09-10T10:30:29.048Z","updatedAt":"2023-11-20T22:24:20.203Z"},{"_id":"63198665f4a469c3500cbf3f","title":"axios x-www-form-urlencoded 请求","markContent":"$11","viewCount":1109,"createTime":"2022-09-08T06:06:29.385Z","updateTime":"2022-09-10T10:02:57.244Z","__v":0,"createdAt":"2022-09-08T06:06:29.385Z","updatedAt":"2023-11-20T22:24:20.205Z"},{"_id":"6318bb36f4a469c3500cbefe","title":"JS前端实现全屏和cancelFullscreen效果","markContent":"$12","viewCount":1046,"createTime":"2022-09-07T15:39:34.635Z","updateTime":"2022-09-07T15:39:34.635Z","__v":0,"createdAt":"2022-09-07T15:39:34.635Z","updatedAt":"2023-11-20T22:24:20.206Z"},{"_id":"6302f2b7fb839c1829f9d671","title":"利用vue-pdf实现pdf在线预览","markContent":"$13","viewCount":782,"createTime":"2022-08-22T03:06:31.992Z","updateTime":"2022-08-22T03:06:31.992Z","__v":0,"createdAt":"2022-08-22T03:06:31.992Z","updatedAt":"2023-11-20T22:24:20.721Z"},{"_id":"62c25d8ec97da52b249c7457","title":"Vue3 setup 基础及奇技淫巧","markContent":"$14","viewCount":705,"createTime":"2022-07-04T03:25:02.664Z","updateTime":"2022-08-31T07:20:38.649Z","__v":0,"createdAt":"2022-07-04T03:25:02.664Z","updatedAt":"2023-11-20T22:24:20.723Z"},{"_id":"62b52408a3b6a21ae059850b","title":"web(h5)  javascript 运行环境判断","markContent":"$15","viewCount":513,"createTime":"2022-06-24T02:40:08.605Z","updateTime":"2022-07-04T02:23:25.527Z","__v":0,"createdAt":"2022-06-24T02:40:08.605Z","updatedAt":"2023-11-20T22:24:20.722Z"},{"_id":"62b277ed3e9326646e1f6074","title":"Web适配 iPhoneX，就是这么简单","markContent":"$16","viewCount":256,"createTime":"2022-06-22T02:01:17.278Z","updateTime":"2022-06-22T02:01:17.278Z","__v":0,"createdAt":"2022-06-22T02:01:17.278Z","updatedAt":"2023-11-20T22:24:21.778Z"},{"_id":"62abe9c1957f80472322d1cd","title":"Vue TypeScript  使用 Mixins","markContent":"$17","viewCount":289,"createTime":"2022-06-17T02:41:05.050Z","updateTime":"2022-06-17T02:49:16.433Z","__v":0,"createdAt":"2022-06-17T02:41:05.050Z","updatedAt":"2023-11-20T22:24:21.776Z"},{"_id":"62aa9049957f80472322d145","title":"vue 2 typescript 绝对路径配置","markContent":"$18","viewCount":240,"createTime":"2022-06-16T02:07:05.423Z","updateTime":"2022-06-16T02:07:05.423Z","__v":0,"createdAt":"2022-06-16T02:07:05.423Z","updatedAt":"2023-11-20T22:24:21.779Z"},{"_id":"62a93f57957f80472322d0df","title":"vue2 集成 esbuild","markContent":"$19","viewCount":452,"createTime":"2022-06-15T02:09:27.122Z","updateTime":"2022-06-15T02:09:27.122Z","__v":0,"createdAt":"2022-06-15T02:09:27.122Z","updatedAt":"2023-11-20T22:24:21.959Z"},{"_id":"62a7e9c7957f80472322d084","title":"Vue项目加入TypeScript  js，ts 混合","markContent":"$1a","viewCount":359,"createTime":"2022-06-14T01:52:07.685Z","updateTime":"2022-06-14T01:56:22.440Z","__v":0,"createdAt":"2022-06-14T01:52:07.685Z","updatedAt":"2023-11-20T22:24:21.958Z"},{"_id":"62a6937ca06dc621e3fce438","title":"echarts 渐变色 的使用","markContent":"$1b","viewCount":340,"createTime":"2022-06-13T01:31:40.482Z","updateTime":"2022-06-13T02:03:47.151Z","__v":0,"createdAt":"2022-06-13T01:31:40.482Z","updatedAt":"2023-11-20T22:24:22.044Z"},{"_id":"629867a425f88c33044481c0","title":"Next.js 01 - 创建项目","markContent":"$1c","viewCount":217,"createTime":"2022-06-02T07:32:52.968Z","updateTime":"2022-06-02T07:32:52.968Z","__v":0,"createdAt":"2022-06-02T07:32:52.968Z","updatedAt":"2023-11-20T22:24:22.148Z"},{"_id":"6298679225f88c33044481be","title":"如何将 Node.js Docker 镜像大小减小10倍","markContent":"$1d","viewCount":122,"createTime":"2022-06-02T07:32:34.937Z","updateTime":"2022-06-02T07:32:34.937Z","__v":0,"createdAt":"2022-06-02T07:32:34.937Z","updatedAt":"2023-11-20T22:24:22.146Z"},{"_id":"6298677d25f88c33044481bc","title":"Git分支管理策略","markContent":"$1e","viewCount":430,"createTime":"2022-06-02T07:32:13.009Z","updateTime":"2022-06-02T07:32:13.009Z","__v":0,"createdAt":"2022-06-02T07:32:13.009Z","updatedAt":"2023-11-20T22:24:22.147Z"},{"_id":"6298676425f88c33044481ba","title":"动态生成 uniapp 配置文件 pages.json","markContent":"$1f","viewCount":265,"createTime":"2022-06-02T07:31:48.063Z","updateTime":"2022-06-02T07:31:48.063Z","__v":0,"createdAt":"2022-06-02T07:31:48.063Z","updatedAt":"2023-11-20T22:24:22.497Z"},{"_id":"6298674225f88c33044481b8","title":"file转base64, base64 转 blob , blob 转 ArrayBuffer , buffer 转 blob , base64 转 file","markContent":"$20","viewCount":271,"createTime":"2022-06-02T07:31:14.144Z","updateTime":"2022-06-02T07:31:14.144Z","__v":0,"createdAt":"2022-06-02T07:31:14.144Z","updatedAt":"2023-11-20T22:24:22.496Z"},{"_id":"6298672a25f88c33044481b6","title":"vue 2 使用 swiper 插件","markContent":"$21","viewCount":299,"createTime":"2022-06-02T07:30:50.492Z","updateTime":"2022-06-02T07:30:50.492Z","__v":0,"createdAt":"2022-06-02T07:30:50.492Z","updatedAt":"2023-11-20T22:24:22.495Z"},{"_id":"6298671b25f88c33044481b4","title":"Git 设置全局或者当前项目的用户信息","markContent":"$22","viewCount":171,"createTime":"2022-06-02T07:30:35.042Z","updateTime":"2022-06-02T07:30:35.042Z","__v":0,"createdAt":"2022-06-02T07:30:35.042Z","updatedAt":"2023-11-20T22:24:22.819Z"},{"_id":"6298670a25f88c33044481b2","title":"webkit内核浏览器（Chrome, Edge）中自带input样式input:-internal-autofill-selected（修改input背景色）","markContent":"$23","viewCount":304,"createTime":"2022-06-02T07:30:18.035Z","updateTime":"2022-06-02T07:30:18.035Z","__v":0,"createdAt":"2022-06-02T07:30:18.035Z","updatedAt":"2023-11-20T22:24:22.817Z"},{"_id":"629866f525f88c33044481b0","title":"Next.js 添加 Google AdSense 广告","markContent":"$24","viewCount":316,"createTime":"2022-06-02T07:29:57.250Z","updateTime":"2022-06-02T07:29:57.250Z","__v":0,"createdAt":"2022-06-02T07:29:57.250Z","updatedAt":"2023-11-20T22:24:22.816Z"},{"_id":"629866e025f88c33044481ae","title":"Git Clone 指定用户名密码","markContent":"![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6eff5ab7f7c349cb945fd235ca909abc~tplv-k3u1fbpfcp-zoom-1.image)\n\n## 目的\n\n使用一行命令进行`clone`一个私人的仓库（`https`），之前未曾设置过任何私钥或者其他相关配置信息\n\n## 原理\n\n在`clone`的`url`上，附带帐号密码验证即可\n\n## 实现\n\n**\n\n```\n$ git clone https://用户:密码@git.coding.net/git/repo.git\n```\n\n## 注意\n\n⚠️ url中的用户不能为邮箱地址（因为邮箱地址中带有`@`特殊符号）\n\n\n作者：NextStack\n链接：https://www.jianshu.com/p/8521601d2a2d\n来源：简书","viewCount":264,"createTime":"2022-06-02T07:29:36.342Z","updateTime":"2022-06-02T07:29:36.342Z","__v":0,"createdAt":"2022-06-02T07:29:36.342Z","updatedAt":"2023-11-20T22:24:22.959Z"},{"_id":"629866cd25f88c33044481ac","title":"vue 2 安装 tailwindcss","markContent":"![](http://developers-center.oss-cn-beijing.aliyuncs.com/undraw_tailwind_css_1egw.svg)\n\n### 1、安装TailwindCSS\n通过 npm 安装 tailwindcss 及其对等依赖项，然后运行 init 命令生成 tailwind.config.js 和 postcss.config.js。\n```\n npm install -D tailwindcss postcss autoprefixer\n npx tailwindcss init -p\n```\n\n### 2、配置您的模板路径\n\n在 tailwind.config.js 文件中添加所有模板文件的路径。\n\n```\nmodule.exports = {\n    content: [\n       \"./index.html\",\n       \"./src/**/*.{vue,js,ts,jsx,tsx}\",\n    ],\n    theme: {\n        extend: {},\n    },\n    plugins: [],\n}\n```\n\n### 3、将 Tailwind 指令添加到您的 CSS\n创建一个 ./src/index.css 文件并为 Tailwind 的每个层添加 @tailwind 指令。\n```\n@tailwind base;\n@tailwind components;\n@tailwind utilities;\n```\n\n\n### 4、导入 CSS 文件\n```\nimport { createApp } from 'vue'\nimport App from './App.vue'\nimport './index.css'\n\ncreateApp(App).mount('#app')\n```\n### 5、开始在您的项目中使用 Tailwind\n\n开始使用 Tailwind 的实用程序类来设置您的内容样式。\n```\n<template>\n    <h1 class=\"text-3xl font-bold underline\"> Hello world! </h1>\n</template>\n```\n","viewCount":378,"createTime":"2022-06-02T07:29:17.419Z","updateTime":"2022-06-02T07:29:17.419Z","__v":0,"createdAt":"2022-06-02T07:29:17.419Z","updatedAt":"2023-11-20T22:24:22.955Z"},{"_id":"629866b125f88c33044481aa","title":"React 框架生命周期（类组件与函数组件）","markContent":"$25","viewCount":228,"createTime":"2022-06-02T07:28:49.694Z","updateTime":"2022-06-02T07:28:49.694Z","__v":0,"createdAt":"2022-06-02T07:28:49.694Z","updatedAt":"2023-11-20T22:24:22.993Z"},{"_id":"6298669925f88c33044481a8","title":"vue全局提示插件开发-toast","markContent":"$26","viewCount":230,"createTime":"2022-06-02T07:28:25.063Z","updateTime":"2022-06-02T07:28:25.063Z","__v":0,"createdAt":"2022-06-02T07:28:25.063Z","updatedAt":"2023-11-20T22:24:23.206Z"},{"_id":"6298664525f88c33044481a5","title":"你会用ES6，那倒是用啊！","markContent":"$27","viewCount":283,"createTime":"2022-06-02T07:27:01.133Z","updateTime":"2022-06-02T07:27:01.133Z","__v":0,"createdAt":"2022-06-02T07:27:01.133Z","updatedAt":"2023-11-20T22:24:23.203Z"}]}]
+来源：稀土掘金9:["$","$Lb",null,{"blogs":[{"_id":"655cbbb94fcec016231d69e7","title":"使用Vue3实现大屏数字滚动效果的方法和技巧","markContent":"$c","viewCount":0,"createdAt":"2023-11-21T14:16:25.146Z","updatedAt":"2023-11-21T14:16:25.146Z","__v":0},{"_id":"655b7cdfd9abe650fa3b40f7","title":"get请求参数可以放在body中吗？ ","markContent":"$d","viewCount":63,"createTime":"2023-11-20T15:35:59.608Z","updateTime":"2023-11-20T21:50:26.178Z","createdAt":"2023-11-20T15:35:59.609Z","updatedAt":"2023-11-21T12:15:32.449Z","__v":0},{"_id":"6558c4aed9abe650fa3b3e50","title":"网站监控工具：免费监测网站是否正常运行","markContent":"$e","viewCount":11,"createTime":"2023-11-18T14:05:34.553Z","updateTime":"2023-11-18T14:05:34.553Z","createdAt":"2023-11-18T14:05:34.559Z","updatedAt":"2023-11-21T12:15:25.576Z","__v":0},{"_id":"6557439d7c2c3d24f343be13","title":"nvm-desktop：一款高效的 Node.js 版本可视化管理工具","markContent":"$f","viewCount":16,"createTime":"2023-11-17T10:42:37.549Z","updateTime":"2023-11-17T14:54:49.537Z","createdAt":"2023-11-17T10:42:37.554Z","updatedAt":"2023-11-21T12:15:25.574Z","__v":0},{"_id":"65551ceb3e780e3ef8d6b66f","title":"Vue的@input怎么做到不监听输入法拼音的？90%人不知道~","markContent":"$10","viewCount":118,"createTime":"2023-11-15T19:32:59.962Z","updateTime":"2023-11-16T18:43:02.777Z","__v":0,"createdAt":"2023-11-15T19:32:59.962Z","updatedAt":"2023-11-21T12:15:25.579Z"},{"_id":"64992c7b6aca61d0eb32c65f","title":"Docker常用命令行大全：快速掌握Docker常用操作","markContent":"## 在Linux上启动Docker\n\n```\nsudo systemctl start docker\n```\n\n## 在Linux上配置Docker开机自启动\n\n```\nsudo systemctl enable docker.service\n```","viewCount":565,"createTime":"2023-06-26T06:13:15.914Z","updateTime":"2023-06-26T06:22:52.972Z","__v":0,"createdAt":"2023-06-26T06:13:15.914Z","updatedAt":"2023-11-21T12:53:03.270Z"},{"_id":"63204271f4a469c3500cc11e","title":"Html input type number maxlength 属性失效解决方法","markContent":"$11","viewCount":1419,"createTime":"2022-09-13T08:42:25.392Z","updateTime":"2022-09-13T08:42:25.392Z","__v":0,"createdAt":"2022-09-13T08:42:25.392Z","updatedAt":"2023-11-21T12:15:25.897Z"},{"_id":"631c6745f4a469c3500cc037","title":"postcss 忽略文件夹及单个文件","markContent":"\n![](http://developers-center.oss-cn-beijing.aliyuncs.com/postcss.83d93145.svg)\n\n## 背景\n\n在使用 `vue` 开发项目的时候，我们使用 `postcss` 插件 `postcss-px-to-viewport` 对整个项目的 `px` 进行转换，但是在项目后期我们将原生老项目的 `html` 代码迁移到 `vue` 项目中，我们不需要对老项目的 `px` 进行转换，只需要对新项目的 `px` 进行转换，这时候我们就需要对 `postcss` 进行配置，让其忽略对老项目文件的转换。\n\n## 项目环境\n\n* ![](https://img.shields.io/badge/vite-^2.9.9-646cff)\n* ![](https://img.shields.io/badge/vue-^3.2.25-42b883)\n* ![](https://img.shields.io/badge/postcss--px--to--viewport-^1.1.1-dd3a0a)\n\n## Postcss 忽略属性 `exclude`\n\n只需要在 `postcss.config.js` 中配置 `exclude` 即可, `exclude` 是一个正则表达式数组( `exclude: [RegExp]` )，匹配的文件将不会被转换。\n\n## 忽略文件夹\n\n```\nexclude: [/node_modules/, /main/],\n```\n\n## 忽略单个文件\n\n```\nexclude: [/src\\/pages\\/index.vue/]\n```\n\n## 完整示例\n\n`postcss.config.js`\n\n```\nmodule.exports = {\n    plugins: {\n      'postcss-px-to-viewport': {\n        viewportWidth: 375,\n        unitPrecision: 6,\n        unitToConvert: 'px',\n        propList: ['*'],\n        exclude: [/node_modules/, /main/, /src\\/pages\\/index.vue/]\n      }\n    }\n}\n```","viewCount":1263,"createTime":"2022-09-10T10:30:29.048Z","updateTime":"2022-09-10T10:49:17.130Z","__v":0,"createdAt":"2022-09-10T10:30:29.048Z","updatedAt":"2023-11-21T13:40:52.526Z"},{"_id":"63198665f4a469c3500cbf3f","title":"axios x-www-form-urlencoded 请求","markContent":"$12","viewCount":1110,"createTime":"2022-09-08T06:06:29.385Z","updateTime":"2022-09-10T10:02:57.244Z","__v":0,"createdAt":"2022-09-08T06:06:29.385Z","updatedAt":"2023-11-21T12:14:39.155Z"},{"_id":"6318bb36f4a469c3500cbefe","title":"JS前端实现全屏和cancelFullscreen效果","markContent":"$13","viewCount":1047,"createTime":"2022-09-07T15:39:34.635Z","updateTime":"2022-09-07T15:39:34.635Z","__v":0,"createdAt":"2022-09-07T15:39:34.635Z","updatedAt":"2023-11-21T12:14:39.154Z"},{"_id":"6302f2b7fb839c1829f9d671","title":"利用vue-pdf实现pdf在线预览","markContent":"$14","viewCount":783,"createTime":"2022-08-22T03:06:31.992Z","updateTime":"2022-08-22T03:06:31.992Z","__v":0,"createdAt":"2022-08-22T03:06:31.992Z","updatedAt":"2023-11-21T12:14:39.210Z"},{"_id":"62c25d8ec97da52b249c7457","title":"Vue3 setup 基础及奇技淫巧","markContent":"$15","viewCount":706,"createTime":"2022-07-04T03:25:02.664Z","updateTime":"2022-08-31T07:20:38.649Z","__v":0,"createdAt":"2022-07-04T03:25:02.664Z","updatedAt":"2023-11-21T12:14:38.839Z"},{"_id":"62b52408a3b6a21ae059850b","title":"web(h5)  javascript 运行环境判断","markContent":"$16","viewCount":514,"createTime":"2022-06-24T02:40:08.605Z","updateTime":"2022-07-04T02:23:25.527Z","__v":0,"createdAt":"2022-06-24T02:40:08.605Z","updatedAt":"2023-11-21T12:14:38.838Z"},{"_id":"62b277ed3e9326646e1f6074","title":"Web适配 iPhoneX，就是这么简单","markContent":"$17","viewCount":257,"createTime":"2022-06-22T02:01:17.278Z","updateTime":"2022-06-22T02:01:17.278Z","__v":0,"createdAt":"2022-06-22T02:01:17.278Z","updatedAt":"2023-11-21T12:14:38.849Z"},{"_id":"62abe9c1957f80472322d1cd","title":"Vue TypeScript  使用 Mixins","markContent":"$18","viewCount":290,"createTime":"2022-06-17T02:41:05.050Z","updateTime":"2022-06-17T02:49:16.433Z","__v":0,"createdAt":"2022-06-17T02:41:05.050Z","updatedAt":"2023-11-21T12:14:38.449Z"},{"_id":"62aa9049957f80472322d145","title":"vue 2 typescript 绝对路径配置","markContent":"$19","viewCount":241,"createTime":"2022-06-16T02:07:05.423Z","updateTime":"2022-06-16T02:07:05.423Z","__v":0,"createdAt":"2022-06-16T02:07:05.423Z","updatedAt":"2023-11-21T12:14:38.718Z"},{"_id":"62a93f57957f80472322d0df","title":"vue2 集成 esbuild","markContent":"$1a","viewCount":454,"createTime":"2022-06-15T02:09:27.122Z","updateTime":"2022-06-15T02:09:27.122Z","__v":0,"createdAt":"2022-06-15T02:09:27.122Z","updatedAt":"2023-11-21T12:14:38.827Z"},{"_id":"62a7e9c7957f80472322d084","title":"Vue项目加入TypeScript  js，ts 混合","markContent":"$1b","viewCount":360,"createTime":"2022-06-14T01:52:07.685Z","updateTime":"2022-06-14T01:56:22.440Z","__v":0,"createdAt":"2022-06-14T01:52:07.685Z","updatedAt":"2023-11-21T12:14:38.373Z"},{"_id":"62a6937ca06dc621e3fce438","title":"echarts 渐变色 的使用","markContent":"$1c","viewCount":341,"createTime":"2022-06-13T01:31:40.482Z","updateTime":"2022-06-13T02:03:47.151Z","__v":0,"createdAt":"2022-06-13T01:31:40.482Z","updatedAt":"2023-11-21T12:14:38.394Z"},{"_id":"629867a425f88c33044481c0","title":"Next.js 01 - 创建项目","markContent":"$1d","viewCount":219,"createTime":"2022-06-02T07:32:52.968Z","updateTime":"2022-06-02T07:32:52.968Z","__v":0,"createdAt":"2022-06-02T07:32:52.968Z","updatedAt":"2023-11-21T12:14:38.447Z"},{"_id":"6298679225f88c33044481be","title":"如何将 Node.js Docker 镜像大小减小10倍","markContent":"$1e","viewCount":123,"createTime":"2022-06-02T07:32:34.937Z","updateTime":"2022-06-02T07:32:34.937Z","__v":0,"createdAt":"2022-06-02T07:32:34.937Z","updatedAt":"2023-11-21T12:14:38.056Z"},{"_id":"6298677d25f88c33044481bc","title":"Git分支管理策略","markContent":"$1f","viewCount":431,"createTime":"2022-06-02T07:32:13.009Z","updateTime":"2022-06-02T07:32:13.009Z","__v":0,"createdAt":"2022-06-02T07:32:13.009Z","updatedAt":"2023-11-21T12:14:38.060Z"},{"_id":"6298676425f88c33044481ba","title":"动态生成 uniapp 配置文件 pages.json","markContent":"$20","viewCount":266,"createTime":"2022-06-02T07:31:48.063Z","updateTime":"2022-06-02T07:31:48.063Z","__v":0,"createdAt":"2022-06-02T07:31:48.063Z","updatedAt":"2023-11-21T12:14:38.374Z"},{"_id":"6298674225f88c33044481b8","title":"file转base64, base64 转 blob , blob 转 ArrayBuffer , buffer 转 blob , base64 转 file","markContent":"$21","viewCount":273,"createTime":"2022-06-02T07:31:14.144Z","updateTime":"2022-06-02T07:31:14.144Z","__v":0,"createdAt":"2022-06-02T07:31:14.144Z","updatedAt":"2023-11-21T12:14:38.061Z"},{"_id":"6298672a25f88c33044481b6","title":"vue 2 使用 swiper 插件","markContent":"$22","viewCount":301,"createTime":"2022-06-02T07:30:50.492Z","updateTime":"2022-06-02T07:30:50.492Z","__v":0,"createdAt":"2022-06-02T07:30:50.492Z","updatedAt":"2023-11-21T12:14:38.059Z"},{"_id":"6298671b25f88c33044481b4","title":"Git 设置全局或者当前项目的用户信息","markContent":"$23","viewCount":172,"createTime":"2022-06-02T07:30:35.042Z","updateTime":"2022-06-02T07:30:35.042Z","__v":0,"createdAt":"2022-06-02T07:30:35.042Z","updatedAt":"2023-11-21T12:14:38.054Z"},{"_id":"6298670a25f88c33044481b2","title":"webkit内核浏览器（Chrome, Edge）中自带input样式input:-internal-autofill-selected（修改input背景色）","markContent":"$24","viewCount":306,"createTime":"2022-06-02T07:30:18.035Z","updateTime":"2022-06-02T07:30:18.035Z","__v":0,"createdAt":"2022-06-02T07:30:18.035Z","updatedAt":"2023-11-21T12:17:12.145Z"},{"_id":"629866f525f88c33044481b0","title":"Next.js 添加 Google AdSense 广告","markContent":"$25","viewCount":318,"createTime":"2022-06-02T07:29:57.250Z","updateTime":"2022-06-02T07:29:57.250Z","__v":0,"createdAt":"2022-06-02T07:29:57.250Z","updatedAt":"2023-11-21T12:14:36.060Z"},{"_id":"629866e025f88c33044481ae","title":"Git Clone 指定用户名密码","markContent":"![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6eff5ab7f7c349cb945fd235ca909abc~tplv-k3u1fbpfcp-zoom-1.image)\n\n## 目的\n\n使用一行命令进行`clone`一个私人的仓库（`https`），之前未曾设置过任何私钥或者其他相关配置信息\n\n## 原理\n\n在`clone`的`url`上，附带帐号密码验证即可\n\n## 实现\n\n**\n\n```\n$ git clone https://用户:密码@git.coding.net/git/repo.git\n```\n\n## 注意\n\n⚠️ url中的用户不能为邮箱地址（因为邮箱地址中带有`@`特殊符号）\n\n\n作者：NextStack\n链接：https://www.jianshu.com/p/8521601d2a2d\n来源：简书","viewCount":266,"createTime":"2022-06-02T07:29:36.342Z","updateTime":"2022-06-02T07:29:36.342Z","__v":0,"createdAt":"2022-06-02T07:29:36.342Z","updatedAt":"2023-11-21T12:14:36.036Z"},{"_id":"629866cd25f88c33044481ac","title":"vue 2 安装 tailwindcss","markContent":"![](http://developers-center.oss-cn-beijing.aliyuncs.com/undraw_tailwind_css_1egw.svg)\n\n### 1、安装TailwindCSS\n通过 npm 安装 tailwindcss 及其对等依赖项，然后运行 init 命令生成 tailwind.config.js 和 postcss.config.js。\n```\n npm install -D tailwindcss postcss autoprefixer\n npx tailwindcss init -p\n```\n\n### 2、配置您的模板路径\n\n在 tailwind.config.js 文件中添加所有模板文件的路径。\n\n```\nmodule.exports = {\n    content: [\n       \"./index.html\",\n       \"./src/**/*.{vue,js,ts,jsx,tsx}\",\n    ],\n    theme: {\n        extend: {},\n    },\n    plugins: [],\n}\n```\n\n### 3、将 Tailwind 指令添加到您的 CSS\n创建一个 ./src/index.css 文件并为 Tailwind 的每个层添加 @tailwind 指令。\n```\n@tailwind base;\n@tailwind components;\n@tailwind utilities;\n```\n\n\n### 4、导入 CSS 文件\n```\nimport { createApp } from 'vue'\nimport App from './App.vue'\nimport './index.css'\n\ncreateApp(App).mount('#app')\n```\n### 5、开始在您的项目中使用 Tailwind\n\n开始使用 Tailwind 的实用程序类来设置您的内容样式。\n```\n<template>\n    <h1 class=\"text-3xl font-bold underline\"> Hello world! </h1>\n</template>\n```\n","viewCount":380,"createTime":"2022-06-02T07:29:17.419Z","updateTime":"2022-06-02T07:29:17.419Z","__v":0,"createdAt":"2022-06-02T07:29:17.419Z","updatedAt":"2023-11-21T12:14:36.097Z"},{"_id":"629866b125f88c33044481aa","title":"React 框架生命周期（类组件与函数组件）","markContent":"$26","viewCount":229,"createTime":"2022-06-02T07:28:49.694Z","updateTime":"2022-06-02T07:28:49.694Z","__v":0,"createdAt":"2022-06-02T07:28:49.694Z","updatedAt":"2023-11-21T12:14:36.040Z"},{"_id":"6298669925f88c33044481a8","title":"vue全局提示插件开发-toast","markContent":"$27","viewCount":231,"createTime":"2022-06-02T07:28:25.063Z","updateTime":"2022-06-02T07:28:25.063Z","__v":0,"createdAt":"2022-06-02T07:28:25.063Z","updatedAt":"2023-11-21T12:14:36.412Z"},{"_id":"6298664525f88c33044481a5","title":"你会用ES6，那倒是用啊！","markContent":"$28","viewCount":285,"createTime":"2022-06-02T07:27:01.133Z","updateTime":"2022-06-02T07:27:01.133Z","__v":0,"createdAt":"2022-06-02T07:27:01.133Z","updatedAt":"2023-11-21T12:14:36.414Z"}]}]

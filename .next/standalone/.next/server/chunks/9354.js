@@ -1,12 +1,12 @@
-exports.id = 2406;
-exports.ids = [2406];
+exports.id = 9354;
+exports.ids = [9354];
 exports.modules = {
 
-/***/ 83107:
+/***/ 35333:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 97210));
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 18133));
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 97210));
 Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 69216, 23))
 
 /***/ }),
