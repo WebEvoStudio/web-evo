@@ -29,14 +29,12 @@ const pastePlugin = (): BytemdPlugin => {
   };
 };
 
-/**
- * editor.tsx
- * @param {any} props
- * @return {React.ReactElement}
- */
-const EditorPage = (props: {title?: string, value?: string, id?: string}) => {
+const EditorPage = (props: {title?: string, value?: string, id?: string, pathName?: string}) => {
   const [value, setValue] = useState(props.value||'');
   const [title, setTitle] = useState(props.title||'');
+  const [form, setForm] = useState({
+    pathName: props['pathName'] || '',
+  });
   const plugins: BytemdPlugin[] = [
     frontmatter(),
     gfm(),
@@ -56,7 +54,7 @@ const EditorPage = (props: {title?: string, value?: string, id?: string}) => {
     const host = process.env['NEXT_PUBLIC_MIDDLEWARE_URL'];
     const path = 'blogs';
     const url = `${host}${path}`;
-    const requestData = {title, markContent: value};
+    const requestData = {title, markContent: value, ...form};
     axios.post(url, requestData)
         .then(() => enqueueSnackbar('文章发布成功', {variant: 'success'}))
         .catch((err) => enqueueSnackbar(err.message, {variant: 'error'}));
@@ -101,9 +99,21 @@ const EditorPage = (props: {title?: string, value?: string, id?: string}) => {
         <Card>
           <CardHeader
             title={
-              <Box sx={{flex: 1}} mr={2}>
-                <TextField label={'标题'} size={'small'} fullWidth value={title}
-                  onChange={({target: {value}}) => setTitle(value)}/>
+              <Box sx={{flex: 1, display: 'flex'}} mr={2}>
+                <TextField
+                  label={'标题'}
+                  size={'small'}
+                  fullWidth
+                  value={title}
+                  sx={{mr: 2}}
+                  onChange={({target: {value}}) => setTitle(value)}
+                />
+                <TextField
+                  label={'路径'}
+                  size={'small'}
+                  value={form.pathName}
+                  onChange={({target: {value}}) => setForm({...form, pathName: value})}
+                />
               </Box>
             }
             action={

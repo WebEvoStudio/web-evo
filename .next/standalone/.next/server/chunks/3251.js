@@ -129,13 +129,12 @@ const pastePlugin = ()=>{
         }
     };
 };
-/**
- * editor.tsx
- * @param {any} props
- * @return {React.ReactElement}
- */ const EditorPage = (props)=>{
+const EditorPage = (props)=>{
     const [value, setValue] = (0,react_.useState)(props.value || "");
     const [title, setTitle] = (0,react_.useState)(props.title || "");
+    const [form, setForm] = (0,react_.useState)({
+        pathName: props["pathName"] || ""
+    });
     const plugins = [
         (0,plugin_frontmatter_dist/* default */.Z)(),
         (0,plugin_gfm_dist/* default */.Z)(),
@@ -160,7 +159,8 @@ const pastePlugin = ()=>{
         const url = `${host}${path}`;
         const requestData = {
             title,
-            markContent: value
+            markContent: value,
+            ...form
         };
         axios/* default */.Z.post(url, requestData).then(()=>enqueueSnackbar("文章发布成功", {
                 variant: "success"
@@ -222,18 +222,33 @@ const pastePlugin = ()=>{
             children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)(node.Card, {
                 children: [
                     /*#__PURE__*/ jsx_runtime_.jsx(node.CardHeader, {
-                        title: /*#__PURE__*/ jsx_runtime_.jsx(node.Box, {
+                        title: /*#__PURE__*/ (0,jsx_runtime_.jsxs)(node.Box, {
                             sx: {
-                                flex: 1
+                                flex: 1,
+                                display: "flex"
                             },
                             mr: 2,
-                            children: /*#__PURE__*/ jsx_runtime_.jsx(node.TextField, {
-                                label: "标题",
-                                size: "small",
-                                fullWidth: true,
-                                value: title,
-                                onChange: ({ target: { value } })=>setTitle(value)
-                            })
+                            children: [
+                                /*#__PURE__*/ jsx_runtime_.jsx(node.TextField, {
+                                    label: "标题",
+                                    size: "small",
+                                    fullWidth: true,
+                                    value: title,
+                                    sx: {
+                                        mr: 2
+                                    },
+                                    onChange: ({ target: { value } })=>setTitle(value)
+                                }),
+                                /*#__PURE__*/ jsx_runtime_.jsx(node.TextField, {
+                                    label: "路径",
+                                    size: "small",
+                                    value: form.pathName,
+                                    onChange: ({ target: { value } })=>setForm({
+                                            ...form,
+                                            pathName: value
+                                        })
+                                })
+                            ]
                         }),
                         action: /*#__PURE__*/ (0,jsx_runtime_.jsxs)(node.Box, {
                             sx: {

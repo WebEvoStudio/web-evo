@@ -57,7 +57,7 @@ var sitemap = __webpack_require__(13426);
         cache: "no-cache"
     })).json();
     fields.push(...response.map((it)=>({
-            loc: `${host}/blogs/${it["_id"]}`,
+            loc: it.pathName ? `${host}/blogs/${it.pathName}` : `${host}/blogs/${it["_id"]}`,
             lastmod: it["updatedAt"],
             changefreq: "daily",
             priority: 0.7

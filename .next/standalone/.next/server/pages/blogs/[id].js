@@ -99,7 +99,10 @@ var dist = __webpack_require__(68973);
 var google_dark = __webpack_require__(97127);
 // EXTERNAL MODULE: ./styles/my-bytemd.css
 var my_bytemd = __webpack_require__(1816);
+// EXTERNAL MODULE: ./core/unit/string-unit.ts
+var string_unit = __webpack_require__(60842);
 ;// CONCATENATED MODULE: ./pages/blogs/[id].tsx
+
 
 
 
@@ -166,10 +169,11 @@ var my_bytemd = __webpack_require__(1816);
 }
 BlogDetail.getInitialProps = async (ctx)=>{
     const { id } = ctx.query;
+    console.log(id);
     const host = "https://web-evo.bulv.life/service/";
     const path = "blogs";
     const url = `${host}${path}/${id}`;
-    const res = await external_axios_default().get(url);
+    const res = (0,string_unit/* isObjectId */.N)(id) ? await external_axios_default().get(url) : await external_axios_default().get(`${url}/detail`);
     return {
         blog: res.data
     };
@@ -222,6 +226,48 @@ const routeModule = new PagesRouteModule({
 });
 
 //# sourceMappingURL=pages.js.map
+
+/***/ }),
+
+/***/ 60842:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   N: () => (/* binding */ isObjectId),
+/* harmony export */   Z: () => (/* binding */ StringUnit)
+/* harmony export */ });
+/**
+ * String unit
+ */ class StringUnit {
+    /**
+   * base64转File
+   * @param {string} base64
+   * @param {string} fileName
+   * @return {File}
+   */ static toFile(base64, fileName) {
+        const arr = base64.split(",");
+        if (arr.length === 0) {
+            throw new Error("base64转file失败");
+        }
+        const mime = arr[0].match(/:(.*?);/)?.[1];
+        const bstr = atob(arr[1]);
+        let n = bstr.length;
+        const u8arr = new Uint8Array(n);
+        while(n--){
+            u8arr[n] = bstr.charCodeAt(n);
+        }
+        return new File([
+            u8arr
+        ], fileName, {
+            type: mime
+        });
+    }
+}
+const isObjectId = (str)=>{
+    return /^[0-9a-fA-F]{24}$/.test(str);
+};
+
 
 /***/ }),
 

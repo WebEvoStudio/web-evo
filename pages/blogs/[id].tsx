@@ -13,6 +13,7 @@ import highlightSsr from '@bytemd/plugin-highlight-ssr';
 import 'bytemd/dist/index.css';
 import 'highlight.js/styles/base16/google-dark.css';
 import '../../styles/my-bytemd.css';
+import {isObjectId} from '../../core/unit/string-unit';
 /**
  * blog detail page
  * @return {React.ReactElement}
@@ -51,10 +52,11 @@ function BlogDetail({blog}: {blog: {title: string, markContent: string}}) {
 }
 BlogDetail.getInitialProps = async (ctx: any) => {
   const {id} = ctx.query;
+  console.log(id);
   const host = process.env['NEXT_PUBLIC_MIDDLEWARE_URL'];
   const path = 'blogs';
   const url = `${host}${path}/${id}`;
-  const res = await axios.get(url);
+  const res = isObjectId(id) ? await axios.get(url) : await axios.get(`${url}/detail`);
   return {blog: res.data};
 };
 export default BlogDetail;

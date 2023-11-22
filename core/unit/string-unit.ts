@@ -23,3 +23,6 @@ export default class StringUnit {
     return new File([u8arr], fileName, {type: mime});
   }
 }
+export const isObjectId = (str: string) => {
+  return /^[0-9a-fA-F]{24}$/.test(str);
+};
