@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: http://developer.bulv.life/
+Host: https://web-evo.bulv.life
 
 # Sitemaps
-Sitemap: http://developer.bulv.life/sitemap.xml
+Sitemap: https://web-evo.bulv.life/sitemap.xml

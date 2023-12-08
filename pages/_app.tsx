@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/globals.css';
 import {AppProps} from 'next/app';
-import BasicLayout from '../layouts/basic.layout';
+import BasicLayout from '../ui/layouts/basic.layout';
 import '../styles/index.scss';
 import GoogleAnalytics from '@bradgarropy/next-google-analytics';
 import {CssBaseline, ThemeProvider} from '@mui/material';
@@ -10,6 +10,8 @@ import {CacheProvider, EmotionCache} from '@emotion/react';
 import createEmotionCache from '../core/unit/createEmotionCache';
 import Script from 'next/script';
 import {SnackbarProvider} from 'notistack';
+// import '@unocss/reset/tailwind.css';
+// import 'uno.css';
 
 const clientSideEmotionCache = createEmotionCache();
 
@@ -32,20 +34,7 @@ function MyApp(props: MyAppProps) {
             <CssBaseline/>
             <Component {...pageProps} />
             {/* Google Analytics*/}
-            <GoogleAnalytics measurementId={'G-YKCPHDYK53'}/>
-            {/* Google tag (gtag.js) - Google Analytics*/}
-            <Script id={''} async src="https://www.googletagmanager.com/gtag/js?id=UA-222824651-1">
-            </Script>
-            <Script id={'google-tag'} dangerouslySetInnerHTML={{
-              __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-
-              gtag('config', 'UA-222824651-1');
-              `,
-            }}>
-            </Script>
+            <GoogleAnalytics measurementId={'G-R8ZM6SVZ0K'}/>
             {/* microsoft clarity */}
             <Script id={'microsoft-clarity'} dangerouslySetInnerHTML={{
               __html: `

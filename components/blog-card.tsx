@@ -5,8 +5,7 @@ import Markdown from '../core/unit/markdown';
 import {AccessTime, VisibilityOutlined} from '@mui/icons-material';
 import moment from 'moment';
 import Link from 'next/link';
-import Image from 'next/image';
-import {ImageLoader} from 'next/dist/client/image';
+import Image, {ImageLoader} from 'next/image';
 const BlogCard = ({blog}: any) => {
   const [elevation, setElevation] = useState(1);
   const loader: ImageLoader = ({src}) => 'https://' + src;
@@ -26,7 +25,7 @@ const BlogCard = ({blog}: any) => {
           ml: {xs: '-10px', sm: '10px'},
           mb: {xs: '10px', sm: 0},
         }}>
-          <Image loader={loader} src={src} layout={'fill'} objectFit={'contain'}/>
+          <Image alt={blog.title} loader={loader} src={src} layout={'fill'} objectFit={'contain'}/>
         </Box>
       );
     }

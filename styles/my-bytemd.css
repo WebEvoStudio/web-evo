@@ -1,0 +1,48 @@
+@import 'bytemd/dist/index.min.css';
+
+.bytemd {
+    height: calc(100dvh - 146px) !important;
+    background-color: #2B2D30;
+    border-color: #2B2D30;
+}
+.bytemd-toolbar {
+    background-color: #2B2D30;
+    border-color: #2B2D30;
+    color: #9A9CA3;
+}
+.bytemd-status {
+    border-color: #2B2D30;
+    color: #9A9CA3;
+}
+.CodeMirror {
+    background-color: #1E1F22;
+    color: #BABABA;
+}
+.CodeMirror-cursor {
+    border-color: #CED0D6;
+    border-width: 2px;
+}
+.bytemd-preview {
+    background-color: #1E1F22;
+    color: #BABABA;
+}
+.bytemd-split .bytemd-preview {
+    border-color: #2B2D30;
+}
+.markdown-body pre {
+    /*border: 1px solid #d2d3d7;*/
+    padding: clamp(1rem, 0.96rem + 0.18vw, 1.125rem);
+    background-color: #303236;
+    border-radius: 4px;
+    font-size: 14px;
+    overflow-x: auto;
+}
+.markdown-body figure {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-inline-start: 1rem;
+    margin-inline-end: 1rem;
+}
+.hljs {
+    background-color: #303236;
+}

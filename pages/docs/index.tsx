@@ -12,81 +12,26 @@ import {
   Tab,
   Typography,
 } from '@mui/material';
-import {Images} from '../../core/libs/images';
 import styles from '/styles/docs.module.scss';
 import {SnackbarProvider, useSnackbar} from 'notistack';
 import {TabContext, TabList, TabPanel} from '@mui/lab';
+import {useRouter} from 'next/router';
+import {Design, designs, Framework, frameworks} from '../../core/libs/docs';
 
-interface Framework {
-  name: string;
-  description: string;
-  image: string;
-  website?: string;
-}
-interface Design {
-  name: string;
-  description: string;
-  image: string;
-  website?: string;
-}
 
 const DocsIndex: NextPage = () => {
   const {enqueueSnackbar} = useSnackbar();
-  const frameworks: Framework[] = [
-    {
-      image: Images.undrawReact.default.src,
-      name: 'React',
-      description: 'React is a JavaScript library for building user interfaces.',
-      website: 'https://reactjs.org/',
-    },
-    {
-      image: Images.undrawNextJs.default.src,
-      name: 'Next.js',
-      description: 'Next.js is a framework for server-rendered React applications.',
-      website: 'https://nextjs.org/',
-    },
-    {
-      image: Images.undrawNuxtJs.default.src,
-      name: 'Nuxt.js',
-      description: 'Nuxt.js is a framework for server-rendered Vue applications.',
-      website: 'https://nuxtjs.org/',
-    },
-  ];
-  const designs: Design[] = [
-    {
-      name: 'Material Design',
-      description: 'Material Design is a design language developed by Google.',
-      image: Images.materialDesign.default.src,
-      website: 'https://material.io/',
-    },
-    {
-      name: 'Fluent Design',
-      description: 'Fluent Design is a design language developed by Microsoft.',
-      image: Images.fluentDesign.default.src,
-      website: 'https://www.microsoft.com/design/fluent/',
-    },
-    {
-      name: 'Ant Design',
-      description: 'Ant Design is a design language developed by Ali.',
-      image: Images.antDesign.default.src,
-      website: 'https://ant.design/',
-    },
-    {
-      name: 'Arco design',
-      description: 'Arco design is a design language developed by ByteDance.',
-      image: Images.arcoDesign.default.src,
-      website: 'https://arco.design/',
-    },
-    {
-      name: 'Semi Design',
-      description: 'Semi Design is a design language developed by ByteDance.',
-      image: Images.semiDesign.default.src,
-      website: 'https://semi.design/',
-    },
-  ];
-  const openFrameworkWebsite = (framework: Framework) => {
+  const router = useRouter();
+  const openFrameworkWebsite = (framework: Framework | Design) => {
     if (framework.website) {
       window.open(framework.website);
+    } else {
+      enqueueSnackbar(`No website for ${framework.name}`, {variant: 'info'});
+    }
+  };
+  const toDetail = (framework: Framework) => {
+    if (framework.website) {
+      router.push(`/docs/${framework.id}`).then();
     } else {
       enqueueSnackbar(`No website for ${framework.name}`, {variant: 'info'});
     }
@@ -108,7 +53,11 @@ const DocsIndex: NextPage = () => {
             <TabPanel value={'1'}>
               <div className={styles['framework-list']}>
                 {frameworks.map((framework, index) => (
-                  <Card key={index} sx={{width: ['100%', 'calc((100% - 48px) / 3)'], margin: '12px 0'}}>
+                  <Card
+                    key={index}
+                    sx={{width: ['100%', 'calc((100% - 48px) / 3)'], margin: '12px 0'}}
+                    onClick={() => toDetail(framework)}
+                  >
                     <CardMedia component={'img'} image={framework.image}/>
                     <CardContent>
                       <Typography variant={'h6'} component={'div'}>{framework.name}</Typography>

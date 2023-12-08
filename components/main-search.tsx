@@ -2,7 +2,7 @@ import React from 'react';
 import {NextPage} from 'next';
 import {Search as SearchIcon} from '@mui/icons-material';
 import {alpha, InputBase, styled} from '@mui/material';
-import {useRouter} from 'next/router';
+import {useRouter} from 'next/navigation';
 
 const MainSearch: NextPage = () => {
   const router = useRouter();
@@ -49,7 +49,7 @@ const MainSearch: NextPage = () => {
         inputProps={{'aria-label': 'search'}}
         onKeyDown={({key, target}) => {
           const {value} = target as HTMLInputElement;
-          if (key === 'Enter' && value) router.push(`/search?query=${value}`).then();
+          if (key === 'Enter' && value) router.push(`/search?query=${value}`);
         }}
       />
     </Search>

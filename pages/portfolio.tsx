@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {Card, Col, Row} from 'antd';
-// import Meta from 'antd/es/card/Meta';
+import {Grid} from '@mui/material';
 /**
  * Portfolio page component
  * @return {JSX.Element}
@@ -26,15 +25,15 @@ export default function Portfolio(): JSX.Element {
       <h1>Portfolio</h1>
       <p>This is the portfolio page.</p>
       <div className="project-list">
-        <Row className="project-item" gutter={[24, 24]}>
+        <Grid className="project-item">
           {state.projects.map((project: any, index) => (
-            <Col key={index} xs={24} sm={12} md={8} lg={6}>
-              <Card cover={<img className={'cover'} src={project.cover}/>}>
-                {/* <Meta title={project.title} description={project.description}/>*/}
-              </Card>
-            </Col>
+            <Grid key={index}>
+              {/* <Card cover={<img className={'cover'} src={project.cover}/>}>*/}
+              {/* <Meta title={project.title} description={project.description}/>*/}
+              {/* </Card>*/}
+            </Grid>
           ))}
-        </Row>
+        </Grid>
       </div>
     </div>
   );
