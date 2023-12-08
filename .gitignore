@@ -11,8 +11,6 @@
 # production
 /build
 .next/*
-!.next/static
-!.next/standalone
 
 # ides
 .idea

@@ -1,15 +1,15 @@
 {
   "/page": "/",
-  "/services/page": "/services",
   "/blogs-sitemap.xml/route": "/blogs-sitemap.xml",
-  "/contact/page": "/contact",
-  "/about/page": "/about",
-  "/blogs/page": "/blogs",
-  "/privacy-policy/page": "/privacy-policy",
+  "/services/page": "/services",
   "/projects/page": "/projects",
+  "/contact/page": "/contact",
+  "/blogs/page": "/blogs",
+  "/about/page": "/about",
   "/support-us/page": "/support-us",
-  "/tools/markdown-to-pdf/page": "/tools/markdown-to-pdf",
+  "/privacy-policy/page": "/privacy-policy",
   "/dashboard/page": "/dashboard",
+  "/tools/markdown-to-pdf/page": "/tools/markdown-to-pdf",
   "/dashboard/publish/page": "/dashboard/publish",
   "/dashboard/blogs/[id]/modify/page": "/dashboard/blogs/[id]/modify"
 }

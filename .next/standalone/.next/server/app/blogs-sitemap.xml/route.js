@@ -51,17 +51,15 @@ var sitemap = __webpack_require__(13426);
  * @constructor
  */ async function GET() {
     const fields = [];
-    const host = "https://web-evo.bulv.life";
-    const url = `${"https://web-evo.bulv.life/service/"}blogs`;
-    const response = await (await fetch(url, {
-        cache: "no-cache"
-    })).json();
-    fields.push(...response.map((it)=>({
-            loc: it.pathName ? `${host}/blogs/${it.pathName}` : `${host}/blogs/${it["_id"]}`,
-            lastmod: it["updatedAt"],
-            changefreq: "daily",
-            priority: 0.7
-        })));
+    // const host = process.env.NEXT_PUBLIC_SITE_URL;
+    // const url = `${process.env.NEXT_PUBLIC_MIDDLEWARE_URL}blogs`;
+    // const response = await (await fetch(url, {cache: 'no-cache'})).json();
+    // fields.push(...response.map((it: any) => ({
+    //   loc: it.pathName ? `${host}/blogs/${it.pathName}` : `${host}/blogs/${it['_id']}`,
+    //   lastmod: it['updatedAt'],
+    //   changefreq: 'daily',
+    //   priority: 0.7,
+    // })));
     return (0,sitemap/* getServerSideSitemap */.M)(fields);
 }
 
