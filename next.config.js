@@ -9,8 +9,12 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 });
 const unoCSS = require('@unocss/webpack').default;
+const {withContentlayer} = require('next-contentlayer');
+
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  basePath: '',
   experimental: {},
   reactStrictMode: true,
   swcMinify: true,
@@ -45,7 +49,9 @@ const nextConfig = {
     return config;
   },
 };
-const config = process.env.NODE_ENV === 'development' ? nextConfig : withPWA(nextConfig);
+const config = process.env.NODE_ENV === 'development' ?
+    withContentlayer(nextConfig) :
+    withPWA(withContentlayer(nextConfig));
 // module.exports = withBundleAnalyzer(withPWA(nextConfig));
 // module.exports = withPWA(nextConfig);
 // module.exports = nextConfig;

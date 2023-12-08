@@ -11,6 +11,7 @@
 # production
 /build
 .next/*
+.contentlayer
 
 # ides
 .idea
