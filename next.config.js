@@ -5,9 +5,6 @@ const withPWA = require('next-pwa')({
   disable: process.env.NODE_ENV === 'development',
   runtimeCaching,
 });
-const withBundleAnalyzer = require('@next/bundle-analyzer')({
-  enabled: process.env.ANALYZE === 'true',
-});
 const unoCSS = require('@unocss/webpack').default;
 const {withContentlayer} = require('next-contentlayer');
 
@@ -49,10 +46,5 @@ const nextConfig = {
     return config;
   },
 };
-const config = process.env.NODE_ENV === 'development' ?
-    withContentlayer(nextConfig) :
-    withPWA(withContentlayer(nextConfig));
-// module.exports = withBundleAnalyzer(withPWA(nextConfig));
-// module.exports = withPWA(nextConfig);
-// module.exports = nextConfig;
+const config = withPWA(withContentlayer(nextConfig));
 module.exports = config;
