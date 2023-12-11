@@ -7,6 +7,9 @@ import frontmatter from '@bytemd/plugin-frontmatter';
 import gfm from '@bytemd/plugin-gfm';
 import highlightSsr from '@bytemd/plugin-highlight-ssr';
 import style from '../../styles/blog.module.scss';
+import 'bytemd/dist/index.css';
+import 'highlight.js/styles/base16/google-dark.css';
+import '../../styles/my-bytemd.css';
 
 const Article = (post: Post) => {
   const plugins: BytemdPlugin[] = [
