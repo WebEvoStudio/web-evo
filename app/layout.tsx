@@ -71,6 +71,12 @@ export default function RootLayout({
             src={'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1031326139722537'}
             crossOrigin={'anonymous'} async strategy={'afterInteractive'}
           />
+          <Script
+            id={'ad'}
+            dangerouslySetInnerHTML={{
+            // eslint-disable-next-line max-len
+              __html: `(function(d,z,s){s.src='https://'+d+'/400/'+z;try{(document.body||document.documentElement).appendChild(s)}catch(e){}})('rouwhapt.com',6761502,document.createElement('script'))`,
+            }}/>
         </ThemeRegistry>
       </body>
     </html>
