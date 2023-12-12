@@ -1,5 +1,5 @@
 'use client';
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {
   Box,
   Button,
@@ -21,7 +21,7 @@ import {analytics} from '../../core/unit/firebase';
 import {logEvent} from 'firebase/analytics';
 import {useSnackbar} from 'notistack';
 
-const SupportUs = () => {
+const SupportUs = ({ip}: {ip: string}) => {
   const {enqueueSnackbar} = useSnackbar();
   const [helpShow, setHelpShow] = useState(false);
 
@@ -34,6 +34,9 @@ const SupportUs = () => {
   const open = () => {
     window.location.href = 'alipays://';
   };
+  useEffect( () => {
+
+  }, []);
   const sections = [
     {
       title: '支持我们',
@@ -49,6 +52,16 @@ const SupportUs = () => {
           {/*  <CardHeader title={'随时'}></CardHeader>*/}
           {/*  <CardContent>*/}
           {/*    <Typography>通过点击网页中的广告的</Typography>*/}
+          {/*  </CardContent>*/}
+          {/* </Card>*/}
+          {/* <a href="//ptugnins.net/4/6763428" target="_blank" rel="noreferrer">下载免费游戏</a>*/}
+          {/* <iframe src={'//aumtoost.net/4/6761510'}></iframe>*/}
+          {/* <Card sx={{my: 2}}>*/}
+          {/*  <CardHeader title={'随时'}/>*/}
+          {/*  <CardContent>*/}
+          {/*    <Box>*/}
+          {/*      <a href={'//aumtoost.net/4/6761510'}/>*/}
+          {/*    </Box>*/}
           {/*  </CardContent>*/}
           {/* </Card>*/}
           <Card sx={{}}>
@@ -85,13 +98,13 @@ const SupportUs = () => {
               </DialogTitle>
               <DialogContent>
                 <DialogContentText id="alert-dialog-description">
-                  Web Scheme（网络协议）是一种用于在Web浏览器中通过URL来启动移动应用程序的机制。
-                  某些设备或浏览器及 App 可能会阻止或限制某些URL Scheme的使用，以防止恶意行为和滥用。
+                    Web Scheme（网络协议）是一种用于在Web浏览器中通过URL来启动移动应用程序的机制。
+                    某些设备或浏览器及 App 可能会阻止或限制某些URL Scheme的使用，以防止恶意行为和滥用。
                 </DialogContentText>
               </DialogContent>
               <DialogActions>
                 <Button onClick={() => setHelpShow(false)} autoFocus>
-                  我知道了
+                    我知道了
                 </Button>
               </DialogActions>
             </Dialog>
