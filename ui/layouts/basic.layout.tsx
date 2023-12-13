@@ -141,10 +141,10 @@ export default function BasicLayout({children}: any) {
     <>
       <ThemeProvider theme={theme}>
         <CssBaseline/>
-        {!isDashboard ? <Header /> : null}
+        {!isDashboard ? <Header /> : <div></div>}
         {children}
         <TabBar/>
-        {!isDashboard ? <Footer /> : null}
+        {!isDashboard ? <Footer /> : <div></div>}
       </ThemeProvider>
     </>
   );

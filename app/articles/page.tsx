@@ -69,7 +69,7 @@ const ArticleCard = (post: Post) => {
     </Box>
   );
 };
-const ArticlesPage = async () => {
+export default async function ArticlesPage() {
   const posts = allPosts.sort((a, b) => compareDesc(new Date(a.date), new Date(b.date)));
 
   return (
@@ -84,4 +84,3 @@ const ArticlesPage = async () => {
     </Container>
   );
 };
-export default ArticlesPage;

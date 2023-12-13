@@ -18,16 +18,17 @@ const SupportUsPage = async () => {
     if (Array.isArray(xForwardedFor)) return xForwardedFor.at(0)!.toString();
     return xForwardedFor?.split(',').at(0) || 'Unknown';
   };
-  const ua = headersList.get('User-Agent');
-  const ref = headersList.get('Referer');
-  const getData = async () => {
-    const host = 'http://1881.digitaldsp.com';
-    const path = '/api/bid_request';
-    const auth = '7d8c896bb460fd27426579eb242b0ce4b48f8161';
-    const paramStr = `?auth=${auth}&feed=1881&auth=cDDs8yaZlO&ip=${getIp()}&ua=${ua}&lang=fr-CH&ref=${ref}&sid=6761502`;
-    const url = `${host}${path}${paramStr}`;
-    return await fetch(url);
-  };
+  // const ua = headersList.get('User-Agent');
+  // const ref = headersList.get('Referer');
+  // const getData = async () => {
+  //   const host = 'http://1881.digitaldsp.com';
+  //   const path = '/api/bid_request';
+  //   const auth = '7d8c896bb460fd27426579eb242b0ce4b48f8161';
+  // eslint-disable-next-line max-len
+  // const paramStr = `?auth=${auth}&feed=1881&auth=cDDs8yaZlO&ip=${getIp()}&ua=${ua}&lang=fr-CH&ref=${ref}&sid=6761502`;
+  //   const url = `${host}${path}${paramStr}`;
+  //   return await fetch(url);
+  // };
   // const response = await getData();
   return (<SupportUs ip={getIp()}/>);
 };
