@@ -77,6 +77,10 @@ export default function RootLayout({
             // eslint-disable-next-line max-len
               __html: `(function(d,z,s){s.src='https://'+d+'/400/'+z;try{(document.body||document.documentElement).appendChild(s)}catch(e){}})('rouwhapt.com',6761502,document.createElement('script'))`,
             }}/>
+          <Script
+            async={true}
+            src={'//pl21774134.toprevenuegate.com/b41bbc39088c2494479ef58349cb1ee6/invoke.js'}
+          ></Script>
         </ThemeRegistry>
       </body>
     </html>
