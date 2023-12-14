@@ -84,7 +84,7 @@ const ToolLayout = ({children, onRun, running, runText}: any) => {
       underline="none"
       key="2"
       color="inherit"
-      href="/tools"
+      href="/tools/index1"
     >
       工具
     </Link>,

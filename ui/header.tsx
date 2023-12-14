@@ -26,6 +26,7 @@ const Header = () => {
   const pathname = usePathname();
   const links: any[] = [
     {path: '/articles', name: '文章'},
+    {path: '/tools', name: '工具'},
     // {path: '/blogs', name: '博客'},
     {path: '/about', name: '关于'},
     {path: '/support-us', name: '支持'},
@@ -34,7 +35,6 @@ const Header = () => {
     // {path: '/portfolio', name: 'Portfolio'},
     // {path: '/courses', name: '课程'},
     // {path: '/docs', name: '文档'},
-    // {path: '/tools', name: '工具'},
   ];
   const pathName = `/${pathname?.split('/')[1]}`;
   const [drawerState, setDrawerState] = useState(false);
