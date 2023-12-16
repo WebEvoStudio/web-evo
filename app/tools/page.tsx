@@ -1,7 +1,7 @@
 import React from 'react';
 import {Button, Card, CardActions, CardContent, CardMedia, Container, Typography} from '@mui/material';
 import Grid from '@mui/material/Unstable_Grid2';
-import {countryCode} from '../../core/libs/images';
+import {countryCode, weiboVideoSpider} from '../../core/libs/images';
 import Image from 'next/image';
 import Link from 'next/link';
 import {Metadata} from 'next';
@@ -25,7 +25,7 @@ export default async function ToolsPage() {
       title: '微博短视频无水印解析',
       desc: '通过抓包微博官方数据，分析得到数据接口。提供通过微博短视频的分享链接，获取无水印版视频地址的在线播放与下载服务。',
       src: '/tools/weibo-video-spider',
-      // poster: countryCode,
+      poster: weiboVideoSpider,
     },
   ];
   return (
@@ -41,7 +41,16 @@ export default async function ToolsPage() {
                 <Typography gutterBottom variant="h5" component="div">
                   {title}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">
+                <Typography
+                  variant="body2"
+                  color="text.secondary"
+                  sx={{
+                    'position': 'relative',
+                    'lineHeight': '20px',
+                    'height': '60px',
+                    'overflow': 'hidden',
+                  }}
+                >
                   {desc}
                 </Typography>
               </CardContent>

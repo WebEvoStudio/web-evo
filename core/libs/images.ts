@@ -2,6 +2,7 @@ import uni from '../../assets/images/uni.png';
 import aliRedEnvelopeJpg from '../../assets/images/ali-red-envelope.jpg';
 import webEvoPng from '../../assets/images/web-evo.png';
 import countryCodeJpeg from '../../assets/images/country-code.jpeg';
+import weiboVideoSpiderJpeg from '../../assets/images/weibo-video-spider.jpeg';
 /**
  * Images
  */
@@ -48,3 +49,4 @@ export const uniAppLogo = uni;
 export const aliRedEnvelope = aliRedEnvelopeJpg;
 export const webEvoPoster = webEvoPng;
 export const countryCode = countryCodeJpeg;
+export const weiboVideoSpider = weiboVideoSpiderJpeg;

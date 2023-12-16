@@ -35,7 +35,7 @@ export default function Client() {
   );
   return (
     <Box>
-      <Card>
+      <Card sx={{my: 2}}>
         <CardActions>
           <form style={{display: 'flex', width: '100%'}}>
             <TextField sx={{flex: 1, mr: 2}} size={'small'} onChange={({target: {value}}) => setUrl(value)}></TextField>
@@ -43,7 +43,7 @@ export default function Client() {
           </form>
         </CardActions>
       </Card>
-      <Card>
+      <Card sx={{my: 2}}>
         <CardMedia>
           <video width={'100%'} style={{maxHeight: 300}} controls src={video.streamUrl}></video>
         </CardMedia>
@@ -56,9 +56,11 @@ export default function Client() {
                     <ListItemText primary={it} secondary={'https:' + video.urls[it]} />
                   </ListItem>),
             )}
-            <ListItem key={'stream'} secondaryAction={copy(video.streamUrl)}>
-              <ListItemText primary={'串流地址'} secondary={video.streamUrl}></ListItemText>
-            </ListItem>
+            {video.urls && (
+              <ListItem key={'stream'} secondaryAction={copy(video.streamUrl)}>
+                <ListItemText primary={'串流地址'} secondary={video.streamUrl}></ListItemText>
+              </ListItem>
+            )}
           </List>
         </CardContent>
       </Card>
