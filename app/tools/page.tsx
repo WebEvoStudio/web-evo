@@ -4,6 +4,13 @@ import Grid from '@mui/material/Unstable_Grid2';
 import {countryCode} from '../../core/libs/images';
 import Image from 'next/image';
 import Link from 'next/link';
+import {Metadata} from 'next';
+import {commonMetadata} from '../../core/config/main.config';
+
+export const metadata: Metadata = {
+  ...commonMetadata,
+  title: `${commonMetadata.title} - 工具`,
+};
 export default async function ToolsPage() {
   const tools = [
     {
@@ -13,6 +20,13 @@ export default async function ToolsPage() {
       src: '/tools/country-code',
       poster: countryCode,
     },
+    {
+      id: 2,
+      title: '微博短视频无水印解析',
+      desc: '通过抓包微博官方数据，分析得到数据接口。提供通过微博短视频的分享链接，获取无水印版视频地址的在线播放与下载服务。',
+      src: '/tools/weibo-video-spider',
+      // poster: countryCode,
+    },
   ];
   return (
     <Container maxWidth={'lg'} sx={{p: 2}}>
@@ -21,7 +35,7 @@ export default async function ToolsPage() {
           <Grid key={id} xs={12} sm={6} md={4} lg={3} xl={2}>
             <Card>
               <CardMedia>
-                <Image src={countryCode} alt={''} layout={'responsive'}/>
+                {poster ? <Image src={poster} alt={''} layout={'responsive'}/> : null }
               </CardMedia>
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">

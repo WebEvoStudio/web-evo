@@ -6,7 +6,7 @@ const getV = async (src: string) => {
   // const params = `?page=/tv/show/${id}`;
   const params = `?page=/tv/show/${id}`;
   const url = host + path + params;
-  console.log(url);
+  // console.log(url);
   const formData = new FormData();
   formData.append('data', JSON.stringify({Component_Play_Playinfo: {oid: id}}));
   const response = await fetch(url, {
@@ -18,9 +18,9 @@ const getV = async (src: string) => {
       'Referer': `https://weibo.com/tv/show/${id}?from=old_pc_videoshow`,
     },
   });
-  console.log(response);
+  // console.log(response);
   const newVar = await response.json();
-  console.log(newVar.data);
+  // console.log(newVar.data);
   return newVar.data;
 };
 export async function GET(req: Request) {
