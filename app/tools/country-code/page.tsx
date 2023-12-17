@@ -18,7 +18,7 @@ import {commonMetadata} from '../../../core/config/main.config';
 
 export const metadata: Metadata = {
   ...commonMetadata,
-  title: `${commonMetadata.title} - 国家代码`,
+  title: `${commonMetadata.title} - 现代化的国家/地区代码列表`,
 };
 
 const CountryCodePage = () => {
