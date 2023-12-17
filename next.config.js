@@ -1,13 +1,11 @@
+const {withContentlayer} = require('next-contentlayer');
+const unoCSS = require('@unocss/webpack').default;
+const path = require("path");
 const runtimeCaching = require('next-pwa/cache');
-const path = require('path');
 const withPWA = require('next-pwa')({
   dest: 'public',
-  disable: process.env.NODE_ENV === 'development',
   runtimeCaching,
 });
-const unoCSS = require('@unocss/webpack').default;
-const {withContentlayer} = require('next-contentlayer');
-
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -45,6 +43,6 @@ const nextConfig = {
     );
     return config;
   },
-};
-const config = withPWA(withContentlayer(nextConfig));
-module.exports = config;
+}
+
+module.exports = withPWA(withContentlayer(nextConfig));
