@@ -1,9 +1,7 @@
 'use client';
 import React, {useState} from 'react';
 import {
-  Box,
-  Button,
-  Card,
+  Box, Card,
   CardActions,
   CardContent,
   CardHeader,
@@ -12,26 +10,40 @@ import {
   ListItem, ListItemText,
   TextField,
 } from '@mui/material';
-import {CopyAll} from '@mui/icons-material';
+import {CopyAll, Download} from '@mui/icons-material';
 import clipboard from 'clipboardy';
 import {enqueueSnackbar} from 'notistack';
+import {LoadingButton} from '@mui/lab';
 
 export default function Client() {
   const [url, setUrl] = useState('');
   const [video, setVideo] = useState<{title: string, streamUrl: string, urls: {[key: string]: string}}>();
+  const [parsing, setParsing] = useState(false);
   const getVS = async (src: string) => {
-    const url = '/api/video-spider' + `?url=${src}`;
-    const newVar = await (await fetch(url)).json();
-    setVideo(newVar);
-    console.log(video);
+    try {
+      setParsing(true);
+      const url = '/api/video-spider' + `?url=${src}`;
+      const newVar = await (await fetch(url)).json();
+      setVideo(newVar);
+      console.log(video);
+    } finally {
+      setParsing(false);
+    }
   };
   const copyHandle = (v: string) => {
     clipboard.write(v).then(() => enqueueSnackbar('内容已复制到剪贴板', {variant: 'success'}));
   };
+  const downloadHandle = async (v: string) => {
+  };
   const copy = (v: string) => (
-    <IconButton edge="end" aria-label="delete" onClick={() => copyHandle(v)}>
-      <CopyAll/>
-    </IconButton>
+    <Box sx={{display: 'flex'}}>
+      <IconButton edge="end" aria-label="delete" onClick={() => copyHandle(v)}>
+        <CopyAll/>
+      </IconButton>
+      <IconButton onClick={() => downloadHandle(v)}>
+        <Download/>
+      </IconButton>
+    </Box>
   );
   return (
     <Box>
@@ -39,14 +51,26 @@ export default function Client() {
         <CardActions>
           <form style={{display: 'flex', width: '100%'}}>
             <TextField sx={{flex: 1, mr: 2}} size={'small'} onChange={({target: {value}}) => setUrl(value)}></TextField>
-            <Button variant={'contained'} onClick={() => getVS(url)}>解析视频</Button>
+            <LoadingButton
+              variant={'contained'}
+              loading={parsing}
+              onClick={() => getVS(url)}
+              type={'submit'}
+            >
+              {parsing ? '正在解析' : '解析地址'}
+            </LoadingButton>
           </form>
         </CardActions>
       </Card>
       <Card sx={{my: 2}}>
         {video && (
           <CardMedia>
-            <video width={'100%'} style={{maxHeight: 300}} controls src={video.streamUrl}></video>
+            <video
+              width={'100%'}
+              style={{maxHeight: 300}}
+              controls
+              src={video.streamUrl.replace('http:', 'https:')}
+            ></video>
           </CardMedia>
         )}
         <CardHeader title={video?.title}></CardHeader>

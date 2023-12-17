@@ -27,6 +27,7 @@ export async function GET(req: Request) {
   const {searchParams} = new URL(req.url);
   const src = searchParams.get('url');
   const {Component_Play_Playinfo: {text, urls, stream_url: streamUrl}} = await getV(src!!);
+  // console.log((await getV(src!!)).Component_Play_Playinfo);
   return Response.json({
     title: text,
     urls,
