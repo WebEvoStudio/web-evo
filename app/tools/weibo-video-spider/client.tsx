@@ -18,7 +18,7 @@ import {enqueueSnackbar} from 'notistack';
 
 export default function Client() {
   const [url, setUrl] = useState('');
-  const [video, setVideo] = useState<any>();
+  const [video, setVideo] = useState<{title: string, streamUrl: string, urls: {[key: string]: string}}>();
   const getVS = async (src: string) => {
     const url = '/api/video-spider' + `?url=${src}`;
     const newVar = await (await fetch(url)).json();
@@ -49,16 +49,16 @@ export default function Client() {
             <video width={'100%'} style={{maxHeight: 300}} controls src={video.streamUrl}></video>
           </CardMedia>
         )}
-        <CardHeader title={video.title}></CardHeader>
+        <CardHeader title={video?.title}></CardHeader>
         <CardContent>
           <List sx={{mx: -2, my: -2}}>
-            {video.urls && Object.keys(video.urls).map(
+            {video?.urls && Object.keys(video.urls).map(
                 (it, idx) => (
                   <ListItem key={idx} secondaryAction={copy('https:' + video.urls[it])}>
                     <ListItemText primary={it} secondary={'https:' + video.urls[it]} />
                   </ListItem>),
             )}
-            {video.urls && (
+            {video?.urls && (
               <ListItem key={'stream'} secondaryAction={copy(video.streamUrl)}>
                 <ListItemText primary={'串流地址'} secondary={video.streamUrl}></ListItemText>
               </ListItem>
