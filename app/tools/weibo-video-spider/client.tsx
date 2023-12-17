@@ -18,7 +18,7 @@ import {enqueueSnackbar} from 'notistack';
 
 export default function Client() {
   const [url, setUrl] = useState('');
-  const [video, setVideo] = useState<any>({});
+  const [video, setVideo] = useState<any>();
   const getVS = async (src: string) => {
     const url = '/api/video-spider' + `?url=${src}`;
     const newVar = await (await fetch(url)).json();
@@ -44,9 +44,11 @@ export default function Client() {
         </CardActions>
       </Card>
       <Card sx={{my: 2}}>
-        <CardMedia>
-          <video width={'100%'} style={{maxHeight: 300}} controls src={video.streamUrl}></video>
-        </CardMedia>
+        {video && (
+          <CardMedia>
+            <video width={'100%'} style={{maxHeight: 300}} controls src={video.streamUrl}></video>
+          </CardMedia>
+        )}
         <CardHeader title={video.title}></CardHeader>
         <CardContent>
           <List sx={{mx: -2, my: -2}}>
