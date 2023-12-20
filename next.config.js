@@ -36,6 +36,12 @@ const nextConfig = {
       'angular.io',
     ],
   },
+  rewrites: async () => ([
+    {
+      source: '/weibo-cdn/:path*',
+      destination: 'https://f.video.weibocdn.com/:path*',
+    },
+  ]),
   webpack: (config) => {
     config.cache = false;
     config.plugins.push(

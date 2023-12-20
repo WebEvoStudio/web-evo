@@ -10,7 +10,7 @@ import {
   ListItem, ListItemText,
   TextField,
 } from '@mui/material';
-import {CopyAll, Download} from '@mui/icons-material';
+import {CopyAll} from '@mui/icons-material';
 import clipboard from 'clipboardy';
 import {enqueueSnackbar} from 'notistack';
 import {LoadingButton} from '@mui/lab';
@@ -33,16 +33,20 @@ export default function Client() {
   const copyHandle = (v: string) => {
     clipboard.write(v).then(() => enqueueSnackbar('内容已复制到剪贴板', {variant: 'success'}));
   };
-  const downloadHandle = async (v: string) => {
-  };
+  // const downloadHandle = async (v: string) => {
+  //
+  //   await fetch(`/api/download?url=${v}`);
+  // };
   const copy = (v: string) => (
     <Box sx={{display: 'flex'}}>
       <IconButton edge="end" aria-label="delete" onClick={() => copyHandle(v)}>
         <CopyAll/>
       </IconButton>
-      <IconButton onClick={() => downloadHandle(v)}>
-        <Download/>
-      </IconButton>
+      {/*<Link href={v}>*/}
+      {/*  <IconButton>*/}
+      {/*    <Download/>*/}
+      {/*  </IconButton>*/}
+      {/*</Link>*/}
     </Box>
   );
   return (
@@ -63,16 +67,16 @@ export default function Client() {
         </CardActions>
       </Card>
       <Card sx={{my: 2}}>
-        {video && (
-          <CardMedia>
-            <video
-              width={'100%'}
-              style={{maxHeight: 300}}
-              controls
-              src={video.streamUrl.replace('http:', 'https:')}
-            ></video>
-          </CardMedia>
-        )}
+        {/*{video && (*/}
+        {/*  <CardMedia>*/}
+        {/*    <video*/}
+        {/*      width={'100%'}*/}
+        {/*      style={{maxHeight: 300}}*/}
+        {/*      controls*/}
+        {/*      src={video.streamUrl.replace('http:', 'https:')}*/}
+        {/*    ></video>*/}
+        {/*  </CardMedia>*/}
+        {/*)}*/}
         <CardHeader title={video?.title}></CardHeader>
         <CardContent>
           <List sx={{mx: -2, my: -2}}>

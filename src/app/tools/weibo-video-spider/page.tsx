@@ -1,7 +1,7 @@
 import React from 'react';
 import {Container} from '@mui/material';
 import {Metadata} from 'next';
-import {commonMetadata} from '../../../core/config/main.config';
+import {commonMetadata} from '@/core/config/main.config';
 import Client from './client';
 
 export const metadata: Metadata = {
