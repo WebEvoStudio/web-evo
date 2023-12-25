@@ -18,6 +18,9 @@
 /public/sw*
 /public/workbox*
 
+# sitemap
+/public/sitemap*
+
 # production
 /build
 
