@@ -42,6 +42,13 @@ const nextConfig = {
       destination: 'https://f.video.weibocdn.com/:path*',
     },
   ]),
+  redirects: async () => ([
+    {
+      source: '/',
+      destination: '/articles',
+      permanent: true,
+    },
+  ]),
   webpack: (config) => {
     config.cache = false;
     config.plugins.push(
