@@ -14,6 +14,10 @@
 /out/
 .contentlayer
 
+# PWA
+/public/sw*
+/public/workbox*
+
 # production
 /build
 
@@ -35,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# ides
+.idea
