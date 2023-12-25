@@ -1,11 +1,11 @@
 import React from 'react';
 import {Button, Card, CardActions, CardContent, CardMedia, Container, Typography} from '@mui/material';
 import Grid from '@mui/material/Unstable_Grid2';
-import {countryCode, weiboVideoSpider} from '../../core/libs/images';
+import {countryCode, weiboVideoSpider} from '@/core/libs/images';
 import Image from 'next/image';
 import Link from 'next/link';
 import {Metadata} from 'next';
-import {commonMetadata} from '../../core/config/main.config';
+import {commonMetadata} from '@/core/config/main.config';
 
 export const metadata: Metadata = {
   ...commonMetadata,

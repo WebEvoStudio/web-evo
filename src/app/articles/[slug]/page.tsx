@@ -2,6 +2,7 @@ import React from 'react';
 import {allPosts} from 'contentlayer/generated';
 import {Container} from '@mui/material';
 import Article from '../../../ui/components/Article';
+import {commonMetadata} from "@/core/config/main.config";
 
 
 export const generateStaticParams = async () => allPosts.map((post) => ({slug: post._raw.flattenedPath}));
@@ -9,7 +10,10 @@ export const generateStaticParams = async () => allPosts.map((post) => ({slug: p
 export const generateMetadata = ({params}: { params: { slug: string } }) => {
   const post = allPosts.find((post) => post._raw.flattenedPath === params.slug);
   if (!post) throw new Error(`Post not found for slug: ${params.slug}`);
-  return {title: post.title};
+  return {
+    ...commonMetadata,
+    title: `${commonMetadata.title} -  ${post.title}`,
+  };
 };
 
 const PostLayout = ({params}: { params: { slug: string } }) => {
