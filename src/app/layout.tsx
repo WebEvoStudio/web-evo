@@ -7,6 +7,8 @@ import '../core/styles/globals.css';
 import '../core/styles/rainbow.css';
 import ThemeRegistry from '../ui/components/theme-registry';
 // import 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap';
+import { Analytics } from '@vercel/analytics/react';
+
 
 export const metadata: Metadata = {
   title: 'Web Evo',
@@ -76,6 +78,7 @@ export default function RootLayout({
             src={'//pl21774134.toprevenuegate.com/b41bbc39088c2494479ef58349cb1ee6/invoke.js'}
           ></Script>
         </ThemeRegistry>
+        <Analytics />
       </body>
     </html>
   );

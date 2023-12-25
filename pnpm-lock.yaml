@@ -47,6 +47,9 @@ dependencies:
   '@unocss/webpack':
     specifier: ^0.58.0
     version: 0.58.0(rollup@2.79.1)(webpack@5.89.0)
+  '@vercel/analytics':
+    specifier: ^1.1.1
+    version: 1.1.1
   axios:
     specifier: ^1.6.2
     version: 1.6.2
@@ -3944,6 +3947,12 @@ packages:
       webpack-sources: 3.2.3
     transitivePeerDependencies:
       - rollup
+    dev: false
+
+  /@vercel/analytics@1.1.1:
+    resolution: {integrity: sha512-+NqgNmSabg3IFfxYhrWCfB/H+RCUOCR5ExRudNG2+pcRehq628DJB5e1u1xqwpLtn4pAYii4D98w7kofORAGQA==}
+    dependencies:
+      server-only: 0.0.1
     dev: false
 
   /@webassemblyjs/ast@1.11.6:
@@ -9108,6 +9117,10 @@ packages:
       path-is-inside: 1.0.2
       path-to-regexp: 2.2.1
       range-parser: 1.2.0
+    dev: false
+
+  /server-only@0.0.1:
+    resolution: {integrity: sha512-qepMx2JxAa5jjfzxG79yPPq+8BuFToHd1hm7kI+Z4zAq1ftQiP7HcxMhDDItrbtwVeLg/cY2JnKnrcFkmiswNA==}
     dev: false
 
   /set-function-length@1.1.1:
