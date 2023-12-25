@@ -1,6 +1,6 @@
 ---
 title: '你会用ES6，那倒是用啊！'
-date: '2023-12-11'
+date: '2023-12-10'
 ---
 
 <img width="100%" src="https://developers-center.oss-cn-beijing.aliyuncs.com/undraw_static_assets_rpm6.svg" alt=""/>

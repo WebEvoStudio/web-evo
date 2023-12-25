@@ -1,6 +1,6 @@
 ---
 title: '将 FCM（Firebase Cloud Messaging）添加到 Vue'
-date: '2023-12-12'
+date: '2023-12-14'
 ---
 
 我最近，有一个任务是将 FCM（Firebase Cloud Messaging）实现到我正在开发的 vue 应用程序中，我发现教程很少，而且它们对我没有太大帮助，所以我决定为它写一个小型的教程。
