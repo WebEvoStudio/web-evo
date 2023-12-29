@@ -1,5 +1,8 @@
 @import 'bytemd/dist/index.min.css';
 
+:link, :visited {
+    color: #00a0f4;
+}
 .bytemd {
     height: calc(100dvh - 146px) !important;
     background-color: #2B2D30;
@@ -29,13 +32,34 @@
 .bytemd-split .bytemd-preview {
     border-color: #2B2D30;
 }
+.markdown-body h2 {
+    padding: 0 0 3px;
+    border-bottom-color: #303236;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    font-family: Roboto, "Noto Sans", "Noto Sans JP", "Noto Sans KR", "Noto Naskh Arabic", "Noto Sans Thai", "Noto Sans Hebrew", "Noto Sans Bengali", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+.markdown-body p {
+    font-family: Roboto, "Noto Sans", "Noto Sans JP", "Noto Sans KR", "Noto Naskh Arabic", "Noto Sans Thai", "Noto Sans Hebrew", "Noto Sans Bengali", sans-serif;
+    font-weight: 400;
+}
+.markdown-body {
+
+}
 .markdown-body pre {
     /*border: 1px solid #d2d3d7;*/
-    padding: clamp(1rem, 0.96rem + 0.18vw, 1.125rem);
+    /*padding: clamp(1rem, 0.96rem + 0.18vw, 1.125rem);*/
     background-color: #303236;
     border-radius: 4px;
     font-size: 14px;
     overflow-x: auto;
+}
+.markdown-body code {
+    background-color: #303236;
+    padding: 3px 6px;
+    border-radius: 4px;
 }
 .markdown-body figure {
     margin-top: 2rem;
