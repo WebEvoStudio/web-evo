@@ -45,7 +45,7 @@ router.push('/login')
 ## 定义v-model属性
 
 `/src/components/custom-component.vue`
-```
+```html
 <template>
   <div>{{infos}}</div>
 </template>
@@ -62,7 +62,7 @@ setTimeout(() => {
 
 `/src/pages/index.vue`
 
-```
+```html
 <template>
   <div>
     <custom-component v-model:infos="infos"></custom-component>
@@ -80,7 +80,7 @@ const infos = ref('hello custom-comp');
 
 `子组件 Child.vue`
 
-```
+```html
 <template>
   <div>子页面计数：{{ count }}</div>
 </template>
@@ -103,7 +103,7 @@ defineExpose({
 ```
 
 `父组件 Index.vue`
-```
+```html
 <template>
   <div>
     <Child ref="child"></Child>
@@ -131,7 +131,7 @@ const handleAddCustom = () => {
 
 1. 修改 `<router-view></route-view>` 部分
 
-    ```
+    ```html
     <template>
       <router-view v-slot="{ Component }">
         <keep-alive>
@@ -146,7 +146,7 @@ const handleAddCustom = () => {
     - 方案一 使用 `keep-alive` 的生命周期：`activated`
 
       `child.vue`
-        ```
+        ```html
         <script setup>
             activated() {
                // TODO: 这里处理需要刷新的状态
@@ -157,7 +157,7 @@ const handleAddCustom = () => {
 
       `child.vue`
 
-        ```
+        ```html
         <script setup>
         import {watch} from 'vue';
         import {useRoute} from 'vue-router';
