@@ -46,16 +46,16 @@ router.push('/login')
 
 `/src/components/custom-component.vue`
 ```html
+<script setup>
+   const props = defineProps(['infos'])
+   const emits = defineEmits(['update:infos'])
+   setTimeout(() => {
+      emits('update:infos', 'hello v-model')
+   }, 2000)
+</script>
 <template>
   <div>{{infos}}</div>
 </template>
-<script setup>
-const props = defineProps(['infos'])
-const emits = defineEmits(['update:infos'])
-setTimeout(() => {
-  emits('update:infos', 'hello v-model')
-}, 2000)
-</script>
 ```
 
 使用自定义组件
@@ -63,17 +63,16 @@ setTimeout(() => {
 `/src/pages/index.vue`
 
 ```html
+<script setup>
+   import {ref} from 'vue';
+   import CustomComp from '../components/custom-component.vue';
+   const infos = ref('hello custom-comp');
+</script>
 <template>
   <div>
     <custom-component v-model:infos="infos"></custom-component>
   </div>
 </template>
-
-<script setup>
-import {ref} from 'vue';
-import CustomComp from '../components/custom-component.vue';
-const infos = ref('hello custom-comp');
-</script>
 ```
 
 ## 父组件调用子组件方法
@@ -81,29 +80,40 @@ const infos = ref('hello custom-comp');
 `子组件 Child.vue`
 
 ```html
+<script setup>
+   import { ref } from "vue";
+
+   const count = ref(0);
+   const add = () => {
+      count.value++;
+   };
+   const addCustom = (value) => {
+      count.value += value;
+   };
+   defineExpose({
+      add,
+      addCustom
+   })
+</script>
 <template>
   <div>子页面计数：{{ count }}</div>
 </template>
-
-<script setup>
-import { ref } from "vue";
-
-const count = ref(0);
-const add = () => {
-  count.value++;
-};
-const addCustom = (value) => {
-  count.value += value;
-};
-defineExpose({
-  add,
-  addCustom
-})
-</script>
 ```
 
 `父组件 Index.vue`
 ```html
+<script setup>
+   import { ref } from "vue";
+   import Child from "./Child";
+
+   const child = ref();
+   const handleAdd = () => {
+      child.value.add();
+   };
+   const handleAddCustom = () => {
+      child.value.addCustom(10);
+   };
+</script>
 <template>
   <div>
     <Child ref="child"></Child>
@@ -113,19 +123,6 @@ defineExpose({
     父页面按钮：<button @click="handleAddCustom">(添加自定义数值)点击+10</button>
   </div>
 </template>
-
-<script setup>
-import { ref } from "vue";
-import Child from "./Child";
-
-const child = ref();
-const handleAdd = () => {
-  child.value.add();
-};
-const handleAddCustom = () => {
-  child.value.addCustom(10);
-};
-</script>
 ```
 ## 使用 keep-alive 缓存组件状态
 
