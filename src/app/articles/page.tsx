@@ -6,6 +6,13 @@ import {Avatar, Box, Card, CardMedia, Container, Grid, Typography} from '@mui/ma
 import Markdown from '../../core/unit/markdown';
 import {Images} from '@/core/libs/images';
 import moment from 'moment/moment';
+import {Metadata} from "next";
+import {commonMetadata} from "@/core/config/main.config";
+
+export const metadata: Metadata = {
+  ...commonMetadata,
+  title: `${commonMetadata.title} - 文章`,
+};
 
 const ArticleCard = (post: Post) => {
   const Poster = ({markContent}: any) => {
