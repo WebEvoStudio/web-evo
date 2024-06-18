@@ -1,5 +1,5 @@
 const {withContentlayer} = require('next-contentlayer');
-const unoCSS = require('@unocss/webpack').default;
+const UnoCSS = require('@unocss/webpack').default
 const path = require("path");
 const runtimeCaching = require('next-pwa/cache');
 const withPWA = require('next-pwa')({
@@ -52,7 +52,7 @@ const nextConfig = {
   webpack: (config) => {
     config.cache = false;
     config.plugins.push(
-        unoCSS(),
+        UnoCSS(),
     );
     return config;
   },
