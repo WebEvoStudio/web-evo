@@ -121,24 +121,24 @@ export default function BasicLayout({children}: any) {
             ))}
           </Box>
         </Box>
-        <Box sx={{mt: 2, display: 'flex', justifyContent: 'center'}}>
-          {/* eslint-disable-next-line max-len */}
-          <a href="https://www.digitalocean.com/?refcode=691dc5c1ac63&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge">
-            {/* eslint-disable-next-line max-len */}
-            <img src="https://web-platforms.sfo2.digitaloceanspaces.com/WWW/Badge%203.svg" alt="DigitalOcean Referral Badge" />
-          </a>
-        </Box>
-        <Box sx={{mt: 2, display: 'flex', justifyContent: 'center'}}>
-          <Box sx={{maxWidth: 200}}>
-            <a href="">
-              <img
-                alt="banner"
-                style={{width: '100%'}}
-                src="https://landings-cdn.adsterratech.com/referralBanners/gif/468x120_adsterra_reff.gif"
-              />
-            </a>
-          </Box>
-        </Box>
+        {/*<Box sx={{mt: 2, display: 'flex', justifyContent: 'center'}}>*/}
+        {/*  /!* eslint-disable-next-line max-len *!/*/}
+        {/*  <a href="https://www.digitalocean.com/?refcode=691dc5c1ac63&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge">*/}
+        {/*    /!* eslint-disable-next-line max-len *!/*/}
+        {/*    <img src="https://web-platforms.sfo2.digitaloceanspaces.com/WWW/Badge%203.svg" alt="DigitalOcean Referral Badge" />*/}
+        {/*  </a>*/}
+        {/*</Box>*/}
+        {/*<Box sx={{mt: 2, display: 'flex', justifyContent: 'center'}}>*/}
+        {/*  <Box sx={{maxWidth: 200}}>*/}
+        {/*    <a href="">*/}
+        {/*      <img*/}
+        {/*        alt="banner"*/}
+        {/*        style={{width: '100%'}}*/}
+        {/*        src="https://landings-cdn.adsterratech.com/referralBanners/gif/468x120_adsterra_reff.gif"*/}
+        {/*      />*/}
+        {/*    </a>*/}
+        {/*  </Box>*/}
+        {/*</Box>*/}
         <Box sx={{display: 'flex', flexDirection: 'column', justifyContent: 'center', mt: {xs: 2, md: 3.5}, pb: 3}}>
           <Typography textAlign={'center'} fontSize={14}>© 2023, Web Evo All Rights Reserved</Typography>
           <Link href={'/privacy-policy'}>

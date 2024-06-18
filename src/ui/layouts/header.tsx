@@ -29,7 +29,7 @@ const Header = () => {
     {path: '/tools', name: '工具'},
     // {path: '/blogs', name: '博客'},
     {path: '/about', name: '关于'},
-    {path: '/support-us', name: '支持'},
+    // {path: '/support-us', name: '支持'},
     {path: '/contact', name: '联系'},
     // {path: '/about', name: 'About'},
     // {path: '/portfolio', name: 'Portfolio'},
