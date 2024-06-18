@@ -20,13 +20,13 @@ export default async function ToolsPage() {
       src: '/tools/country-code',
       poster: countryCode,
     },
-    {
-      id: 2,
-      title: '微博短视频无水印解析',
-      desc: '通过抓包微博官方数据，分析得到数据接口。提供通过微博短视频的分享链接，获取无水印版视频地址的在线播放与下载服务。',
-      src: '/tools/weibo-video-spider',
-      poster: weiboVideoSpider,
-    },
+    // {
+    //   id: 2,
+    //   title: '微博短视频无水印解析',
+    //   desc: '通过抓包微博官方数据，分析得到数据接口。提供通过微博短视频的分享链接，获取无水印版视频地址的在线播放与下载服务。',
+    //   src: '/tools/weibo-video-spider',
+    //   poster: weiboVideoSpider,
+    // },
   ];
   return (
     <Container maxWidth={'lg'} sx={{p: 2}}>
