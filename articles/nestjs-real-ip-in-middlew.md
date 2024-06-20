@@ -1,0 +1,105 @@
+---
+title: '如何在 NestJs 中间件中获取真实 IP'
+date: '2023-12-26'
+---
+## Nest.js 中间件
+
+`real-ip.middleware.ts`
+
+```ts
+import {Injectable, NestMiddleware} from '@nestjs/common';
+import {Request, Response, NextFunction} from 'express';
+import {next} from "sucrase/dist/types/parser/tokenizer";
+
+@Injectable()
+export class RealIpMiddleware implements NestMiddleware {
+  use(req: Request, res: Response, next: NextFunction) {
+    console.log('RealIpMiddleware...');
+    next();
+  }
+}
+```
+
+## 获取Ip
+
+在默认情况下，Nest 中间件等同于Express 中间件，因此我们可以使用 Express 的 `req.ip` 属性来获取客户端的 IP 地址。
+
+```ts
+console.log(req.ip); // ::ffff:1
+```
+> **提示**
+> 
+> `::ffff:` 前缀表示 IPv4 地址。`1` 表示本地客户端的 IP 地址。例如`::ffff:127.0.0.1`
+
+这样我们就可以获取到客户端的 IP 地址了。（ps: 实际情况中部署到线上环境时，可能获取到的Ip地址是服务器的IP地址，遇到这种情况我们向下看）
+
+## 代理服务器中获取IP
+
+> **提示**
+>
+> 使用了代理服务器时(ps: 反向代理)，`req.ip` 属性将返回代理服务器的 IP 地址，而不是客户端的 IP 地址。
+
+解决这个问题我们可以通过安装 [nestjs-real-ip](https://www.npmjs.com/package/nestjs-real-ip) 模块来解决。
+
+```ts
+import { RealIp } from 'nestjs-real-ip';
+
+@Controller('/')
+class TestController {
+  @Get('my-ip')
+  get(@RealIp() ip: string) {
+    return ip;
+  }
+}
+```
+以上是 [nestjs-real-ip](https://www.npmjs.com/package/nestjs-real-ip) 模块的用法，我们并未看到如何在中间件中使用它，因此我们可以查看该模块的[源码](https://github.com/p0vidl0/nestjs-real-ip/blob/master/src/index.ts)。
+
+`src/index.ts`
+
+```ts
+import * as requestIp from '@supercharge/request-ip';
+import { createParamDecorator, ExecutionContext } from '@nestjs/common';
+
+export const RealIP = createParamDecorator((data: unknown, ctx: ExecutionContext) => {
+  const request = ctx.switchToHttp().getRequest();
+  return requestIp.getClientIp(request);
+});
+
+export const RealIp = RealIP;
+```
+仿照上面的源码修改我们的中间件
+
+`real-ip.middleware.ts`
+
+```diff
+  import {Injectable, NestMiddleware} from '@nestjs/common';
+  import {Request, Response, NextFunction} from 'express';
+  import {next} from "sucrase/dist/types/parser/tokenizer";
++ import * as requestIp from '@supercharge/request-ip';
+  @Injectable()
+  export class RealIpMiddleware implements NestMiddleware {
+    use(req: Request, res: Response, next: NextFunction) {
+-     console.log('RealIpMiddleware...');
++     const realIp = requestIp.getClientIp(req);
+      next();
+    }
+  }
+```
+
+测试一下，我们发现获取到的Ip地址是服务器的IP地址，而不是客户端的IP地址。
+
+最终代码:
+
+```ts
+import {Injectable, NestMiddleware} from '@nestjs/common';
+import {Request, Response, NextFunction} from 'express';
+import * as requestIp from '@supercharge/request-ip';
+@Injectable()
+export class RealIpMiddleware implements NestMiddleware {
+  use(req: Request, res: Response, next: NextFunction) {
+    const realIp = requestIp.getClientIp(req);
+    console.log(realIp);
+    next();
+  }
+}
+```
