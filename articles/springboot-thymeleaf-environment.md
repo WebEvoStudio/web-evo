@@ -19,12 +19,16 @@ keywords: ['SpringBoot', '环境变量', '模版', 'Thymeleaf']
 <body></body>
 </html>
 ```
+
 上面代码是一个简单的HTML页面，使用Thymeleaf模版引擎渲染，`xmlns:th`是Thymeleaf模版引擎的命名空间。
+
+## 变量
+
 在模版中，可以使用`${}`来获取变量的值。
 
 ## 获取运行时环境配置
 
-在 `Thymeleaf` 中，可以使用`${@environment.acceptsProfiles('dev')}`来获取运行时配置。
+在 `Thymeleaf` 中, 我们可以使用`${@environment.acceptsProfiles('dev')}`来获取运行时配置。
 
 ```html
 <!DOCTYPE html>
