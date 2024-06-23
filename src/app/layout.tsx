@@ -56,8 +56,6 @@ export default function RootLayout({
           <BasicLayout>
             {children}
           </BasicLayout>
-          {/* Google Analytics*/}
-          <GoogleAnalytics measurementId={'G-QJB07C22CV'}/>
           {/* microsoft clarity */}
           <Script id={'microsoft-clarity'} dangerouslySetInnerHTML={{
             __html: `
