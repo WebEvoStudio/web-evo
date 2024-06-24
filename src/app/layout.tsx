@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     'shenma-site-verification': 'ced0831a368866ea173608f4f067519f_1687339017',
   },
   icons: {
-    icon: '/favicon.png',
+    icon: '/favicon.ico',
     apple: '/logo192.png',
   },
   manifest: '/manifest.json',

@@ -1,8 +1,6 @@
 ---
 title: '如何在 SpringBoot 模版中获取运行环境？'
 date: '2023-12-28'
-tags: ['SpringBoot']
-keywords: ['SpringBoot', '环境变量', '模版', 'Thymeleaf']
 ---
 
 ## 模版
