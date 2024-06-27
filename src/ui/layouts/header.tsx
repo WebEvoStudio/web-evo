@@ -127,9 +127,9 @@ const Header = () => {
               ))}
             </nav>
           </Box>
-          <Box sx={{display: {xs: 'none', sm: 'block'}}}>
-            <MainSearch/>
-          </Box>
+          {/*<Box sx={{display: {xs: 'none', sm: 'block'}}}>*/}
+          {/*  <MainSearch/>*/}
+          {/*</Box>*/}
           <Box sx={{flexGrow: 1, display: {xs: 'none', sm: 'block'}}} />
           <IconButton
             size="large"
