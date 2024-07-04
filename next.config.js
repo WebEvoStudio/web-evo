@@ -6,6 +6,8 @@ const withPWA = require('next-pwa')({
   dest: 'public',
   runtimeCaching,
 });
+const withMDX = require('@next/mdx')()
+
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -13,6 +15,8 @@ const nextConfig = {
   experimental: {},
   reactStrictMode: true,
   swcMinify: true,
+  mdxRs: true,
+  pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
   modularizeImports: {
     '@mui/icons-material': {
       transform: '@mui/icons-material/{{member}}',
@@ -58,4 +62,4 @@ const nextConfig = {
   },
 }
 
-module.exports = withPWA(withContentlayer(nextConfig));
+module.exports = withMDX(withPWA(withContentlayer(nextConfig)));
