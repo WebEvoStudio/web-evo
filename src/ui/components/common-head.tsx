@@ -16,7 +16,7 @@ export default function CommonHead(props: {title?: string, description?: string,
       <meta name="viewport"
         content="initial-scale=1, width=device-width, maximum-scale=1.0, user-scalable=0, viewport-fit=cover"/>
       {/* 百度验证*/}
-      <meta name="baidu-site-verification" content="code-yx2HQhygQo" />
+      <meta name="baidu-site-verification" content="codeva-5CgxDGmTr7" />
       {/* 必应验证*/}
       <meta name="msvalidate.01" content="AB78A0C987D3AEA34B969889512FF33E" />
       {/* 谷歌验证*/}
