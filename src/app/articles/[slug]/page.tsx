@@ -3,6 +3,7 @@ import {allPosts} from 'contentlayer/generated';
 import {Container} from '@mui/material';
 import Article from '../../../ui/components/Article';
 import {commonMetadata} from "@/core/config/main.config";
+import './page.css';
 
 
 export const generateStaticParams = async () => allPosts.map((post) => ({slug: post._raw.flattenedPath}));
