@@ -8,6 +8,7 @@ import '../core/styles/rainbow.css';
 import ThemeRegistry from '../ui/components/theme-registry';
 // import 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap';
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 
 export const metadata: Metadata = {
@@ -52,6 +53,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <SpeedInsights/>
         <ThemeRegistry>
           <BasicLayout>
             {children}
