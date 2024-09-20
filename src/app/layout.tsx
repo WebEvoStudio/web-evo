@@ -76,6 +76,9 @@ export default function RootLayout({
             async={true}
             src={'//pl21774134.toprevenuegate.com/b41bbc39088c2494479ef58349cb1ee6/invoke.js'}
           ></Script>
+          {/*Yandex.RTB*/}
+          <Script dangerouslySetInnerHTML={{__html: `window.yaContextCb=window.yaContextCb||[]`}}></Script>
+          <Script src={'https://yandex.ru/ads/system/context.js'} async></Script>
         </ThemeRegistry>
         <Analytics />
       </body>
