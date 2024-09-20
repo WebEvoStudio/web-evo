@@ -53,6 +53,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+      {/*Yandex.RTB*/}
+      <Script id={'yandex-rtb'}
+              dangerouslySetInnerHTML={{__html: `window.yaContextCb=window.yaContextCb||[]`}}></Script>
+      <Script src={'https://yandex.ru/ads/system/context.js'} async></Script>
         <SpeedInsights/>
         <ThemeRegistry>
           <BasicLayout>
@@ -76,10 +80,6 @@ export default function RootLayout({
               async={true}
               src={'//pl21774134.toprevenuegate.com/b41bbc39088c2494479ef58349cb1ee6/invoke.js'}
           ></Script>
-          {/*Yandex.RTB*/}
-          <Script id={'yandex-rtb'}
-                  dangerouslySetInnerHTML={{__html: `window.yaContextCb=window.yaContextCb||[]`}}></Script>
-          <Script src={'https://yandex.ru/ads/system/context.js'} async></Script>
           <Script async={true} src={'https://fundingchoicesmessages.google.com/i/pub-1497400778110343?ers=1'}></Script>
           <Script id={'ad-blocking-revenue-recovery'} dangerouslySetInnerHTML={{__html: `
             (function() {function signalGooglefcPresent() {

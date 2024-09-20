@@ -24,10 +24,15 @@ const Article = (post: Post) => {
         "blockId": "R-A-8623764-1",
         "renderTo": "yandex_rtb_R-A-8623764-1"
       })
+      Ya?.Context.AdvManager.render({
+        "blockId": "R-A-8623764-2",
+        "renderTo": "yandex_rtb_R-A-8623764-2"
+      })
     })
   }, [])
   return (
       <article data-clarity-region="article">
+        <div id="yandex_rtb_R-A-8623764-2" style={{height: '120px', marginBottom: '16px'}}></div>
         <div className={style['blog']}>
           <div className={style['blog-detail']}>
             <h1 className={style['page-title']}>
@@ -45,7 +50,7 @@ const Article = (post: Post) => {
         </div>
         {/* <div className="[&>*]:mb-3 [&>*:last-child]:mb-0" dangerouslySetInnerHTML={{__html: post.body.html}}/>*/}
 
-        <div id={'yandex_rtb_R-A-8623764-1'} style={{height: '100px', marginBottom: '16px'}}></div>
+        <div id={'yandex_rtb_R-A-8623764-1'} style={{height: '120px', marginBottom: '16px'}}></div>
       </article>
 
   );
