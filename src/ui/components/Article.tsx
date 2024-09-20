@@ -44,7 +44,7 @@ const Article = (post: Post) => {
           {/* <h1 className="text-3xl font-bold">{post.title}</h1>*/}
         </div>
         {/* <div className="[&>*]:mb-3 [&>*:last-child]:mb-0" dangerouslySetInnerHTML={{__html: post.body.html}}/>*/}
-        <div id={'yandex_rtb_R-A-8623764-1'}></div>
+        <div id={'yandex_rtb_R-A-8623764-1'} style={{height: '100px', marginBottom: '16px'}}></div>
       </article>
 
   );
