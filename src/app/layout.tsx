@@ -69,18 +69,36 @@ export default function RootLayout({
             `,
           }}/>
           <Script
-            src={'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1031326139722537'}
-            crossOrigin={'anonymous'} async strategy={'afterInteractive'}
+              src={'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1031326139722537'}
+              crossOrigin={'anonymous'} async strategy={'afterInteractive'}
           />
           <Script
-            async={true}
-            src={'//pl21774134.toprevenuegate.com/b41bbc39088c2494479ef58349cb1ee6/invoke.js'}
+              async={true}
+              src={'//pl21774134.toprevenuegate.com/b41bbc39088c2494479ef58349cb1ee6/invoke.js'}
           ></Script>
           {/*Yandex.RTB*/}
-          <Script id={'yandex-rtb'} dangerouslySetInnerHTML={{__html: `window.yaContextCb=window.yaContextCb||[]`}}></Script>
+          <Script id={'yandex-rtb'}
+                  dangerouslySetInnerHTML={{__html: `window.yaContextCb=window.yaContextCb||[]`}}></Script>
           <Script src={'https://yandex.ru/ads/system/context.js'} async></Script>
+          <Script async={true} src={'https://fundingchoicesmessages.google.com/i/pub-1497400778110343?ers=1'}></Script>
+          <Script id={'ad-blocking-revenue-recovery'} dangerouslySetInnerHTML={{__html: `
+            (function() {function signalGooglefcPresent() {
+            if (!window.frames['googlefcPresent']) {
+              if (document.body) {
+                const iframe = document.createElement('iframe');
+                iframe.style = 'width: 0; height: 0; border: none; z-index: -1000; left: -1000px; top: -1000px;';
+                iframe.style.display = 'none';
+                iframe.name = 'googlefcPresent';
+                document.body.appendChild(iframe);
+              } else {
+                setTimeout(signalGooglefcPresent, 0);
+              }
+            }
+          }signalGooglefcPresent();})();
+          `}}>
+          </Script>
         </ThemeRegistry>
-        <Analytics />
+        <Analytics/>
       </body>
     </html>
   );
